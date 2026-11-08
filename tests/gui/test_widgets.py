@@ -513,3 +513,29 @@ def test_simulation_section_profile_use_badges_follow_selected_profiles() -> Non
     assert widget_editors_module.ProfileEnumEditor.display_text_for_value('kodak_portra_400') == 'still / kodak_portra_400'
     assert widget_editors_module.ProfileEnumEditor.display_text_for_value('kodak_vision3_50d') == 'cine / kodak_vision3_50d'
     assert widget_editors_module.ProfileEnumEditor.display_text_for_value('kodak_2393') == 'cine / kodak_2393'
+
+
+def test_scanner_section_frontier_mode_toggles_controls() -> None:
+    from dataclasses import replace as _replace
+    from qtpy import QtWidgets
+    _app = QtWidgets.QApplication.instance() or QtWidgets.QApplication([])
+    from spektrafilm.runtime.params_schema import ScannerParams
+    from spektrafilm_gui.param_manifest import FRONTIER_MANIFEST, SCANNER_MANIFEST
+    from spektrafilm_gui.widget_sections import ScannerSection
+    QWidget = QtWidgets.QWidget
+
+    section = ScannerSection(SCANNER_MANIFEST, FRONTIER_MANIFEST)
+    print_widget = QWidget()
+    section.bind_print_path_widgets(print_widget)
+    assert not section.frontier.isEnabled() and print_widget.isEnabled()
+
+    state = ScannerParams(method='frontier_sp500')
+    state.frontier = _replace(state.frontier, contrast='hard')
+    section.set_state(state)
+    assert section.frontier.isEnabled()
+    assert not print_widget.isEnabled()
+    assert not section.lens_blur.isEnabled()
+    out = section.get_state()
+    assert out.method == 'frontier_sp500' and out.frontier.contrast == 'hard'
+    assert 'contrast' in section._editors and 'method' in section._editors
+    assert FRONTIER_MANIFEST.fields[0].tooltip.endswith('evidence.md]')

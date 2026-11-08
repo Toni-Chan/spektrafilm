@@ -17,7 +17,7 @@ import colour
 import numpy as np
 
 from spektrafilm.runtime.params_builder import init_params
-from spektrafilm.runtime.simulator import Simulator  # type: ignore[attr-defined]
+from spektrafilm.runtime.pipeline import SimulationPipeline
 
 
 def main(capture_id: str = "frontier_sp500_community_a") -> None:
@@ -31,7 +31,7 @@ def main(capture_id: str = "frontier_sp500_community_a") -> None:
     params.debug.deactivate_spatial_effects = True
     params.debug.deactivate_stochastic_effects = True
     params.camera.auto_exposure = False
-    sim = Simulator(params)
+    sim = SimulationPipeline(params)
     rendered = sim.process(scene, collect="frontier_rendered").reshape(-1, 3)
     xyz = colour.RGB_to_XYZ(scene.reshape(-1, 3), "sRGB", apply_cctf_decoding=False)
     m, *_ = np.linalg.lstsq(rendered, xyz, rcond=None)

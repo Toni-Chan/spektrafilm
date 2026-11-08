@@ -347,3 +347,13 @@ def test_project_default_gui_state_matches_builder() -> None:
     )
 
     assert PROJECT_DEFAULT_GUI_STATE == built_state
+
+
+def test_build_params_maps_frontier_method_and_panel() -> None:
+    state = make_state()
+    state.scanner = replace(state.scanner, method='frontier_sp3000')
+    state.scanner.frontier = replace(state.scanner.frontier, contrast='soft', hyper_tone=0.3)
+    params = build_params_from_state(state)
+    assert params.scanner.method == 'frontier_sp3000'
+    assert params.scanner.frontier.contrast == 'soft'
+    assert params.scanner.frontier.hyper_tone == 0.3
