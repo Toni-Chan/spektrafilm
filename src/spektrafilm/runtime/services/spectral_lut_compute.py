@@ -25,6 +25,9 @@ class SpectralLUTService:
         self.filming_tc_lut_memory : np.ndarray | None = None # tc_lut memory
         self.enlarger_lut_memory : np.ndarray | None = None # enlarger lut memory
         self.scanner_lut_memory : np.ndarray | None = None # scanner lut memory
+        # Frontier capture LUTs keyed by (film hash, capture hash, range, resolution)
+        self._frontier_capture_luts: dict = {}
+        self.frontier_capture_lut_builds = 0
 
         # local memory
         self._film_sensitivity = None # to track if tc_lut needs to be recomputed when film sensitivity changes
@@ -163,6 +166,44 @@ class SpectralLUTService:
         if data_out is None:
             raise RuntimeError('LUT computation did not produce an output')
         return data_out
+
+    def spectral_compute_frontier_capture(self, film_profile, capture, data_min, data_max) -> Callable:
+        """Return a callable mapping (..., 3) film CMY to log10 instrument RGB via a cached 3D LUT.
+
+        The LUT is built from the direct spectral capture once per
+        ``profile_hash(film spectral data) + profile_hash(capture) + range + resolution``.
+        """
+        from spektrafilm.model.scanner_profiles import profile_hash
+        from spektrafilm.runtime.stages.frontier_scanning import capture_direct
+
+        data_min = np.broadcast_to(np.asarray(data_min, dtype=np.float64), (3,)).copy()
+        data_max = np.broadcast_to(np.asarray(data_max, dtype=np.float64), (3,)).copy()
+        film_key = profile_hash({
+            "channel_density": np.nan_to_num(np.asarray(film_profile.data.channel_density), nan=-1.0),
+            "base_density": np.nan_to_num(np.asarray(film_profile.data.base_density), nan=-1.0),
+        })
+        key = (film_key, profile_hash(capture), tuple(data_min), tuple(data_max), self._lut_resolution)
+
+        def log_capture(cmy):
+            return np.log10(np.fmax(capture_direct(cmy, film_profile, capture), 1e-10))
+
+        lut = self._frontier_capture_luts.get(key)
+        if lut is None:
+            probe = np.zeros((1, 1, 3))
+            _, lut = compute_with_lut(probe, log_capture, xmin=data_min, xmax=data_max,
+                                      steps=self._lut_resolution)
+            self._frontier_capture_luts[key] = lut
+            self.frontier_capture_lut_builds += 1
+
+        def apply(cmy: np.ndarray) -> np.ndarray:
+            cmy = np.asarray(cmy, dtype=np.float64)
+            shape = cmy.shape
+            img = cmy.reshape(-1, 1, 3) if cmy.ndim != 3 else cmy
+            out, _ = compute_with_lut(img, log_capture, xmin=data_min, xmax=data_max,
+                                      steps=self._lut_resolution, lut=lut)
+            return np.asarray(out).reshape(shape)
+
+        return apply
 
     @timeit("get_filming_tc_lut")
     def get_filming_tc_lut(self, sensitivity):
