@@ -81,3 +81,17 @@ def test_default_method_topology_unchanged():
     pipe = SimulationPipeline(make_fast_test_params())
     assert pipe._frontier_stage is None
     assert [n.label for n in pipe._topology][-1] == "scanning.scan_print"
+
+
+def test_soft_update_render_params_do_not_rebuild_capture_lut():
+    p = _frontier_params()
+    p.settings.use_scanner_lut = True
+    pipe = SimulationPipeline(p)
+    builds = pipe._lut_service.frontier_capture_lut_builds
+    assert builds == 1
+    before = pipe.process(_gray_ramp())
+    pipe.soft_update(frontier_density_offset=(0.0, 0.1, 0.0), frontier_brightness_offset=0.5,
+                     frontier_contrast="hard")
+    after = pipe.process(_gray_ramp())
+    assert pipe._lut_service.frontier_capture_lut_builds == builds
+    assert not np.allclose(before, after)

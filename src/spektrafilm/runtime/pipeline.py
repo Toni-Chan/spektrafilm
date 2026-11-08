@@ -156,7 +156,18 @@ class SimulationPipeline:
                     m_filter_neutral=None,
                     y_filter_neutral=None,
                     film_density_curves=None,
-                    print_density_curves=None,):
+                    print_density_curves=None,
+                    frontier_density_offset=None,
+                    frontier_brightness_offset=None,
+                    frontier_contrast=None,):
+        # Frontier render settings are read live by FrontierScanningStage, so
+        # changing them never rebuilds the capture LUT.
+        if frontier_density_offset is not None:
+            self.scanner.frontier.density_offset = tuple(frontier_density_offset)
+        if frontier_brightness_offset is not None:
+            self.scanner.frontier.brightness_offset = float(frontier_brightness_offset)
+        if frontier_contrast is not None:
+            self.scanner.frontier.contrast = frontier_contrast
         invalidates_print_balance_reference = False
         if exposure_compensation_ev is not None:
             self.camera.exposure_compensation_ev = exposure_compensation_ev
