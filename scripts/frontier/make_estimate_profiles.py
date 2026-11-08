@@ -54,9 +54,13 @@ def capture(model, preset):
             "provenance": prov("estimate", "generic front-illuminated silicon CCD shape; R8 comparator only", notes="replace via FRT-14"),
         },
         "effective_kernels": None,
-        "mtf": {"lens_blur_px": 0.0, "provenance": prov("estimate", "no data", notes="replace via FRT-16")},
+        "mtf": {
+            "gaussians_um": [],
+            "flare": {"fraction": 0.0, "sigma_um": 500.0},
+            "provenance": prov("estimate", "no data; ideal optics until slanted-edge/flare measurement", notes="replace via FRT-16/FRT-24"),
+        },
         "pixel_shift": {"active": False, "provenance": prov("official", "R2", "PDF p.46", "pixel shifting exists; not simulated yet")},
-        "noise": {"read_noise": 0.0, "provenance": prov("estimate", "no data", notes="replace via FRT-13")},
+        "noise": {"full_well_e": None, "read_noise_e": 0.0, "provenance": prov("estimate", "no data; noise off until flat-field measurement", notes="replace via FRT-13")},
         "adc_bits": {"value": 12, "provenance": prov("estimate", "no public spec", notes="replace via FRT-13")},
         "provenance": prov("estimate", "docs/frontier/evidence.md default template"),
     }

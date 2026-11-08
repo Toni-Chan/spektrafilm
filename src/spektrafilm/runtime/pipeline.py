@@ -99,6 +99,8 @@ class SimulationPipeline:
                 self.io,
                 self.settings,
                 self._lut_service,
+                self._resize_service,
+                self.debug,
             )
 
         # timing communication

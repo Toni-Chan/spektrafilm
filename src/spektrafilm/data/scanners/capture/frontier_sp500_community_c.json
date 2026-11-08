@@ -75,12 +75,16 @@
   },
   "effective_kernels": null,
   "mtf": {
-    "lens_blur_px": 0.0,
+    "gaussians_um": [],
+    "flare": {
+      "fraction": 0.0,
+      "sigma_um": 500.0
+    },
     "provenance": {
       "label": "estimate",
-      "source": "no data",
+      "source": "no data; ideal optics until slanted-edge/flare measurement",
       "locator": "",
-      "notes": "replace via FRT-16"
+      "notes": "replace via FRT-16/FRT-24"
     }
   },
   "pixel_shift": {
@@ -93,10 +97,11 @@
     }
   },
   "noise": {
-    "read_noise": 0.0,
+    "full_well_e": null,
+    "read_noise_e": 0.0,
     "provenance": {
       "label": "estimate",
-      "source": "no data",
+      "source": "no data; noise off until flat-field measurement",
       "locator": "",
       "notes": "replace via FRT-13"
     }

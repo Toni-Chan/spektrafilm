@@ -83,7 +83,8 @@ class FrontierScanningStage:
     Replaces both PrintingStage and ScanningStage for the Frontier methods.
     """
 
-    def __init__(self, film, film_render_params, scanner_params, io_params, settings_params, lut_service):
+    def __init__(self, film, film_render_params, scanner_params, io_params, settings_params, lut_service,
+                 resize_service=None, debug_params=None):
         from spektrafilm.model.frontier_render import StockReference, instrument_density
         from spektrafilm.model.scanner_profiles import load_capture_profile, load_render_profile
 
@@ -94,6 +95,8 @@ class FrontierScanningStage:
         self._io = io_params
         self._settings = settings_params
         self._lut_service = lut_service
+        self._resize_service = resize_service
+        self._debug = debug_params
         self.timings = {}
 
         method = scanner_params.method
@@ -138,10 +141,29 @@ class FrontierScanningStage:
 
     # pipeline nodes
 
+    def _spatial_on(self) -> bool:
+        return not (self._debug is not None and self._debug.deactivate_spatial_effects)
+
+    def _stochastic_on(self) -> bool:
+        return not (self._debug is not None and self._debug.deactivate_stochastic_effects)
+
+    def _pixel_size_um(self):
+        return None if self._resize_service is None else self._resize_service.pixel_size_um
+
     def capture(self, cmy_film: np.ndarray) -> InstrumentRGB:
+        from spektrafilm.model.frontier_optics import add_sensor_noise, apply_flare, apply_mtf, quantise
         if self._capture_lut is not None:
-            return InstrumentRGB(10.0 ** self._capture_lut(cmy_film))
-        return self._capture_direct(cmy_film)
+            s = 10.0 ** self._capture_lut(cmy_film)
+        else:
+            s = self._capture_direct(cmy_film)
+        cap = self.capture_profile
+        if self._spatial_on() and np.ndim(s) == 3:
+            s = apply_mtf(s, cap.mtf, self._pixel_size_um())
+            s = apply_flare(s, cap.mtf.get("flare"), self._pixel_size_um())
+        if self._stochastic_on():
+            s = add_sensor_noise(s, cap.noise, np.random.default_rng(self._fr.seed))
+        s = quantise(s, cap.adc_bits)
+        return InstrumentRGB(s)
 
     def to_density(self, s: InstrumentRGB):
         from spektrafilm.model.frontier_render import instrument_density, remove_base
