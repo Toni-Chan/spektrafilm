@@ -11,7 +11,7 @@ from spektrafilm.runtime.services import (
     SpectralLUTService,
     ColorReferenceService,
 )
-from spektrafilm.runtime.stages import FilmingStage, PrintingStage, ScanningStage
+from spektrafilm.runtime.stages import FilmingStage, FrontierScanningStage, PrintingStage, ScanningStage
 from spektrafilm.runtime.topology import Node, Tap, run_topology
 from spektrafilm.utils.timings import format_timings
 
@@ -89,6 +89,17 @@ class SimulationPipeline:
             self._lut_service,
             self._color_reference_service,
         )
+
+        self._frontier_stage = None
+        if self.scanner.method != "default":
+            self._frontier_stage = FrontierScanningStage(
+                self.film,
+                self.film_render,
+                self.scanner,
+                self.io,
+                self.settings,
+                self._lut_service,
+            )
 
         # timing communication
         self._filming_stage.timings = self.timings
@@ -178,6 +189,14 @@ class SimulationPipeline:
             Node((Tap.RGB_PRE,),    (Tap.LOG_E_FILM,), f.expose,         "filming.expose"),
             Node((Tap.LOG_E_FILM,), (Tap.CMY_FILM,),   f.develop,        "filming.develop"),
         ]
+        if self._frontier_stage is not None:
+            fr = self._frontier_stage
+            return common + [
+                Node((Tap.CMY_FILM,),           (Tap.INSTRUMENT_RGB,),     fr.capture,    "frontier.capture"),
+                Node((Tap.INSTRUMENT_RGB,),     (Tap.INSTRUMENT_DENSITY,), fr.to_density, "frontier.density"),
+                Node((Tap.INSTRUMENT_DENSITY,), (Tap.FRONTIER_RENDERED,),  fr.render,     "frontier.render"),
+                Node((Tap.FRONTIER_RENDERED,),  (Tap.RGB_OUT,),            fr.output,     "frontier.output"),
+            ]
         if self.io.scan_film:
             return common + [
                 Node((Tap.CMY_FILM,), (Tap.RGB_OUT,), s.scan, "scanning.scan_film"),

@@ -23,6 +23,10 @@ class Tap:
     LOG_E_PRINT  = "log_e_print"
     CMY_PRINT    = "cmy_print"
     RGB_OUT      = "rgb_out"
+    # Frontier scanner taps (only present when scanner.method is a frontier method)
+    INSTRUMENT_RGB     = "instrument_rgb"
+    INSTRUMENT_DENSITY = "instrument_density"
+    FRONTIER_RENDERED  = "frontier_rendered"
 
 
 @dataclass(frozen=True)
