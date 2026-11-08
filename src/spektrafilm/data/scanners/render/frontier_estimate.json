@@ -1,0 +1,60 @@
+{
+  "id": "frontier_estimate",
+  "description": "Placeholder Frontier positive rendering. Gradation, balance and matrix are estimates.",
+  "gradation": {
+    "type": "log_linear_rolloff",
+    "contrast_slopes": {
+      "soft": 0.85,
+      "standard": 1.0,
+      "hard": 1.15
+    },
+    "midgray_out": 0.18,
+    "white_rolloff": 6.0,
+    "provenance": {
+      "label": "estimate",
+      "source": "no published Frontier gradation",
+      "locator": "",
+      "notes": "replace via FRT-13/FRT-23"
+    }
+  },
+  "balance": {
+    "method": "stock_midgray",
+    "provenance": {
+      "label": "estimate",
+      "source": "Frontier per-film-type channel setup assumed to neutralise stock mid-grey",
+      "locator": "",
+      "notes": "replace via FRT-17"
+    }
+  },
+  "matrix_instrument_to_xyz": {
+    "value": [
+      [
+        0.4124,
+        0.3576,
+        0.1805
+      ],
+      [
+        0.2126,
+        0.7152,
+        0.0722
+      ],
+      [
+        0.0193,
+        0.1192,
+        0.9505
+      ]
+    ],
+    "provenance": {
+      "label": "estimate",
+      "source": "sRGB primaries (IEC 61966-2-1) used as placeholder",
+      "locator": "",
+      "notes": "refit via scripts/frontier/fit_placeholder_matrix.py or FRT-24"
+    }
+  },
+  "provenance": {
+    "label": "estimate",
+    "source": "docs/frontier/evidence.md default template",
+    "locator": "",
+    "notes": ""
+  }
+}
