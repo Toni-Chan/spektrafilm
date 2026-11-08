@@ -106,10 +106,6 @@ class FrontierScanningStage:
             scanner_params.capture_profile or f"{method}_{DEFAULT_CAPTURE_PRESET}")
         self.render_profile = load_render_profile(scanner_params.render_profile or DEFAULT_RENDER_PROFILE)
 
-        if self._fr.sharpness != "off" or self._fr.hyper_tone != 0.0:
-            warnings.warn("Frontier sharpness/Hyper Tone are not implemented yet and are ignored", stacklevel=2)
-        if self._fr.roll_density_setup != "off":
-            warnings.warn("Frontier roll density setup is not implemented yet and is ignored", stacklevel=2)
 
         dc = np.asarray(film.data.density_curves, dtype=np.float64)
         self._data_min = np.minimum(0.0, -np.asarray(film_render_params.grain.density_min, dtype=np.float64))
@@ -177,7 +173,14 @@ class FrontierScanningStage:
             d = InstrumentDensity(d, base_removed=True)  # tap contract: injected density is base-removed
         log_e = apply_gradation(d, self.render_profile, self._fr.contrast, self.stock_reference)
         log_e = apply_user_offsets(log_e, self._fr.density_offset, self._fr.brightness_offset)
-        return np.asarray(tone_map(log_e, self.render_profile))
+        if self._fr.hyper_tone and self._spatial_on() and np.ndim(log_e) == 3:
+            from spektrafilm.model.frontier_local_tone import hyper_tone
+            log_e = hyper_tone(np.asarray(log_e), self._fr.hyper_tone)
+        lin = np.asarray(tone_map(log_e, self.render_profile))
+        if self._fr.sharpness != "off" and self._spatial_on() and lin.ndim == 3:
+            from spektrafilm.model.frontier_local_tone import frontier_sharpen
+            lin = frontier_sharpen(lin, self._fr.sharpness)
+        return lin
 
     def output(self, rendered: np.ndarray) -> np.ndarray:
         from spektrafilm.model.frontier_render import to_output
