@@ -5,7 +5,7 @@ from dataclasses import fields
 from functools import lru_cache
 
 from spektrafilm.profiles.io import load_profile
-from spektrafilm.runtime.params_schema import RuntimePhotoParams
+from spektrafilm.runtime.params_schema import FRONTIER_SCANNER_METHODS, RuntimePhotoParams
 from spektrafilm.utils.io import read_neutral_print_filters
 
 
@@ -72,11 +72,21 @@ def apply_database_neutral_print_filters(
     return params
 
 
+def validate_scanner_method(params: RuntimePhotoParams) -> None:
+    """Raise ValueError for an unknown ``params.scanner.method``."""
+    method = params.scanner.method
+    if method not in FRONTIER_SCANNER_METHODS:
+        raise ValueError(
+            f"Unknown scanner method {method!r}; expected one of {FRONTIER_SCANNER_METHODS}"
+        )
+
+
 def digest_params(params: RuntimePhotoParams, apply_stocks_specifics=True) -> RuntimePhotoParams:
     """Digest the params to prepare for use in the runtime pipeline.
     In the pipeline params should be static and not be changed.
     params.settings and params.debug should contain all the switching logic for the digesting.
     """
+    validate_scanner_method(params)
     params = apply_database_neutral_print_filters(params)
 
     if params.settings.preview_mode:

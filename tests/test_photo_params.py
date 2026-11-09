@@ -217,3 +217,67 @@ class TestDigestParamsFilmDefaults:
         assert params.enlarger.c_filter_neutral == 12.0
         assert params.enlarger.m_filter_neutral == 34.0
         assert params.enlarger.y_filter_neutral == 56.0
+
+
+class TestFrontierParams:
+    def test_frontier_params_defaults(self):
+        params = init_params()
+        assert params.scanner.method == 'default'
+        assert params.scanner.capture_profile is None
+        assert params.scanner.render_profile is None
+        assert tuple(params.scanner.unsharp_mask) == (0.7, 0.7)
+        fr = params.scanner.frontier
+        assert fr.roll_density_setup == 'off'
+        assert tuple(fr.density_offset) == (0.0, 0.0, 0.0)
+        assert fr.brightness_offset == 0.0
+        assert fr.contrast == 'standard'
+        assert fr.sharpness == 'off'
+        assert fr.hyper_tone == 0.0
+        assert fr.output_space == 'sRGB'
+        assert fr.seed is None
+
+    def test_frontier_params_clone_deepcopy(self):
+        from spektrafilm.runtime.params_builder import clone_runtime_params
+        params = init_params()
+        clone = clone_runtime_params(params)
+        clone.scanner.method = 'frontier_sp500'
+        clone.scanner.frontier.hyper_tone = 0.5
+        assert params.scanner.method == 'default'
+        assert params.scanner.frontier.hyper_tone == 0.0
+        assert clone.scanner.frontier is not params.scanner.frontier
+
+    @mark.parametrize('method', ['default', 'frontier_sp3000', 'frontier_sp500'])
+    def test_frontier_method_accepted(self, method):
+        params = init_params()
+        params.scanner.method = method
+        assert digest_params(params).scanner.method == method
+
+    def test_frontier_method_rejected(self):
+        import pytest
+        params = init_params()
+        params.scanner.method = 'frontier_sp9000'
+        with pytest.raises(ValueError):
+            digest_params(params)
+
+
+class TestFrontierTemplate:
+    def test_default_template_values_are_labelled(self):
+        from spektrafilm.profiles.frontier import (
+            ALLOWED_LABELS, iter_labelled_values, load_frontier_template,
+        )
+        tpl = load_frontier_template()
+        entries = list(iter_labelled_values(tpl))
+        assert entries
+        for path, entry in entries:
+            assert entry['label'] in ALLOWED_LABELS, path
+            assert entry.get('source'), path
+            if entry['label'] == 'estimate':
+                assert entry.get('replace_with', '').startswith('FRT-'), path
+
+    def test_default_template_shapes(self):
+        from spektrafilm.profiles.frontier import load_frontier_template
+        tpl = load_frontier_template()
+        assert len(tpl['led']['peak_nm']['value']) == 3
+        assert len(tpl['led']['fwhm_nm']['value']) == 3
+        s = tpl['sensor']
+        assert len(s['qe_nodes_nm']['value']) == len(s['qe_relative']['value'])

@@ -1,0 +1,124 @@
+{
+  "id": "frontier_sp3000_community_c",
+  "description": "Frontier SP3000: LED board R64/G40/B50/IR144, Super CCD Honeycomb area sensor (R2 PDF p.13, p.46). Placeholder capture profile; spectral values are not measured.",
+  "led_spd": {
+    "R": {
+      "gaussian": {
+        "peak_nm": 630.0,
+        "fwhm_nm": 20.0,
+        "skew": 0.0
+      },
+      "provenance": {
+        "label": "community",
+        "source": "R14 photo.net (B,R); G taken from community_a",
+        "locator": "",
+        "notes": "FWHM 20.0 nm is an estimate from LED datasheets R15/R16; replace via FRT-15"
+      }
+    },
+    "G": {
+      "gaussian": {
+        "peak_nm": 550.0,
+        "fwhm_nm": 30.0,
+        "skew": 0.0
+      },
+      "provenance": {
+        "label": "community",
+        "source": "R14 photo.net (B,R); G taken from community_a",
+        "locator": "",
+        "notes": "FWHM 30.0 nm is an estimate from LED datasheets R15/R16; replace via FRT-15"
+      }
+    },
+    "B": {
+      "gaussian": {
+        "peak_nm": 465.0,
+        "fwhm_nm": 20.0,
+        "skew": 0.0
+      },
+      "provenance": {
+        "label": "community",
+        "source": "R14 photo.net (B,R); G taken from community_a",
+        "locator": "",
+        "notes": "FWHM 20.0 nm is an estimate from LED datasheets R15/R16; replace via FRT-15"
+      }
+    }
+  },
+  "filters": [],
+  "sensor_qe": {
+    "wavelengths_nm": [
+      380,
+      420,
+      460,
+      500,
+      550,
+      600,
+      650,
+      700,
+      780
+    ],
+    "values": [
+      0.2,
+      0.38,
+      0.55,
+      0.72,
+      0.9,
+      1.0,
+      0.95,
+      0.82,
+      0.55
+    ],
+    "provenance": {
+      "label": "estimate",
+      "source": "generic front-illuminated silicon CCD shape; R8 comparator only",
+      "locator": "",
+      "notes": "replace via FRT-14"
+    }
+  },
+  "effective_kernels": null,
+  "mtf": {
+    "gaussians_um": [],
+    "flare": {
+      "fraction": 0.0,
+      "sigma_um": 500.0
+    },
+    "provenance": {
+      "label": "estimate",
+      "source": "no data; ideal optics until slanted-edge/flare measurement",
+      "locator": "",
+      "notes": "replace via FRT-16/FRT-24"
+    }
+  },
+  "pixel_shift": {
+    "active": false,
+    "provenance": {
+      "label": "official",
+      "source": "R2",
+      "locator": "PDF p.46",
+      "notes": "pixel shifting exists; not simulated yet"
+    }
+  },
+  "noise": {
+    "full_well_e": null,
+    "read_noise_e": 0.0,
+    "provenance": {
+      "label": "estimate",
+      "source": "no data; noise off until flat-field measurement",
+      "locator": "",
+      "notes": "replace via FRT-13"
+    }
+  },
+  "adc_bits": {
+    "value": 12,
+    "provenance": {
+      "label": "estimate",
+      "source": "no public spec",
+      "locator": "",
+      "notes": "replace via FRT-13"
+    }
+  },
+  "provenance": {
+    "label": "estimate",
+    "source": "docs/frontier/evidence.md default template",
+    "locator": "",
+    "notes": ""
+  }
+}

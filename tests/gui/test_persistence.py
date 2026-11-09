@@ -130,3 +130,21 @@ def test_gui_state_from_dict_flat_gui_only_sections_override_nested_copy() -> No
     assert restored.gui_only.display.white_padding == 0.12
     assert restored.gui_only.display.settings.preview_max_size == 2048
     assert restored.gui_only.load_raw.white_balance == 'daylight'
+
+def test_frontier_settings_round_trip() -> None:
+    state = make_test_gui_state()
+    state.scanner = replace(state.scanner, method='frontier_sp500')
+    state.scanner.frontier = replace(state.scanner.frontier, contrast='hard', density_offset=(0.02, 0.0, -0.01),
+                                     brightness_offset=0.5, sharpness='low')
+    restored = gui_state_from_dict(gui_state_to_dict(state))
+    assert restored.scanner == state.scanner
+    assert isinstance(restored.scanner.frontier.density_offset, tuple)
+
+
+def test_session_without_frontier_fields_loads_as_default_method() -> None:
+    data = gui_state_to_dict(PROJECT_DEFAULT_GUI_STATE)
+    for key in ('method', 'capture_profile', 'render_profile', 'frontier'):
+        data['scanner'].pop(key, None)
+    restored = gui_state_from_dict(data)
+    assert restored.scanner.method == 'default'
+    assert restored.scanner.frontier == PROJECT_DEFAULT_GUI_STATE.scanner.frontier
