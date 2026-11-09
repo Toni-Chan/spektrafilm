@@ -55,7 +55,7 @@ class RawRecord:
     @property
     def guessed_type(self) -> str:
         t = self.info.get('type', '').strip().lower()
-        if t in ('negative', 'positive'):
+        if t in ('negative', 'positive', 'paper'):
             return t
         return 'positive' if self.has_cmy_dyes and not self.has_mid_min else 'negative'
 

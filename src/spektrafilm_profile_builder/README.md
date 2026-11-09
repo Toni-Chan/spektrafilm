@@ -3,7 +3,9 @@
 Builds spektrafilm film profiles (the JSON files in
 `src/spektrafilm/data/profiles`) from digitised manufacturer data-sheet
 curves, and ships the 25 colour profiles made from the **Fujifilm
-Professional Data Guide** (`*_fdg`).
+Professional Data Guide** (`*_fdg`) and the 63 film and print-material
+profiles made from the **KODAK technical data sheets** (E-series, 1997-2003;
+`kodak_<stock>_<pubcode>`, e.g. `kodak_portra_160nc_e190`).
 
 It is the historical upstream raw-curve factory (`profiles_factory`, last
 public at commit `049f677^`) restored, ported to the current module layout and
@@ -25,8 +27,14 @@ spektrafilm-profile-builder batch \
     -o src/spektrafilm/data/profiles \
     --filters-json src/spektrafilm/data/filters/neutral_print_filters.json
 
-# neutral enlarger filters for existing profile JSONs (merged into the JSON file)
-spektrafilm-profile-builder fit-filters out/my_film.json --filters-json out/neutral_print_filters.json
+# a print paper / print material (stage 'printing'); --support film for a backlit display transparency
+spektrafilm-profile-builder build path/to/paper_record --stock my_paper --name "My Paper" \
+    --type paper --reference-illuminant TH-KG3 -o out/
+
+# neutral enlarger filters for existing profile JSONs or shipped ids (merged into the JSON file);
+# --papers limits the papers, --only-missing never overwrites an existing entry
+spektrafilm-profile-builder fit-filters out/my_film.json kodak_portra_400 --filters-json out/neutral_print_filters.json \
+    [--papers my_paper,kodak_portra_endura] [--only-missing]
 
 # catalogue rows (name, short name, ISO, swatch...) for apps that keep their own stock list
 spektrafilm-profile-builder catalog out/*.json
@@ -48,7 +56,7 @@ raw data used:
 | `density_curve_{r,g,b}.csv` | log10 exposure (lux s) | total density (base+fog included) |
 | `dye_density_{c,m,y}.csv` | wavelength (nm) | spectral dye density (reversal films) |
 | `dye_density_{mid,min}.csv` | wavelength (nm) | mid-scale neutral / minimum density (colour negatives) |
-| `info.txt` | first line = stock name, `Key: value` lines are read (e.g. `Type: positive`) | |
+| `info.txt` | first line = stock name, `Key: value` lines are read (e.g. `Type: positive`, `Type: paper`) | |
 
 Anything else in the folder (MTF, Fuji's 4th "cyan-sensitive" layer...) is
 kept for reference and ignored.
@@ -106,6 +114,20 @@ Finally a common log-exposure shift makes the scanned mid-grey render at
 about 0.5 at log exposure 0). The mid-scale neutral density is
 `channel_density @ D(0) + base_density`.
 
+Paper / print material (`--type paper`, status A), following upstream's
+`process_paper_profile`: base+fog is removed and spread spectrally from the
+status-A minima; log exposure 0 is put where green reaches D = 0.735 over
+D-min; the dyes (peak-normalised on 420-700 nm, since paper sheets draw every
+dye rising into the UV) are scaled so that their mixture plus base is a
+metameric 18.4 % neutral under the viewing illuminant (amounts relative to
+green); the status-A curves are unmixed and fitted with the `cdfs` model. The
+spectral sensitivities are kept as printed (their R/G/B balance sets the
+enlarger filtration; the absolute level cancels in the runtime's print
+exposure normalisation), with the tails continued. The profile is written with
+`type: negative`, `stage: printing`, `support: paper` (or `film` for backlit
+display transparencies, like `kodak_2383`), reference illuminant `TH-KG3`, and
+no hanatos2025 parameters, as the shipped papers.
+
 The hanatos2025 adaptation parameters (spectral window, exposure-correction
 surface) are fitted by upstream's private profile creator and are not
 constrained by a data sheet; the builder averages those of shipped profiles
@@ -141,6 +163,8 @@ Code: GPLv3, like the rest of the repository. Profiles: CC BY-SA 4.0 with
 the spektrafilm profile attribution (see `SPEKTRAFILM_LICENSE.txt`); the
 `metadata.datasource` of each profile names the source page. The raw curves
 are digitised from the Fujifilm Professional Data Guide AF3-207U (2005),
-publicly published by FUJIFILM Corporation; the data remain property of
-their holder. See
-[data/raw/fujifilm_professional_data_guide/README.md](data/raw/fujifilm_professional_data_guide/README.md).
+publicly published by FUJIFILM Corporation, and from the KODAK technical data
+sheets (E-series) published by Eastman Kodak Company; the data remain property
+of their holders and the source PDFs are not redistributed. See
+[data/raw/fujifilm_professional_data_guide/README.md](data/raw/fujifilm_professional_data_guide/README.md)
+and [data/raw/kodak_technical_data/README.md](data/raw/kodak_technical_data/README.md).

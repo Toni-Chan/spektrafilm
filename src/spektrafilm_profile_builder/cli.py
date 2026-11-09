@@ -65,33 +65,54 @@ def _print_report(report: BuildReport):
         print('   ', step)
 
 
-def fit_filters_for_profiles(profiles, filters_json, papers=None, illuminant='TH-KG3'):
+def fit_filters_for_profiles(profiles, filters_json, papers=None, illuminant='TH-KG3', only_missing=False):
     """Fit neutral enlarger filters of each negative on every print paper and
-    merge them into a ``neutral_print_filters.json`` (created if missing)."""
+    merge them into a ``neutral_print_filters.json`` (created if missing).
+    Paper profiles in ``profiles`` are skipped (they are print targets).
+    ``only_missing`` keeps every entry already in the file untouched."""
     from .runtime_fit import fit_neutral_print_filters
 
     filters_json = Path(filters_json)
     db = json.loads(filters_json.read_text()) if filters_json.exists() else {}
     papers = papers or [p.value for p in PrintPapers]
     for profile in profiles:
+        if profile.info.stage == 'printing':
+            continue
         stock = profile.info.stock
         for paper in papers:
+            slot = db.setdefault(paper, {}).setdefault(illuminant, {})
+            if only_missing and stock in slot:
+                continue
             if profile.info.type == 'positive':
                 cmy = (0.0, 50.0, 50.0)  # placeholder, as for the shipped reversal films
                 res = 0.0
             else:
                 cmy, res = fit_neutral_print_filters(profile, paper, illuminant=illuminant)
-            db.setdefault(paper, {}).setdefault(illuminant, {})[stock] = list(cmy)
+            slot[stock] = list(cmy)
             print(f'   filters {stock} on {paper}: C {cmy[0]:.2f} M {cmy[1]:.2f} Y {cmy[2]:.2f} (res {res:.1e})')
+            filters_json.parent.mkdir(parents=True, exist_ok=True)
+            filters_json.write_text(json.dumps(db, indent=4) + '\n')
     filters_json.parent.mkdir(parents=True, exist_ok=True)
     filters_json.write_text(json.dumps(db, indent=4) + '\n')
+
+
+def _load_profiles(items):
+    from spektrafilm.profiles.io import load_profile
+    out = []
+    for item in items:
+        p = Path(item)
+        out.append(profile_from_dict(json.loads(p.read_text())) if p.suffix == '.json' and p.exists()
+                   else load_profile(item))
+    return out
 
 
 def _add_recipe_args(ap):
     ap.add_argument('--stock', required=True, help='profile id (file name stem); must not clash with shipped ids')
     ap.add_argument('--name', required=True, help='display name (info.name)')
-    ap.add_argument('--type', choices=('negative', 'positive'), default=None,
+    ap.add_argument('--type', choices=('negative', 'positive', 'paper'), default=None,
                     help='default: from info.txt / available files')
+    ap.add_argument('--support', choices=('paper', 'film'), default=None,
+                    help="paper type only: 'paper' (reflection print, default) or 'film' (display transparency)")
     ap.add_argument('--densitometer', choices=('status_M', 'status_A'), default=None)
     ap.add_argument('--density-over-min', type=float, default=1.0, dest='log_sensitivity_density_over_min',
                     help='density above D-min at which the sheet defines sensitivity (default 1.0)')
@@ -130,8 +151,10 @@ def main(argv=None):
     cc.add_argument('profiles', nargs='+')
 
     ff = sub.add_parser('fit-filters', help='fit neutral print filters for existing profile JSONs')
-    ff.add_argument('profiles', nargs='+')
+    ff.add_argument('profiles', nargs='+', help='profile JSON files or shipped profile ids')
     ff.add_argument('--filters-json', required=True)
+    ff.add_argument('--papers', default='', help='comma-separated paper ids (default: every PrintPapers entry)')
+    ff.add_argument('--only-missing', action='store_true', help='never overwrite an existing entry')
 
     args = ap.parse_args(argv)
 
@@ -142,14 +165,15 @@ def main(argv=None):
         return 0
 
     if args.cmd == 'fit-filters':
-        profiles = [profile_from_dict(json.loads(Path(p).read_text())) for p in args.profiles]
-        fit_filters_for_profiles(profiles, args.filters_json)
+        papers = [p for p in args.papers.split(',') if p] or None
+        fit_filters_for_profiles(_load_profiles(args.profiles), args.filters_json, papers=papers,
+                                 only_missing=args.only_missing)
         return 0
 
     if args.cmd == 'build':
         record = load_record(args.record)
         recipe = Recipe(
-            stock=args.stock, name=args.name, type=args.type or record.guessed_type,
+            stock=args.stock, name=args.name, type=args.type or record.guessed_type, support=args.support,
             densitometer=args.densitometer,
             log_sensitivity_density_over_min=args.log_sensitivity_density_over_min,
             reference_illuminant=args.reference_illuminant, viewing_illuminant=args.viewing_illuminant,
