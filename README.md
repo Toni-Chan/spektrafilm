@@ -146,7 +146,10 @@ The codebase is organized as four packages under `src/`:
    data-sheet curves. Ships the raw records of the Fujifilm Professional Data
    Guide and the 25 `*_fdg` colour profiles made from them. Drives via the
    `spektrafilm-profile-builder` command-line tool; see its
-   [README](src/spektrafilm_profile_builder/README.md).
+   [README](src/spektrafilm_profile_builder/README.md). It also writes the
+   profile-extension sidecars (`spektrafilm/data/profile_extensions`) that
+   model Fujifilm's 4th, cyan-sensitive colour layer as a red-layer inhibitor
+   ([details](src/spektrafilm_profile_builder/README.md#fujis-4th-colour-layer-cyan-inhibitor)).
 
 Canonical import surfaces:
 
