@@ -156,6 +156,23 @@ DIR_COUPLERS_MANIFEST = GroupManifest(
             step=5,
             tooltip="Sigma in um for the diffusion of the couplers, (5-20 um), controls sharpness and affects saturation.",
         ),
+        ParamSpec(
+            f"{_DC}.cyan_inhibitor_active",
+            tooltip=(
+                "Fujifilm 4th colour layer (cyan-sensitive, no image dye): its development inhibits the red layer, "
+                "giving red a negative response around 500-520 nm. Only acts on stocks with a profile-extension "
+                "sidecar (the Pro Data Guide *_fdg negatives)."
+            ),
+        ),
+        ParamSpec(
+            f"{_DC}.cyan_inhibitor_scale",
+            min=0,
+            step=0.1,
+            tooltip=(
+                "Multiplier on the stock's estimated 4th-layer inhibition strength (sidecar amount_default, "
+                "an estimate). 0 disables it; 1 = default."
+            ),
+        ),
     ),
 )
 

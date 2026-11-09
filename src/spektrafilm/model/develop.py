@@ -3,7 +3,7 @@ from typing import Literal, TypeAlias
 import numpy as np
 from numpy.typing import NDArray
 from opt_einsum import contract
-from spektrafilm.model.couplers import apply_density_correction_dir_couplers
+from spektrafilm.model.couplers import InhibitorExposure, apply_density_correction_dir_couplers
 from spektrafilm.model.density_curves import interpolate_exposure_to_density
 from spektrafilm.model.grain import apply_grain
 from spektrafilm.profiles.io import DensityCurvesModel
@@ -50,6 +50,7 @@ def develop(
     gamma_factor: float = 1.0,
     bypass_grain: bool = False,
     use_fast_stats: bool = False,
+    inhibitor: InhibitorExposure | None = None,
 ) -> FloatArray:
     density_curves = np.asarray(density_curves)
     normalized_density_curves = density_curves - np.nanmin(density_curves, axis=0)
@@ -69,6 +70,7 @@ def develop(
         dir_couplers,
         profile_type,
         gamma_factor=gamma_factor,
+        inhibitor=inhibitor,
     )
     return apply_grain(
         density_cmy,
