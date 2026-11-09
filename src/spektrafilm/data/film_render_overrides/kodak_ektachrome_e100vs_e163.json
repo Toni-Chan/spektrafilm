@@ -1,0 +1,7 @@
+{
+  "stock": "kodak_ektachrome_e100vs_e163",
+  "estimate": true,
+  "dir_couplers_interlayer_scale": 1.8,
+  "note": "E-163 attributes E100VS's 'most vivid, saturated colors' to 'Color Amplifying Technology ... while maintaining a neutral gray scale', i.e. interimage effects that a neutral-exposure characteristic curve cannot show. From the sheet alone the profile was only ~1 C* above E100G (its neutral gamma is a little higher, 1.71-1.82 vs 1.64; its dyes have slightly more unwanted absorption). Digitisation verified against the PDF.",
+  "calibration": "Target: Velvia class (photographers rank E100VS with Velvia, above E100S/E100G and PROVIA 100F); capped at 1.8 for positives. ColorChecker C* (scanned): 37.6 -> 42.1 (E100G 36.5, E100GX 37.6, velvia_50_fdg 39.5 with its override, velvia_100_fdg 45.6); mid-grey a*b* (-0.1, 0.4) -> (0.1, 0.7)."
+}
