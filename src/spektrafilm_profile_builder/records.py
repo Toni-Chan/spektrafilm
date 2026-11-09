@@ -3,22 +3,25 @@
 A record is a folder of headerless ``x, y`` CSV files in the historical
 spektrafilm raw-data layout:
 
-=================================  =========================================
-file                               content
-=================================  =========================================
-``log_sensitivity_{r,g,b}.csv``    wavelength [nm], log10 spectral sensitivity
-``density_curve_{r,g,b}.csv``      log10 exposure [lux s], total density
-``dye_density_{c,m,y}.csv``        wavelength [nm], spectral dye density
-                                   (reversal films, and any stock whose sheet
-                                   separates the dyes)
-``dye_density_{mid,min}.csv``      wavelength [nm], mid-scale neutral and
-                                   minimum spectral density (colour negatives)
-``info.txt``                       free text; the first line is the stock name,
-                                   ``Key: value`` lines are parsed
-=================================  =========================================
+====================================  =========================================
+file                                  content
+====================================  =========================================
+``log_sensitivity_{r,g,b}.csv``       wavelength [nm], log10 spectral sensitivity
+``density_curve_{r,g,b}.csv``         log10 exposure [lux s], total density
+``dye_density_{c,m,y}.csv``           wavelength [nm], spectral dye density
+                                      (reversal films, and any stock whose sheet
+                                      separates the dyes)
+``dye_density_{mid,min}.csv``         wavelength [nm], mid-scale neutral and
+                                      minimum spectral density (colour negatives)
+``log_sensitivity_cyan_layer.csv``    optional: Fuji's 4th, cyan-sensitive
+                                      inhibitor layer (no image dye). Not part of
+                                      the profile JSON; ``extensions.py`` turns it
+                                      into a profile-extension sidecar
+``info.txt``                          free text; the first line is the stock name,
+                                      ``Key: value`` lines are parsed
+====================================  =========================================
 
-Other files (``mtf.csv``, ``log_sensitivity_cyan_layer.csv``...) are kept
-for reference and ignored by the builder.
+Other files (``mtf.csv``...) are kept for reference and ignored by the builder.
 """
 
 from __future__ import annotations
@@ -42,6 +45,7 @@ class RawRecord:
     dye_density_cmy: np.ndarray | None = None   # (n_wl, 3)
     dye_density_min: np.ndarray | None = None   # (n_wl,)
     dye_density_mid: np.ndarray | None = None   # (n_wl,)
+    log_sensitivity_cyan_layer: np.ndarray | None = None  # (n_wl,) Fuji 4th layer, NaN outside data
     wavelengths: np.ndarray = field(default_factory=lambda: WAVELENGTHS.copy())
 
     @property
@@ -99,4 +103,5 @@ def load_record(folder) -> RawRecord:
         dye_density_cmy=cmy,
         dye_density_min=spectral('dye_density_min.csv'),
         dye_density_mid=spectral('dye_density_mid.csv'),
+        log_sensitivity_cyan_layer=spectral('log_sensitivity_cyan_layer.csv'),
     )

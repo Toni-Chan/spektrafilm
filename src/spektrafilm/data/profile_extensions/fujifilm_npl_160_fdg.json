@@ -1,0 +1,26 @@
+{
+  "stock": "fujifilm_npl_160_fdg",
+  "version": 1,
+  "inhibitor_layers": [
+    {
+      "name": "cyan",
+      "target": "r",
+      "reference": "g",
+      "amount_default": 0.2277,
+      "label": "estimate",
+      "source": "Fujifilm Professional Data Guide AF3-207U (2005), PDF page 30, FUJICOLOR NPL 160 PROFESSIONAL [NPL]: https://asset.fujifilm.com/www/us/files/2020-03/3ab271f46f8d71c7e4c91bcedb7de050/ProfessionalFilmDataGuide.pdf -- curve: log_sensitivity_cyan_layer.csv",
+      "notes": "Fujifilm 4th colour layer: cyan-sensitive, forms no image dye, releases DIR inhibitor into the red-sensitive layer. log_sensitivity is normalised to raw exposure 1 at 18.4 % grey under the reference illuminant; values outside the printed range are a smooth extrapolation. The runtime models the developed silver of this layer with the red layer's characteristic-curve shape.",
+      "amount_basis": "Estimate, not measured: the data sheet gives the layer's spectral sensitivity but not how strongly it inhibits. The runtime lowers red log exposure by amount * [D(log E_cyan) - D(log E_green)] (departure from neutral; D = red characteristic curve shape). amount_default is the value for which the effective red spectral sensitivity of the full film model (narrowband sweep on mid-grey through spektrafilm.model.develop, default negative DIR-coupler matrix) has a negative lobe at 500-530 nm as deep, relative to its positive peak, as the CIE 1931 r-bar colour-matching function (0.0936 / 0.3476 = 0.269, minimum at 515 nm). Fujifilm describes the 4th layer as giving film the negative red response of human vision around 500-520 nm. The generic DIR couplers alone already give a shallower lobe (effective_red_lobe_ratio_without_layer).",
+      "gamma_r_at_midgray": 0.5593,
+      "effective_red_lobe_ratio_without_layer": -0.1051,
+      "effective_red_lobe_ratio_target": -0.2692,
+      "amount_linearised_without_dir_couplers": 0.3259,
+      "reference_illuminant": "T",
+      "printed_range_nm": [465.0, 540.0],
+      "printed_peak_nm": 510.0,
+      "printed_peak_log_sensitivity_relative_to_red_peak": -0.4754,
+      "wavelengths": [380.0, 385.0, 390.0, 395.0, 400.0, 405.0, 410.0, 415.0, 420.0, 425.0, 430.0, 435.0, 440.0, 445.0, 450.0, 455.0, 460.0, 465.0, 470.0, 475.0, 480.0, 485.0, 490.0, 495.0, 500.0, 505.0, 510.0, 515.0, 520.0, 525.0, 530.0, 535.0, 540.0, 545.0, 550.0, 555.0, 560.0, 565.0, 570.0, 575.0, 580.0, 585.0, 590.0, 595.0, 600.0, 605.0, 610.0, 615.0, 620.0, 625.0, 630.0, 635.0, 640.0, 645.0, 650.0, 655.0, 660.0, 665.0, 670.0, 675.0, 680.0, 685.0, 690.0, 695.0, 700.0, 705.0, 710.0, 715.0, 720.0, 725.0, 730.0, 735.0, 740.0, 745.0, 750.0, 755.0, 760.0, 765.0, 770.0, 775.0, 780.0],
+      "log_sensitivity": [-2.28073, -2.21757, -2.1521, -2.08417, -2.01357, -1.94009, -1.86349, -1.78347, -1.69974, -1.61192, -1.51959, -1.42227, -1.31938, -1.21026, -1.09409, -0.9699, -0.83651, -0.69243, -0.63981, -0.55492, -0.44318, -0.34851, -0.28173, -0.2272, -0.18049, -0.14718, -0.1336, -0.14755, -0.1991, -0.30261, -0.43788, -0.54899, -0.64757, -0.79165, -0.92504, -1.04923, -1.1654, -1.27452, -1.37741, -1.47473, -1.56706, -1.65488, -1.73861, -1.81863, -1.89524, -1.96871, -2.03931, -2.10724, -2.17271, -2.23587, -2.29689, -2.35592, -2.41306, -2.46845, -2.52219, -2.57436, -2.62507, -2.67439, -2.72239, -2.76915, -2.81472, -2.85917, -2.90254, -2.9449, -2.98628, -3.02673, -3.06629, -3.105, -3.1429, -3.18001, -3.21638, -3.25202, -3.28698, -3.32126, -3.35491, -3.38794, -3.42037, -3.45223, -3.48354, -3.51431, -3.54456]
+    }
+  ]
+}
