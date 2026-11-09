@@ -1,0 +1,37 @@
+FUJICOLOR TRUE DEFINITION 400 [CH]
+Datasheet: Fujifilm Professional Data Guide AF3-207U (2005), PDF page 33
+Source URL: https://asset.fujifilm.com/www/us/files/2020-03/3ab271f46f8d71c7e4c91bcedb7de050/ProfessionalFilmDataGuide.pdf
+Type: negative
+Speed: ISO 400/27°
+Light type: Daylight
+Process: CN-16
+Densitometry: Status M
+Exposure (as printed): Daylight
+Diffuse RMS granularity (as printed): 5
+
+Files (x range, y range, n points):
+  density_curve_b.csv  x -3.559..0.287  y 0.853..2.391  n=70
+  density_curve_g.csv  x -3.582..0.275  y 0.607..2.211  n=47
+  density_curve_r.csv  x -3.594..0.269  y 0.229..1.941  n=70
+  dye_density_mid.csv  x 400.544..719.135  y 1.021..1.895  n=300
+  dye_density_min.csv  x 399.995..718.586  y 0.175..0.879  n=162
+  log_sensitivity_b.csv  x 400.895..490.597  y 0.112..1.317  n=139
+  log_sensitivity_cyan_layer.csv  x 482.886..554.857  y -0.021..0.582  n=47
+  log_sensitivity_g.csv  x 479.546..584.412  y -0.021..1.672  n=116
+  log_sensitivity_r.csv  x 573.103..659.981  y 0.012..1.2  n=93
+  mtf.csv  x 3.915..104.354  y 22.697..114.963  n=70
+
+Units: log_sensitivity_* = wavelength nm, log10 relative sensitivity (sensitivity = 1/exposure in J/cm2
+  giving the specified density above D-min, see page). density_curve_* = log10 H (lux-seconds), density.
+  dye_density_* = wavelength nm, spectral diffuse density. mtf.csv = cycles/mm, response %.
+Extraction: vector strokes read directly from the PDF (pymupdf), axes calibrated from tick labels
+  snapped to grid lines (script: scripts/extract_fujifilm_data_guide.py). Typical accuracy ~0.1-0.2 pt on the page
+  (about 0.5-1 nm, 0.005-0.01 log H, 0.005-0.01 density) plus the original drawing accuracy.
+Calibration:
+  dye: {"x_labels_used": [400.0, 500.0, 600.0, 700.0], "x_labels_dropped": [], "x_fit_max_resid_pt": 0.186, "y_labels_used": [2.0, 1.0, 0.0], "y_labels_dropped": [], "y_fit_max_resid_pt": 0.14, "y_calibration": "from printed axis labels"}
+  sens: {"x_labels_used": [400.0, 500.0, 600.0, 700.0], "x_labels_dropped": [], "x_fit_max_resid_pt": 0.116, "y_calibration": "relative: one log unit = the grid interval marked by the \"1.0\" bracket (y_pt 116.90..145.43); zero set at the lower bracket grid line"}
+  char: {"x_labels_used": [-4.0, -3.0, -2.0, -1.0, 0.0, 1.0], "x_labels_dropped": [], "x_fit_max_resid_pt": 0.078, "y_labels_used": [4.0, 3.5, 3.0, 2.5, 2.0, 1.5, 1.0, 0.5, 0.0], "y_labels_dropped": [], "y_fit_max_resid_pt": 0.251, "y_calibration": "from printed axis labels"}
+  mtf: {"x_labels_used": [1.0, 5.0, 10.0, 20.0, 50.0, 100.0, 200.0], "x_labels_dropped": [], "x_fit_max_resid_pt": 0.576, "y_labels_used": [150.0, 100.0, 70.0, 50.0, 30.0, 20.0, 10.0, 7.0, 5.0], "y_labels_dropped": [], "y_fit_max_resid_pt": 0.568, "y_calibration": "from printed axis labels"}
+Caveats:
+  density curves are total densities as printed (base/fog NOT subtracted).
+  none

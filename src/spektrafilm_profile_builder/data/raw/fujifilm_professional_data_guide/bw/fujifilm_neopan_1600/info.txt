@@ -1,0 +1,29 @@
+NEOPAN 1600 Professional
+Datasheet: Fujifilm Professional Data Guide AF3-207U (2005), PDF page 42
+Source URL: https://asset.fujifilm.com/www/us/files/2020-03/3ab271f46f8d71c7e4c91bcedb7de050/ProfessionalFilmDataGuide.pdf
+Type: bw
+Speed: EI 1600/33°
+Light type: Daylight (5400K spectrogram)
+Process: D-76, small tank, 20C
+Densitometry: visual/diffuse (not stated)
+Exposure (as printed): 
+Diffuse RMS granularity (as printed): 
+
+Files (x range, y range, n points):
+  density_curve.csv  x -3.751..0.115  y 0.176..1.753  n=47  (copy of density_curve_5p25min.csv)
+  density_curve_4min.csv  x -3.751..0.115  y 0.171..1.47  n=47
+  density_curve_5p25min.csv  x -3.751..0.115  y 0.176..1.753  n=47
+  density_curve_7p5min.csv  x -3.74..0.137  y 0.183..2.23  n=47
+  log_sensitivity.csv  x 391.446..652.087  y -0.068..0.802  n=116
+
+Units: log_sensitivity_* = wavelength nm, log10 relative sensitivity (sensitivity = 1/exposure in J/cm2
+  giving the specified density above D-min, see page). density_curve_* = log10 H (lux-seconds), density.
+  dye_density_* = wavelength nm, spectral diffuse density. mtf.csv = cycles/mm, response %.
+Extraction: vector strokes read directly from the PDF (pymupdf), axes calibrated from tick labels
+  snapped to grid lines (script: scripts/extract_fujifilm_data_guide.py). Typical accuracy ~0.1-0.2 pt on the page
+  (about 0.5-1 nm, 0.005-0.01 log H, 0.005-0.01 density) plus the original drawing accuracy.
+Calibration:
+  sens: {"x_labels_used": [400.0, 500.0, 600.0, 700.0], "x_labels_dropped": [], "x_fit_max_resid_pt": 0.065, "y_calibration": "relative: one log unit = the grid interval marked by the \"1.0\" bracket (y_pt 157.65..184.53); zero set at the lower bracket grid line"}
+  char: {"x_labels_used": [-3.0, -2.0, -1.0, 0.0, 1.0], "x_labels_dropped": [], "x_fit_max_resid_pt": 0.234, "y_labels_used": [3.0, 2.5, 2.0, 1.5, 1.0, 0.5, 0.0], "y_labels_dropped": [], "y_fit_max_resid_pt": 0.289, "y_calibration": "from printed axis labels", "development_times_top_to_bottom": ["71/2", "51/4", "4"]}
+Caveats:
+  density_curve.csv is a copy of density_curve_5p25min.csv (135 size where sizes differ; middle of the three published D-76 development times); all times/sizes are kept as separate files
