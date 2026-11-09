@@ -1,0 +1,7 @@
+{
+  "stock": "fujifilm_velvia_50_fdg",
+  "estimate": true,
+  "dir_couplers_interlayer_scale": 1.8,
+  "note": "Velvia 50's data-guide page (AF3-207U p.24, matches the RVP50 bulletin AF3-0221E2) prints a neutral gamma of about 1.7, the same as PROVIA 100F, and dyes with more unwanted absorption than Velvia 100. Its saturation comes from interimage effects the sheet cannot show; Fujifilm states Velvia 100 reaches 'the world's highest color saturation level equal to that of Velvia (ISO50)' (RVP100 bulletin AF3-202E).",
+  "calibration": "Target: as close to velvia_100_fdg as possible without crushing blacks; capped at 1.8 for positives. ColorChecker C*: 35.2 -> 39.5 (velvia_100_fdg 45.6, provia_100f_fdg 36.7). The remaining gap is Velvia 100's higher printed contrast (gamma 2.06 vs 1.70), which reviewers also report."
+}
