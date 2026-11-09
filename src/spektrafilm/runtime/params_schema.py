@@ -139,6 +139,12 @@ class DirCouplersParams:
     diffusion_size_um: float = 20.0
     diffusion_tail_um: float = 200.0 # exponential tail for Lévy-like processes or environmental heterogeneity
     diffusion_tail_weight: float = 0.06
+    # Dye-less inhibitor layer (Fuji's 4th, cyan-sensitive layer). Only acts on
+    # stocks that ship a sidecar in spektrafilm/data/profile_extensions; the
+    # strength is the sidecar's amount_default times this scale (and times
+    # ``amount``, like the rest of the DIR matrix).
+    cyan_inhibitor_active: bool = True
+    cyan_inhibitor_scale: float = 1.0
 
 @dataclass
 class GlareParams:

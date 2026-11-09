@@ -5,6 +5,7 @@
     spektrafilm-profile-builder batch RECIPES.csv -o OUT_DIR [--only id1,id2] [--filters-json F]
     spektrafilm-profile-builder fit-filters PROFILE.json [...] --filters-json F
     spektrafilm-profile-builder catalog PROFILE.json [...]
+    spektrafilm-profile-builder extensions RECIPES.csv --profiles DIR -o OUT_DIR [--only id1,id2]
 
 ``python -m spektrafilm_profile_builder`` works the same way.
 """
@@ -133,7 +134,37 @@ def main(argv=None):
     ff.add_argument('profiles', nargs='+')
     ff.add_argument('--filters-json', required=True)
 
+    ee = sub.add_parser('extensions', help="write profile-extension sidecars (Fuji 4th cyan-sensitive "
+                                           "inhibitor layer) for recipe rows whose record has "
+                                           "log_sensitivity_cyan_layer.csv")
+    ee.add_argument('recipes')
+    ee.add_argument('--profiles', required=True, help='folder with the built <stock>.json profiles')
+    ee.add_argument('-o', '--out', required=True, help='output folder (e.g. src/spektrafilm/data/profile_extensions)')
+    ee.add_argument('--only', default='')
+    ee.add_argument('--amount', type=float, default=None, help='override amount_default for every stock')
+
     args = ap.parse_args(argv)
+
+    if args.cmd == 'extensions':
+        from .extensions import build_cyan_layer_extension, save_extension_json
+        only = {s for s in args.only.split(',') if s}
+        for folder, recipe in read_recipes(args.recipes):
+            if only and recipe.stock not in only:
+                continue
+            record = load_record(folder)
+            if record.log_sensitivity_cyan_layer is None or recipe.type != 'negative':
+                continue
+            profile_path = Path(args.profiles) / f'{recipe.stock}.json'
+            if not profile_path.exists():
+                print(f'  skip {recipe.stock}: {profile_path} not found')
+                continue
+            profile = profile_from_dict(json.loads(profile_path.read_text()))
+            src = f'{recipe.datasource} -- curve: log_sensitivity_cyan_layer.csv' if recipe.datasource else ''
+            ext = build_cyan_layer_extension(record, profile, amount=args.amount, source=src)
+            path = save_extension_json(ext, args.out)
+            layer = ext.inhibitor_layers[0]
+            print(f'  {recipe.stock}: amount_default={layer.amount_default} ({layer.label}) -> {path}')
+        return 0
 
     if args.cmd == 'catalog':
         from .catalog import catalog_entries

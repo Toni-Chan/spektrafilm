@@ -179,6 +179,22 @@ def _params_snapshot_for_spec(spec: BundleSpec, in_entry, out_entry) -> dict:
         for print_stock in spec.print_profiles
     }
 
+def _warn_inhibitor_layer_split(film_profile: str) -> None:
+    """Topologies that split the chain at ``log_e_film`` cannot carry a
+    dye-less inhibitor layer (Fuji 4th colour layer): its exposure is not part
+    of the log_e_film tap, so the filming-develop cube is baked with the
+    feature off. Single-cube and 2-LUT bundles include it."""
+    from spektrafilm.profiles.extensions import load_profile_extension
+    if load_profile_extension(film_profile) is not None:
+        import warnings
+        warnings.warn(
+            f"{film_profile}: the 4th-layer (cyan inhibitor) effect is not representable when the "
+            "LUT chain is split at log_e_film; the filming-develop cube is baked without it. "
+            "Use a 1- or 2-LUT topology to include it.",
+            stacklevel=3,
+        )
+
+
 # Default base directory for `BundleBuilder.write(bundle)` when no out_dir
 # is provided. Resolved against `Path.cwd()` at write time, so running a
 # bake script from any directory drops its output into a sibling
@@ -563,6 +579,7 @@ class BundleBuilder:
         # Shared pipeline: filming.* stages are print-independent, so the
         # choice of print for the shared pass is just a convenient anchor.
         first_print = spec.print_profiles[0]
+        _warn_inhibitor_layer_split(spec.film_profile)
         pipeline_shared = self._make_pipeline(spec, in_entry, out_entry, first_print)
 
         # Probe wires from the same 9³ pass (cheap; pipeline runs sub-second).
@@ -687,6 +704,7 @@ class BundleBuilder:
         # identical output regardless of which print we attach here, so
         # we use the first print as a convenient anchor.
         first_print = spec.print_profiles[0]
+        _warn_inhibitor_layer_split(spec.film_profile)
         pipeline_shared = self._make_pipeline(spec, in_entry, out_entry, first_print)
 
         # Probe wires from a single 9³ pass.

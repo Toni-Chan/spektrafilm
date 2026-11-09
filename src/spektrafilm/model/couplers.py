@@ -1,3 +1,5 @@
+from dataclasses import dataclass
+
 import numpy as np
 from opt_einsum import contract
 
@@ -107,6 +109,53 @@ def compute_exposure_correction_dir_couplers(log_raw, density_cmy, density_max,
     return log_raw_corrected
 
 
+@dataclass(frozen=True)
+class InhibitorExposure:
+    """Exposure of a dye-less inhibitor layer (e.g. Fuji's 4th, cyan-sensitive layer).
+
+    The layer develops silver (modelled with the characteristic-curve shape of
+    the ``target`` layer) and its DIR inhibitor lowers the log exposure of
+    ``target``. Data-sheet curves are measured with neutral light, i.e. *with*
+    the inhibitor already acting at its neutral level, so only the departure
+    from neutral is applied::
+
+        delta log E_target = -amount * [D(log E_inhibitor) - D(log E_reference)]
+
+    where ``reference`` is the image layer whose exposure stands in for the
+    inhibitor layer's exposure under light of the same brightness but neutral
+    spectrum (green: the cyan layer's band lies inside the green band). Both
+    exposures are normalised to the same value for neutral grey, so a neutral
+    exposure is left exactly unchanged at any level.
+
+    log_raw: (H, W) log10 raw exposure of the inhibitor layer.
+    amount: log exposure removed from ``target`` per unit silver-density difference.
+    """
+    log_raw: np.ndarray
+    amount: float
+    target: int = 0
+    reference: int = 1
+
+
+def compute_inhibitor_log_raw_correction(log_raw, inhibitor: InhibitorExposure, density_curves,
+                                         log_exposure, gamma_factor=1.0, positive=False):
+    """Per-pixel donor term of an inhibitor layer, (H, W, 3), before diffusion."""
+    target = int(inhibitor.target)
+    stacked = np.stack([
+        np.asarray(inhibitor.log_raw, dtype=float),
+        np.asarray(log_raw[..., inhibitor.reference], dtype=float),
+        np.asarray(log_raw[..., inhibitor.reference], dtype=float),
+    ], axis=-1)
+    curves = np.repeat(np.asarray(density_curves)[:, target:target + 1], 3, axis=1)
+    density = interpolate_exposure_to_density(stacked, curves, log_exposure, gamma_factor)
+    # silver density difference; for positives silver = d_max - d, so the sign flips
+    delta = density[..., 0] - density[..., 1]
+    if positive:
+        delta = -delta
+    correction = np.zeros(np.shape(log_raw)[:2] + (3,))
+    correction[..., target] = inhibitor.amount * delta
+    return correction
+
+
 def apply_density_correction_dir_couplers(
     density_cmy,
     log_raw,
@@ -116,6 +165,7 @@ def apply_density_correction_dir_couplers(
     dir_couplers,
     profile_type,
     gamma_factor=1.0,
+    inhibitor: InhibitorExposure | None = None,
 ):
     if not dir_couplers.active:
         return density_cmy
@@ -146,8 +196,30 @@ def apply_density_correction_dir_couplers(
         diffusion_size_pixel = 0
         diffusion_tail_size_pixel = 0
     diffusion_tail_weight = dir_couplers.diffusion_tail_weight
+    use_inhibitor = (
+        inhibitor is not None
+        and inhibitor.amount * dir_couplers.amount > 0
+        and np.shape(inhibitor.log_raw) == np.shape(log_raw)[:2]
+    )
+    if use_inhibitor:
+        # Dye-less inhibitor layer: its departure-from-neutral term is zero for
+        # neutral exposures, so the pre-coupler curves need no re-derivation.
+        # It goes through the same inhibitor diffusion as the DIR couplers by
+        # being added to the raw before the correction (the correction is
+        # linear in its input, so diffusing the sum = summing the diffused terms).
+        inhibitor_correction = compute_inhibitor_log_raw_correction(
+            log_raw, inhibitor, density_curves, log_exposure, gamma_factor, positive=positive,
+        ) * dir_couplers.amount
+        if diffusion_size_pixel > 0:
+            inhibitor_correction = (
+                (1 - diffusion_tail_weight) * fast_gaussian_filter(inhibitor_correction, diffusion_size_pixel)
+                + fast_exponential_filter(inhibitor_correction, diffusion_tail_size_pixel) * diffusion_tail_weight
+            )
+        log_raw_inhibited = log_raw - inhibitor_correction
+    else:
+        log_raw_inhibited = log_raw
     log_raw_0 = compute_exposure_correction_dir_couplers(
-        log_raw,
+        log_raw_inhibited,
         density_cmy,
         density_max,
         couplers_matrix,
