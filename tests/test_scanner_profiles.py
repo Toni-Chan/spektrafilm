@@ -22,7 +22,7 @@ pytestmark = pytest.mark.unit
 
 def test_all_shipped_profiles_load():
     caps = list_profiles("capture")
-    assert len(caps) == 6
+    assert len(caps) == 8
     for pid in caps:
         p = load_capture_profile(pid)
         k = p.channel_kernels()
@@ -92,3 +92,13 @@ def test_gaussian_spd_fwhm_and_skew():
     sk = gaussian_spd(630.0, 20.0, wl, skew=0.3)
     assert wl[np.argmax(sk)] == pytest.approx(630.0, abs=0.1)
     assert np.sum(sk[wl > 630]) > np.sum(sk[wl < 630])
+
+
+def test_community_spd_preset_matches_digitised_sp3000_plot():
+    wl = grid_wavelengths()
+    for model in ("frontier_sp500", "frontier_sp3000"):
+        p = load_capture_profile(f"{model}_community_spd")
+        for ch, peak in (("B", 463.5), ("G", 536.6), ("R", 630.2)):
+            v = p.led_spd[ch].values
+            assert abs(wl[np.argmax(v)] - peak) <= 5.0
+            assert p.led_spd[ch].provenance.label == "community"

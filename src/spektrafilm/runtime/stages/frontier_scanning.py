@@ -73,7 +73,7 @@ def capture_crosstalk_matrix(film_profile, capture: ScannerCaptureProfile) -> np
     return k.T @ dyes
 
 
-DEFAULT_CAPTURE_PRESET = "community_a"
+DEFAULT_CAPTURE_PRESET = "community_spd"
 DEFAULT_RENDER_PROFILE = "frontier_estimate"
 
 

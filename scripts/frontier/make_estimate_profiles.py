@@ -22,6 +22,12 @@ PRESETS = {
 }
 FWHM = {"B": 20.0, "G": 30.0, "R": 20.0}
 
+# Tabulated LED spectra digitised from the SP3000 light-source plot posted on
+# discuss.pixls.us (R17). Each LED is normalised to its own peak; the plot gives
+# no relative power between LEDs. Treated as identical for the SP500.
+SPD_FIT = Path(__file__).resolve().parent / "data" / "sp3000_led_fit.json"
+SPD_PRESET = "community_spd"
+
 QE_NODES = [380, 420, 460, 500, 550, 600, 650, 700, 780]
 QE_REL = [0.20, 0.38, 0.55, 0.72, 0.90, 1.00, 0.95, 0.82, 0.55]
 
@@ -35,15 +41,35 @@ def prov(label, source, locator="", notes=""):
     return {"label": label, "source": source, "locator": locator, "notes": notes}
 
 
-def capture(model, preset):
-    peaks, src = PRESETS[preset]
-    b, g, r = peaks
+def _leds_from_spd():
+    fit = json.loads(SPD_FIT.read_text())
     leds = {}
-    for ch, pk in (("R", r), ("G", g), ("B", b)):
+    for ch in ("R", "G", "B"):
+        f = fit["fit"][ch]
         leds[ch] = {
-            "gaussian": {"peak_nm": pk, "fwhm_nm": FWHM[ch], "skew": 0.0},
-            "provenance": prov("community", src, notes=f"FWHM {FWHM[ch]} nm is an estimate from LED datasheets R15/R16; replace via FRT-15"),
+            "wavelengths_nm": fit["wavelengths"],
+            "values": fit["tables"][ch],
+            "provenance": prov(
+                "community", "R17", "discuss.pixls.us t/20271 post 13, 'Fuji Frontier SP3000' spectrum",
+                notes=(f"digitised plot, split pseudo-Voigt fit; peak {f['peak_nm']} nm, FWHM {f['fwhm_nm']} nm, "
+                       f"fit RMS {f['fit_rms']}; SP500 assumed identical; replace via FRT-15"),
+            ),
         }
+    return leds
+
+
+def capture(model, preset):
+    if preset == SPD_PRESET:
+        leds = _leds_from_spd()
+    else:
+        peaks, src = PRESETS[preset]
+        b, g, r = peaks
+        leds = {}
+        for ch, pk in (("R", r), ("G", g), ("B", b)):
+            leds[ch] = {
+                "gaussian": {"peak_nm": pk, "fwhm_nm": FWHM[ch], "skew": 0.0},
+                "provenance": prov("community", src, notes=f"FWHM {FWHM[ch]} nm is an estimate from LED datasheets R15/R16; replace via FRT-15"),
+            }
     return {
         "id": f"{model}_{preset}",
         "description": MODELS[model] + " Placeholder capture profile; spectral values are not measured.",
@@ -92,7 +118,7 @@ def render():
 
 def main():
     for model in MODELS:
-        for preset in PRESETS:
+        for preset in (*PRESETS, SPD_PRESET):
             d = capture(model, preset)
             (OUT / "capture" / f"{d['id']}.json").write_text(json.dumps(d, indent=2) + "\n")
     d = render()
