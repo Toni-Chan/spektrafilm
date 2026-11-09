@@ -130,7 +130,7 @@ Hunt's book [^2].
 
 ## Package layout
 
-The codebase is organized as three packages under `src/`:
+The codebase is organized as four packages under `src/`:
 
 1. [src/spektrafilm](src/spektrafilm): runtime simulation pipeline (the
    physical-pipeline core). Linear-in / linear-out, no GUI or LUT concerns.
@@ -141,6 +141,12 @@ The codebase is organized as three packages under `src/`:
    1-LUT / 2-LUT / 3-LUT / 4-LUT topologies with optional standalone OCIO 2
    configs for pipeline integration. Drives via the `spektrafilm-lut`
    command-line tool or the Python `BundleBuilder` API.
+4. [src/spektrafilm_profile_builder](src/spektrafilm_profile_builder): builds
+   film profiles (the JSON files in `spektrafilm/data/profiles`) from digitised
+   data-sheet curves. Ships the raw records of the Fujifilm Professional Data
+   Guide and the 25 `*_fdg` colour profiles made from them. Drives via the
+   `spektrafilm-profile-builder` command-line tool; see its
+   [README](src/spektrafilm_profile_builder/README.md).
 
 Canonical import surfaces:
 
@@ -212,7 +218,8 @@ Dependency direction:
 
 1. `spektrafilm_gui` depends on `spektrafilm`.
 2. `spektrafilm_lut_creator` depends on `spektrafilm`.
-3. `spektrafilm` (runtime) does not depend on any of the higher-level packages.
+3. `spektrafilm_profile_builder` depends on `spektrafilm`.
+4. `spektrafilm` (runtime) does not depend on any of the higher-level packages.
 
 ## Installation
 
