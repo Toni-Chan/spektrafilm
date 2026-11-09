@@ -1,0 +1,43 @@
+KODAK PROFESSIONAL EKTACHROME E100GX
+Datasheet: Kodak technical data E-4024 (July 2003), e4024.pdf, PDF page(s) 5, 6
+Source URL: https://125px.com/docs/unsorted/kodak/e4024.pdf
+Publication: E-4024
+Publication date: July 2003
+Type: positive
+Material class: positive
+Densitometry: Status A (as printed on the sheet)
+Process: E-6
+Exposure (characteristic curves): Daylight 1/100 second
+Sensitivity defined at: 
+Sensitivity effective exposure: 
+
+Files (x range, y range, n points):
+  density_curve_b.csv  x -2.835..0.014  y 0.146..3.757  n=49
+  density_curve_g.csv  x -2.835..0.014  y 0.157..3.601  n=54
+  density_curve_r.csv  x -2.835..0.014  y 0.151..3.241  n=48
+  dye_density_c.csv  x 400.984..700.148  y 0.041..0.949  n=90
+  dye_density_m.csv  x 400.984..700.148  y 0.01..0.937  n=115
+  dye_density_neutral.csv  x 400.984..700.148  y 0.721..1.147  n=130
+  dye_density_y.csv  x 400.984..680.205  y 0.006..0.929  n=85
+  log_sensitivity_b.csv  x 395.207..520.212  y -0.792..1.52  n=85
+  log_sensitivity_g.csv  x 475.267..605.243  y -1.019..1.228  n=75
+  log_sensitivity_r.csv  x 555.217..685.193  y -1.04..1.442  n=71
+  mtf_b.csv  x 2.549..81.554  y 28.316..96.96  n=63
+  mtf_g.csv  x 2.549..81.554  y 18.15..99.318  n=53
+  mtf_r.csv  x 2.549..81.554  y 7.938..97.896  n=62
+
+Units: log_sensitivity_* = wavelength nm, log10 sensitivity (sensitivity = 1/exposure in erg/cm2
+  giving the specified density, see "Sensitivity defined at"). density_curve_* = log10 H (lux-seconds),
+  total density as printed (base+fog included). dye_density_* = wavelength nm, diffuse spectral density
+  (c/m/y: individual dyes, normalised as printed; mid: midscale neutral; min: D-min; neutral: the printed
+  visual-neutral sum of the dyes). mtf* = cycles/mm, response %.
+Extraction: vector strokes read directly from the PDF (pymupdf), axes calibrated from tick labels snapped
+  to tick/grid lines (script: scripts/extract_kodak_datasheets.py). Typical accuracy ~0.1-0.3 pt on the
+  page (about 0.5-1.5 nm, 0.005-0.015 log H or density) plus the original drawing accuracy.
+Calibration:
+  char_p5: {"x_labels_used": [-3.0, -2.0, -1.0, 0.0, 1.0], "x_labels_dropped": [], "x_fit_max_resid_pt": 0.001, "x_snapped_to_ticks": 5, "y_labels_used": [4.0, 3.0, 2.0, 1.0, 0.0], "y_labels_dropped": [], "y_fit_max_resid_pt": 0.001, "y_snapped_to_ticks": 5}
+  sens_p5: {"x_labels_used": [250.0, 300.0, 350.0, 400.0, 450.0, 500.0, 550.0, 600.0, 650.0, 700.0, 750.0], "x_labels_dropped": [], "x_fit_max_resid_pt": 0.019, "x_snapped_to_ticks": 11, "y_labels_used": [2.0, 1.0, 0.0], "y_labels_dropped": [], "y_fit_max_resid_pt": 0.018, "y_snapped_to_ticks": 3}
+  dye_p5: {"x_labels_used": [400.0, 500.0, 600.0, 700.0], "x_labels_dropped": [], "x_fit_max_resid_pt": 0.176, "x_snapped_to_ticks": 4, "y_labels_used": [1.4, 1.2, 1.0, 0.8, 0.6, 0.4, 0.2, 0.0], "y_labels_dropped": [], "y_fit_max_resid_pt": 0.025, "y_snapped_to_ticks": 8}
+  mtf_p6: {"x_labels_used": [1.0, 2.0, 3.0, 4.0, 5.0, 10.0, 20.0, 50.0, 100.0, 200.0, 600.0], "x_labels_dropped": [], "x_fit_max_resid_pt": 0.028, "x_snapped_to_ticks": 11, "y_labels_used": [200.0, 100.0, 70.0, 50.0, 30.0, 20.0, 10.0, 7.0, 5.0, 3.0, 2.0, 1.0], "y_labels_dropped": [], "y_fit_max_resid_pt": 0.029, "y_snapped_to_ticks": 12}
+Caveats:
+  dye plot: visual-neutral (sum) curve kept as dye_density_neutral.csv (1 piece(s))

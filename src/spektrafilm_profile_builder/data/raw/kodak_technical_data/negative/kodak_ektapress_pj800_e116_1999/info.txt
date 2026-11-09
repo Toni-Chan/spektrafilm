@@ -1,0 +1,38 @@
+KODAK PROFESSIONAL EKTAPRESS PJ800
+Datasheet: Kodak technical data E-116 (March 1999), e116.pdf, PDF page(s) 7, 8
+Source URL: https://125px.com/docs/unsorted/kodak/e116.pdf
+Publication: E-116
+Publication date: March 1999
+Revision: superseded by e116-1.pdf (newer revision of E-116); kept for reference
+Type: negative
+Material class: negative
+Densitometry: Status M (as printed on the sheet)
+Process: C-41
+Exposure (characteristic curves): Daylight, EI 800
+Sensitivity defined at: 
+Sensitivity effective exposure: 1/10 second
+
+Files (x range, y range, n points):
+  density_curve_b.csv  x -3.534..0.259  y 1.013..3.133  n=36
+  density_curve_g.csv  x -3.534..0.259  y 0.763..2.433  n=43
+  density_curve_r.csv  x -3.534..0.259  y 0.313..2.093  n=34
+  dye_density_mid.csv  x 403.86..700.052  y 0.842..2.5  n=148
+  dye_density_min.csv  x 400.055..700.055  y 0.321..2.25  n=119
+  log_sensitivity_b.csv  x 378.952..529.098  y 0.59..2.939  n=68
+  log_sensitivity_g.csv  x 459.029..599.17  y 0.68..2.727  n=53
+  log_sensitivity_r.csv  x 539.107..679.249  y 0.9..2.737  n=60
+
+Units: log_sensitivity_* = wavelength nm, log10 sensitivity (sensitivity = 1/exposure in erg/cm2
+  giving the specified density, see "Sensitivity defined at"). density_curve_* = log10 H (lux-seconds),
+  total density as printed (base+fog included). dye_density_* = wavelength nm, diffuse spectral density
+  (c/m/y: individual dyes, normalised as printed; mid: midscale neutral; min: D-min; neutral: the printed
+  visual-neutral sum of the dyes). mtf* = cycles/mm, response %.
+Extraction: vector strokes read directly from the PDF (pymupdf), axes calibrated from tick labels snapped
+  to tick/grid lines (script: scripts/extract_kodak_datasheets.py). Typical accuracy ~0.1-0.3 pt on the
+  page (about 0.5-1.5 nm, 0.005-0.015 log H or density) plus the original drawing accuracy.
+Calibration:
+  char_p7: {"x_bar_notation": true, "x_labels_used": [-4.0, -3.0, -2.0, -1.0, 0.0, 1.0], "x_labels_dropped": [], "x_fit_max_resid_pt": 0.044, "x_snapped_to_ticks": 6, "y_labels_used": [4.0, 3.0, 2.0, 1.0, 0.0], "y_labels_dropped": [], "y_fit_max_resid_pt": 0.0, "y_snapped_to_ticks": 5}
+  sens_p8: {"x_labels_used": [250.0, 300.0, 350.0, 400.0, 450.0, 500.0, 550.0, 600.0, 650.0, 700.0, 750.0], "x_labels_dropped": [], "x_fit_max_resid_pt": 0.296, "x_snapped_to_ticks": 11, "y_labels_used": [4.0, 3.0, 2.0, 1.0, 0.0], "y_labels_dropped": [], "y_fit_max_resid_pt": 0.001, "y_snapped_to_ticks": 5}
+  dye_p8: {"x_labels_used": [400.0, 500.0, 600.0, 700.0], "x_labels_dropped": [], "x_fit_max_resid_pt": 0.0, "x_snapped_to_ticks": 4, "y_labels_used": [2.5, 2.0, 1.5, 1.0, 0.5, 0.0], "y_labels_dropped": [], "y_fit_max_resid_pt": 0.0, "y_snapped_to_ticks": 6}
+Caveats:
+  none

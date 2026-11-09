@@ -1,0 +1,40 @@
+KODAK EKTACHROME RADIANCE III Paper
+Datasheet: Kodak technical data E-1766 (February 2003), e1766.pdf, PDF page(s) 5
+Source URL: https://125px.com/docs/unsorted/kodak/e1766.pdf
+Publication: E-1766
+Publication date: February 2003
+Type: paper
+Material class: reversal_paper
+Densitometry: Status A, Reflection (as printed on the sheet)
+Process: R-3
+Exposure (characteristic curves): 1/2 second, 2850 K + CC Filtration
+Sensitivity defined at: 
+Sensitivity effective exposure: 1 second
+
+Files (x range, y range, n points):
+  density_curve_b.csv  x -0.0..3.8  y 0.08..2.456  n=67
+  density_curve_g.csv  x -0.0..3.8  y 0.1..2.42  n=65
+  density_curve_r.csv  x -0.0..3.8  y 0.07..2.71  n=82
+  dye_density_c.csv  x 400.0..699.999  y 0.211..1.609  n=115
+  dye_density_m.csv  x 400.0..699.999  y 0.109..1.636  n=114
+  dye_density_y.csv  x 400.0..699.999  y 0.093..1.478  n=82
+  log_sensitivity_b.csv  x 349.951..510.102  y -0.992..1.104  n=68
+  log_sensitivity_g.csv  x 480.077..560.162  y -0.67..0.923  n=29
+  log_sensitivity_r.csv  x 560.155..700.296  y -1.533..0.493  n=51
+
+Units: log_sensitivity_* = wavelength nm, log10 sensitivity (sensitivity = 1/exposure in erg/cm2
+  giving the specified density, see "Sensitivity defined at"). density_curve_* = log10 H (lux-seconds),
+  total density as printed (base+fog included). dye_density_* = wavelength nm, diffuse spectral density
+  (c/m/y: individual dyes, normalised as printed; mid: midscale neutral; min: D-min; neutral: the printed
+  visual-neutral sum of the dyes). mtf* = cycles/mm, response %.
+Extraction: vector strokes read directly from the PDF (pymupdf), axes calibrated from tick labels snapped
+  to tick/grid lines (script: scripts/extract_kodak_datasheets.py). Typical accuracy ~0.1-0.3 pt on the
+  page (about 0.5-1.5 nm, 0.005-0.015 log H or density) plus the original drawing accuracy.
+Calibration:
+  char_p5: {"x_labels_used": [0.0, 1.0, 2.0, 3.0, 4.0], "x_labels_dropped": [], "x_fit_max_resid_pt": 0.0, "x_snapped_to_ticks": 5, "y_labels_used": [4.0, 3.0, 2.0, 1.0, 0.0], "y_labels_dropped": [], "y_fit_max_resid_pt": 0.0, "y_snapped_to_ticks": 5}
+  dye_p5: {"x_labels_used": [400.0, 500.0, 600.0, 700.0], "x_labels_dropped": [], "x_fit_max_resid_pt": 0.0, "x_snapped_to_ticks": 4, "y_labels_used": [2.5, 2.0, 1.5, 1.0, 0.5, 0.0], "y_labels_dropped": [], "y_fit_max_resid_pt": 0.001, "y_snapped_to_ticks": 6}
+  sens_p5: {"y_bar_notation": true, "x_labels_used": [250.0, 300.0, 350.0, 400.0, 450.0, 500.0, 550.0, 600.0, 650.0, 700.0, 750.0], "x_labels_dropped": [], "x_fit_max_resid_pt": 0.296, "x_snapped_to_ticks": 11, "y_labels_used": [2.0, 1.0, 0.0, -1.0, -2.0], "y_labels_dropped": [], "y_fit_max_resid_pt": 0.001, "y_snapped_to_ticks": 5}
+Caveats:
+  characteristic: a 9-pt stroke not continuing any curve dropped
+  characteristic: a 7-pt piece joined to a curve (gap 4.7 pt)
+  characteristic: a 3-pt stroke not continuing any curve dropped

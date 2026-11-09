@@ -1,0 +1,42 @@
+KODAK PROFESSIONAL PORTRA 400UC
+Datasheet: Kodak technical data E-190 (May 2003), e190-1.pdf, PDF page(s) 13
+Source URL: https://125px.com/docs/unsorted/kodak/e190-1.pdf
+Publication: E-190
+Publication date: May 2003
+Revision: current revision; supersedes e190.pdf
+Type: negative
+Material class: negative
+Densitometry: Status M (as printed on the sheet)
+Process: C-41
+Exposure (characteristic curves): Daylight
+Sensitivity defined at: 0.2 > D-min
+Sensitivity effective exposure: 1/50 Second
+
+Files (x range, y range, n points):
+  density_curve_b.csv  x -3.44..0.56  y 1.045..3.113  n=31
+  density_curve_g.csv  x -3.44..0.56  y 0.758..2.562  n=30
+  density_curve_r.csv  x -3.44..0.56  y 0.328..2.061  n=30
+  dye_density_mid.csv  x 380.001..750.004  y 0.732..2.943  n=165
+  dye_density_min.csv  x 380.001..750.004  y 0.247..2.579  n=120
+  log_sensitivity_b.csv  x 380.001..519.994  y 0.038..2.7  n=87
+  log_sensitivity_g.csv  x 395.001..600.001  y 0.158..2.571  n=128
+  log_sensitivity_r.csv  x 484.999..694.998  y 0.133..2.549  n=131
+  mtf_b.csv  x 2.458..81.219  y 54.729..106.043  n=29
+  mtf_g.csv  x 2.461..81.351  y 36.554..110.159  n=33
+  mtf_r.csv  x 2.461..81.369  y 12.528..104.993  n=47
+
+Units: log_sensitivity_* = wavelength nm, log10 sensitivity (sensitivity = 1/exposure in erg/cm2
+  giving the specified density, see "Sensitivity defined at"). density_curve_* = log10 H (lux-seconds),
+  total density as printed (base+fog included). dye_density_* = wavelength nm, diffuse spectral density
+  (c/m/y: individual dyes, normalised as printed; mid: midscale neutral; min: D-min; neutral: the printed
+  visual-neutral sum of the dyes). mtf* = cycles/mm, response %.
+Extraction: vector strokes read directly from the PDF (pymupdf), axes calibrated from tick labels snapped
+  to tick/grid lines (script: scripts/extract_kodak_datasheets.py). Typical accuracy ~0.1-0.3 pt on the
+  page (about 0.5-1.5 nm, 0.005-0.015 log H or density) plus the original drawing accuracy.
+Calibration:
+  sens_p13: {"x_labels_used": [350.0, 400.0, 450.0, 500.0, 550.0, 600.0, 650.0, 700.0, 750.0], "x_labels_dropped": [], "x_fit_max_resid_pt": 0.002, "x_snapped_to_ticks": 9, "y_labels_used": [4.0, 3.0, 2.0, 1.0, 0.0], "y_labels_dropped": [], "y_fit_max_resid_pt": 0.001, "y_snapped_to_ticks": 5}
+  dye_p13: {"x_labels_used": [350.0, 450.0, 550.0, 650.0, 750.0], "x_labels_dropped": [], "x_fit_max_resid_pt": 0.0, "x_snapped_to_ticks": 5, "y_labels_used": [3.0, 2.5, 2.0, 1.5, 1.0, 0.5, 0.0], "y_labels_dropped": [], "y_fit_max_resid_pt": 0.001, "y_snapped_to_ticks": 7}
+  mtf_p13: {"x_labels_used": [1.0, 2.0, 3.0, 4.0, 5.0, 10.0, 20.0, 50.0, 100.0, 200.0, 600.0], "x_labels_dropped": [], "x_fit_max_resid_pt": 0.81, "x_snapped_to_ticks": 11, "y_labels_used": [200.0, 100.0, 70.0, 50.0, 30.0, 20.0, 10.0, 7.0, 5.0, 3.0, 2.0, 1.0], "y_labels_dropped": [], "y_fit_max_resid_pt": 0.603, "y_snapped_to_ticks": 12}
+  char_p13: {"x_bar_notation": true, "x_labels_used": [-4.0, -3.0, -2.0, -1.0, 0.0, 1.0], "x_labels_dropped": [], "x_fit_max_resid_pt": 0.0, "x_snapped_to_ticks": 6, "y_labels_used": [4.0, 3.0, 2.0, 1.0, 0.0], "y_labels_dropped": [], "y_fit_max_resid_pt": 0.0, "y_snapped_to_ticks": 5}
+Caveats:
+  none
