@@ -1,0 +1,5930 @@
+{
+ "fujifilm_velvia_50": {
+  "files": {
+   "log_sensitivity_b": {
+    "n": 70,
+    "x": [
+     389.461,
+     493.692
+    ],
+    "y": [
+     -0.756,
+     0.593
+    ]
+   },
+   "log_sensitivity_g": {
+    "n": 116,
+    "x": [
+     484.527,
+     592.195
+    ],
+    "y": [
+     -0.721,
+     0.565
+    ]
+   },
+   "log_sensitivity_r": {
+    "n": 93,
+    "x": [
+     578.45,
+     689.554
+    ],
+    "y": [
+     -0.767,
+     0.575
+    ]
+   },
+   "dye_density_y": {
+    "n": 70,
+    "x": [
+     380.181,
+     601.138
+    ],
+    "y": [
+     0.009,
+     1.001
+    ]
+   },
+   "dye_density_c": {
+    "n": 61,
+    "x": [
+     382.495,
+     718.711
+    ],
+    "y": [
+     0.04,
+     0.996
+    ]
+   },
+   "dye_density_m": {
+    "n": 116,
+    "x": [
+     380.469,
+     718.422
+    ],
+    "y": [
+     0.017,
+     0.994
+    ]
+   },
+   "density_curve_r": {
+    "n": 116,
+    "x": [
+     -2.812,
+     1.112
+    ],
+    "y": [
+     0.157,
+     3.318
+    ]
+   },
+   "density_curve_g": {
+    "n": 93,
+    "x": [
+     -2.833,
+     1.108
+    ],
+    "y": [
+     0.145,
+     3.813
+    ]
+   },
+   "density_curve_b": {
+    "n": 93,
+    "x": [
+     -2.833,
+     1.108
+    ],
+    "y": [
+     0.149,
+     3.702
+    ]
+   },
+   "mtf": {
+    "n": 47,
+    "x": [
+     1.021,
+     65.375
+    ],
+    "y": [
+     33.182,
+     122.884
+    ]
+   }
+  },
+  "notes": [],
+  "calib": {
+   "sens": {
+    "x_labels_used": [
+     400.0,
+     500.0,
+     600.0,
+     700.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.075,
+    "y_labels_used": [
+     2.0,
+     1.0,
+     0.0,
+     -1.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.279,
+    "y_calibration": "from printed axis labels"
+   },
+   "dye": {
+    "x_labels_used": [
+     400.0,
+     500.0,
+     600.0,
+     700.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.299,
+    "y_labels_used": [
+     1.5,
+     1.0,
+     0.5,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.192,
+    "y_calibration": "from printed axis labels"
+   },
+   "char": {
+    "x_labels_used": [
+     -3.0,
+     -2.0,
+     -1.0,
+     0.0,
+     1.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.175,
+    "y_labels_used": [
+     4.0,
+     3.5,
+     3.0,
+     2.5,
+     2.0,
+     1.5,
+     1.0,
+     0.5,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.272,
+    "y_calibration": "from printed axis labels"
+   },
+   "mtf": {
+    "x_labels_used": [
+     1.0,
+     5.0,
+     10.0,
+     20.0,
+     50.0,
+     100.0,
+     200.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.955,
+    "y_labels_used": [
+     150.0,
+     100.0,
+     70.0,
+     50.0,
+     30.0,
+     20.0,
+     10.0,
+     7.0,
+     5.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.255,
+    "y_calibration": "from printed axis labels"
+   }
+  },
+  "meta": {
+   "iso": "ISO 50/18\u00b0",
+   "light": "Daylight",
+   "process": [
+    "E-6/CR-56"
+   ],
+   "densitometry": [
+    "Status A"
+   ],
+   "rms_granularity": "9",
+   "exposure": [
+    "Daylight",
+    "Separated Light"
+   ]
+  }
+ },
+ "fujifilm_velvia_100": {
+  "files": {
+   "dye_density_c": {
+    "n": 162,
+    "x": [
+     391.687,
+     704.098
+    ],
+    "y": [
+     0.028,
+     0.998
+    ]
+   },
+   "dye_density_m": {
+    "n": 162,
+    "x": [
+     390.543,
+     706.228
+    ],
+    "y": [
+     0.008,
+     0.997
+    ]
+   },
+   "dye_density_y": {
+    "n": 116,
+    "x": [
+     396.84,
+     704.866
+    ],
+    "y": [
+     0.01,
+     0.999
+    ]
+   },
+   "log_sensitivity_b": {
+    "n": 185,
+    "x": [
+     394.978,
+     521.555
+    ],
+    "y": [
+     -0.689,
+     1.063
+    ]
+   },
+   "log_sensitivity_g": {
+    "n": 185,
+    "x": [
+     482.609,
+     601.992
+    ],
+    "y": [
+     -0.689,
+     1.025
+    ]
+   },
+   "log_sensitivity_r": {
+    "n": 162,
+    "x": [
+     550.345,
+     688.998
+    ],
+    "y": [
+     -0.689,
+     1.051
+    ]
+   },
+   "density_curve_r": {
+    "n": 93,
+    "x": [
+     -3.387,
+     0.994
+    ],
+    "y": [
+     0.134,
+     3.39
+    ]
+   },
+   "density_curve_g": {
+    "n": 93,
+    "x": [
+     -3.381,
+     0.981
+    ],
+    "y": [
+     0.131,
+     3.824
+    ]
+   },
+   "density_curve_b": {
+    "n": 93,
+    "x": [
+     -3.381,
+     0.981
+    ],
+    "y": [
+     0.134,
+     3.694
+    ]
+   },
+   "mtf": {
+    "n": 47,
+    "x": [
+     0.975,
+     100.257
+    ],
+    "y": [
+     25.639,
+     106.818
+    ]
+   }
+  },
+  "notes": [],
+  "calib": {
+   "dye": {
+    "x_labels_used": [
+     400.0,
+     500.0,
+     600.0,
+     700.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.299,
+    "y_labels_used": [
+     1.5,
+     1.0,
+     0.5,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.192,
+    "y_calibration": "from printed axis labels"
+   },
+   "sens": {
+    "x_labels_used": [
+     400.0,
+     500.0,
+     600.0,
+     700.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.108,
+    "y_labels_used": [
+     2.0,
+     1.0,
+     0.0,
+     -1.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.279,
+    "y_calibration": "from printed axis labels"
+   },
+   "char": {
+    "x_labels_used": [
+     -3.0,
+     -2.0,
+     -1.0,
+     0.0,
+     1.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.283,
+    "y_labels_used": [
+     4.0,
+     3.5,
+     3.0,
+     2.5,
+     2.0,
+     1.5,
+     1.0,
+     0.5,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.224,
+    "y_calibration": "from printed axis labels"
+   },
+   "mtf": {
+    "x_labels_used": [
+     1.0,
+     5.0,
+     10.0,
+     20.0,
+     50.0,
+     100.0,
+     200.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.955,
+    "y_labels_used": [
+     150.0,
+     100.0,
+     70.0,
+     50.0,
+     30.0,
+     20.0,
+     10.0,
+     7.0,
+     5.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.255,
+    "y_calibration": "from printed axis labels"
+   }
+  },
+  "meta": {
+   "iso": "ISO 100/21\u00b0",
+   "light": "Daylight",
+   "process": [
+    "CR-56/E-6",
+    "E-6/CR-56"
+   ],
+   "densitometry": [
+    "Status A"
+   ],
+   "rms_granularity": "8",
+   "exposure": [
+    "Daylight",
+    "Separated Light"
+   ]
+  }
+ },
+ "fujifilm_velvia_100f": {
+  "files": {
+   "dye_density_c": {
+    "n": 162,
+    "x": [
+     391.687,
+     704.098
+    ],
+    "y": [
+     0.028,
+     0.998
+    ]
+   },
+   "dye_density_m": {
+    "n": 162,
+    "x": [
+     390.543,
+     706.228
+    ],
+    "y": [
+     0.008,
+     0.997
+    ]
+   },
+   "dye_density_y": {
+    "n": 116,
+    "x": [
+     396.84,
+     704.866
+    ],
+    "y": [
+     0.01,
+     0.999
+    ]
+   },
+   "log_sensitivity_b": {
+    "n": 185,
+    "x": [
+     395.301,
+     521.066
+    ],
+    "y": [
+     -0.709,
+     1.043
+    ]
+   },
+   "log_sensitivity_g": {
+    "n": 185,
+    "x": [
+     482.541,
+     601.155
+    ],
+    "y": [
+     -0.71,
+     1.004
+    ]
+   },
+   "log_sensitivity_r": {
+    "n": 116,
+    "x": [
+     550.065,
+     678.776
+    ],
+    "y": [
+     -0.707,
+     1.043
+    ]
+   },
+   "density_curve_r": {
+    "n": 140,
+    "x": [
+     -3.402,
+     1.015
+    ],
+    "y": [
+     0.112,
+     3.426
+    ]
+   },
+   "density_curve_g": {
+    "n": 139,
+    "x": [
+     -3.402,
+     1.015
+    ],
+    "y": [
+     0.112,
+     3.807
+    ]
+   },
+   "density_curve_b": {
+    "n": 139,
+    "x": [
+     -3.402,
+     1.015
+    ],
+    "y": [
+     0.112,
+     3.716
+    ]
+   },
+   "mtf": {
+    "n": 47,
+    "x": [
+     0.975,
+     100.257
+    ],
+    "y": [
+     25.639,
+     106.818
+    ]
+   }
+  },
+  "notes": [
+   "char g: own dashed trace covers logH -3.40..-1.21; outside that range the curves coincide and the shared solid (red) trace is used",
+   "char b: own dashed trace covers logH -3.40..-1.22; outside that range the curves coincide and the shared solid (red) trace is used"
+  ],
+  "calib": {
+   "dye": {
+    "x_labels_used": [
+     400.0,
+     500.0,
+     600.0,
+     700.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.299,
+    "y_labels_used": [
+     1.5,
+     1.0,
+     0.5,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.192,
+    "y_calibration": "from printed axis labels"
+   },
+   "sens": {
+    "x_labels_used": [
+     400.0,
+     500.0,
+     600.0,
+     700.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.264,
+    "y_labels_used": [
+     2.0,
+     1.0,
+     0.0,
+     -1.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.279,
+    "y_calibration": "from printed axis labels"
+   },
+   "char": {
+    "x_labels_used": [
+     -3.0,
+     -2.0,
+     -1.0,
+     0.0,
+     1.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.175,
+    "y_labels_used": [
+     4.0,
+     3.5,
+     3.0,
+     2.5,
+     2.0,
+     1.5,
+     1.0,
+     0.5,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.272,
+    "y_calibration": "from printed axis labels"
+   },
+   "mtf": {
+    "x_labels_used": [
+     1.0,
+     5.0,
+     10.0,
+     20.0,
+     50.0,
+     100.0,
+     200.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.955,
+    "y_labels_used": [
+     150.0,
+     100.0,
+     70.0,
+     50.0,
+     30.0,
+     20.0,
+     10.0,
+     7.0,
+     5.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.255,
+    "y_calibration": "from printed axis labels"
+   }
+  },
+  "meta": {
+   "iso": "ISO 100/21\u00b0",
+   "light": "Daylight",
+   "process": [
+    "CR-56/E-6",
+    "E-6/CR-56"
+   ],
+   "densitometry": [
+    "Status A"
+   ],
+   "rms_granularity": "8",
+   "exposure": [
+    "Daylight",
+    "Separated Light"
+   ]
+  }
+ },
+ "fujifilm_provia_100f": {
+  "files": {
+   "dye_density_y": {
+    "n": 70,
+    "x": [
+     390.698,
+     719.108
+    ],
+    "y": [
+     -0.024,
+     0.995
+    ]
+   },
+   "dye_density_c": {
+    "n": 47,
+    "x": [
+     389.523,
+     719.108
+    ],
+    "y": [
+     0.07,
+     0.998
+    ]
+   },
+   "dye_density_m": {
+    "n": 93,
+    "x": [
+     390.698,
+     717.936
+    ],
+    "y": [
+     0.012,
+     0.993
+    ]
+   },
+   "log_sensitivity_b": {
+    "n": 116,
+    "x": [
+     387.205,
+     500.461
+    ],
+    "y": [
+     -0.865,
+     1.077
+    ]
+   },
+   "log_sensitivity_g": {
+    "n": 93,
+    "x": [
+     475.0,
+     598.791
+    ],
+    "y": [
+     -0.616,
+     0.803
+    ]
+   },
+   "log_sensitivity_r": {
+    "n": 116,
+    "x": [
+     571.575,
+     672.539
+    ],
+    "y": [
+     -0.58,
+     0.996
+    ]
+   },
+   "density_curve_r": {
+    "n": 93,
+    "x": [
+     -3.412,
+     0.851
+    ],
+    "y": [
+     0.122,
+     3.289
+    ]
+   },
+   "density_curve_g": {
+    "n": 93,
+    "x": [
+     -3.412,
+     0.851
+    ],
+    "y": [
+     0.122,
+     3.563
+    ]
+   },
+   "density_curve_b": {
+    "n": 94,
+    "x": [
+     -3.412,
+     0.851
+    ],
+    "y": [
+     0.122,
+     3.585
+    ]
+   },
+   "mtf": {
+    "n": 29,
+    "x": [
+     0.986,
+     61.381
+    ],
+    "y": [
+     25.708,
+     116.609
+    ]
+   }
+  },
+  "notes": [
+   "dye: y-axis label(s) [0.0] not consistent with the grid and ignored in calibration (stray/other-axis label or a printed-chart offset; see check PNG)",
+   "char g: own dashed trace covers logH -3.36..-1.80; outside that range the curves coincide and the shared solid (red) trace is used",
+   "char b: own dashed trace covers logH -3.37..-1.85; outside that range the curves coincide and the shared solid (red) trace is used"
+  ],
+  "calib": {
+   "dye": {
+    "x_labels_used": [
+     400.0,
+     500.0,
+     600.0,
+     700.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.32,
+    "y_labels_used": [
+     1.0,
+     0.5
+    ],
+    "y_labels_dropped": [
+     0.0
+    ],
+    "y_fit_max_resid_pt": 0.0,
+    "y_calibration": "from printed axis labels"
+   },
+   "sens": {
+    "x_labels_used": [
+     400.0,
+     500.0,
+     600.0,
+     700.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.175,
+    "y_labels_used": [
+     2.0,
+     1.0,
+     0.0,
+     -1.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.342,
+    "y_calibration": "from printed axis labels"
+   },
+   "char": {
+    "x_labels_used": [
+     -3.0,
+     -2.0,
+     -1.0,
+     0.0,
+     1.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.448,
+    "y_labels_used": [
+     4.0,
+     3.5,
+     3.0,
+     2.5,
+     2.0,
+     1.5,
+     1.0,
+     0.5,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 1.028,
+    "y_calibration": "from printed axis labels"
+   },
+   "mtf": {
+    "x_labels_used": [
+     1.0,
+     5.0,
+     10.0,
+     20.0,
+     50.0,
+     100.0,
+     200.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.69,
+    "y_labels_used": [
+     150.0,
+     100.0,
+     70.0,
+     50.0,
+     30.0,
+     20.0,
+     10.0,
+     7.0,
+     5.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.611,
+    "y_calibration": "from printed axis labels"
+   }
+  },
+  "meta": {
+   "iso": "ISO 100/21\u00b0",
+   "light": "Daylight",
+   "process": [
+    "E-6/CR-56"
+   ],
+   "densitometry": [
+    "Status A"
+   ],
+   "rms_granularity": "8",
+   "exposure": [
+    "Daylight",
+    "Separated Light"
+   ]
+  }
+ },
+ "fujifilm_astia_100f": {
+  "files": {
+   "dye_density_c": {
+    "n": 162,
+    "x": [
+     387.509,
+     708.6
+    ],
+    "y": [
+     0.026,
+     0.992
+    ]
+   },
+   "dye_density_m": {
+    "n": 162,
+    "x": [
+     388.091,
+     710.285
+    ],
+    "y": [
+     0.007,
+     0.991
+    ]
+   },
+   "dye_density_y": {
+    "n": 116,
+    "x": [
+     392.722,
+     709.444
+    ],
+    "y": [
+     0.009,
+     0.993
+    ]
+   },
+   "log_sensitivity_r": {
+    "n": 185,
+    "x": [
+     550.329,
+     684.365
+    ],
+    "y": [
+     -0.715,
+     1.016
+    ]
+   },
+   "log_sensitivity_b": {
+    "n": 185,
+    "x": [
+     395.019,
+     520.35
+    ],
+    "y": [
+     -0.717,
+     0.94
+    ]
+   },
+   "log_sensitivity_g": {
+    "n": 139,
+    "x": [
+     479.794,
+     600.512
+    ],
+    "y": [
+     -0.717,
+     0.919
+    ]
+   },
+   "density_curve_r": {
+    "n": 139,
+    "x": [
+     -3.409,
+     1.0
+    ],
+    "y": [
+     0.128,
+     3.305
+    ]
+   },
+   "density_curve_g": {
+    "n": 139,
+    "x": [
+     -3.409,
+     1.0
+    ],
+    "y": [
+     0.128,
+     3.447
+    ]
+   },
+   "density_curve_b": {
+    "n": 139,
+    "x": [
+     -3.409,
+     1.0
+    ],
+    "y": [
+     0.128,
+     3.511
+    ]
+   },
+   "mtf": {
+    "n": 70,
+    "x": [
+     0.994,
+     102.975
+    ],
+    "y": [
+     19.855,
+     104.702
+    ]
+   }
+  },
+  "notes": [
+   "char g: own dashed trace covers logH -3.41..-1.04; outside that range the curves coincide and the shared solid (red) trace is used",
+   "char b: own dashed trace covers logH -3.41..-1.04; outside that range the curves coincide and the shared solid (red) trace is used"
+  ],
+  "calib": {
+   "dye": {
+    "x_labels_used": [
+     400.0,
+     500.0,
+     600.0,
+     700.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.295,
+    "y_labels_used": [
+     1.5,
+     1.0,
+     0.5,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.188,
+    "y_calibration": "from printed axis labels"
+   },
+   "sens": {
+    "x_labels_used": [
+     400.0,
+     500.0,
+     600.0,
+     700.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.264,
+    "y_labels_used": [
+     2.0,
+     1.0,
+     0.0,
+     -1.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.279,
+    "y_calibration": "from printed axis labels"
+   },
+   "char": {
+    "x_labels_used": [
+     -3.0,
+     -2.0,
+     -1.0,
+     0.0,
+     1.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.175,
+    "y_labels_used": [
+     4.0,
+     3.5,
+     3.0,
+     2.5,
+     2.0,
+     1.5,
+     1.0,
+     0.5,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.272,
+    "y_calibration": "from printed axis labels"
+   },
+   "mtf": {
+    "x_labels_used": [
+     1.0,
+     5.0,
+     10.0,
+     20.0,
+     50.0,
+     100.0,
+     200.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.955,
+    "y_labels_used": [
+     150.0,
+     100.0,
+     70.0,
+     50.0,
+     30.0,
+     20.0,
+     10.0,
+     7.0,
+     5.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.255,
+    "y_calibration": "from printed axis labels"
+   }
+  },
+  "meta": {
+   "iso": "ISO 100/21\u00b0",
+   "light": "Daylight",
+   "process": [
+    "E-6/CR-56"
+   ],
+   "densitometry": [
+    "Status A"
+   ],
+   "rms_granularity": "7",
+   "exposure": [
+    "Daylight"
+   ]
+  }
+ },
+ "fujifilm_provia_400f": {
+  "files": {
+   "dye_density_y": {
+    "n": 70,
+    "x": [
+     390.698,
+     719.108
+    ],
+    "y": [
+     -0.024,
+     0.995
+    ]
+   },
+   "dye_density_c": {
+    "n": 47,
+    "x": [
+     389.523,
+     719.108
+    ],
+    "y": [
+     0.07,
+     0.998
+    ]
+   },
+   "dye_density_m": {
+    "n": 93,
+    "x": [
+     390.698,
+     717.937
+    ],
+    "y": [
+     0.012,
+     0.993
+    ]
+   },
+   "log_sensitivity_b": {
+    "n": 162,
+    "x": [
+     383.693,
+     508.362
+    ],
+    "y": [
+     -0.438,
+     1.977
+    ]
+   },
+   "log_sensitivity_g": {
+    "n": 162,
+    "x": [
+     460.075,
+     600.547
+    ],
+    "y": [
+     -0.331,
+     1.593
+    ]
+   },
+   "log_sensitivity_r": {
+    "n": 116,
+    "x": [
+     570.697,
+     677.807
+    ],
+    "y": [
+     -0.348,
+     1.593
+    ]
+   },
+   "density_curve_r": {
+    "n": 93,
+    "x": [
+     -3.996,
+     -0.016
+    ],
+    "y": [
+     0.073,
+     3.21
+    ]
+   },
+   "density_curve_g": {
+    "n": 84,
+    "x": [
+     -3.996,
+     -0.016
+    ],
+    "y": [
+     0.073,
+     3.407
+    ]
+   },
+   "density_curve_b": {
+    "n": 105,
+    "x": [
+     -3.987,
+     -0.016
+    ],
+    "y": [
+     0.073,
+     3.284
+    ]
+   },
+   "mtf": {
+    "n": 24,
+    "x": [
+     0.983,
+     71.028
+    ],
+    "y": [
+     14.557,
+     120.241
+    ]
+   }
+  },
+  "notes": [
+   "dye: y-axis label(s) [0.0] not consistent with the grid and ignored in calibration (stray/other-axis label or a printed-chart offset; see check PNG)",
+   "char g: own dashed trace covers logH -4.00..-2.03; outside that range the curves coincide and the shared solid (red) trace is used",
+   "char b: own dashed trace covers logH -3.99..-1.97; outside that range the curves coincide and the shared solid (red) trace is used"
+  ],
+  "calib": {
+   "dye": {
+    "x_labels_used": [
+     400.0,
+     500.0,
+     600.0,
+     700.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.32,
+    "y_labels_used": [
+     1.0,
+     0.5
+    ],
+    "y_labels_dropped": [
+     0.0
+    ],
+    "y_fit_max_resid_pt": 0.0,
+    "y_calibration": "from printed axis labels"
+   },
+   "sens": {
+    "x_labels_used": [
+     400.0,
+     500.0,
+     600.0,
+     700.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.175,
+    "y_labels_used": [
+     2.0,
+     1.0,
+     0.0,
+     -1.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.347,
+    "y_calibration": "from printed axis labels"
+   },
+   "char": {
+    "x_labels_used": [
+     -4.0,
+     -3.0,
+     -2.0,
+     -1.0,
+     0.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.443,
+    "y_labels_used": [
+     4.0,
+     3.5,
+     3.0,
+     2.5,
+     2.0,
+     1.5,
+     1.0,
+     0.5,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 1.025,
+    "y_calibration": "from printed axis labels"
+   },
+   "mtf": {
+    "x_labels_used": [
+     1.0,
+     5.0,
+     10.0,
+     20.0,
+     50.0,
+     100.0,
+     200.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.945,
+    "y_labels_used": [
+     150.0,
+     100.0,
+     70.0,
+     50.0,
+     30.0,
+     20.0,
+     10.0,
+     7.0,
+     5.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.251,
+    "y_calibration": "from printed axis labels"
+   }
+  },
+  "meta": {
+   "iso": "ISO 400/27\u00b0",
+   "light": "Daylight",
+   "process": [
+    "E-6/CR-56"
+   ],
+   "densitometry": [
+    "Status A"
+   ],
+   "rms_granularity": "13",
+   "exposure": [
+    "Daylight",
+    "Separated Light"
+   ]
+  }
+ },
+ "fujifilm_64t_type_ii": {
+  "files": {
+   "log_sensitivity_b": {
+    "n": 116,
+    "x": [
+     379.213,
+     507.803
+    ],
+    "y": [
+     -1.073,
+     1.027
+    ]
+   },
+   "log_sensitivity_g": {
+    "n": 208,
+    "x": [
+     476.849,
+     590.554
+    ],
+    "y": [
+     -0.989,
+     0.3
+    ]
+   },
+   "log_sensitivity_r": {
+    "n": 93,
+    "x": [
+     575.67,
+     664.968
+    ],
+    "y": [
+     -1.14,
+     0.134
+    ]
+   },
+   "dye_density_y": {
+    "n": 126,
+    "x": [
+     390.644,
+     718.939
+    ],
+    "y": [
+     0.012,
+     0.995
+    ]
+   },
+   "dye_density_c": {
+    "n": 93,
+    "x": [
+     390.644,
+     717.939
+    ],
+    "y": [
+     0.105,
+     0.994
+    ]
+   },
+   "dye_density_m": {
+    "n": 139,
+    "x": [
+     390.644,
+     718.939
+    ],
+    "y": [
+     0.026,
+     0.994
+    ]
+   },
+   "density_curve_r": {
+    "n": 93,
+    "x": [
+     -2.483,
+     0.789
+    ],
+    "y": [
+     0.096,
+     3.124
+    ]
+   },
+   "density_curve_g": {
+    "n": 101,
+    "x": [
+     -2.492,
+     0.789
+    ],
+    "y": [
+     0.096,
+     3.372
+    ]
+   },
+   "density_curve_b": {
+    "n": 97,
+    "x": [
+     -2.483,
+     0.789
+    ],
+    "y": [
+     0.096,
+     3.311
+    ]
+   },
+   "mtf": {
+    "n": 70,
+    "x": [
+     0.972,
+     98.789
+    ],
+    "y": [
+     15.443,
+     111.508
+    ]
+   }
+  },
+  "notes": [
+   "char g: own dashed trace covers logH -2.49..-1.49; outside that range the curves coincide and the shared solid (red) trace is used",
+   "char b: own dashed trace covers logH -2.48..-1.92; outside that range the curves coincide and the shared solid (red) trace is used"
+  ],
+  "calib": {
+   "sens": {
+    "x_labels_used": [
+     400.0,
+     500.0,
+     600.0,
+     700.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.296,
+    "y_labels_used": [
+     1.0,
+     0.0,
+     -1.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.087,
+    "y_calibration": "from printed axis labels"
+   },
+   "dye": {
+    "x_labels_used": [
+     400.0,
+     500.0,
+     600.0,
+     700.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.147,
+    "y_labels_used": [
+     1.5,
+     1.0,
+     0.5,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.513,
+    "y_calibration": "from printed axis labels"
+   },
+   "char": {
+    "x_labels_used": [
+     -3.0,
+     -2.0,
+     -1.0,
+     0.0,
+     1.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.307,
+    "y_labels_used": [
+     4.0,
+     3.5,
+     3.0,
+     2.5,
+     2.0,
+     1.5,
+     1.0,
+     0.5,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.168,
+    "y_calibration": "from printed axis labels"
+   },
+   "mtf": {
+    "x_labels_used": [
+     1.0,
+     5.0,
+     10.0,
+     20.0,
+     50.0,
+     100.0,
+     200.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.602,
+    "y_labels_used": [
+     150.0,
+     100.0,
+     70.0,
+     50.0,
+     30.0,
+     20.0,
+     10.0,
+     7.0,
+     5.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.518,
+    "y_calibration": "from printed axis labels"
+   }
+  },
+  "meta": {
+   "iso": "ISO 64/19\u00b0",
+   "light": "Tungsten",
+   "process": [
+    "E-6/CR-56"
+   ],
+   "densitometry": [
+    "Status A"
+   ],
+   "rms_granularity": "10",
+   "exposure": [
+    "Separated Light",
+    "Tungsten"
+   ]
+  }
+ },
+ "fujifilm_sensia_100": {
+  "files": {
+   "log_sensitivity_r": {
+    "n": 185,
+    "x": [
+     547.768,
+     679.173
+    ],
+    "y": [
+     -0.754,
+     1.026
+    ]
+   },
+   "log_sensitivity_g": {
+    "n": 139,
+    "x": [
+     478.867,
+     597.219
+    ],
+    "y": [
+     -0.757,
+     0.925
+    ]
+   },
+   "log_sensitivity_b": {
+    "n": 185,
+    "x": [
+     396.233,
+     519.111
+    ],
+    "y": [
+     -0.759,
+     0.945
+    ]
+   },
+   "dye_density_c": {
+    "n": 162,
+    "x": [
+     393.827,
+     708.737
+    ],
+    "y": [
+     0.026,
+     0.993
+    ]
+   },
+   "dye_density_m": {
+    "n": 162,
+    "x": [
+     393.827,
+     710.426
+    ],
+    "y": [
+     0.012,
+     0.998
+    ]
+   },
+   "dye_density_y": {
+    "n": 116,
+    "x": [
+     396.079,
+     709.578
+    ],
+    "y": [
+     0.006,
+     0.991
+    ]
+   },
+   "density_curve_r": {
+    "n": 210,
+    "x": [
+     -3.295,
+     1.01
+    ],
+    "y": [
+     0.118,
+     3.039
+    ]
+   },
+   "density_curve_g": {
+    "n": 208,
+    "x": [
+     -3.282,
+     1.01
+    ],
+    "y": [
+     0.118,
+     3.249
+    ]
+   },
+   "density_curve_b": {
+    "n": 210,
+    "x": [
+     -3.282,
+     1.01
+    ],
+    "y": [
+     0.118,
+     3.249
+    ]
+   },
+   "mtf": {
+    "n": 70,
+    "x": [
+     0.99,
+     102.593
+    ],
+    "y": [
+     19.987,
+     105.362
+    ]
+   }
+  },
+  "notes": [
+   "char g: own dashed trace covers logH -3.28..-1.44; outside that range the curves coincide and the shared solid (red) trace is used",
+   "char b: own dashed trace covers logH -3.28..-1.44; outside that range the curves coincide and the shared solid (red) trace is used"
+  ],
+  "calib": {
+   "sens": {
+    "x_labels_used": [
+     400.0,
+     500.0,
+     600.0,
+     700.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.257,
+    "y_labels_used": [
+     2.0,
+     1.0,
+     0.0,
+     -1.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.192,
+    "y_calibration": "from printed axis labels"
+   },
+   "dye": {
+    "x_labels_used": [
+     400.0,
+     500.0,
+     600.0,
+     700.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.299,
+    "y_labels_used": [
+     1.5,
+     1.0,
+     0.5,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.192,
+    "y_calibration": "from printed axis labels"
+   },
+   "char": {
+    "x_labels_used": [
+     -3.0,
+     -2.0,
+     -1.0,
+     0.0,
+     1.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.175,
+    "y_labels_used": [
+     4.0,
+     3.5,
+     3.0,
+     2.5,
+     2.0,
+     1.5,
+     1.0,
+     0.5,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.272,
+    "y_calibration": "from printed axis labels"
+   },
+   "mtf": {
+    "x_labels_used": [
+     1.0,
+     5.0,
+     10.0,
+     20.0,
+     50.0,
+     100.0,
+     200.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.953,
+    "y_labels_used": [
+     150.0,
+     100.0,
+     70.0,
+     50.0,
+     30.0,
+     20.0,
+     10.0,
+     7.0,
+     5.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.255,
+    "y_calibration": "from printed axis labels"
+   }
+  },
+  "meta": {
+   "iso": "ISO 100/21\u00b0",
+   "light": "Daylight",
+   "process": [
+    "CR-56/E-6",
+    "E-6/CR-56"
+   ],
+   "densitometry": [
+    "Status A"
+   ],
+   "rms_granularity": "8",
+   "exposure": [
+    "Daylight",
+    "Separated Light"
+   ]
+  }
+ },
+ "fujifilm_sensia_200": {
+  "files": {
+   "log_sensitivity_b": {
+    "n": 139,
+    "x": [
+     389.275,
+     501.086
+    ],
+    "y": [
+     -0.3,
+     1.623
+    ]
+   },
+   "log_sensitivity_g": {
+    "n": 139,
+    "x": [
+     469.527,
+     594.863
+    ],
+    "y": [
+     -0.415,
+     1.279
+    ]
+   },
+   "log_sensitivity_r": {
+    "n": 116,
+    "x": [
+     573.222,
+     674.213
+    ],
+    "y": [
+     -0.283,
+     1.333
+    ]
+   },
+   "dye_density_y": {
+    "n": 98,
+    "x": [
+     387.179,
+     718.366
+    ],
+    "y": [
+     0.023,
+     1.003
+    ]
+   },
+   "dye_density_m": {
+    "n": 116,
+    "x": [
+     388.344,
+     718.366
+    ],
+    "y": [
+     0.039,
+     1.003
+    ]
+   },
+   "dye_density_c": {
+    "n": 70,
+    "x": [
+     388.344,
+     718.366
+    ],
+    "y": [
+     0.109,
+     0.997
+    ]
+   },
+   "density_curve_r": {
+    "n": 70,
+    "x": [
+     -3.49,
+     -0.019
+    ],
+    "y": [
+     0.12,
+     3.092
+    ]
+   },
+   "density_curve_g": {
+    "n": 75,
+    "x": [
+     -3.502,
+     -0.019
+    ],
+    "y": [
+     0.12,
+     3.213
+    ]
+   },
+   "density_curve_b": {
+    "n": 70,
+    "x": [
+     -3.496,
+     -0.025
+    ],
+    "y": [
+     0.146,
+     3.327
+    ]
+   },
+   "mtf": {
+    "n": 24,
+    "x": [
+     1.012,
+     79.096
+    ],
+    "y": [
+     18.399,
+     121.801
+    ]
+   }
+  },
+  "notes": [
+   "char g: own dashed trace covers logH -3.50..-1.36; outside that range the curves coincide and the shared solid (red) trace is used"
+  ],
+  "calib": {
+   "sens": {
+    "x_labels_used": [
+     400.0,
+     500.0,
+     600.0,
+     700.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.175,
+    "y_labels_used": [
+     2.0,
+     1.0,
+     0.0,
+     -1.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.096,
+    "y_calibration": "from printed axis labels"
+   },
+   "dye": {
+    "x_labels_used": [
+     400.0,
+     500.0,
+     600.0,
+     700.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.467,
+    "y_labels_used": [
+     1.5,
+     1.0,
+     0.5,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.153,
+    "y_calibration": "from printed axis labels"
+   },
+   "char": {
+    "x_labels_used": [
+     -3.0,
+     -2.0,
+     -1.0,
+     -0.0,
+     1.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.216,
+    "y_labels_used": [
+     4.0,
+     3.5,
+     3.0,
+     2.5,
+     2.0,
+     1.5,
+     1.0,
+     0.5,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.725,
+    "y_calibration": "from printed axis labels"
+   },
+   "mtf": {
+    "x_labels_used": [
+     1.0,
+     5.0,
+     10.0,
+     20.0,
+     50.0,
+     100.0,
+     200.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.502,
+    "y_labels_used": [
+     150.0,
+     100.0,
+     70.0,
+     50.0,
+     30.0,
+     20.0,
+     10.0,
+     7.0,
+     5.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.682,
+    "y_calibration": "from printed axis labels"
+   }
+  },
+  "meta": {
+   "iso": "ISO 200/24\u00b0",
+   "light": "Daylight",
+   "process": [
+    "E-6/CR-56"
+   ],
+   "densitometry": [
+    "Status A"
+   ],
+   "rms_granularity": "13",
+   "exposure": [
+    "Daylight",
+    "Separated Light"
+   ]
+  }
+ },
+ "fujifilm_sensia_400": {
+  "files": {
+   "log_sensitivity_b": {
+    "n": 162,
+    "x": [
+     383.693,
+     508.362
+    ],
+    "y": [
+     -0.438,
+     1.977
+    ]
+   },
+   "log_sensitivity_g": {
+    "n": 162,
+    "x": [
+     460.075,
+     600.547
+    ],
+    "y": [
+     -0.331,
+     1.593
+    ]
+   },
+   "log_sensitivity_r": {
+    "n": 116,
+    "x": [
+     570.697,
+     677.807
+    ],
+    "y": [
+     -0.348,
+     1.593
+    ]
+   },
+   "dye_density_y": {
+    "n": 75,
+    "x": [
+     378.202,
+     658.596
+    ],
+    "y": [
+     0.035,
+     0.993
+    ]
+   },
+   "dye_density_m": {
+    "n": 93,
+    "x": [
+     379.386,
+     720.118
+    ],
+    "y": [
+     0.041,
+     0.988
+    ]
+   },
+   "dye_density_c": {
+    "n": 47,
+    "x": [
+     378.202,
+     720.118
+    ],
+    "y": [
+     0.112,
+     0.995
+    ]
+   },
+   "density_curve_r": {
+    "n": 70,
+    "x": [
+     -3.984,
+     -0.015
+    ],
+    "y": [
+     0.118,
+     3.068
+    ]
+   },
+   "density_curve_g": {
+    "n": 91,
+    "x": [
+     -3.984,
+     -0.015
+    ],
+    "y": [
+     0.118,
+     3.224
+    ]
+   },
+   "density_curve_b": {
+    "n": 48,
+    "x": [
+     -3.975,
+     -0.024
+    ],
+    "y": [
+     0.151,
+     3.295
+    ]
+   },
+   "mtf": {
+    "n": 24,
+    "x": [
+     0.984,
+     71.03
+    ],
+    "y": [
+     14.555,
+     120.231
+    ]
+   }
+  },
+  "notes": [
+   "char g: own dashed trace covers logH -3.98..-2.37; outside that range the curves coincide and the shared solid (red) trace is used"
+  ],
+  "calib": {
+   "sens": {
+    "x_labels_used": [
+     400.0,
+     500.0,
+     600.0,
+     700.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.175,
+    "y_labels_used": [
+     2.0,
+     1.0,
+     0.0,
+     -1.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.347,
+    "y_calibration": "from printed axis labels"
+   },
+   "dye": {
+    "x_labels_used": [
+     400.0,
+     500.0,
+     600.0,
+     700.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.097,
+    "y_labels_used": [
+     1.5,
+     1.0,
+     0.5,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.382,
+    "y_calibration": "from printed axis labels"
+   },
+   "char": {
+    "x_labels_used": [
+     -4.0,
+     -3.0,
+     -2.0,
+     -1.0,
+     -0.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.172,
+    "y_labels_used": [
+     4.0,
+     3.5,
+     3.0,
+     2.5,
+     2.0,
+     1.5,
+     1.0,
+     0.5,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.725,
+    "y_calibration": "from printed axis labels"
+   },
+   "mtf": {
+    "x_labels_used": [
+     1.0,
+     5.0,
+     10.0,
+     20.0,
+     50.0,
+     100.0,
+     200.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.955,
+    "y_labels_used": [
+     150.0,
+     100.0,
+     70.0,
+     50.0,
+     30.0,
+     20.0,
+     10.0,
+     7.0,
+     5.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.255,
+    "y_calibration": "from printed axis labels"
+   }
+  },
+  "meta": {
+   "iso": "ISO 400/27\u00b0",
+   "light": "Daylight",
+   "process": [
+    "E-6/CR-56"
+   ],
+   "densitometry": [
+    "Status A"
+   ],
+   "rms_granularity": "13",
+   "exposure": [
+    "Daylight",
+    "Separated Light"
+   ]
+  }
+ },
+ "fujifilm_pro_160s": {
+  "files": {
+   "dye_density_mid": {
+    "n": 185,
+    "x": [
+     399.398,
+     720.203
+    ],
+    "y": [
+     0.982,
+     2.34
+    ]
+   },
+   "dye_density_min": {
+    "n": 162,
+    "x": [
+     399.398,
+     720.299
+    ],
+    "y": [
+     0.254,
+     1.13
+    ]
+   },
+   "log_sensitivity_b": {
+    "n": 208,
+    "x": [
+     381.552,
+     510.083
+    ],
+    "y": [
+     -0.876,
+     1.231
+    ]
+   },
+   "log_sensitivity_g": {
+    "n": 162,
+    "x": [
+     479.861,
+     589.956
+    ],
+    "y": [
+     -0.725,
+     1.241
+    ]
+   },
+   "log_sensitivity_r": {
+    "n": 185,
+    "x": [
+     557.325,
+     680.093
+    ],
+    "y": [
+     -0.647,
+     1.091
+    ]
+   },
+   "log_sensitivity_cyan_layer": {
+    "n": 116,
+    "x": [
+     474.236,
+     552.69
+    ],
+    "y": [
+     -0.12,
+     0.423
+    ]
+   },
+   "density_curve_b": {
+    "n": 47,
+    "x": [
+     -3.61,
+     0.489
+    ],
+    "y": [
+     1.0,
+     2.536
+    ]
+   },
+   "density_curve_g": {
+    "n": 47,
+    "x": [
+     -3.614,
+     0.488
+    ],
+    "y": [
+     0.753,
+     2.267
+    ]
+   },
+   "density_curve_r": {
+    "n": 47,
+    "x": [
+     -3.608,
+     0.493
+    ],
+    "y": [
+     0.206,
+     1.747
+    ]
+   },
+   "mtf": {
+    "n": 47,
+    "x": [
+     2.44,
+     95.921
+    ],
+    "y": [
+     25.516,
+     116.767
+    ]
+   }
+  },
+  "notes": [],
+  "calib": {
+   "dye": {
+    "x_labels_used": [
+     400.0,
+     500.0,
+     600.0,
+     700.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.28,
+    "y_labels_used": [
+     3.0,
+     2.0,
+     1.0,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.228,
+    "y_calibration": "from printed axis labels"
+   },
+   "sens": {
+    "x_labels_used": [
+     400.0,
+     500.0,
+     600.0,
+     700.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.179,
+    "y_calibration": "relative: one log unit = the grid interval marked by the \"1.0\" bracket (y_pt 117.91..145.34); zero set at the lower bracket grid line"
+   },
+   "char": {
+    "x_labels_used": [
+     -4.0,
+     -3.0,
+     -2.0,
+     -1.0,
+     0.0,
+     1.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.121,
+    "y_labels_used": [
+     4.0,
+     3.5,
+     3.0,
+     2.5,
+     2.0,
+     1.5,
+     1.0,
+     0.5,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.211,
+    "y_calibration": "from printed axis labels"
+   },
+   "mtf": {
+    "x_labels_used": [
+     1.0,
+     5.0,
+     10.0,
+     20.0,
+     50.0,
+     100.0,
+     200.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.786,
+    "y_labels_used": [
+     150.0,
+     100.0,
+     70.0,
+     50.0,
+     30.0,
+     20.0,
+     10.0,
+     7.0,
+     5.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.841,
+    "y_calibration": "from printed axis labels"
+   }
+  },
+  "meta": {
+   "iso": "ISO 160/23\u00b0",
+   "light": "Daylight",
+   "process": [
+    "C-41"
+   ],
+   "densitometry": [
+    "Status M"
+   ],
+   "rms_granularity": "3",
+   "exposure": [
+    "Daylight"
+   ]
+  }
+ },
+ "fujifilm_pro_160c": {
+  "files": {
+   "log_sensitivity_b": {
+    "n": 231,
+    "x": [
+     380.875,
+     514.561
+    ],
+    "y": [
+     -0.922,
+     1.26
+    ]
+   },
+   "log_sensitivity_g": {
+    "n": 162,
+    "x": [
+     484.232,
+     589.071
+    ],
+    "y": [
+     -0.795,
+     1.164
+    ]
+   },
+   "log_sensitivity_r": {
+    "n": 162,
+    "x": [
+     564.387,
+     668.677
+    ],
+    "y": [
+     -0.743,
+     0.925
+    ]
+   },
+   "log_sensitivity_cyan_layer": {
+    "n": 116,
+    "x": [
+     474.043,
+     552.476
+    ],
+    "y": [
+     -0.121,
+     0.422
+    ]
+   },
+   "dye_density_mid": {
+    "n": 162,
+    "x": [
+     401.618,
+     719.204
+    ],
+    "y": [
+     1.042,
+     2.474
+    ]
+   },
+   "dye_density_min": {
+    "n": 162,
+    "x": [
+     401.618,
+     719.716
+    ],
+    "y": [
+     0.265,
+     1.152
+    ]
+   },
+   "density_curve_b": {
+    "n": 47,
+    "x": [
+     -3.664,
+     0.479
+    ],
+    "y": [
+     0.944,
+     2.703
+    ]
+   },
+   "density_curve_g": {
+    "n": 47,
+    "x": [
+     -3.669,
+     0.478
+    ],
+    "y": [
+     0.713,
+     2.465
+    ]
+   },
+   "density_curve_r": {
+    "n": 47,
+    "x": [
+     -3.663,
+     0.483
+    ],
+    "y": [
+     0.244,
+     1.977
+    ]
+   },
+   "mtf": {
+    "n": 47,
+    "x": [
+     2.506,
+     96.835
+    ],
+    "y": [
+     22.918,
+     116.896
+    ]
+   }
+  },
+  "notes": [],
+  "calib": {
+   "sens": {
+    "x_labels_used": [
+     400.0,
+     500.0,
+     600.0,
+     700.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.172,
+    "y_calibration": "relative: one log unit = the grid interval marked by the \"1.0\" bracket (y_pt 116.74..144.42); zero set at the lower bracket grid line"
+   },
+   "dye": {
+    "x_labels_used": [
+     400.0,
+     500.0,
+     600.0,
+     700.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.072,
+    "y_labels_used": [
+     3.0,
+     2.0,
+     1.0,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.264,
+    "y_calibration": "from printed axis labels"
+   },
+   "char": {
+    "x_labels_used": [
+     -4.0,
+     -3.0,
+     -2.0,
+     -1.0,
+     -0.0,
+     1.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.191,
+    "y_labels_used": [
+     4.0,
+     3.5,
+     3.0,
+     2.5,
+     2.0,
+     1.5,
+     1.0,
+     0.5,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.156,
+    "y_calibration": "from printed axis labels"
+   },
+   "mtf": {
+    "x_labels_used": [
+     1.0,
+     5.0,
+     10.0,
+     20.0,
+     50.0,
+     100.0,
+     200.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.339,
+    "y_labels_used": [
+     150.0,
+     100.0,
+     70.0,
+     50.0,
+     30.0,
+     20.0,
+     10.0,
+     7.0,
+     5.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.117,
+    "y_calibration": "from printed axis labels"
+   }
+  },
+  "meta": {
+   "iso": "ISO 160/23\u00b0",
+   "light": "Daylight",
+   "process": [
+    "C-41"
+   ],
+   "densitometry": [
+    "Status M"
+   ],
+   "rms_granularity": "3",
+   "exposure": [
+    "Daylight"
+   ]
+  }
+ },
+ "fujifilm_npl_160": {
+  "files": {
+   "log_sensitivity_b": {
+    "n": 93,
+    "x": [
+     387.943,
+     494.404
+    ],
+    "y": [
+     -0.271,
+     1.44
+    ]
+   },
+   "log_sensitivity_g": {
+    "n": 93,
+    "x": [
+     487.461,
+     584.666
+    ],
+    "y": [
+     -0.139,
+     0.993
+    ]
+   },
+   "log_sensitivity_r": {
+    "n": 41,
+    "x": [
+     583.51,
+     648.315
+    ],
+    "y": [
+     -0.223,
+     0.813
+    ]
+   },
+   "log_sensitivity_cyan_layer": {
+    "n": 70,
+    "x": [
+     463.159,
+     541.85
+    ],
+    "y": [
+     -0.247,
+     0.337
+    ]
+   },
+   "dye_density_mid": {
+    "n": 70,
+    "x": [
+     393.702,
+     719.183
+    ],
+    "y": [
+     0.883,
+     2.392
+    ]
+   },
+   "dye_density_min": {
+    "n": 116,
+    "x": [
+     393.393,
+     720.033
+    ],
+    "y": [
+     0.187,
+     1.094
+    ]
+   },
+   "density_curve_b": {
+    "n": 47,
+    "x": [
+     -3.606,
+     0.43
+    ],
+    "y": [
+     0.744,
+     2.918
+    ]
+   },
+   "density_curve_g": {
+    "n": 47,
+    "x": [
+     -3.571,
+     0.43
+    ],
+    "y": [
+     0.54,
+     2.351
+    ]
+   },
+   "density_curve_r": {
+    "n": 47,
+    "x": [
+     -3.571,
+     0.454
+    ],
+    "y": [
+     0.151,
+     1.878
+    ]
+   },
+   "mtf": {
+    "n": 34,
+    "x": [
+     2.201,
+     91.703
+    ],
+    "y": [
+     24.311,
+     114.817
+    ]
+   }
+  },
+  "notes": [
+   "mtf: y-axis label(s) [5.0] not consistent with the grid and ignored in calibration (stray/other-axis label or a printed-chart offset; see check PNG)"
+  ],
+  "calib": {
+   "sens": {
+    "x_labels_used": [
+     400.0,
+     500.0,
+     600.0,
+     700.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.035,
+    "y_calibration": "relative: one log unit = the grid interval marked by the \"1.0\" bracket (y_pt 117.14..144.78); zero set at the lower bracket grid line"
+   },
+   "dye": {
+    "x_labels_used": [
+     400.0,
+     500.0,
+     600.0,
+     700.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.099,
+    "y_labels_used": [
+     3.0,
+     2.0,
+     1.0,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.143,
+    "y_calibration": "from printed axis labels"
+   },
+   "char": {
+    "x_labels_used": [
+     -4.0,
+     -3.0,
+     -2.0,
+     -1.0,
+     0.0,
+     1.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.272,
+    "y_labels_used": [
+     4.0,
+     3.5,
+     3.0,
+     2.5,
+     2.0,
+     1.5,
+     1.0,
+     0.5,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.313,
+    "y_calibration": "from printed axis labels"
+   },
+   "mtf": {
+    "x_labels_used": [
+     1.0,
+     5.0,
+     10.0,
+     20.0,
+     50.0,
+     100.0,
+     200.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.522,
+    "y_labels_used": [
+     150.0,
+     100.0,
+     70.0,
+     50.0,
+     30.0,
+     20.0,
+     10.0,
+     7.0
+    ],
+    "y_labels_dropped": [
+     5.0
+    ],
+    "y_fit_max_resid_pt": 1.014,
+    "y_calibration": "from printed axis labels"
+   }
+  },
+  "meta": {
+   "iso": "ISO 160/23\u00b0",
+   "light": "Tungsten",
+   "process": [
+    "C-41/CN-16"
+   ],
+   "densitometry": [
+    "Status M"
+   ],
+   "rms_granularity": "4",
+   "exposure": [
+    "Tungsten"
+   ]
+  }
+ },
+ "fujifilm_pro_400h": {
+  "files": {
+   "log_sensitivity_b": {
+    "n": 116,
+    "x": [
+     383.762,
+     515.558
+    ],
+    "y": [
+     -0.72,
+     1.512
+    ]
+   },
+   "log_sensitivity_g": {
+    "n": 70,
+    "x": [
+     450.569,
+     592.689
+    ],
+    "y": [
+     -0.762,
+     1.35
+    ]
+   },
+   "log_sensitivity_r": {
+    "n": 116,
+    "x": [
+     556.248,
+     663.144
+    ],
+    "y": [
+     -0.738,
+     1.056
+    ]
+   },
+   "log_sensitivity_cyan_layer": {
+    "n": 47,
+    "x": [
+     473.195,
+     552.454
+    ],
+    "y": [
+     -0.117,
+     0.421
+    ]
+   },
+   "dye_density_mid": {
+    "n": 162,
+    "x": [
+     399.556,
+     722.387
+    ],
+    "y": [
+     0.753,
+     2.019
+    ]
+   },
+   "dye_density_min": {
+    "n": 185,
+    "x": [
+     398.972,
+     721.803
+    ],
+    "y": [
+     0.162,
+     1.46
+    ]
+   },
+   "density_curve_b": {
+    "n": 47,
+    "x": [
+     -3.581,
+     0.658
+    ],
+    "y": [
+     0.949,
+     2.619
+    ]
+   },
+   "density_curve_g": {
+    "n": 47,
+    "x": [
+     -3.581,
+     0.658
+    ],
+    "y": [
+     0.701,
+     2.368
+    ]
+   },
+   "density_curve_r": {
+    "n": 47,
+    "x": [
+     -3.572,
+     0.65
+    ],
+    "y": [
+     0.188,
+     1.938
+    ]
+   },
+   "mtf": {
+    "n": 24,
+    "x": [
+     2.45,
+     98.554
+    ],
+    "y": [
+     23.02,
+     112.655
+    ]
+   }
+  },
+  "notes": [],
+  "calib": {
+   "sens": {
+    "x_labels_used": [
+     400.0,
+     500.0,
+     600.0,
+     700.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.233,
+    "y_calibration": "relative: one log unit = the grid interval marked by the \"1.0\" bracket (y_pt 115.60..143.60); zero set at the lower bracket grid line"
+   },
+   "dye": {
+    "x_labels_used": [
+     400.0,
+     500.0,
+     600.0,
+     700.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.301,
+    "y_labels_used": [
+     2.0,
+     1.5,
+     1.0,
+     0.5,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.32,
+    "y_calibration": "from printed axis labels"
+   },
+   "char": {
+    "x_labels_used": [
+     -4.0,
+     -3.0,
+     -2.0,
+     -1.0,
+     0.0,
+     1.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.36,
+    "y_labels_used": [
+     4.0,
+     3.5,
+     3.0,
+     2.5,
+     2.0,
+     1.5,
+     1.0,
+     0.5,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.632,
+    "y_calibration": "from printed axis labels"
+   },
+   "mtf": {
+    "x_labels_used": [
+     1.0,
+     5.0,
+     10.0,
+     20.0,
+     50.0,
+     100.0,
+     200.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.677,
+    "y_labels_used": [
+     150.0,
+     100.0,
+     70.0,
+     50.0,
+     30.0,
+     20.0,
+     10.0,
+     7.0,
+     5.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.702,
+    "y_calibration": "from printed axis labels"
+   }
+  },
+  "meta": {
+   "iso": "ISO 400/27\u00b0",
+   "light": "Daylight",
+   "process": [
+    "C-41/CN-16"
+   ],
+   "densitometry": [
+    "Status M"
+   ],
+   "rms_granularity": "4",
+   "exposure": [
+    "Daylight"
+   ]
+  }
+ },
+ "fujifilm_pro_800z": {
+  "files": {
+   "log_sensitivity_b": {
+    "n": 116,
+    "x": [
+     398.882,
+     521.819
+    ],
+    "y": [
+     -0.586,
+     1.634
+    ]
+   },
+   "log_sensitivity_g": {
+    "n": 93,
+    "x": [
+     476.287,
+     594.671
+    ],
+    "y": [
+     -0.568,
+     1.463
+    ]
+   },
+   "log_sensitivity_r": {
+    "n": 93,
+    "x": [
+     551.871,
+     671.165
+    ],
+    "y": [
+     -0.631,
+     1.057
+    ]
+   },
+   "log_sensitivity_cyan_layer": {
+    "n": 47,
+    "x": [
+     468.091,
+     553.692
+    ],
+    "y": [
+     -0.256,
+     0.43
+    ]
+   },
+   "dye_density_mid": {
+    "n": 162,
+    "x": [
+     400.43,
+     721.219
+    ],
+    "y": [
+     0.732,
+     1.914
+    ]
+   },
+   "dye_density_min": {
+    "n": 208,
+    "x": [
+     398.682,
+     722.093
+    ],
+    "y": [
+     0.177,
+     1.32
+    ]
+   },
+   "density_curve_b": {
+    "n": 47,
+    "x": [
+     -3.581,
+     0.685
+    ],
+    "y": [
+     0.876,
+     2.539
+    ]
+   },
+   "density_curve_g": {
+    "n": 47,
+    "x": [
+     -3.581,
+     0.658
+    ],
+    "y": [
+     0.614,
+     2.35
+    ]
+   },
+   "density_curve_r": {
+    "n": 47,
+    "x": [
+     -3.59,
+     0.667
+    ],
+    "y": [
+     0.173,
+     2.098
+    ]
+   },
+   "mtf": {
+    "n": 24,
+    "x": [
+     2.788,
+     105.399
+    ],
+    "y": [
+     15.005,
+     113.571
+    ]
+   }
+  },
+  "notes": [],
+  "calib": {
+   "sens": {
+    "x_labels_used": [
+     400.0,
+     500.0,
+     600.0,
+     700.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.389,
+    "y_calibration": "relative: one log unit = the grid interval marked by the \"1.0\" bracket (y_pt 116.35..144.35); zero set at the lower bracket grid line"
+   },
+   "dye": {
+    "x_labels_used": [
+     400.0,
+     500.0,
+     600.0,
+     700.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.301,
+    "y_labels_used": [
+     2.0,
+     1.5,
+     1.0,
+     0.5,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.122,
+    "y_calibration": "from printed axis labels"
+   },
+   "char": {
+    "x_labels_used": [
+     -4.0,
+     -3.0,
+     -2.0,
+     -1.0,
+     -0.0,
+     1.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.36,
+    "y_labels_used": [
+     4.0,
+     3.5,
+     3.0,
+     2.5,
+     2.0,
+     1.5,
+     1.0,
+     0.5,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.653,
+    "y_calibration": "from printed axis labels"
+   },
+   "mtf": {
+    "x_labels_used": [
+     1.0,
+     5.0,
+     10.0,
+     20.0,
+     50.0,
+     100.0,
+     200.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.902,
+    "y_labels_used": [
+     150.0,
+     100.0,
+     70.0,
+     50.0,
+     30.0,
+     20.0,
+     10.0,
+     7.0,
+     5.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.714,
+    "y_calibration": "from printed axis labels"
+   }
+  },
+  "meta": {
+   "iso": "ISO 800/30\u00b0",
+   "light": "Daylight",
+   "process": [
+    "C-41"
+   ],
+   "densitometry": [
+    "Status A",
+    "Status M"
+   ],
+   "rms_granularity": "5",
+   "exposure": [
+    "Daylight"
+   ]
+  }
+ },
+ "fujifilm_superia_reala": {
+  "files": {
+   "dye_density_mid": {
+    "n": 139,
+    "x": [
+     400.815,
+     722.478
+    ],
+    "y": [
+     0.882,
+     2.016
+    ]
+   },
+   "dye_density_min": {
+    "n": 93,
+    "x": [
+     399.651,
+     710.824
+    ],
+    "y": [
+     0.272,
+     0.909
+    ]
+   },
+   "log_sensitivity_b": {
+    "n": 70,
+    "x": [
+     388.362,
+     515.565
+    ],
+    "y": [
+     0.083,
+     1.645
+    ]
+   },
+   "log_sensitivity_g": {
+    "n": 47,
+    "x": [
+     462.562,
+     588.584
+    ],
+    "y": [
+     -0.345,
+     1.391
+    ]
+   },
+   "log_sensitivity_r": {
+    "n": 47,
+    "x": [
+     555.608,
+     669.85
+    ],
+    "y": [
+     0.012,
+     1.354
+    ]
+   },
+   "log_sensitivity_cyan_layer": {
+    "n": 24,
+    "x": [
+     463.742,
+     554.431
+    ],
+    "y": [
+     -0.369,
+     0.56
+    ]
+   },
+   "density_curve_b": {
+    "n": 47,
+    "x": [
+     -3.617,
+     0.298
+    ],
+    "y": [
+     0.965,
+     2.715
+    ]
+   },
+   "density_curve_g": {
+    "n": 47,
+    "x": [
+     -3.595,
+     0.298
+    ],
+    "y": [
+     0.494,
+     2.332
+    ]
+   },
+   "density_curve_r": {
+    "n": 29,
+    "x": [
+     -3.628,
+     0.409
+    ],
+    "y": [
+     0.294,
+     2.051
+    ]
+   },
+   "mtf": {
+    "n": 24,
+    "x": [
+     2.748,
+     110.94
+    ],
+    "y": [
+     14.527,
+     117.577
+    ]
+   }
+  },
+  "notes": [],
+  "calib": {
+   "dye": {
+    "x_labels_used": [
+     400.0,
+     500.0,
+     600.0,
+     700.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.301,
+    "y_labels_used": [
+     2.0,
+     1.5,
+     1.0,
+     0.5,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.2,
+    "y_calibration": "from printed axis labels"
+   },
+   "sens": {
+    "x_labels_used": [
+     400.0,
+     500.0,
+     600.0,
+     700.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.389,
+    "y_calibration": "relative: one log unit = the grid interval marked by the \"1.0\" bracket (y_pt 116.62..144.62); zero set at the lower bracket grid line"
+   },
+   "char": {
+    "x_labels_used": [
+     -4.0,
+     -3.0,
+     -2.0,
+     -1.0,
+     -0.0,
+     1.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.36,
+    "y_labels_used": [
+     4.0,
+     3.5,
+     3.0,
+     2.5,
+     2.0,
+     1.5,
+     1.0,
+     0.5,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.653,
+    "y_calibration": "from printed axis labels"
+   },
+   "mtf": {
+    "x_labels_used": [
+     1.0,
+     5.0,
+     10.0,
+     20.0,
+     50.0,
+     100.0,
+     200.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.588,
+    "y_labels_used": [
+     150.0,
+     100.0,
+     70.0,
+     50.0,
+     30.0,
+     20.0,
+     10.0,
+     7.0,
+     5.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.714,
+    "y_calibration": "from printed axis labels"
+   }
+  },
+  "meta": {
+   "iso": "ISO 100/21\u00b0",
+   "light": "Daylight",
+   "process": [
+    "C-41/CN-16"
+   ],
+   "densitometry": [
+    "Status M"
+   ],
+   "rms_granularity": "4",
+   "exposure": [
+    "Daylight"
+   ]
+  }
+ },
+ "fujifilm_superia_100": {
+  "files": {
+   "log_sensitivity_b": {
+    "n": 70,
+    "x": [
+     383.201,
+     515.565
+    ],
+    "y": [
+     0.083,
+     1.649
+    ]
+   },
+   "log_sensitivity_g": {
+    "n": 69,
+    "x": [
+     455.342,
+     591.966
+    ],
+    "y": [
+     0.129,
+     1.459
+    ]
+   },
+   "log_sensitivity_r": {
+    "n": 68,
+    "x": [
+     551.871,
+     655.881
+    ],
+    "y": [
+     0.146,
+     1.49
+    ]
+   },
+   "log_sensitivity_cyan_layer": {
+    "n": 70,
+    "x": [
+     459.895,
+     548.228
+    ],
+    "y": [
+     0.128,
+     0.73
+    ]
+   },
+   "dye_density_mid": {
+    "n": 231,
+    "x": [
+     400.748,
+     723.23
+    ],
+    "y": [
+     0.872,
+     1.968
+    ]
+   },
+   "dye_density_min": {
+    "n": 134,
+    "x": [
+     399.869,
+     724.108
+    ],
+    "y": [
+     0.211,
+     0.858
+    ]
+   },
+   "density_curve_b": {
+    "n": 47,
+    "x": [
+     -3.634,
+     0.343
+    ],
+    "y": [
+     0.798,
+     3.122
+    ]
+   },
+   "density_curve_g": {
+    "n": 47,
+    "x": [
+     -3.622,
+     0.355
+    ],
+    "y": [
+     0.499,
+     2.763
+    ]
+   },
+   "density_curve_r": {
+    "n": 47,
+    "x": [
+     -3.599,
+     0.355
+    ],
+    "y": [
+     0.236,
+     2.356
+    ]
+   },
+   "mtf": {
+    "n": 47,
+    "x": [
+     2.704,
+     129.874
+    ],
+    "y": [
+     15.571,
+     119.528
+    ]
+   }
+  },
+  "notes": [],
+  "calib": {
+   "sens": {
+    "x_labels_used": [
+     400.0,
+     500.0,
+     600.0,
+     700.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.389,
+    "y_calibration": "relative: one log unit = the grid interval marked by the \"1.0\" bracket (y_pt 117.71..145.71); zero set at the lower bracket grid line"
+   },
+   "dye": {
+    "x_labels_used": [
+     400.0,
+     500.0,
+     600.0,
+     700.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.351,
+    "y_labels_used": [
+     2.0,
+     1.5,
+     1.0,
+     0.5,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.2,
+    "y_calibration": "from printed axis labels"
+   },
+   "char": {
+    "x_labels_used": [
+     -4.0,
+     -3.0,
+     -2.0,
+     -1.0,
+     0.0,
+     1.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.36,
+    "y_labels_used": [
+     4.0,
+     3.5,
+     3.0,
+     2.5,
+     2.0,
+     1.5,
+     1.0,
+     0.5,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.653,
+    "y_calibration": "from printed axis labels"
+   },
+   "mtf": {
+    "x_labels_used": [
+     1.0,
+     5.0,
+     10.0,
+     20.0,
+     50.0,
+     100.0,
+     200.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.588,
+    "y_labels_used": [
+     150.0,
+     100.0,
+     70.0,
+     50.0,
+     30.0,
+     20.0,
+     10.0,
+     7.0,
+     5.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.714,
+    "y_calibration": "from printed axis labels"
+   }
+  },
+  "meta": {
+   "iso": "ISO 100/21\u00b0",
+   "light": "Daylight",
+   "process": [
+    "C-41/CN-16"
+   ],
+   "densitometry": [
+    "Status M"
+   ],
+   "rms_granularity": "4",
+   "exposure": [
+    "Daylight"
+   ]
+  }
+ },
+ "fujifilm_superia_200": {
+  "files": {
+   "dye_density_mid": {
+    "n": 231,
+    "x": [
+     400.748,
+     723.23
+    ],
+    "y": [
+     0.872,
+     1.968
+    ]
+   },
+   "dye_density_min": {
+    "n": 134,
+    "x": [
+     399.869,
+     724.108
+    ],
+    "y": [
+     0.211,
+     0.858
+    ]
+   },
+   "log_sensitivity_b": {
+    "n": 124,
+    "x": [
+     383.547,
+     514.753
+    ],
+    "y": [
+     0.012,
+     1.654
+    ]
+   },
+   "log_sensitivity_g": {
+    "n": 70,
+    "x": [
+     450.935,
+     590.263
+    ],
+    "y": [
+     0.096,
+     1.456
+    ]
+   },
+   "log_sensitivity_r": {
+    "n": 69,
+    "x": [
+     552.927,
+     660.446
+    ],
+    "y": [
+     0.087,
+     1.542
+    ]
+   },
+   "log_sensitivity_cyan_layer": {
+    "n": 70,
+    "x": [
+     460.952,
+     547.463
+    ],
+    "y": [
+     0.149,
+     0.78
+    ]
+   },
+   "density_curve_b": {
+    "n": 70,
+    "x": [
+     -3.625,
+     0.323
+    ],
+    "y": [
+     0.783,
+     2.978
+    ]
+   },
+   "density_curve_g": {
+    "n": 70,
+    "x": [
+     -3.616,
+     0.332
+    ],
+    "y": [
+     0.477,
+     2.719
+    ]
+   },
+   "density_curve_r": {
+    "n": 70,
+    "x": [
+     -3.625,
+     0.341
+    ],
+    "y": [
+     0.218,
+     2.324
+    ]
+   },
+   "mtf": {
+    "n": 49,
+    "x": [
+     2.784,
+     114.759
+    ],
+    "y": [
+     15.251,
+     128.121
+    ]
+   }
+  },
+  "notes": [],
+  "calib": {
+   "dye": {
+    "x_labels_used": [
+     400.0,
+     500.0,
+     600.0,
+     700.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.351,
+    "y_labels_used": [
+     2.0,
+     1.5,
+     1.0,
+     0.5,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.2,
+    "y_calibration": "from printed axis labels"
+   },
+   "sens": {
+    "x_labels_used": [
+     400.0,
+     500.0,
+     600.0,
+     700.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.389,
+    "y_calibration": "relative: one log unit = the grid interval marked by the \"1.0\" bracket (y_pt 117.80..145.80); zero set at the lower bracket grid line"
+   },
+   "char": {
+    "x_labels_used": [
+     -4.0,
+     -3.0,
+     -2.0,
+     -1.0,
+     0.0,
+     1.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.443,
+    "y_labels_used": [
+     4.0,
+     3.5,
+     3.0,
+     2.5,
+     2.0,
+     1.5,
+     1.0,
+     0.5,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.814,
+    "y_calibration": "from printed axis labels"
+   },
+   "mtf": {
+    "x_labels_used": [
+     1.0,
+     5.0,
+     10.0,
+     20.0,
+     50.0,
+     100.0,
+     200.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.608,
+    "y_labels_used": [
+     150.0,
+     100.0,
+     70.0,
+     50.0,
+     30.0,
+     20.0,
+     10.0,
+     7.0,
+     5.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.707,
+    "y_calibration": "from printed axis labels"
+   }
+  },
+  "meta": {
+   "iso": "ISO 200/24\u00b0",
+   "light": "Daylight",
+   "process": [
+    "C-41/CN-16"
+   ],
+   "densitometry": [
+    "Status M"
+   ],
+   "rms_granularity": "4",
+   "exposure": [
+    "Daylight"
+   ]
+  }
+ },
+ "fujifilm_superia_xtra_400": {
+  "files": {
+   "log_sensitivity_b": {
+    "n": 139,
+    "x": [
+     401.333,
+     500.123
+    ],
+    "y": [
+     -0.006,
+     1.586
+    ]
+   },
+   "log_sensitivity_g": {
+    "n": 116,
+    "x": [
+     472.271,
+     587.873
+    ],
+    "y": [
+     -0.297,
+     1.506
+    ]
+   },
+   "log_sensitivity_r": {
+    "n": 116,
+    "x": [
+     565.396,
+     666.109
+    ],
+    "y": [
+     -0.039,
+     1.239
+    ]
+   },
+   "log_sensitivity_cyan_layer": {
+    "n": 47,
+    "x": [
+     472.856,
+     554.305
+    ],
+    "y": [
+     -0.288,
+     0.587
+    ]
+   },
+   "dye_density_mid": {
+    "n": 231,
+    "x": [
+     399.817,
+     726.446
+    ],
+    "y": [
+     1.077,
+     1.956
+    ]
+   },
+   "dye_density_min": {
+    "n": 167,
+    "x": [
+     399.407,
+     726.212
+    ],
+    "y": [
+     0.176,
+     0.894
+    ]
+   },
+   "density_curve_b": {
+    "n": 47,
+    "x": [
+     -3.629,
+     0.234
+    ],
+    "y": [
+     0.726,
+     2.959
+    ]
+   },
+   "density_curve_g": {
+    "n": 47,
+    "x": [
+     -3.633,
+     0.289
+    ],
+    "y": [
+     0.409,
+     2.592
+    ]
+   },
+   "density_curve_r": {
+    "n": 47,
+    "x": [
+     -3.631,
+     0.324
+    ],
+    "y": [
+     0.136,
+     2.124
+    ]
+   },
+   "mtf": {
+    "n": 47,
+    "x": [
+     2.706,
+     100.352
+    ],
+    "y": [
+     23.005,
+     117.545
+    ]
+   }
+  },
+  "notes": [],
+  "calib": {
+   "sens": {
+    "x_labels_used": [
+     400.0,
+     500.0,
+     600.0,
+     700.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.175,
+    "y_calibration": "relative: one log unit = the grid interval marked by the \"1.0\" bracket (y_pt 116.47..144.72); zero set at the lower bracket grid line"
+   },
+   "dye": {
+    "x_labels_used": [
+     400.0,
+     500.0,
+     600.0,
+     700.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.193,
+    "y_labels_used": [
+     2.0,
+     1.0,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.313,
+    "y_calibration": "from printed axis labels"
+   },
+   "char": {
+    "x_labels_used": [
+     -4.0,
+     -3.0,
+     -2.0,
+     -1.0,
+     0.0,
+     1.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.004,
+    "y_labels_used": [
+     4.0,
+     3.5,
+     3.0,
+     2.5,
+     2.0,
+     1.5,
+     1.0,
+     0.5,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.005,
+    "y_calibration": "from printed axis labels"
+   },
+   "mtf": {
+    "x_labels_used": [
+     1.0,
+     5.0,
+     10.0,
+     20.0,
+     50.0,
+     100.0,
+     200.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.591,
+    "y_labels_used": [
+     150.0,
+     100.0,
+     70.0,
+     50.0,
+     30.0,
+     20.0,
+     10.0,
+     7.0,
+     5.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.469,
+    "y_calibration": "from printed axis labels"
+   }
+  },
+  "meta": {
+   "iso": "ISO 400/27\u00b0",
+   "light": "Daylight",
+   "process": [
+    "C-41/CN-16"
+   ],
+   "densitometry": [
+    "Status M"
+   ],
+   "rms_granularity": "4",
+   "exposure": [
+    "Daylight"
+   ]
+  }
+ },
+ "fujifilm_true_definition_400": {
+  "files": {
+   "dye_density_mid": {
+    "n": 300,
+    "x": [
+     400.544,
+     719.135
+    ],
+    "y": [
+     1.021,
+     1.895
+    ]
+   },
+   "dye_density_min": {
+    "n": 162,
+    "x": [
+     399.995,
+     718.586
+    ],
+    "y": [
+     0.175,
+     0.879
+    ]
+   },
+   "log_sensitivity_b": {
+    "n": 139,
+    "x": [
+     400.895,
+     490.597
+    ],
+    "y": [
+     0.112,
+     1.317
+    ]
+   },
+   "log_sensitivity_g": {
+    "n": 116,
+    "x": [
+     479.546,
+     584.412
+    ],
+    "y": [
+     -0.021,
+     1.672
+    ]
+   },
+   "log_sensitivity_r": {
+    "n": 93,
+    "x": [
+     573.103,
+     659.981
+    ],
+    "y": [
+     0.012,
+     1.2
+    ]
+   },
+   "log_sensitivity_cyan_layer": {
+    "n": 47,
+    "x": [
+     482.886,
+     554.857
+    ],
+    "y": [
+     -0.021,
+     0.582
+    ]
+   },
+   "density_curve_b": {
+    "n": 70,
+    "x": [
+     -3.559,
+     0.287
+    ],
+    "y": [
+     0.853,
+     2.391
+    ]
+   },
+   "density_curve_g": {
+    "n": 47,
+    "x": [
+     -3.582,
+     0.275
+    ],
+    "y": [
+     0.607,
+     2.211
+    ]
+   },
+   "density_curve_r": {
+    "n": 70,
+    "x": [
+     -3.594,
+     0.269
+    ],
+    "y": [
+     0.229,
+     1.941
+    ]
+   },
+   "mtf": {
+    "n": 70,
+    "x": [
+     3.915,
+     104.354
+    ],
+    "y": [
+     22.697,
+     114.963
+    ]
+   }
+  },
+  "notes": [],
+  "calib": {
+   "dye": {
+    "x_labels_used": [
+     400.0,
+     500.0,
+     600.0,
+     700.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.186,
+    "y_labels_used": [
+     2.0,
+     1.0,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.14,
+    "y_calibration": "from printed axis labels"
+   },
+   "sens": {
+    "x_labels_used": [
+     400.0,
+     500.0,
+     600.0,
+     700.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.116,
+    "y_calibration": "relative: one log unit = the grid interval marked by the \"1.0\" bracket (y_pt 116.90..145.43); zero set at the lower bracket grid line"
+   },
+   "char": {
+    "x_labels_used": [
+     -4.0,
+     -3.0,
+     -2.0,
+     -1.0,
+     0.0,
+     1.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.078,
+    "y_labels_used": [
+     4.0,
+     3.5,
+     3.0,
+     2.5,
+     2.0,
+     1.5,
+     1.0,
+     0.5,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.251,
+    "y_calibration": "from printed axis labels"
+   },
+   "mtf": {
+    "x_labels_used": [
+     1.0,
+     5.0,
+     10.0,
+     20.0,
+     50.0,
+     100.0,
+     200.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.576,
+    "y_labels_used": [
+     150.0,
+     100.0,
+     70.0,
+     50.0,
+     30.0,
+     20.0,
+     10.0,
+     7.0,
+     5.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.568,
+    "y_calibration": "from printed axis labels"
+   }
+  },
+  "meta": {
+   "iso": "ISO 400/27\u00b0",
+   "light": "Daylight",
+   "process": [
+    "CN-16"
+   ],
+   "densitometry": [
+    "Status M"
+   ],
+   "rms_granularity": "5",
+   "exposure": [
+    "Daylight"
+   ]
+  }
+ },
+ "fujifilm_superia_xtra_800": {
+  "files": {
+   "log_sensitivity_b": {
+    "n": 116,
+    "x": [
+     382.061,
+     521.825
+    ],
+    "y": [
+     0.089,
+     1.72
+    ]
+   },
+   "log_sensitivity_g": {
+    "n": 70,
+    "x": [
+     462.313,
+     595.765
+    ],
+    "y": [
+     -0.124,
+     1.575
+    ]
+   },
+   "log_sensitivity_r": {
+    "n": 93,
+    "x": [
+     551.582,
+     680.525
+    ],
+    "y": [
+     0.097,
+     1.565
+    ]
+   },
+   "log_sensitivity_cyan_layer": {
+    "n": 47,
+    "x": [
+     472.232,
+     553.385
+    ],
+    "y": [
+     -0.142,
+     0.419
+    ]
+   },
+   "dye_density_mid": {
+    "n": 185,
+    "x": [
+     393.073,
+     725.183
+    ],
+    "y": [
+     1.173,
+     2.998
+    ]
+   },
+   "dye_density_min": {
+    "n": 162,
+    "x": [
+     386.686,
+     725.183
+    ],
+    "y": [
+     0.394,
+     2.989
+    ]
+   },
+   "density_curve_b": {
+    "n": 70,
+    "x": [
+     -3.563,
+     0.154
+    ],
+    "y": [
+     0.786,
+     3.17
+    ]
+   },
+   "density_curve_g": {
+    "n": 70,
+    "x": [
+     -3.551,
+     0.166
+    ],
+    "y": [
+     0.46,
+     2.811
+    ]
+   },
+   "density_curve_r": {
+    "n": 70,
+    "x": [
+     -3.551,
+     0.26
+    ],
+    "y": [
+     0.222,
+     2.416
+    ]
+   },
+   "mtf": {
+    "n": 24,
+    "x": [
+     3.265,
+     106.192
+    ],
+    "y": [
+     17.685,
+     121.682
+    ]
+   }
+  },
+  "notes": [],
+  "calib": {
+   "sens": {
+    "x_labels_used": [
+     400.0,
+     500.0,
+     600.0,
+     700.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.175,
+    "y_calibration": "relative: one log unit = the grid interval marked by the \"1.0\" bracket (y_pt 116.01..144.26); zero set at the lower bracket grid line"
+   },
+   "dye": {
+    "x_labels_used": [
+     400.0,
+     500.0,
+     600.0,
+     700.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.2,
+    "y_labels_used": [
+     3.0,
+     2.0,
+     1.0,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.116,
+    "y_calibration": "from printed axis labels"
+   },
+   "char": {
+    "x_labels_used": [
+     -4.0,
+     -3.0,
+     -2.0,
+     -1.0,
+     -0.0,
+     1.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.36,
+    "y_labels_used": [
+     4.0,
+     3.5,
+     3.0,
+     2.5,
+     2.0,
+     1.5,
+     1.0,
+     0.5,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.651,
+    "y_calibration": "from printed axis labels"
+   },
+   "mtf": {
+    "x_labels_used": [
+     1.0,
+     5.0,
+     10.0,
+     20.0,
+     50.0,
+     100.0,
+     200.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.665,
+    "y_labels_used": [
+     150.0,
+     100.0,
+     70.0,
+     50.0,
+     30.0,
+     20.0,
+     10.0,
+     7.0,
+     5.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.652,
+    "y_calibration": "from printed axis labels"
+   }
+  },
+  "meta": {
+   "iso": "ISO 800/30\u00b0",
+   "light": "Daylight",
+   "process": [
+    "C-41/CN-16"
+   ],
+   "densitometry": [
+    "Status M"
+   ],
+   "rms_granularity": "5",
+   "exposure": [
+    "Daylight"
+   ]
+  }
+ },
+ "fujifilm_superia_1600": {
+  "files": {
+   "dye_density_mid": {
+    "n": 185,
+    "x": [
+     399.813,
+     726.219
+    ],
+    "y": [
+     0.777,
+     1.98
+    ]
+   },
+   "dye_density_min": {
+    "n": 231,
+    "x": [
+     399.772,
+     726.547
+    ],
+    "y": [
+     0.164,
+     1.069
+    ]
+   },
+   "log_sensitivity_b": {
+    "n": 139,
+    "x": [
+     386.185,
+     504.403
+    ],
+    "y": [
+     0.049,
+     1.487
+    ]
+   },
+   "log_sensitivity_g": {
+    "n": 116,
+    "x": [
+     468.498,
+     614.74
+    ],
+    "y": [
+     -0.003,
+     1.504
+    ]
+   },
+   "log_sensitivity_r": {
+    "n": 93,
+    "x": [
+     556.506,
+     677.355
+    ],
+    "y": [
+     -0.065,
+     1.473
+    ]
+   },
+   "log_sensitivity_cyan_layer": {
+    "n": 47,
+    "x": [
+     470.688,
+     558.718
+    ],
+    "y": [
+     -0.294,
+     0.578
+    ]
+   },
+   "density_curve_b": {
+    "n": 47,
+    "x": [
+     -3.688,
+     0.308
+    ],
+    "y": [
+     0.738,
+     3.224
+    ]
+   },
+   "density_curve_g": {
+    "n": 47,
+    "x": [
+     -3.691,
+     0.354
+    ],
+    "y": [
+     0.35,
+     2.866
+    ]
+   },
+   "density_curve_r": {
+    "n": 47,
+    "x": [
+     -3.689,
+     0.302
+    ],
+    "y": [
+     0.175,
+     2.416
+    ]
+   },
+   "mtf": {
+    "n": 47,
+    "x": [
+     3.125,
+     95.857
+    ],
+    "y": [
+     22.354,
+     114.137
+    ]
+   }
+  },
+  "notes": [],
+  "calib": {
+   "dye": {
+    "x_labels_used": [
+     400.0,
+     500.0,
+     600.0,
+     700.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.193,
+    "y_labels_used": [
+     2.0,
+     1.0,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.313,
+    "y_calibration": "from printed axis labels"
+   },
+   "sens": {
+    "x_labels_used": [
+     400.0,
+     500.0,
+     600.0,
+     700.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.172,
+    "y_calibration": "relative: one log unit = the grid interval marked by the \"1.0\" bracket (y_pt 116.85..144.53); zero set at the lower bracket grid line"
+   },
+   "char": {
+    "x_labels_used": [
+     -4.0,
+     -3.0,
+     -2.0,
+     -1.0,
+     -0.0,
+     1.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.004,
+    "y_labels_used": [
+     4.0,
+     3.5,
+     3.0,
+     2.5,
+     2.0,
+     1.5,
+     1.0,
+     0.5,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.005,
+    "y_calibration": "from printed axis labels"
+   },
+   "mtf": {
+    "x_labels_used": [
+     1.0,
+     5.0,
+     10.0,
+     20.0,
+     50.0,
+     100.0,
+     200.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.772,
+    "y_labels_used": [
+     150.0,
+     100.0,
+     70.0,
+     50.0,
+     30.0,
+     20.0,
+     10.0,
+     7.0,
+     5.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.426,
+    "y_calibration": "from printed axis labels"
+   }
+  },
+  "meta": {
+   "iso": "ISO 1600/33\u00b0",
+   "light": "Daylight",
+   "process": [
+    "C-41/CN-16"
+   ],
+   "densitometry": [
+    "Status M"
+   ],
+   "rms_granularity": "7",
+   "exposure": [
+    "Daylight"
+   ]
+  }
+ },
+ "fujifilm_neopan_acros_100": {
+  "files": {
+   "log_sensitivity": {
+    "n": 277,
+    "x": [
+     379.341,
+     648.389
+    ],
+    "y": [
+     -0.39,
+     0.672
+    ]
+   },
+   "density_curve_135_10min": {
+    "n": 47,
+    "x": [
+     -3.017,
+     0.515
+    ],
+    "y": [
+     0.132,
+     2.252
+    ]
+   },
+   "density_curve_135_7min": {
+    "n": 47,
+    "x": [
+     -2.942,
+     0.537
+    ],
+    "y": [
+     0.131,
+     1.885
+    ]
+   },
+   "density_curve_135_4min": {
+    "n": 47,
+    "x": [
+     -3.266,
+     0.543
+    ],
+    "y": [
+     0.13,
+     1.41
+    ]
+   },
+   "density_curve_120_10min": {
+    "n": 47,
+    "x": [
+     -2.645,
+     0.554
+    ],
+    "y": [
+     0.076,
+     2.179
+    ]
+   },
+   "density_curve_120_7min": {
+    "n": 47,
+    "x": [
+     -2.883,
+     0.565
+    ],
+    "y": [
+     0.065,
+     1.823
+    ]
+   },
+   "density_curve_120_4min": {
+    "n": 47,
+    "x": [
+     -3.311,
+     0.574
+    ],
+    "y": [
+     0.066,
+     1.382
+    ]
+   },
+   "density_curve": {
+    "n": 47,
+    "x": [
+     -2.942,
+     0.537
+    ],
+    "y": [
+     0.131,
+     1.885
+    ],
+    "copy_of": "density_curve_135_7min"
+   }
+  },
+  "notes": [
+   "char_135: x-axis label(s) [0.0] not consistent with the grid and ignored in calibration (stray/other-axis label or a printed-chart offset; see check PNG)",
+   "char_120: x-axis label(s) [0.0] not consistent with the grid and ignored in calibration (stray/other-axis label or a printed-chart offset; see check PNG)",
+   "density_curve.csv is a copy of density_curve_135_7min.csv (135 size where sizes differ; middle of the three published D-76 development times); all times/sizes are kept as separate files"
+  ],
+  "calib": {
+   "sens": {
+    "x_labels_used": [
+     400.0,
+     500.0,
+     600.0,
+     700.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.068,
+    "y_calibration": "relative: one log unit = the grid interval marked by the \"1.0\" bracket (y_pt 135.86..162.74); zero set at the lower bracket grid line"
+   },
+   "char_135": {
+    "x_labels_used": [
+     -3.0,
+     -2.0,
+     -1.0,
+     0.0,
+     1.0
+    ],
+    "x_labels_dropped": [
+     0.0
+    ],
+    "x_fit_max_resid_pt": 0.125,
+    "y_labels_used": [
+     3.0,
+     2.5,
+     2.0,
+     1.5,
+     1.0,
+     0.5,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.297,
+    "y_calibration": "from printed axis labels",
+    "development_times_top_to_bottom": [
+     "10",
+     "7",
+     "4"
+    ]
+   },
+   "char_120": {
+    "x_labels_used": [
+     -3.0,
+     -2.0,
+     -1.0,
+     0.0,
+     1.0
+    ],
+    "x_labels_dropped": [
+     0.0
+    ],
+    "x_fit_max_resid_pt": 0.125,
+    "y_labels_used": [
+     3.0,
+     2.5,
+     2.0,
+     1.5,
+     1.0,
+     0.5,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.297,
+    "y_calibration": "from printed axis labels",
+    "development_times_top_to_bottom": [
+     "10",
+     "7",
+     "4"
+    ]
+   }
+  },
+  "meta": {
+   "iso": "ISO 100/21\u00b0",
+   "light": "",
+   "process": [],
+   "densitometry": [],
+   "rms_granularity": "",
+   "exposure": []
+  }
+ },
+ "fujifilm_neopan_400": {
+  "files": {
+   "log_sensitivity": {
+    "n": 162,
+    "x": [
+     388.417,
+     649.092
+    ],
+    "y": [
+     -0.162,
+     0.623
+    ]
+   },
+   "density_curve_135_12min": {
+    "n": 47,
+    "x": [
+     -3.502,
+     0.654
+    ],
+    "y": [
+     0.255,
+     2.448
+    ]
+   },
+   "density_curve_135_8p75min": {
+    "n": 47,
+    "x": [
+     -3.502,
+     0.654
+    ],
+    "y": [
+     0.234,
+     2.164
+    ]
+   },
+   "density_curve_135_7p5min": {
+    "n": 47,
+    "x": [
+     -3.502,
+     0.687
+    ],
+    "y": [
+     0.233,
+     1.903
+    ]
+   },
+   "density_curve_120_12min": {
+    "n": 70,
+    "x": [
+     -3.218,
+     0.646
+    ],
+    "y": [
+     0.111,
+     2.34
+    ]
+   },
+   "density_curve_120_8p75min": {
+    "n": 63,
+    "x": [
+     -3.109,
+     0.668
+    ],
+    "y": [
+     0.115,
+     2.072
+    ]
+   },
+   "density_curve_120_7p5min": {
+    "n": 70,
+    "x": [
+     -3.485,
+     0.671
+    ],
+    "y": [
+     0.113,
+     1.789
+    ]
+   },
+   "density_curve": {
+    "n": 47,
+    "x": [
+     -3.502,
+     0.654
+    ],
+    "y": [
+     0.234,
+     2.164
+    ],
+    "copy_of": "density_curve_135_8p75min"
+   }
+  },
+  "notes": [
+   "density_curve.csv is a copy of density_curve_135_8p75min.csv (135 size where sizes differ; middle of the three published D-76 development times); all times/sizes are kept as separate files"
+  ],
+  "calib": {
+   "sens": {
+    "x_labels_used": [
+     400.0,
+     500.0,
+     600.0,
+     700.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.068,
+    "y_calibration": "relative: one log unit = the grid interval marked by the \"1.0\" bracket (y_pt 137.97..164.85); zero set at the lower bracket grid line"
+   },
+   "char_135": {
+    "x_labels_used": [
+     -3.0,
+     -2.0,
+     -1.0,
+     0.0,
+     1.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.447,
+    "y_labels_used": [
+     3.0,
+     2.5,
+     2.0,
+     1.5,
+     1.0,
+     0.5,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.474,
+    "y_calibration": "from printed axis labels",
+    "development_times_top_to_bottom": [
+     "12",
+     "83/4",
+     "71/2"
+    ]
+   },
+   "char_120": {
+    "x_labels_used": [
+     -3.0,
+     -2.0,
+     -1.0,
+     0.0,
+     1.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.078,
+    "y_labels_used": [
+     3.0,
+     2.5,
+     2.0,
+     1.5,
+     1.0,
+     0.5,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.297,
+    "y_calibration": "from printed axis labels",
+    "development_times_top_to_bottom": [
+     "12",
+     "83/4",
+     "71/2"
+    ]
+   }
+  },
+  "meta": {
+   "iso": "ISO 400/27\u00b0",
+   "light": "",
+   "process": [],
+   "densitometry": [],
+   "rms_granularity": "",
+   "exposure": []
+  }
+ },
+ "fujifilm_neopan_1600": {
+  "files": {
+   "log_sensitivity": {
+    "n": 116,
+    "x": [
+     391.446,
+     652.087
+    ],
+    "y": [
+     -0.068,
+     0.802
+    ]
+   },
+   "density_curve_7p5min": {
+    "n": 47,
+    "x": [
+     -3.74,
+     0.137
+    ],
+    "y": [
+     0.183,
+     2.23
+    ]
+   },
+   "density_curve_5p25min": {
+    "n": 47,
+    "x": [
+     -3.751,
+     0.115
+    ],
+    "y": [
+     0.176,
+     1.753
+    ]
+   },
+   "density_curve_4min": {
+    "n": 47,
+    "x": [
+     -3.751,
+     0.115
+    ],
+    "y": [
+     0.171,
+     1.47
+    ]
+   },
+   "density_curve": {
+    "n": 47,
+    "x": [
+     -3.751,
+     0.115
+    ],
+    "y": [
+     0.176,
+     1.753
+    ],
+    "copy_of": "density_curve_5p25min"
+   }
+  },
+  "notes": [
+   "density_curve.csv is a copy of density_curve_5p25min.csv (135 size where sizes differ; middle of the three published D-76 development times); all times/sizes are kept as separate files"
+  ],
+  "calib": {
+   "sens": {
+    "x_labels_used": [
+     400.0,
+     500.0,
+     600.0,
+     700.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.065,
+    "y_calibration": "relative: one log unit = the grid interval marked by the \"1.0\" bracket (y_pt 157.65..184.53); zero set at the lower bracket grid line"
+   },
+   "char": {
+    "x_labels_used": [
+     -3.0,
+     -2.0,
+     -1.0,
+     0.0,
+     1.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.234,
+    "y_labels_used": [
+     3.0,
+     2.5,
+     2.0,
+     1.5,
+     1.0,
+     0.5,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.289,
+    "y_calibration": "from printed axis labels",
+    "development_times_top_to_bottom": [
+     "71/2",
+     "51/4",
+     "4"
+    ]
+   }
+  },
+  "meta": {
+   "iso": "EI 1600/33\u00b0",
+   "light": "",
+   "process": [],
+   "densitometry": [],
+   "rms_granularity": "",
+   "exposure": []
+  }
+ },
+ "fujifilm_nexia_a200": {
+  "files": {
+   "log_sensitivity_b": {
+    "n": 116,
+    "x": [
+     392.882,
+     501.988
+    ],
+    "y": [
+     -0.372,
+     1.028
+    ]
+   },
+   "log_sensitivity_g": {
+    "n": 93,
+    "x": [
+     465.92,
+     589.453
+    ],
+    "y": [
+     -0.849,
+     0.778
+    ]
+   },
+   "log_sensitivity_r": {
+    "n": 93,
+    "x": [
+     556.09,
+     670.606
+    ],
+    "y": [
+     -0.637,
+     0.73
+    ]
+   },
+   "log_sensitivity_cyan_layer": {
+    "n": 47,
+    "x": [
+     470.428,
+     552.483
+    ],
+    "y": [
+     -0.858,
+     -0.058
+    ]
+   },
+   "dye_density_mid": {
+    "n": 162,
+    "x": [
+     383.949,
+     725.183
+    ],
+    "y": [
+     1.154,
+     2.989
+    ]
+   },
+   "dye_density_min": {
+    "n": 162,
+    "x": [
+     378.474,
+     726.095
+    ],
+    "y": [
+     0.448,
+     2.672
+    ]
+   },
+   "density_curve_b": {
+    "n": 70,
+    "x": [
+     -3.28,
+     0.567
+    ],
+    "y": [
+     0.703,
+     2.847
+    ]
+   },
+   "density_curve_g": {
+    "n": 70,
+    "x": [
+     -3.28,
+     0.579
+    ],
+    "y": [
+     0.475,
+     2.464
+    ]
+   },
+   "density_curve_r": {
+    "n": 70,
+    "x": [
+     -3.268,
+     0.591
+    ],
+    "y": [
+     0.198,
+     2.056
+    ]
+   },
+   "mtf": {
+    "n": 24,
+    "x": [
+     3.484,
+     87.801
+    ],
+    "y": [
+     22.792,
+     127.978
+    ]
+   }
+  },
+  "notes": [],
+  "calib": {
+   "sens": {
+    "x_labels_used": [
+     400.0,
+     500.0,
+     600.0,
+     700.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.175,
+    "y_calibration": "relative: one log unit = the grid interval marked by the \"1.0\" bracket (y_pt 117.01..145.26); zero set at the lower bracket grid line"
+   },
+   "dye": {
+    "x_labels_used": [
+     400.0,
+     500.0,
+     600.0,
+     700.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.2,
+    "y_labels_used": [
+     3.0,
+     2.0,
+     1.0,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.116,
+    "y_calibration": "from printed axis labels"
+   },
+   "char": {
+    "x_labels_used": [
+     -4.0,
+     -3.0,
+     -2.0,
+     -1.0,
+     -0.0,
+     1.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.36,
+    "y_labels_used": [
+     4.0,
+     3.5,
+     3.0,
+     2.5,
+     2.0,
+     1.5,
+     1.0,
+     0.5,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.651,
+    "y_calibration": "from printed axis labels"
+   },
+   "mtf": {
+    "x_labels_used": [
+     1.0,
+     5.0,
+     10.0,
+     20.0,
+     50.0,
+     100.0,
+     200.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.587,
+    "y_labels_used": [
+     150.0,
+     100.0,
+     70.0,
+     50.0,
+     30.0,
+     20.0,
+     10.0,
+     7.0,
+     5.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.684,
+    "y_calibration": "from printed axis labels"
+   }
+  },
+  "meta": {
+   "iso": "ISO 200/24\u00b0",
+   "light": "Daylight",
+   "process": [
+    "C-41/CN-16"
+   ],
+   "densitometry": [
+    "Status M"
+   ],
+   "rms_granularity": "4",
+   "exposure": [
+    "Daylight"
+   ]
+  }
+ },
+ "fujifilm_nexia_400": {
+  "files": {
+   "log_sensitivity_b": {
+    "n": 116,
+    "x": [
+     385.222,
+     510.891
+    ],
+    "y": [
+     -0.232,
+     1.331
+    ]
+   },
+   "log_sensitivity_g": {
+    "n": 70,
+    "x": [
+     460.5,
+     594.671
+    ],
+    "y": [
+     -0.732,
+     1.09
+    ]
+   },
+   "log_sensitivity_r": {
+    "n": 116,
+    "x": [
+     555.815,
+     675.412
+    ],
+    "y": [
+     -0.553,
+     1.039
+    ]
+   },
+   "log_sensitivity_cyan_layer": {
+    "n": 70,
+    "x": [
+     464.751,
+     553.386
+    ],
+    "y": [
+     -0.601,
+     0.245
+    ]
+   },
+   "dye_density_mid": {
+    "n": 185,
+    "x": [
+     391.697,
+     722.102
+    ],
+    "y": [
+     1.159,
+     3.064
+    ]
+   },
+   "dye_density_min": {
+    "n": 162,
+    "x": [
+     382.083,
+     722.102
+    ],
+    "y": [
+     0.391,
+     2.719
+    ]
+   },
+   "density_curve_b": {
+    "n": 47,
+    "x": [
+     -3.616,
+     0.189
+    ],
+    "y": [
+     0.85,
+     2.907
+    ]
+   },
+   "density_curve_g": {
+    "n": 47,
+    "x": [
+     -3.519,
+     0.216
+    ],
+    "y": [
+     0.503,
+     2.619
+    ]
+   },
+   "density_curve_r": {
+    "n": 47,
+    "x": [
+     -3.572,
+     0.34
+    ],
+    "y": [
+     0.188,
+     2.215
+    ]
+   },
+   "mtf": {
+    "n": 24,
+    "x": [
+     3.247,
+     96.87
+    ],
+    "y": [
+     22.549,
+     123.82
+    ]
+   }
+  },
+  "notes": [
+   "dye: y-axis label(s) [0.0] not consistent with the grid and ignored in calibration (stray/other-axis label or a printed-chart offset; see check PNG)"
+  ],
+  "calib": {
+   "sens": {
+    "x_labels_used": [
+     400.0,
+     500.0,
+     600.0,
+     700.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.389,
+    "y_calibration": "relative: one log unit = the grid interval marked by the \"1.0\" bracket (y_pt 114.21..142.21); zero set at the lower bracket grid line"
+   },
+   "dye": {
+    "x_labels_used": [
+     400.0,
+     500.0,
+     600.0,
+     700.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.302,
+    "y_labels_used": [
+     3.0,
+     2.0,
+     1.0
+    ],
+    "y_labels_dropped": [
+     0.0
+    ],
+    "y_fit_max_resid_pt": 0.083,
+    "y_calibration": "from printed axis labels"
+   },
+   "char": {
+    "x_labels_used": [
+     -4.0,
+     -3.0,
+     -2.0,
+     -1.0,
+     -0.0,
+     1.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.36,
+    "y_labels_used": [
+     4.0,
+     3.5,
+     3.0,
+     2.5,
+     2.0,
+     1.5,
+     1.0,
+     0.5,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.653,
+    "y_calibration": "from printed axis labels"
+   },
+   "mtf": {
+    "x_labels_used": [
+     1.0,
+     5.0,
+     10.0,
+     20.0,
+     50.0,
+     100.0,
+     200.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.611,
+    "y_labels_used": [
+     150.0,
+     100.0,
+     70.0,
+     50.0,
+     30.0,
+     20.0,
+     10.0,
+     7.0,
+     5.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.714,
+    "y_calibration": "from printed axis labels"
+   }
+  },
+  "meta": {
+   "iso": "ISO 400/27\u00b0",
+   "light": "Daylight",
+   "process": [
+    "C-41/CN-16"
+   ],
+   "densitometry": [
+    "Status M"
+   ],
+   "rms_granularity": "4",
+   "exposure": [
+    "Daylight"
+   ]
+  }
+ },
+ "fujifilm_nexia_800": {
+  "files": {
+   "dye_density_mid": {
+    "n": 162,
+    "x": [
+     386.686,
+     724.861
+    ],
+    "y": [
+     1.091,
+     2.998
+    ]
+   },
+   "dye_density_min": {
+    "n": 185,
+    "x": [
+     379.387,
+     725.055
+    ],
+    "y": [
+     0.341,
+     2.654
+    ]
+   },
+   "log_sensitivity_b": {
+    "n": 116,
+    "x": [
+     384.767,
+     515.514
+    ],
+    "y": [
+     -0.221,
+     1.419
+    ]
+   },
+   "log_sensitivity_g": {
+    "n": 70,
+    "x": [
+     467.723,
+     592.158
+    ],
+    "y": [
+     -0.221,
+     1.308
+    ]
+   },
+   "log_sensitivity_r": {
+    "n": 93,
+    "x": [
+     557.894,
+     675.115
+    ],
+    "y": [
+     -0.139,
+     1.339
+    ]
+   },
+   "log_sensitivity_cyan_layer": {
+    "n": 70,
+    "x": [
+     476.74,
+     549.778
+    ],
+    "y": [
+     -0.23,
+     0.317
+    ]
+   },
+   "density_curve_b": {
+    "n": 70,
+    "x": [
+     -3.643,
+     0.189
+    ],
+    "y": [
+     0.832,
+     3.14
+    ]
+   },
+   "density_curve_g": {
+    "n": 70,
+    "x": [
+     -3.625,
+     0.163
+    ],
+    "y": [
+     0.492,
+     2.871
+    ]
+   },
+   "density_curve_r": {
+    "n": 70,
+    "x": [
+     -3.625,
+     0.172
+    ],
+    "y": [
+     0.158,
+     2.53
+    ]
+   },
+   "mtf": {
+    "n": 24,
+    "x": [
+     3.31,
+     106.19
+    ],
+    "y": [
+     17.462,
+     126.36
+    ]
+   }
+  },
+  "notes": [],
+  "calib": {
+   "dye": {
+    "x_labels_used": [
+     400.0,
+     500.0,
+     600.0,
+     700.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.2,
+    "y_labels_used": [
+     3.0,
+     2.0,
+     1.0,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.116,
+    "y_calibration": "from printed axis labels"
+   },
+   "sens": {
+    "x_labels_used": [
+     400.0,
+     500.0,
+     600.0,
+     700.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.175,
+    "y_calibration": "relative: one log unit = the grid interval marked by the \"1.0\" bracket (y_pt 114.68..142.93); zero set at the lower bracket grid line"
+   },
+   "char": {
+    "x_labels_used": [
+     -4.0,
+     -3.0,
+     -2.0,
+     -1.0,
+     -0.0,
+     1.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.36,
+    "y_labels_used": [
+     4.0,
+     3.5,
+     3.0,
+     2.5,
+     2.0,
+     1.5,
+     1.0,
+     0.5,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.651,
+    "y_calibration": "from printed axis labels"
+   },
+   "mtf": {
+    "x_labels_used": [
+     1.0,
+     5.0,
+     10.0,
+     20.0,
+     50.0,
+     100.0,
+     200.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.669,
+    "y_labels_used": [
+     150.0,
+     100.0,
+     70.0,
+     50.0,
+     30.0,
+     20.0,
+     10.0,
+     7.0,
+     5.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.653,
+    "y_calibration": "from printed axis labels"
+   }
+  },
+  "meta": {
+   "iso": "ISO 800/30\u00b0",
+   "light": "Daylight",
+   "process": [
+    "C-41/CN-16"
+   ],
+   "densitometry": [
+    "Status M"
+   ],
+   "rms_granularity": "5",
+   "exposure": [
+    "Daylight"
+   ]
+  }
+ }
+}

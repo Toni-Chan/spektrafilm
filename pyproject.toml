@@ -53,6 +53,7 @@ dev = [
 [project.scripts]
 spektrafilm = "spektrafilm_gui.app:main"
 spektrafilm-lut = "spektrafilm_lut_creator.cli:main"
+spektrafilm-profile-builder = "spektrafilm_profile_builder.cli:main"
 
 [tool.setuptools]
 zip-safe = false
@@ -66,6 +67,8 @@ include = [
     "spektrafilm_gui.*",
     "spektrafilm_lut_creator",
     "spektrafilm_lut_creator.*",
+    "spektrafilm_profile_builder",
+    "spektrafilm_profile_builder.*",
 ]
 
 [tool.setuptools.package-data]
@@ -74,5 +77,9 @@ spektrafilm = [
 ]
 spektrafilm_gui = [
     "assets/*",
+]
+spektrafilm_profile_builder = [
+    "data/**/*",
+    "README.md",
 ]
 

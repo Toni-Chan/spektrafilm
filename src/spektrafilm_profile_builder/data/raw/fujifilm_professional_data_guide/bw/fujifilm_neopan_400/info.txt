@@ -1,0 +1,33 @@
+NEOPAN 400 Professional
+Datasheet: Fujifilm Professional Data Guide AF3-207U (2005), PDF page 41
+Source URL: https://asset.fujifilm.com/www/us/files/2020-03/3ab271f46f8d71c7e4c91bcedb7de050/ProfessionalFilmDataGuide.pdf
+Type: bw
+Speed: ISO 400/27°
+Light type: Daylight (5400K spectrogram)
+Process: D-76, small tank, 20C
+Densitometry: visual/diffuse (not stated)
+Exposure (as printed): 
+Diffuse RMS granularity (as printed): 
+
+Files (x range, y range, n points):
+  density_curve.csv  x -3.502..0.654  y 0.234..2.164  n=47  (copy of density_curve_135_8p75min.csv)
+  density_curve_120_12min.csv  x -3.218..0.646  y 0.111..2.34  n=70
+  density_curve_120_7p5min.csv  x -3.485..0.671  y 0.113..1.789  n=70
+  density_curve_120_8p75min.csv  x -3.109..0.668  y 0.115..2.072  n=63
+  density_curve_135_12min.csv  x -3.502..0.654  y 0.255..2.448  n=47
+  density_curve_135_7p5min.csv  x -3.502..0.687  y 0.233..1.903  n=47
+  density_curve_135_8p75min.csv  x -3.502..0.654  y 0.234..2.164  n=47
+  log_sensitivity.csv  x 388.417..649.092  y -0.162..0.623  n=162
+
+Units: log_sensitivity_* = wavelength nm, log10 relative sensitivity (sensitivity = 1/exposure in J/cm2
+  giving the specified density above D-min, see page). density_curve_* = log10 H (lux-seconds), density.
+  dye_density_* = wavelength nm, spectral diffuse density. mtf.csv = cycles/mm, response %.
+Extraction: vector strokes read directly from the PDF (pymupdf), axes calibrated from tick labels
+  snapped to grid lines (script: scripts/extract_fujifilm_data_guide.py). Typical accuracy ~0.1-0.2 pt on the page
+  (about 0.5-1 nm, 0.005-0.01 log H, 0.005-0.01 density) plus the original drawing accuracy.
+Calibration:
+  sens: {"x_labels_used": [400.0, 500.0, 600.0, 700.0], "x_labels_dropped": [], "x_fit_max_resid_pt": 0.068, "y_calibration": "relative: one log unit = the grid interval marked by the \"1.0\" bracket (y_pt 137.97..164.85); zero set at the lower bracket grid line"}
+  char_135: {"x_labels_used": [-3.0, -2.0, -1.0, 0.0, 1.0], "x_labels_dropped": [], "x_fit_max_resid_pt": 0.447, "y_labels_used": [3.0, 2.5, 2.0, 1.5, 1.0, 0.5, 0.0], "y_labels_dropped": [], "y_fit_max_resid_pt": 0.474, "y_calibration": "from printed axis labels", "development_times_top_to_bottom": ["12", "83/4", "71/2"]}
+  char_120: {"x_labels_used": [-3.0, -2.0, -1.0, 0.0, 1.0], "x_labels_dropped": [], "x_fit_max_resid_pt": 0.078, "y_labels_used": [3.0, 2.5, 2.0, 1.5, 1.0, 0.5, 0.0], "y_labels_dropped": [], "y_fit_max_resid_pt": 0.297, "y_calibration": "from printed axis labels", "development_times_top_to_bottom": ["12", "83/4", "71/2"]}
+Caveats:
+  density_curve.csv is a copy of density_curve_135_8p75min.csv (135 size where sizes differ; middle of the three published D-76 development times); all times/sizes are kept as separate files
