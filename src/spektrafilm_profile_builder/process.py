@@ -7,6 +7,7 @@ from datetime import date
 
 import numpy as np
 import scipy.ndimage
+import scipy.optimize
 
 from spektrafilm.profiles.io import (
     DensityCurvesModel, Profile, ProfileData, ProfileInfo, ProfileMetadata, list_profiles, load_profile,
@@ -15,7 +16,7 @@ from spektrafilm.utils.spectral_upsampling import rgb_to_raw_hanatos2025
 
 from . import __version__
 from .curves import (
-    evaluate_cdfs, fit_cdfs, measure_density_min, shift_curves, speed_point_log_exposure,
+    MIDGRAY_TRANSMITTANCE, evaluate_cdfs, fit_cdfs, measure_density_min, shift_curves, speed_point_log_exposure,
 )
 from .reconstruct import reconstruct_dye_density
 from .records import RawRecord
@@ -34,7 +35,8 @@ class Recipe:
     or a column of a batch recipe file."""
     stock: str
     name: str
-    type: str = 'negative'                     # 'negative' | 'positive'
+    type: str = 'negative'                     # 'negative' | 'positive' | 'paper'
+    support: str | None = None                 # paper only: 'paper' (reflection, default) or 'film' (display transparency)
     densitometer: str | None = None            # default: status_M (negative) / status_A (positive)
     log_sensitivity_density_over_min: float = 1.0
     reference_illuminant: str = 'D55'
@@ -150,8 +152,135 @@ def _positive_base_density(wl, dc_min, sigma_nm=20.0):
 # -----------------------------------------------------------------------------
 # main entry point
 
+def _metameric_neutral_scale(cmy, base, viewing_illuminant, midgray=MIDGRAY_TRANSMITTANCE):
+    """Upstream ``balance_metameric_neutral``: dye amounts (C, M, Y) whose
+    mixture plus base renders as an 18.4 % neutral under the viewing
+    illuminant (CIE 1931 2 deg, sRGB primaries with the illuminant white).
+    Returns the amounts and the mid-scale spectral density."""
+    import colour
+    from colour.models import RGB_COLOURSPACE_sRGB
+    from spektrafilm.config import STANDARD_OBSERVER_CMFS
+    from spektrafilm.model.illuminants import standard_illuminant
+
+    ill = np.asarray(standard_illuminant(viewing_illuminant)[:], dtype=float)
+    cmfs = np.asarray(STANDARD_OBSERVER_CMFS[:], dtype=float)
+    norm = np.sum(ill * cmfs[:, 1])
+    ill_xy = colour.XYZ_to_xy(ill @ cmfs / norm)
+    dyes = np.nan_to_num(cmy)
+
+    def rgb(d):
+        mid = dyes @ d + base
+        light = np.nan_to_num(10 ** (-mid) * ill)
+        return colour.XYZ_to_RGB(light @ cmfs / norm, RGB_COLOURSPACE_sRGB, illuminant=ill_xy,
+                                 apply_cctf_encoding=False)
+
+    fit = scipy.optimize.least_squares(lambda d: rgb(d) - midgray, [0.5, 0.5, 0.5], bounds=(0, 5))
+    return fit.x, cmy @ fit.x + base
+
+
+def _visual_midgray_log_exposure(le, dc, cmy, base, viewing_illuminant, midgray=MIDGRAY_TRANSMITTANCE):
+    """Log exposure at which the print's spectral density (dyes @ layer density
+    + base) gives ``midgray`` luminance (CIE Y) under the viewing illuminant."""
+    from spektrafilm.config import STANDARD_OBSERVER_CMFS
+    from spektrafilm.model.illuminants import standard_illuminant
+
+    w = np.asarray(standard_illuminant(viewing_illuminant)[:], dtype=float) * \
+        np.asarray(STANDARD_OBSERVER_CMFS[:], dtype=float)[:, 1]
+    dens = np.nan_to_num(np.asarray(dc, dtype=float)) @ np.nan_to_num(cmy).T + base[None, :]
+    y = (10 ** -dens) @ w / w.sum()
+    sel = np.isfinite(y)
+    return float(np.interp(-np.log10(midgray), -np.log10(y[sel]), le[sel]))
+
+
+def build_paper_profile(record: RawRecord, recipe: Recipe, report: BuildReport | None = None) -> Profile:
+    """Colour print paper / print material (stage 'printing'), following the
+    upstream ``process_paper_profile``: base+fog spread spectrally from the
+    status-A minima, log exposure first put where green reaches D = 0.735 over
+    D-min, dyes scaled so that the mid-scale neutral is metameric to 18.4 % grey
+    under the viewing illuminant (relative to green), status-A unmixing, cdfs
+    fit; finally log exposure 0 is moved to where the print renders 18.4 %
+    luminance under the viewing illuminant (the level the shipped papers print
+    mid-grey at).
+    The sheet's spectral sensitivities are kept as printed (their R/G/B levels
+    set the enlarger filtration; the absolute level cancels in the runtime's
+    print-exposure normalisation); tails are continued so they are finite."""
+    report = report or BuildReport(recipe.stock, 'paper')
+    densitometer_kind = recipe.densitometer or 'status_A'
+    dstm = load_densitometer(densitometer_kind)
+    wl = record.wavelengths
+    if not record.has_cmy_dyes:
+        raise ValueError(f'{record.folder}: a paper needs dye_density_c/m/y.csv')
+
+    ls = extrapolate_log_sensitivity_tails(wl, record.log_sensitivity)
+
+    le, dc = _density_curves_on_grid(record)
+    dc_min = measure_density_min(le, dc, 'negative')
+    dc = dc - dc_min
+    le0 = speed_point_log_exposure(le, dc, 'negative', speed_point_density=np.log10(1 / MIDGRAY_TRANSMITTANCE),
+                                   stops_over_speed_point=0.0)
+    dc = shift_curves(le, dc, [-le0] * 3)
+    base = _positive_base_density(wl, dc_min)
+    report.log(f'base+fog (status A) RGB: {np.round(dc_min, 3).tolist()}; green D=0.735 over D-min at log H {le0:+.3f}')
+
+    cmy = fill_dye_gaps(wl, record.dye_density_cmy)
+    # peak-normalise on the visible absorption band: paper sheets draw every dye
+    # rising into the UV (overcoat UV absorber), which must not set the scale
+    vis = (wl >= 420) & (wl <= 700)
+    cmy = cmy / np.nanmax(cmy[vis], axis=0)
+    d_mid, mid = _metameric_neutral_scale(cmy, base, recipe.viewing_illuminant)
+    cmy = cmy * (d_mid / d_mid[1])[None, :]
+    mid = np.where(np.isfinite(mid), mid, np.nan)
+    report.log(f'metameric neutral ({recipe.viewing_illuminant}) dye amounts CMY {np.round(d_mid, 4).tolist()}')
+
+    m = densitometer_crosstalk_matrix(dstm, cmy)
+    dc = np.einsum('ij,kj->ki', np.linalg.inv(m), dc)
+    dc = np.where(np.isfinite(dc), np.clip(dc, 0, None), np.nan)
+    report.log(f'densitometer crosstalk: {np.round(m, 3).tolist()}')
+    dc, layers, model, rms = _fit_and_eval(le, dc, 'negative')
+    report.log(f'cdfs fit RMS (unmixed curves): {np.round(rms, 4).tolist()}')
+    # print mid-grey: put log exposure 0 where the print itself (dyes + base) reflects /
+    # transmits 18.4 % luminance under the viewing illuminant, so a mid-grey negative
+    # exposure prints at the level of the shipped papers (they print about 0.46 sRGB)
+    s = _visual_midgray_log_exposure(le, dc, cmy, base, recipe.viewing_illuminant)
+    dc = shift_curves(le, dc, [-s] * 3)
+    dc, layers, model, _ = _fit_and_eval(le, dc, 'negative')
+    report.log(f'visual mid-grey anchor: log exposure shift {s:+.4f} '
+               f'(layer density at 0: {np.round([np.interp(0.0, le, dc[:, i]) for i in range(3)], 3).tolist()})')
+
+    info = ProfileInfo(
+        stock=recipe.stock, name=recipe.name, type='negative', support=recipe.support or 'paper',
+        stage='printing', use=recipe.use, antihalation=recipe.antihalation, target_print=None,
+        channel_model='color', densitometer=densitometer_kind,
+        log_sensitivity_density_over_min=float(recipe.log_sensitivity_density_over_min),
+        reference_illuminant=recipe.reference_illuminant, viewing_illuminant=recipe.viewing_illuminant,
+    )
+    data = ProfileData(
+        wavelengths=wl, log_sensitivity=ls,
+        hanatos2025_adaptation_window_params=np.empty((0,)), hanatos2025_adaptation_surface_params=np.empty((0, 3)),
+        channel_density=cmy, base_density=base, midscale_neutral_density=mid,
+        log_exposure=le, density_curves=dc, density_curves_layers=layers, density_curves_model=model,
+    )
+    return Profile(metadata=_metadata(recipe), info=info, data=data)
+
+
+def _metadata(recipe):
+    metadata = ProfileMetadata()
+    metadata.created = date.today().isoformat()
+    metadata.copyright = recipe.copyright or (
+        f'Copyright (c) {date.today().year} spektrafilm contributors; profile generated with '
+        'spektrafilm_profile_builder from published data-sheet curves. Licensed under CC BY-SA 4.0.')
+    metadata.datasource = (
+        f'Generated with spektrafilm_profile_builder {__version__} from digitised data-sheet curves. '
+        + (recipe.datasource.strip() + ' ' if recipe.datasource else '')
+        + 'Original data are property of the respective holders.'
+    )
+    return metadata
+
+
 def build_profile(record: RawRecord, recipe: Recipe, report: BuildReport | None = None) -> Profile:
     ptype = recipe.type
+    if ptype == 'paper':
+        return build_paper_profile(record, recipe, report)
     if ptype not in ('negative', 'positive'):
         raise ValueError(f'unsupported type {ptype!r}')
     report = report or BuildReport(recipe.stock, ptype)
@@ -265,14 +394,4 @@ def _assemble(recipe, densitometer_kind, wl, ls, cmy, base, mid, le, dc, layers,
         channel_density=cmy, base_density=base, midscale_neutral_density=mid,
         log_exposure=le, density_curves=dc, density_curves_layers=layers, density_curves_model=model,
     )
-    metadata = ProfileMetadata()
-    metadata.created = date.today().isoformat()
-    metadata.copyright = recipe.copyright or (
-        f'Copyright (c) {date.today().year} spektrafilm contributors; profile generated with '
-        'spektrafilm_profile_builder from published data-sheet curves. Licensed under CC BY-SA 4.0.')
-    metadata.datasource = (
-        f'Generated with spektrafilm_profile_builder {__version__} from digitised data-sheet curves. '
-        + (recipe.datasource.strip() + ' ' if recipe.datasource else '')
-        + 'Original data are property of the respective holders.'
-    )
-    return Profile(metadata=metadata, info=info, data=data)
+    return Profile(metadata=_metadata(recipe), info=info, data=data)

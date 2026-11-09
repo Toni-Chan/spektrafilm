@@ -3,6 +3,8 @@ from __future__ import annotations
 import copy
 from dataclasses import fields
 from functools import lru_cache
+import importlib.resources as pkg_resources
+import json
 
 from spektrafilm.profiles.io import load_profile
 from spektrafilm.runtime.params_schema import RuntimePhotoParams
@@ -212,7 +214,55 @@ def _apply_film_specifics(params: RuntimePhotoParams) -> RuntimePhotoParams:
         
     # if params.film.info.stock == "kodak_portra_400":
     #     params.film_render.halation.scatter_core_um = (3.5, 2.2, 1.9)
+
+    _apply_film_render_overrides(params)
     return params
+
+
+# Per-stock rendering overrides for profiles built from data sheets, stored as
+# data/film_render_overrides/<stock>.json (one file per stock, so downstream
+# ports such as SpektraLab can read them without the Python runtime). Data
+# sheets plot characteristic curves for neutral (white-light) exposures, so
+# they do not encode interlayer interimage effects (DIR couplers), the main
+# design lever behind "vivid"/"ultra" colour stocks. Every value in these files
+# is an ESTIMATE calibrated against the maker's published saturation ranking;
+# see data/film_render_overrides/README.md.
+#
+# Supported keys (all optional):
+#   "dir_couplers_interlayer_scale": float, multiplies the stock's interlayer
+#       DIR gammas (gamma_interlayer_*). Grey ramps are unaffected because the
+#       runtime pre-corrects the density curves for the couplers. The
+#       user-facing knob dir_couplers.inhibition_interlayer is left untouched
+#       and still multiplies on top.
+_FILM_RENDER_OVERRIDE_KEYS = {"dir_couplers_interlayer_scale"}
+
+
+@lru_cache(maxsize=None)
+def load_film_render_overrides(stock: str) -> dict:
+    """Rendering overrides for ``stock`` (empty dict when there are none)."""
+    if not stock:
+        return {}
+    res = pkg_resources.files("spektrafilm.data").joinpath("film_render_overrides", f"{stock}.json")
+    try:
+        text = res.read_text(encoding="utf-8")
+    except (FileNotFoundError, OSError):
+        return {}
+    data = json.loads(text)
+    unknown = set(data) - _FILM_RENDER_OVERRIDE_KEYS - {"stock", "estimate", "note", "calibration"}
+    if unknown:
+        raise ValueError(f"film_render_overrides/{stock}.json: unknown keys {sorted(unknown)}")
+    return data
+
+
+def _apply_film_render_overrides(params: RuntimePhotoParams) -> None:
+    overrides = load_film_render_overrides(params.film.info.stock)
+    scale = overrides.get("dir_couplers_interlayer_scale")
+    if scale is not None:
+        dc = params.film_render.dir_couplers
+        s = float(scale)
+        dc.gamma_interlayer_r_to_gb = tuple(s * float(v) for v in dc.gamma_interlayer_r_to_gb)
+        dc.gamma_interlayer_g_to_rb = tuple(s * float(v) for v in dc.gamma_interlayer_g_to_rb)
+        dc.gamma_interlayer_b_to_rg = tuple(s * float(v) for v in dc.gamma_interlayer_b_to_rg)
 
 
 # Halation low-level presets keyed by (use, antihalation). These set the

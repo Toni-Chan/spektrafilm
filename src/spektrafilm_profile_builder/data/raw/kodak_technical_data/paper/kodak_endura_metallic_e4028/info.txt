@@ -1,0 +1,40 @@
+KODAK PROFESSIONAL ENDURA Metallic Paper
+Datasheet: Kodak technical data E-4028 (June 2003), e4028.pdf, PDF page(s) 7, 8
+Source URL: https://125px.com/docs/unsorted/kodak/e4028.pdf
+Publication: E-4028
+Publication date: June 2003
+Type: paper
+Material class: paper
+Densitometry: Status A (as printed on the sheet)
+Process: RA-4, RA-4, 95°F (35°C), 45 sec.
+Exposure (characteristic curves): 0.5 sec.
+Sensitivity defined at: 
+Sensitivity effective exposure: 0.5 sec.
+
+Files (x range, y range, n points):
+  density_curve_b.csv  x -1.95..-0.075  y 0.239..2.532  n=63
+  density_curve_g.csv  x -1.95..-0.075  y 0.233..2.698  n=57
+  density_curve_r.csv  x -1.95..-0.075  y 0.236..2.757  n=60
+  dye_density_c.csv  x 400.0..700.0  y 0.138..1.009  n=93
+  dye_density_m.csv  x 400.0..700.0  y 0.146..1.003  n=103
+  dye_density_y.csv  x 400.0..700.0  y 0.063..1.049  n=79
+  log_sensitivity_b.csv  x 378.16..508.218  y -1.471..1.716  n=111
+  log_sensitivity_g.csv  x 423.544..583.406  y -1.727..1.118  n=145
+  log_sensitivity_r.csv  x 578.66..738.522  y -1.586..-0.15  n=46
+
+Units: log_sensitivity_* = wavelength nm, log10 sensitivity (sensitivity = 1/exposure in erg/cm2
+  giving the specified density, see "Sensitivity defined at"). density_curve_* = log10 H (lux-seconds),
+  total density as printed (base+fog included). dye_density_* = wavelength nm, diffuse spectral density
+  (c/m/y: individual dyes, normalised as printed; mid: midscale neutral; min: D-min; neutral: the printed
+  visual-neutral sum of the dyes). mtf* = cycles/mm, response %.
+Extraction: vector strokes read directly from the PDF (pymupdf), axes calibrated from tick labels snapped
+  to tick/grid lines (script: scripts/extract_kodak_datasheets.py). Typical accuracy ~0.1-0.3 pt on the
+  page (about 0.5-1.5 nm, 0.005-0.015 log H or density) plus the original drawing accuracy.
+Calibration:
+  char_p7: {"x_bar_notation": true, "x_labels_used": [-3.0, -2.0, -1.0, 0.0, 1.0], "x_labels_dropped": [], "x_fit_max_resid_pt": 0.0, "x_snapped_to_ticks": 5, "y_labels_used": [4.0, 3.0, 2.0, 1.0, 0.0], "y_labels_dropped": [], "y_fit_max_resid_pt": 0.0, "y_snapped_to_ticks": 5}
+  dye_p7: {"x_labels_used": [400.0, 500.0, 600.0, 700.0], "x_labels_dropped": [], "x_fit_max_resid_pt": 0.0, "x_snapped_to_ticks": 4, "y_labels_used": [2.5, 2.0, 1.5, 1.0, 0.5, 0.0], "y_labels_dropped": [], "y_fit_max_resid_pt": 0.0, "y_snapped_to_ticks": 6}
+  sens_p8: {"x_labels_used": [250.0, 300.0, 350.0, 400.0, 450.0, 500.0, 550.0, 600.0, 650.0, 700.0, 750.0], "x_labels_dropped": [], "x_fit_max_resid_pt": 0.451, "x_snapped_to_ticks": 9, "y_labels_used": [2.0, 1.0, 0.0, -1.0, -2.0], "y_labels_dropped": [], "y_fit_max_resid_pt": 0.002, "y_snapped_to_ticks": 5}
+Caveats:
+  sensitivity b: merged 3 sub-paths
+  sensitivity g: merged 6 sub-paths
+  sensitivity r: merged 2 sub-paths

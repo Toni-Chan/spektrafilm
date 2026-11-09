@@ -1,0 +1,42 @@
+KODAK EKTACHROME 100 Professional [EPN]
+Datasheet: Kodak technical data E-27 (June 2003), e27-1.pdf, PDF page(s) 5
+Source URL: https://125px.com/docs/unsorted/kodak/e27-1.pdf
+Publication: E-27
+Publication date: June 2003
+Revision: current revision; supersedes e27.pdf
+Type: positive
+Material class: positive
+Densitometry: E.N.D., Status A (as printed on the sheet)
+Process: E-6
+Exposure (characteristic curves): Daylight 1/100 second
+Sensitivity defined at: E.N.D. 1.0
+Sensitivity effective exposure: 1/10 second
+
+Files (x range, y range, n points):
+  density_curve_b.csv  x -2.81..0.04  y 0.13..3.697  n=59
+  density_curve_g.csv  x -2.81..0.04  y 0.155..3.385  n=68
+  density_curve_r.csv  x -2.81..0.04  y 0.154..3.066  n=69
+  dye_density_c.csv  x 399.819..699.817  y 0.047..0.936  n=90
+  dye_density_m.csv  x 399.819..699.817  y 0.007..0.906  n=114
+  dye_density_neutral.csv  x 399.819..699.817  y 0.697..1.13  n=141
+  dye_density_y.csv  x 399.819..699.817  y -0.002..0.886  n=81
+  log_sensitivity_b.csv  x 380.847..520.988  y -0.835..1.54  n=62
+  log_sensitivity_g.csv  x 410.877..591.061  y -0.652..1.359  n=67
+  log_sensitivity_r.csv  x 440.907..681.144  y -0.893..1.357  n=91
+  mtf.csv  x 2.392..49.899  y 28.184..113.127  n=17
+
+Units: log_sensitivity_* = wavelength nm, log10 sensitivity (sensitivity = 1/exposure in erg/cm2
+  giving the specified density, see "Sensitivity defined at"). density_curve_* = log10 H (lux-seconds),
+  total density as printed (base+fog included). dye_density_* = wavelength nm, diffuse spectral density
+  (c/m/y: individual dyes, normalised as printed; mid: midscale neutral; min: D-min; neutral: the printed
+  visual-neutral sum of the dyes). mtf* = cycles/mm, response %.
+Extraction: vector strokes read directly from the PDF (pymupdf), axes calibrated from tick labels snapped
+  to tick/grid lines (script: scripts/extract_kodak_datasheets.py). Typical accuracy ~0.1-0.3 pt on the
+  page (about 0.5-1.5 nm, 0.005-0.015 log H or density) plus the original drawing accuracy.
+Calibration:
+  sens_p5: {"y_bar_notation": true, "x_labels_used": [250.0, 300.0, 350.0, 400.0, 450.0, 500.0, 550.0, 600.0, 650.0, 700.0, 750.0], "x_labels_dropped": [], "x_fit_max_resid_pt": 0.296, "x_snapped_to_ticks": 11, "y_labels_used": [3.0, 2.0, 1.0, 0.0, -1.0], "y_labels_dropped": [], "y_fit_max_resid_pt": 0.001, "y_snapped_to_ticks": 5}
+  char_p5: {"x_bar_notation": true, "x_labels_used": [-3.0, -2.0, -1.0, 0.0, 1.0], "x_labels_dropped": [], "x_fit_max_resid_pt": 0.0, "x_snapped_to_ticks": 5, "y_labels_used": [4.0, 3.0, 2.0, 1.0, 0.0], "y_labels_dropped": [], "y_fit_max_resid_pt": 0.001, "y_snapped_to_ticks": 5}
+  mtf_p5: {"x_labels_used": [1.0, 2.0, 3.0, 4.0, 5.0, 10.0, 20.0, 50.0, 100.0, 200.0, 600.0], "x_labels_dropped": [], "x_fit_max_resid_pt": 0.809, "x_snapped_to_ticks": 11, "y_labels_used": [200.0, 100.0, 70.0, 50.0, 30.0, 20.0, 10.0, 7.0, 5.0, 3.0, 2.0, 1.0], "y_labels_dropped": [], "y_fit_max_resid_pt": 0.605, "y_snapped_to_ticks": 12}
+  dye_p5: {"x_labels_used": [400.0, 500.0, 600.0, 700.0], "x_labels_dropped": [], "x_fit_max_resid_pt": 0.0, "x_snapped_to_ticks": 4, "y_labels_used": [2.0, 1.5, 1.0, 0.5, 0.0], "y_labels_dropped": [], "y_fit_max_resid_pt": 0.001, "y_snapped_to_ticks": 5}
+Caveats:
+  dye plot: visual-neutral (sum) curve kept as dye_density_neutral.csv (1 piece(s))

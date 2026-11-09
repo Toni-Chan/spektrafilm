@@ -1,0 +1,38 @@
+KODAK PROFESSIONAL DURAFLEX Print Material
+Datasheet: Kodak technical data E-143 (January 2003), e143.pdf, PDF page(s) 6
+Source URL: https://125px.com/docs/unsorted/kodak/e143.pdf
+Publication: E-143
+Publication date: January 2003
+Type: paper
+Material class: paper
+Densitometry: Status A (as printed on the sheet)
+Process: RA-4
+Exposure (characteristic curves): 32 seconds
+Sensitivity defined at: 
+Sensitivity effective exposure: 1/2 second
+
+Files (x range, y range, n points):
+  density_curve_b.csv  x 0.2..3.8  y 0.1..2.62  n=65
+  density_curve_g.csv  x 0.2..3.8  y 0.11..2.5  n=66
+  density_curve_r.csv  x 0.2..3.8  y 0.13..2.52  n=66
+  dye_density_c.csv  x 400.0..699.905  y 0.243..1.509  n=99
+  dye_density_m.csv  x 400.0..699.905  y 0.152..1.504  n=117
+  dye_density_y.csv  x 400.0..699.905  y 0.142..1.505  n=89
+  log_sensitivity_b.csv  x 399.999..518.122  y -2.023..1.137  n=47
+  log_sensitivity_g.csv  x 400.129..585.189  y -2.024..0.592  n=80
+  log_sensitivity_r.csv  x 400.253..743.871  y -2.023..-0.437  n=154
+
+Units: log_sensitivity_* = wavelength nm, log10 sensitivity (sensitivity = 1/exposure in erg/cm2
+  giving the specified density, see "Sensitivity defined at"). density_curve_* = log10 H (lux-seconds),
+  total density as printed (base+fog included). dye_density_* = wavelength nm, diffuse spectral density
+  (c/m/y: individual dyes, normalised as printed; mid: midscale neutral; min: D-min; neutral: the printed
+  visual-neutral sum of the dyes). mtf* = cycles/mm, response %.
+Extraction: vector strokes read directly from the PDF (pymupdf), axes calibrated from tick labels snapped
+  to tick/grid lines (script: scripts/extract_kodak_datasheets.py). Typical accuracy ~0.1-0.3 pt on the
+  page (about 0.5-1.5 nm, 0.005-0.015 log H or density) plus the original drawing accuracy.
+Calibration:
+  dye_p6: {"x_labels_used": [400.0, 500.0, 600.0, 700.0], "x_labels_dropped": [], "x_fit_max_resid_pt": 0.0, "x_snapped_to_ticks": 4, "y_labels_used": [2.5, 2.0, 1.5, 1.0, 0.5, 0.0], "y_labels_dropped": [], "y_fit_max_resid_pt": 0.001, "y_snapped_to_ticks": 6}
+  char_p6: {"x_labels_used": [0.0, 1.0, 2.0, 3.0, 4.0], "x_labels_dropped": [], "x_fit_max_resid_pt": 0.0, "x_snapped_to_ticks": 5, "y_labels_used": [4.0, 3.0, 2.0, 1.0, 0.0], "y_labels_dropped": [], "y_fit_max_resid_pt": 0.0, "y_snapped_to_ticks": 5}
+  sens_p6: {"y_bar_notation": true, "x_labels_used": [250.0, 300.0, 350.0, 400.0, 450.0, 500.0, 550.0, 600.0, 650.0, 700.0, 750.0], "x_labels_dropped": [], "x_fit_max_resid_pt": 0.296, "x_snapped_to_ticks": 11, "y_labels_used": [2.0, 1.0, 0.0, -1.0, -2.0], "y_labels_dropped": [], "y_fit_max_resid_pt": 0.338, "y_snapped_to_ticks": 5}
+Caveats:
+  none
