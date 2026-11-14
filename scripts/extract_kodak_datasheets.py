@@ -4,7 +4,7 @@ upstream-spektrafilm-style raw CSV records (the layout read by spektrafilm_profi
 
 Usage (needs `pip install pymupdf pillow scipy`; the PDFs are not shipped with the repository):
 
-    mkdir -p kodak_pdfs && for f in e190-1 e4024 ...; do
+    mkdir -p kodak_pdfs && for f in e190-1 e4024 ...; do   # e55: https://125px.com/docs/film/kodak/e55.pdf
         curl -sL -o kodak_pdfs/$f.pdf https://125px.com/docs/unsorted/kodak/$f.pdf; done
     python scripts/extract_kodak_datasheets.py --pdfs kodak_pdfs \
         --out src/spektrafilm_profile_builder/data/raw/kodak_technical_data --checks /tmp/kodak_checks
@@ -31,6 +31,12 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import kodak_plots as K  # noqa: E402
 
 BASE_URL = 'https://125px.com/docs/unsorted/kodak/'
+# sheets mirrored elsewhere on 125px.com (default: BASE_URL)
+SOURCE_URLS = {'e55': 'https://125px.com/docs/film/kodak/'}
+
+
+def source_url(stem):
+    return SOURCE_URLS.get(stem, BASE_URL) + stem + '.pdf'
 
 # ---------------------------------------------------------------------------------------------
 # stock table: id, display name, type, pdf stem, plot selectors
@@ -109,6 +115,9 @@ STOCKS = [
     ('kodak_elite_chrome_extra_color_100', 'KODAK ELITE Chrome Extra Color 100', 'positive', 'e126', P(5)),
     ('kodak_elite_chrome_200', 'KODAK ELITE Chrome 200', 'positive', 'e148', P(4)),
     ('kodak_elite_chrome_160t', 'KODAK ELITE Chrome 160T', 'positive', 'e154', P(3, 4)),
+    ('kodak_kodachrome_25', 'KODAK KODACHROME 25 Professional [PKM]', 'positive', 'e55', dict(P(3), frame_top=('dye',))),
+    ('kodak_kodachrome_64', 'KODAK KODACHROME 64 Professional [PKR]', 'positive', 'e55', dict(P(4), frame_top=('dye',))),
+    ('kodak_kodachrome_200', 'KODAK KODACHROME 200 Professional [PKL]', 'positive', 'e55', dict(P(5), frame_top=('dye',))),
     ('kodak_ektachrome_duplicating_edupe', 'KODAK PROFESSIONAL EKTACHROME Duplicating Film EDUPE', 'duplicating', 'e2529',
      S((6, 'char', None, 'Roll'), (7, 'sens'), (7, 'dye'), (7, 'mtf'))),
     # ---- colour negative papers (optical printing, RA-4)
@@ -550,7 +559,7 @@ def sens_density(stype, meta):
 def write_info(folder, sid, name, stype, pdf, date, pub, used_pages, meta, files, calib, notes, superseded):
     L = [name,
          f'Datasheet: Kodak technical data {pub} ({date}), {pdf}.pdf, PDF page(s) {", ".join(map(str, used_pages))}',
-         f'Source URL: {BASE_URL}{pdf}.pdf',
+         f'Source URL: {source_url(pdf)}',
          f'Publication: {pub}', f'Publication date: {date}']
     if superseded:
         L.append(f'Revision: {superseded}')
@@ -627,7 +636,11 @@ def extract_all(pdf_dir, out, chk, only=None):
             for ax_ in 'xy':
                 if cinfo.get(f'{ax_}_labels_dropped'):
                     notes.append(f'{kind} p{pn}: {ax_}-axis label(s) {cinfo[f"{ax_}_labels_dropped"]} inconsistent with the scale, ignored')
-            pcs = K.pieces_in(plot, drs)
+            # E-55 draws dye curves (cyan, visual neutral) above the top y label, up to the frame top
+            top = K.frame_top(plot, vl) if kind in spec.get('frame_top', ()) else None
+            if top is not None:
+                notes.append(f'{kind} p{pn}: curves read up to the plot frame top (above the highest y label)')
+            pcs = K.pieces_in(plot, drs, top=top)
             # sensitivity curves of neighbouring layers touch each other: do not chain them
             curves = chain(pcs)
             res = assign(kind, 'negative' if stype == 'negative' else stype, plot, curves, X, Y, toks, notes)
