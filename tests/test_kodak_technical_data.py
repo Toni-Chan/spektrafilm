@@ -47,10 +47,10 @@ def _raw_json(stock):
     return json.loads((r.files('spektrafilm.data.profiles') / f'{stock}.json').read_text())
 
 
-def test_catalogue_lists_all_69_sheets():
+def test_catalogue_lists_all_69_sheets_and_e55():
     rows = list(csv.DictReader((RAW / 'index.csv').open()))
-    assert len(rows) == 69
-    assert {r['file'] for r in rows} >= {'e190-1.pdf', 'e190.pdf', 'e4021.pdf', 'e8.pdf'}
+    assert len(rows) == 70  # the 69 sheets of 125px.com/docs/unsorted/kodak/ + E-55 (docs/film/kodak/)
+    assert {r['file'] for r in rows} >= {'e190-1.pdf', 'e190.pdf', 'e4021.pdf', 'e8.pdf', 'e55.pdf'}
     assert all(r['publication'].startswith('E-') for r in rows)
 
 

@@ -1,0 +1,461 @@
+{
+ "doc": "H-1-5294",
+ "publisher": "KODAK technical data",
+ "date": "2019 (Revised 5-24)",
+ "title": "KODAK EKTACHROME 100D Color Reversal Film 5294 / 7294",
+ "pdf": "KODAK-EKTACHROME-100D-COLOR-REVERSAL-FILM-5294-7294-datasheet-EN.pdf",
+ "url": "https://filmcolors.org/wp-content/uploads/2026/08/KODAK-EKTACHROME-100D-COLOR-REVERSAL-FILM-5294-7294-datasheet-EN.pdf",
+ "entry": "https://filmcolors.org/timeline-entry/40486/",
+ "stocks": [
+  {
+   "id": "kodak_ektachrome_100d_h15294",
+   "name": "KODAK EKTACHROME 100D Color Reversal Film 5294 / 7294",
+   "type": "positive",
+   "meta": {
+    "speed": "EI 100 (daylight 5500 K)",
+    "process": "E-6",
+    "densitometry": "Status A (not stated on the curves; Kodak reversal convention)",
+    "exposure": "Daylight 5500 K (tungsten filtered to 5500 K for the MTF / granularity data)",
+    "sensitivity_defined_at": "not stated on the sheet (assumed 1.0 END, as other KODAK reversal sheets)",
+    "art": "raster (embedded colour JPEG images, axis labels inside the images), pages 3-4"
+   },
+   "notes": [
+    "the whole PDF is images (no text layer): curves traced from the 600 dpi render of the embedded JPEGs, each curve only through pixels of its printed colour",
+    "sensitometry plot: top axis log exposure (lux-seconds) -4..1 used; the bottom camera-stops axis is ignored",
+    "dye plot: the cyan / magenta / yellow dyes are peak-normalised on the sheet (note under the plot); the black curve is the midscale neutral"
+   ],
+   "plots": [
+    {
+     "kind": "char",
+     "page": 3,
+     "rect": [
+      331.2,
+      87.0,
+      579.6,
+      316.7
+     ],
+     "x": [
+      [
+       -4,
+       371.34
+      ],
+      [
+       -3,
+       411.72
+      ],
+      [
+       -2,
+       451.8
+      ],
+      [
+       -1,
+       492.18
+      ],
+      [
+       0,
+       532.56
+      ],
+      [
+       1,
+       572.94
+      ]
+     ],
+     "y": [
+      [
+       4,
+       118.32
+      ],
+      [
+       3,
+       158.04
+      ],
+      [
+       2,
+       199.08
+      ],
+      [
+       1,
+       240.12
+      ],
+      [
+       0,
+       279.78
+      ]
+     ],
+     "curves": {
+      "r": {
+       "rgb": [
+        205,
+        42,
+        44
+       ],
+       "rgb_tol": 70,
+       "gap": 120,
+       "seeds": [
+        {
+         "col": -2.5,
+         "rank": 0
+        },
+        {
+         "col": -0.3,
+         "rank": 0
+        }
+       ]
+      },
+      "g": {
+       "rgb": [
+        10,
+        117,
+        67
+       ],
+       "rgb_tol": 70,
+       "gap": 120,
+       "seeds": [
+        {
+         "col": -2.5,
+         "rank": 0
+        },
+        {
+         "col": -0.3,
+         "rank": 0
+        }
+       ]
+      },
+      "b": {
+       "rgb": [
+        52,
+        62,
+        148
+       ],
+       "rgb_tol": 70,
+       "gap": 120,
+       "seeds": [
+        {
+         "col": -2.5,
+         "rank": 0
+        },
+        {
+         "col": -0.3,
+         "rank": 0
+        }
+       ]
+      }
+     }
+    },
+    {
+     "kind": "sens",
+     "page": 3,
+     "rect": [
+      320.4,
+      458.4,
+      568.8,
+      670.1
+     ],
+     "x": [
+      [
+       250,
+       363.66
+      ],
+      [
+       300,
+       383.4
+      ],
+      [
+       400,
+       422.76
+      ],
+      [
+       500,
+       461.88
+      ],
+      [
+       600,
+       501.0
+      ],
+      [
+       700,
+       540.36
+      ],
+      [
+       750,
+       560.1
+      ]
+     ],
+     "y": [
+      [
+       2,
+       470.1
+      ],
+      [
+       1,
+       511.92
+      ],
+      [
+       0,
+       553.44
+      ],
+      [
+       -1,
+       594.96
+      ],
+      [
+       -2,
+       636.84
+      ]
+     ],
+     "curves": {
+      "b": {
+       "rgb": [
+        45,
+        75,
+        150
+       ],
+       "rgb_tol": 75,
+       "seeds": [
+        {
+         "col": 430,
+         "rank": 0
+        }
+       ]
+      },
+      "g": {
+       "rgb": [
+        20,
+        125,
+        70
+       ],
+       "rgb_tol": 75,
+       "seeds": [
+        {
+         "col": 560,
+         "rank": 0
+        }
+       ]
+      },
+      "r": {
+       "rgb": [
+        205,
+        40,
+        40
+       ],
+       "rgb_tol": 75,
+       "seeds": [
+        {
+         "col": 650,
+         "rank": 0
+        }
+       ]
+      }
+     }
+    },
+    {
+     "kind": "dye",
+     "page": 4,
+     "rect": [
+      56.9,
+      97.2,
+      286.6,
+      308.2
+     ],
+     "x": [
+      [
+       400,
+       73.7
+      ],
+      [
+       450,
+       107.3
+      ],
+      [
+       500,
+       141.26
+      ],
+      [
+       550,
+       174.92
+      ],
+      [
+       600,
+       208.88
+      ],
+      [
+       650,
+       242.84
+      ],
+      [
+       700,
+       276.44
+      ]
+     ],
+     "y": [
+      [
+       1.5,
+       122.34
+      ],
+      [
+       1,
+       178.44
+      ],
+      [
+       0.5,
+       234.48
+      ],
+      [
+       0,
+       290.46
+      ]
+     ],
+     "curves": {
+      "y": {
+       "rgb": [
+        16,
+        2,
+        200
+       ],
+       "rgb_tol": 90,
+       "gap": 120,
+       "seeds": [
+        {
+         "col": 420,
+         "rank": 0
+        },
+        {
+         "col": 480,
+         "rank": 0
+        },
+        {
+         "col": 530,
+         "rank": 0
+        }
+       ]
+      },
+      "m": {
+       "rgb": [
+        68,
+        148,
+        110
+       ],
+       "rgb_tol": 60,
+       "gap": 120,
+       "seeds": [
+        [
+         480,
+         0.25
+        ]
+       ]
+      },
+      "c": {
+       "rgb": [
+        205,
+        28,
+        45
+       ],
+       "rgb_tol": 80,
+       "gap": 120,
+       "seeds": [
+        {
+         "col": 420,
+         "rank": 0
+        },
+        {
+         "col": 560,
+         "rank": 0
+        },
+        {
+         "col": 680,
+         "rank": 0
+        }
+       ]
+      },
+      "neutral": {
+       "rgb": [
+        5,
+        5,
+        5
+       ],
+       "rgb_tol": 45,
+       "gap": 120,
+       "seeds": [
+        {
+         "col": 420,
+         "rank": 0
+        },
+        {
+         "col": 520,
+         "rank": 0
+        },
+        {
+         "col": 620,
+         "rank": 0
+        },
+        {
+         "col": 690,
+         "rank": 0
+        }
+       ]
+      }
+     },
+     "mask": [
+      [
+       420,
+       0.69,
+       466,
+       0.81
+      ],
+      [
+       533,
+       0.6,
+       567,
+       0.77
+      ],
+      [
+       636,
+       0.67,
+       684,
+       0.77
+      ],
+      [
+       543,
+       1.14,
+       574,
+       1.23
+      ]
+     ]
+    }
+   ],
+   "recipe": {
+    "stock": "kodak_ektachrome_100d_h15294",
+    "name": "Kodak Ektachrome 100D 5294/7294 (H-1-5294, 2024)",
+    "reference_illuminant": "D55",
+    "dye_extension": "hold_decay",
+    "adaptation_donors": [
+     "kodak_ektachrome_100",
+     "kodak_ektachrome_64_e8",
+     "kodak_ektachrome_100_e27",
+     "kodak_ektachrome_100_plus_e113",
+     "kodak_ektachrome_64t_e130",
+     "kodak_ektachrome_160t_e144",
+     "kodak_ektachrome_320t_e145",
+     "kodak_ektachrome_p1600_e147",
+     "kodak_ektachrome_400x_e161",
+     "kodak_ektachrome_e100vs_e163",
+     "kodak_ektachrome_e100s_e164",
+     "kodak_ektachrome_e100sw_e164",
+     "kodak_ektachrome_e200_e28",
+     "kodak_ektachrome_e100g_e4024",
+     "kodak_ektachrome_e100gx_e4024",
+     "kodak_elite_chrome_100_e7014",
+     "kodak_elite_chrome_extra_color_100_e126",
+     "kodak_elite_chrome_200_e148",
+     "kodak_elite_chrome_160t_e154"
+    ],
+    "estimates": [
+     "dye densities outside the printed 400-700 nm (held below, exponential decay above); the printed dyes are peak-normalised, their relative amounts come from the builder's neutral balance",
+     "sensitivity tails beyond the printed curves; the density at which sensitivity is defined is not stated (1.0 assumed)",
+     "hanatos2025 adaptation parameters (averaged from pinned Kodak reversal profiles)",
+     "interlayer DIR coupler strength (not on any data sheet)"
+    ]
+   }
+  }
+ ]
+}
