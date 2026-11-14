@@ -7,7 +7,7 @@ so downstream ports (e.g. SpektraLab) can read them without the Python runtime.
 
 ## Why these exist
 
-Profiles built from data sheets (`*_fdg`, `kodak_*_<pubcode>`) get their
+Profiles built from data sheets (`*_fdg`, `kodak_*_<pubcode>`, `fujifilm_*_af3<ref>`) get their
 characteristic curves from **neutral, white-light exposures**. Those curves do
 not encode interlayer interimage effects (DIR couplers in negatives, iodide
 interimage in E-6 reversal films), which are the main design lever behind

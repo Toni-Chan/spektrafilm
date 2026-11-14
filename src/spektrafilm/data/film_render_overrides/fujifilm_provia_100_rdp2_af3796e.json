@@ -1,0 +1,7 @@
+{
+  "stock": "fujifilm_provia_100_rdp2_af3796e",
+  "estimate": true,
+  "dir_couplers_interlayer_scale": 1.4,
+  "note": "PROVIA 100 [RDP II] (AF3-796E, 1996) is Fujifilm's standard-saturation E-6 film, the predecessor of PROVIA 100F [RDP III]. From the sheet alone it renders below every natural Fujifilm E-6 profile; the interimage strength that sets its saturation is not on the sheet.",
+  "calibration": "Target: just below provia_100f_fdg (36.7), its successor. ColorChecker C*: 32.7 -> 35.3 (1.2: 34.0, 1.6: 36.8); grey a*b* [0.7, 0.3]. Same method as velvia_50_fdg / kodak_kodachrome_*_e55."
+}

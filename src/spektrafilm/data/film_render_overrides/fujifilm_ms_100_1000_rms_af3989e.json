@@ -1,0 +1,7 @@
+{
+  "stock": "fujifilm_ms_100_1000_rms_af3989e",
+  "estimate": true,
+  "dir_couplers_interlayer_scale": 1.8,
+  "note": "MS 100/1000 [RMS] (AF3-989E, 1998) is a multi-speed E-6 film; only the EI 100 curve set is used. From the sheet it renders far below the other Fujifilm E-6 films (C* 26.4, low contrast, L* 11-79), which is not how the film is described; the interimage strength is not on the sheet.",
+  "calibration": "Target: towards provia_400f_fdg (35.1); capped at 1.8 for positives. ColorChecker C*: 26.3 -> 31.0 (1.4: 28.5, 1.6: 29.7); grey a*b* [0.2, 0.1]. The remaining gap comes from the sheet's lower contrast (L* 11-79)."
+}
