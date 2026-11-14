@@ -1,0 +1,1480 @@
+{
+ "fujifilm_eterna_250_kb1101e": {
+  "accuracy": {
+   "char:b": {
+    "max_pt": 0.0,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   },
+   "char:g": {
+    "max_pt": 0.12,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   },
+   "char:r": {
+    "max_pt": 0.12,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   }
+  },
+  "borrowed": {
+   "files": [
+    "log_sensitivity_b",
+    "log_sensitivity_g",
+    "log_sensitivity_r",
+    "dye_density_mid",
+    "dye_density_min"
+   ],
+   "source": "fujifilm_f250_kb914e",
+   "why": "tungsten EI 250 Fujifilm cine negative with its own data sheet, the stock ETERNA 250 replaced"
+  },
+  "calib": {
+   "char_p10": {
+    "grid_lines": {
+     "h": 7,
+     "v": 15
+    },
+    "stroke_px": 6.0,
+    "x_labels": [
+     -1.80618,
+     -1.20412,
+     -0.60206,
+     0.0,
+     0.60206,
+     1.20412,
+     1.80618
+    ],
+    "x_resid_pt": 0.043,
+    "y_labels": [
+     0,
+     0.5,
+     1,
+     1.5,
+     2,
+     2.5,
+     3
+    ],
+    "y_resid_pt": 0.024
+   }
+  },
+  "files": {
+   "density_curve_b": {
+    "n": 19,
+    "x": [
+     -1.975,
+     1.627
+    ],
+    "y": [
+     0.68,
+     2.259
+    ]
+   },
+   "density_curve_g": {
+    "n": 44,
+    "x": [
+     -1.952,
+     1.677
+    ],
+    "y": [
+     0.56,
+     2.083
+    ]
+   },
+   "density_curve_r": {
+    "n": 21,
+    "x": [
+     -1.976,
+     1.683
+    ],
+    "y": [
+     0.257,
+     1.477
+    ]
+   }
+  },
+  "notes": [
+   "curves read directly from the PDF vector paths, no tracing",
+   "the manual prints the characteristic curves only (no spectral sensitivity or dye density plots)",
+   "characteristic curves printed against camera stops (-6..+6), converted to relative log H"
+  ]
+ },
+ "fujifilm_eterna_250d_kb0507er": {
+  "accuracy": {
+   "char:b": {
+    "max_pt": 0.12,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   },
+   "char:g": {
+    "max_pt": 0.24,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   },
+   "char:r": {
+    "max_pt": 0.0,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   },
+   "dye:mid": {
+    "max_pt": 0.0,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   },
+   "dye:min": {
+    "max_pt": 0.48,
+    "median_pt": 0.0,
+    "p95_pt": 0.433
+   },
+   "sens:b": {
+    "max_pt": 0.0,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   },
+   "sens:g": {
+    "max_pt": 0.12,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   },
+   "sens:r": {
+    "max_pt": 0.0,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   }
+  },
+  "calib": {
+   "char_p1": {
+    "grid_lines": {
+     "h": 6,
+     "v": 15
+    },
+    "stroke_px": 5.0,
+    "x_labels": [
+     -1.80618,
+     -1.20412,
+     -0.60206,
+     0.0,
+     0.60206,
+     1.20412,
+     1.80618
+    ],
+    "x_resid_pt": 0.034,
+    "y_labels": [
+     0,
+     0.5,
+     1,
+     1.5,
+     2,
+     2.5,
+     3
+    ],
+    "y_resid_pt": 0.776
+   },
+   "dye_p1": {
+    "grid_lines": {
+     "h": 5,
+     "v": 4
+    },
+    "stroke_px": 6.0,
+    "x_labels": [
+     400,
+     500,
+     600,
+     700
+    ],
+    "x_resid_pt": 0.613,
+    "y_labels": [
+     0,
+     0.5,
+     1,
+     1.5,
+     2
+    ],
+    "y_resid_pt": 0.698
+   },
+   "sens_p1": {
+    "grid_lines": {
+     "h": 4,
+     "v": 9
+    },
+    "stroke_px": 6.0,
+    "x_labels": [
+     400,
+     450,
+     500,
+     550,
+     600,
+     650,
+     700
+    ],
+    "x_resid_pt": 0.034,
+    "y_labels": [
+     0,
+     1,
+     2,
+     3
+    ],
+    "y_resid_pt": 0.62
+   }
+  },
+  "files": {
+   "density_curve_b": {
+    "n": 32,
+    "x": [
+     -1.986,
+     1.666
+    ],
+    "y": [
+     0.694,
+     2.218
+    ]
+   },
+   "density_curve_g": {
+    "n": 41,
+    "x": [
+     -1.993,
+     1.644
+    ],
+    "y": [
+     0.566,
+     2.05
+    ]
+   },
+   "density_curve_r": {
+    "n": 21,
+    "x": [
+     -1.97,
+     1.663
+    ],
+    "y": [
+     0.256,
+     1.493
+    ]
+   },
+   "dye_density_mid": {
+    "n": 113,
+    "x": [
+     408.875,
+     690.323
+    ],
+    "y": [
+     0.598,
+     1.522
+    ]
+   },
+   "dye_density_min": {
+    "n": 86,
+    "x": [
+     409.204,
+     690.305
+    ],
+    "y": [
+     0.137,
+     0.743
+    ]
+   },
+   "log_sensitivity_b": {
+    "n": 54,
+    "x": [
+     387.667,
+     501.901
+    ],
+    "y": [
+     0.504,
+     2.014
+    ]
+   },
+   "log_sensitivity_g": {
+    "n": 39,
+    "x": [
+     479.91,
+     597.275
+    ],
+    "y": [
+     0.384,
+     2.018
+    ]
+   },
+   "log_sensitivity_r": {
+    "n": 39,
+    "x": [
+     563.439,
+     667.03
+    ],
+    "y": [
+     0.289,
+     1.457
+    ]
+   }
+  },
+  "notes": [
+   "curves read directly from the PDF vector paths (page 1), no tracing",
+   "characteristic curves printed against camera stops (-6..+6), converted to relative log H",
+   "y label 2.5: no grid line within 3.0 pt of 301.96; used as given"
+  ]
+ },
+ "fujifilm_eterna_400_kb1101e": {
+  "accuracy": {
+   "char:b": {
+    "max_pt": 0.0,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   },
+   "char:g": {
+    "max_pt": 0.12,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   },
+   "char:r": {
+    "max_pt": 0.12,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   }
+  },
+  "borrowed": {
+   "files": [
+    "log_sensitivity_b",
+    "log_sensitivity_g",
+    "log_sensitivity_r",
+    "dye_density_mid",
+    "dye_density_min"
+   ],
+   "source": "fujifilm_eterna_vivid_500_kb0901e",
+   "why": "nearest-speed tungsten ETERNA negative with its own data sheet"
+  },
+  "calib": {
+   "char_p12": {
+    "grid_lines": {
+     "h": 7,
+     "v": 15
+    },
+    "stroke_px": 6.0,
+    "x_labels": [
+     -1.80618,
+     -1.20412,
+     -0.60206,
+     0.0,
+     0.60206,
+     1.20412,
+     1.80618
+    ],
+    "x_resid_pt": 0.043,
+    "y_labels": [
+     0,
+     0.5,
+     1,
+     1.5,
+     2,
+     2.5,
+     3
+    ],
+    "y_resid_pt": 0.024
+   }
+  },
+  "files": {
+   "density_curve_b": {
+    "n": 21,
+    "x": [
+     -1.899,
+     1.871
+    ],
+    "y": [
+     0.655,
+     2.194
+    ]
+   },
+   "density_curve_g": {
+    "n": 21,
+    "x": [
+     -1.881,
+     1.863
+    ],
+    "y": [
+     0.512,
+     1.965
+    ]
+   },
+   "density_curve_r": {
+    "n": 21,
+    "x": [
+     -1.881,
+     1.887
+    ],
+    "y": [
+     0.24,
+     1.44
+    ]
+   }
+  },
+  "notes": [
+   "curves read directly from the PDF vector paths, no tracing",
+   "the manual prints the characteristic curves only (no spectral sensitivity or dye density plots)",
+   "characteristic curves printed against camera stops (-6..+6), converted to relative log H"
+  ]
+ },
+ "fujifilm_eterna_vivid_160_kb0701e": {
+  "accuracy": {
+   "char:b": {
+    "max_pt": 0.0,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   },
+   "char:g": {
+    "max_pt": 0.0,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   },
+   "char:r": {
+    "max_pt": 0.12,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   },
+   "dye:mid": {
+    "max_pt": 0.0,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   },
+   "dye:min": {
+    "max_pt": 0.509,
+    "median_pt": 0.0,
+    "p95_pt": 0.433
+   },
+   "sens:b": {
+    "max_pt": 0.0,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   },
+   "sens:g": {
+    "max_pt": 0.0,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   },
+   "sens:r": {
+    "max_pt": 0.0,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   }
+  },
+  "calib": {
+   "char_p1": {
+    "grid_lines": {
+     "h": 6,
+     "v": 15
+    },
+    "stroke_px": 8.0,
+    "x_labels": [
+     -1.80618,
+     -1.20412,
+     -0.60206,
+     0.0,
+     0.60206,
+     1.20412,
+     1.80618
+    ],
+    "x_resid_pt": 0.043,
+    "y_labels": [
+     0,
+     0.5,
+     1,
+     1.5,
+     2,
+     2.5,
+     3
+    ],
+    "y_resid_pt": 0.032
+   },
+   "dye_p1": {
+    "grid_lines": {
+     "h": 5,
+     "v": 4
+    },
+    "stroke_px": 7.0,
+    "x_labels": [
+     400,
+     500,
+     600,
+     700
+    ],
+    "x_resid_pt": 0.204,
+    "y_labels": [
+     0,
+     0.5,
+     1,
+     1.5,
+     2
+    ],
+    "y_resid_pt": 0.836
+   },
+   "sens_p1": {
+    "grid_lines": {
+     "h": 4,
+     "v": 9
+    },
+    "stroke_px": 9.0,
+    "x_labels": [
+     400,
+     450,
+     500,
+     550,
+     600,
+     650,
+     700
+    ],
+    "x_resid_pt": 0.309,
+    "y_labels": [
+     0,
+     1,
+     2,
+     3
+    ],
+    "y_resid_pt": 0.765
+   }
+  },
+  "files": {
+   "density_curve_b": {
+    "n": 23,
+    "x": [
+     -1.948,
+     1.814
+    ],
+    "y": [
+     0.66,
+     2.332
+    ]
+   },
+   "density_curve_g": {
+    "n": 22,
+    "x": [
+     -1.95,
+     1.808
+    ],
+    "y": [
+     0.515,
+     2.145
+    ]
+   },
+   "density_curve_r": {
+    "n": 16,
+    "x": [
+     -1.95,
+     1.807
+    ],
+    "y": [
+     0.254,
+     1.608
+    ]
+   },
+   "dye_density_mid": {
+    "n": 112,
+    "x": [
+     408.059,
+     692.265
+    ],
+    "y": [
+     0.703,
+     1.495
+    ]
+   },
+   "dye_density_min": {
+    "n": 78,
+    "x": [
+     407.99,
+     693.027
+    ],
+    "y": [
+     0.133,
+     0.73
+    ]
+   },
+   "log_sensitivity_b": {
+    "n": 55,
+    "x": [
+     385.53,
+     518.846
+    ],
+    "y": [
+     0.246,
+     2.175
+    ]
+   },
+   "log_sensitivity_g": {
+    "n": 43,
+    "x": [
+     479.998,
+     598.914
+    ],
+    "y": [
+     0.237,
+     1.962
+    ]
+   },
+   "log_sensitivity_r": {
+    "n": 35,
+    "x": [
+     570.758,
+     663.629
+    ],
+    "y": [
+     0.406,
+     1.301
+    ]
+   }
+  },
+  "notes": [
+   "curves read directly from the PDF vector paths (page 1), no tracing",
+   "characteristic curves printed against camera stops (-6..+6), converted to relative log H",
+   "ETERNA Vivid: FUJIFILM's high-saturation, high-contrast cine negative",
+   "y label 2.5: no grid line within 3.0 pt of 128.66; used as given"
+  ]
+ },
+ "fujifilm_eterna_vivid_500_kb0901e": {
+  "accuracy": {
+   "char:b": {
+    "max_pt": 0.12,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   },
+   "char:g": {
+    "max_pt": 0.0,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   },
+   "char:r": {
+    "max_pt": 0.12,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   },
+   "dye:mid": {
+    "max_pt": 0.12,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   },
+   "dye:min": {
+    "max_pt": 0.48,
+    "median_pt": 0.0,
+    "p95_pt": 0.379
+   },
+   "sens:b": {
+    "max_pt": 0.12,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   },
+   "sens:g": {
+    "max_pt": 0.12,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   },
+   "sens:r": {
+    "max_pt": 0.12,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   }
+  },
+  "calib": {
+   "char_p1": {
+    "grid_lines": {
+     "h": 6,
+     "v": 15
+    },
+    "stroke_px": 5.0,
+    "x_labels": [
+     -1.80618,
+     -1.50515,
+     -1.20412,
+     -0.90309,
+     -0.60206,
+     -0.30103,
+     0.0,
+     0.30103,
+     0.60206,
+     0.90309,
+     1.20412,
+     1.50515,
+     1.80618
+    ],
+    "x_resid_pt": 0.051,
+    "y_labels": [
+     0,
+     0.5,
+     1,
+     1.5,
+     2,
+     3
+    ],
+    "y_resid_pt": 1.159
+   },
+   "dye_p1": {
+    "grid_lines": {
+     "h": 5,
+     "v": 4
+    },
+    "stroke_px": 7.0,
+    "x_labels": [
+     400,
+     500,
+     600,
+     700
+    ],
+    "x_resid_pt": 0.782,
+    "y_labels": [
+     0,
+     0.5,
+     1,
+     1.5,
+     2
+    ],
+    "y_resid_pt": 1.521
+   },
+   "sens_p1": {
+    "grid_lines": {
+     "h": 4,
+     "v": 9
+    },
+    "stroke_px": 8.0,
+    "x_labels": [
+     400,
+     450,
+     500,
+     550,
+     600,
+     650,
+     700
+    ],
+    "x_resid_pt": 0.032,
+    "y_labels": [
+     0,
+     1,
+     2,
+     3
+    ],
+    "y_resid_pt": 0.832
+   }
+  },
+  "files": {
+   "density_curve_b": {
+    "n": 46,
+    "x": [
+     -1.878,
+     1.885
+    ],
+    "y": [
+     0.672,
+     2.252
+    ]
+   },
+   "density_curve_g": {
+    "n": 47,
+    "x": [
+     -1.879,
+     1.892
+    ],
+    "y": [
+     0.54,
+     2.21
+    ]
+   },
+   "density_curve_r": {
+    "n": 39,
+    "x": [
+     -1.869,
+     1.906
+    ],
+    "y": [
+     0.291,
+     1.586
+    ]
+   },
+   "dye_density_mid": {
+    "n": 97,
+    "x": [
+     416.216,
+     688.076
+    ],
+    "y": [
+     0.668,
+     1.45
+    ]
+   },
+   "dye_density_min": {
+    "n": 105,
+    "x": [
+     415.315,
+     688.076
+    ],
+    "y": [
+     0.209,
+     0.861
+    ]
+   },
+   "log_sensitivity_b": {
+    "n": 54,
+    "x": [
+     392.06,
+     503.648
+    ],
+    "y": [
+     0.753,
+     2.255
+    ]
+   },
+   "log_sensitivity_g": {
+    "n": 33,
+    "x": [
+     491.202,
+     591.953
+    ],
+    "y": [
+     0.741,
+     1.844
+    ]
+   },
+   "log_sensitivity_r": {
+    "n": 35,
+    "x": [
+     583.906,
+     665.806
+    ],
+    "y": [
+     0.626,
+     1.142
+    ]
+   }
+  },
+  "notes": [
+   "the page is one embedded colour image (about 150 dpi): curves traced from the 600 dpi render, each colour curve only through pixels of its printed colour",
+   "characteristic curves printed against camera stops (-6..+6), converted to relative log H",
+   "ETERNA Vivid: FUJIFILM's high-saturation, high-contrast cine negative"
+  ]
+ },
+ "fujifilm_f125_kb913e": {
+  "accuracy": {
+   "char:b": {
+    "max_pt": 0.12,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   },
+   "char:g": {
+    "max_pt": 0.12,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   },
+   "char:r": {
+    "max_pt": 0.12,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   },
+   "dye:mid": {
+    "max_pt": 0.0,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   },
+   "dye:min": {
+    "max_pt": 0.768,
+    "median_pt": 0.12,
+    "p95_pt": 0.69
+   },
+   "sens:b": {
+    "max_pt": 0.0,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   },
+   "sens:g": {
+    "max_pt": 0.0,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   },
+   "sens:r": {
+    "max_pt": 0.0,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   }
+  },
+  "calib": {
+   "char_p1": {
+    "grid_lines": {
+     "h": 6,
+     "v": 10
+    },
+    "stroke_px": 8.0,
+    "x_labels": [
+     -3.5,
+     -3.0,
+     -2.5,
+     -2.0,
+     -1.5,
+     -1.0,
+     -0.5,
+     0.0,
+     0.5,
+     1.0
+    ],
+    "x_resid_pt": 0.071,
+    "y_labels": [
+     0.0,
+     0.5,
+     1.0,
+     1.5,
+     2.0,
+     2.5,
+     3.0
+    ],
+    "y_resid_pt": 0.094
+   },
+   "dye_p1": {
+    "grid_lines": {
+     "h": 5,
+     "v": 4
+    },
+    "stroke_px": 6.0,
+    "x_labels": [
+     400,
+     500,
+     600,
+     700
+    ],
+    "x_resid_pt": 0.216,
+    "y_labels": [
+     0.0,
+     0.5,
+     1.0,
+     1.5,
+     2.0
+    ],
+    "y_resid_pt": 0.108
+   },
+   "sens_p1": {
+    "grid_lines": {
+     "h": 4,
+     "v": 9
+    },
+    "stroke_px": 9.0,
+    "x_labels": [
+     400,
+     500,
+     600,
+     700
+    ],
+    "x_resid_pt": 0.024,
+    "y_labels": [
+     0,
+     1,
+     2,
+     3
+    ],
+    "y_resid_pt": 0.372
+   }
+  },
+  "files": {
+   "density_curve_b": {
+    "n": 24,
+    "x": [
+     -2.65,
+     0.775
+    ],
+    "y": [
+     0.784,
+     2.21
+    ]
+   },
+   "density_curve_g": {
+    "n": 25,
+    "x": [
+     -2.65,
+     0.775
+    ],
+    "y": [
+     0.458,
+     1.829
+    ]
+   },
+   "density_curve_r": {
+    "n": 22,
+    "x": [
+     -2.65,
+     0.775
+    ],
+    "y": [
+     0.19,
+     1.421
+    ]
+   },
+   "dye_density_mid": {
+    "n": 134,
+    "x": [
+     401.86,
+     697.977
+    ],
+    "y": [
+     0.765,
+     1.807
+    ]
+   },
+   "dye_density_min": {
+    "n": 89,
+    "x": [
+     401.604,
+     697.762
+    ],
+    "y": [
+     0.048,
+     0.836
+    ]
+   },
+   "log_sensitivity_b": {
+    "n": 47,
+    "x": [
+     376.157,
+     505.872
+    ],
+    "y": [
+     0.729,
+     2.454
+    ]
+   },
+   "log_sensitivity_g": {
+    "n": 33,
+    "x": [
+     477.098,
+     589.515
+    ],
+    "y": [
+     0.671,
+     2.165
+    ]
+   },
+   "log_sensitivity_r": {
+    "n": 47,
+    "x": [
+     571.721,
+     667.277
+    ],
+    "y": [
+     0.707,
+     1.772
+    ]
+   }
+  },
+  "notes": [
+   "curves read directly from the PDF vector paths (page 1), no tracing",
+   "characteristic curves printed against log H (lux-seconds), bar notation on the axis",
+   "y label 2.5: no grid line within 3.0 pt of 127.78; used as given"
+  ]
+ },
+ "fujifilm_f250_kb914e": {
+  "accuracy": {
+   "char:b": {
+    "max_pt": 0.24,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   },
+   "char:g": {
+    "max_pt": 0.24,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   },
+   "char:r": {
+    "max_pt": 0.12,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   },
+   "dye:mid": {
+    "max_pt": 0.12,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   },
+   "dye:min": {
+    "max_pt": 0.768,
+    "median_pt": 0.12,
+    "p95_pt": 0.7
+   },
+   "sens:b": {
+    "max_pt": 0.0,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   },
+   "sens:g": {
+    "max_pt": 0.12,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   },
+   "sens:r": {
+    "max_pt": 0.12,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   }
+  },
+  "calib": {
+   "char_p1": {
+    "grid_lines": {
+     "h": 6,
+     "v": 10
+    },
+    "stroke_px": 8.0,
+    "x_labels": [
+     -3.5,
+     -3.0,
+     -2.5,
+     -2.0,
+     -1.5,
+     -1.0,
+     -0.5,
+     0.0,
+     0.5,
+     1.0
+    ],
+    "x_resid_pt": 0.061,
+    "y_labels": [
+     0.0,
+     0.5,
+     1.0,
+     1.5,
+     2.0,
+     2.5,
+     3.0
+    ],
+    "y_resid_pt": 0.089
+   },
+   "dye_p1": {
+    "grid_lines": {
+     "h": 5,
+     "v": 4
+    },
+    "stroke_px": 7.0,
+    "x_labels": [
+     400,
+     500,
+     600,
+     700
+    ],
+    "x_resid_pt": 0.216,
+    "y_labels": [
+     0.0,
+     0.5,
+     1.0,
+     1.5,
+     2.0
+    ],
+    "y_resid_pt": 0.072
+   },
+   "sens_p1": {
+    "grid_lines": {
+     "h": 4,
+     "v": 9
+    },
+    "stroke_px": 9.0,
+    "x_labels": [
+     400,
+     500,
+     600,
+     700
+    ],
+    "x_resid_pt": 0.024,
+    "y_labels": [
+     0,
+     1,
+     2,
+     3
+    ],
+    "y_resid_pt": 0.378
+   }
+  },
+  "files": {
+   "density_curve_b": {
+    "n": 38,
+    "x": [
+     -2.984,
+     0.789
+    ],
+    "y": [
+     0.825,
+     2.478
+    ]
+   },
+   "density_curve_g": {
+    "n": 44,
+    "x": [
+     -2.984,
+     0.823
+    ],
+    "y": [
+     0.569,
+     2.203
+    ]
+   },
+   "density_curve_r": {
+    "n": 41,
+    "x": [
+     -2.989,
+     0.794
+    ],
+    "y": [
+     0.201,
+     1.556
+    ]
+   },
+   "dye_density_mid": {
+    "n": 125,
+    "x": [
+     409.279,
+     698.053
+    ],
+    "y": [
+     0.64,
+     1.485
+    ]
+   },
+   "dye_density_min": {
+    "n": 86,
+    "x": [
+     414.028,
+     698.042
+    ],
+    "y": [
+     0.077,
+     0.832
+    ]
+   },
+   "log_sensitivity_b": {
+    "n": 57,
+    "x": [
+     386.188,
+     509.216
+    ],
+    "y": [
+     0.884,
+     2.803
+    ]
+   },
+   "log_sensitivity_g": {
+    "n": 59,
+    "x": [
+     487.192,
+     591.451
+    ],
+    "y": [
+     0.884,
+     2.385
+    ]
+   },
+   "log_sensitivity_r": {
+    "n": 45,
+    "x": [
+     574.725,
+     674.939
+    ],
+    "y": [
+     0.59,
+     1.959
+    ]
+   }
+  },
+  "notes": [
+   "curves read directly from the PDF vector paths (page 1), no tracing",
+   "characteristic curves printed against log H (lux-seconds), bar notation on the axis",
+   "y label 2.5: no grid line within 3.0 pt of 130.72; used as given"
+  ]
+ },
+ "fujifilm_f64d_kb1101e": {
+  "accuracy": {
+   "char:b": {
+    "max_pt": 0.12,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   },
+   "char:g": {
+    "max_pt": 0.12,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   },
+   "char:r": {
+    "max_pt": 0.12,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   }
+  },
+  "borrowed": {
+   "files": [
+    "log_sensitivity_b",
+    "log_sensitivity_g",
+    "log_sensitivity_r",
+    "dye_density_mid",
+    "dye_density_min"
+   ],
+   "source": "fujifilm_eterna_250d_kb0507er",
+   "why": "the only daylight Fujifilm cine negative with spectral data sheets"
+  },
+  "calib": {
+   "char_p18": {
+    "grid_lines": {
+     "h": 7,
+     "v": 10
+    },
+    "stroke_px": 7.0,
+    "x_labels": [
+     -4.0,
+     -3.5,
+     -3.0,
+     -2.5,
+     -2.0,
+     -1.5,
+     -1.0,
+     -0.5,
+     0.0,
+     0.5
+    ],
+    "x_resid_pt": 0.04,
+    "y_labels": [
+     0,
+     0.5,
+     1,
+     1.5,
+     2,
+     2.5,
+     3
+    ],
+    "y_resid_pt": 0.024
+   }
+  },
+  "files": {
+   "density_curve_b": {
+    "n": 18,
+    "x": [
+     -2.68,
+     0.278
+    ],
+    "y": [
+     0.783,
+     2.043
+    ]
+   },
+   "density_curve_g": {
+    "n": 17,
+    "x": [
+     -2.68,
+     0.278
+    ],
+    "y": [
+     0.462,
+     1.747
+    ]
+   },
+   "density_curve_r": {
+    "n": 19,
+    "x": [
+     -2.68,
+     0.278
+    ],
+    "y": [
+     0.165,
+     1.32
+    ]
+   }
+  },
+  "notes": [
+   "curves read directly from the PDF vector paths, no tracing",
+   "the manual prints the characteristic curves only (no spectral sensitivity or dye density plots)",
+   "characteristic curves printed against log H (lux-seconds), bar notation on the axis"
+  ]
+ },
+ "fujifilm_reala_500d_kb1101e": {
+  "accuracy": {
+   "char:b": {
+    "max_pt": 0.12,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   },
+   "char:g": {
+    "max_pt": 0.12,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   },
+   "char:r": {
+    "max_pt": 0.12,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   }
+  },
+  "borrowed": {
+   "files": [
+    "log_sensitivity_b",
+    "log_sensitivity_g",
+    "log_sensitivity_r",
+    "dye_density_mid",
+    "dye_density_min"
+   ],
+   "source": "fujifilm_eterna_250d_kb0507er",
+   "why": "the only daylight Fujifilm cine negative with spectral data sheets; REALA's fourth (cyan-sensitive) layer is not modelled"
+  },
+  "calib": {
+   "char_p24": {
+    "grid_lines": {
+     "h": 7,
+     "v": 10
+    },
+    "stroke_px": 6.0,
+    "x_labels": [
+     -4.0,
+     -3.5,
+     -3.0,
+     -2.5,
+     -2.0,
+     -1.5,
+     -1.0,
+     -0.5,
+     0.0,
+     0.5
+    ],
+    "x_resid_pt": 0.062,
+    "y_labels": [
+     0,
+     0.5,
+     1,
+     1.5,
+     2,
+     2.5,
+     3
+    ],
+    "y_resid_pt": 0.049
+   }
+  },
+  "files": {
+   "density_curve_b": {
+    "n": 34,
+    "x": [
+     -3.492,
+     0.293
+    ],
+    "y": [
+     0.899,
+     2.579
+    ]
+   },
+   "density_curve_g": {
+    "n": 28,
+    "x": [
+     -3.492,
+     0.291
+    ],
+    "y": [
+     0.631,
+     2.3
+    ]
+   },
+   "density_curve_r": {
+    "n": 21,
+    "x": [
+     -3.492,
+     0.297
+    ],
+    "y": [
+     0.242,
+     1.671
+    ]
+   }
+  },
+  "notes": [
+   "curves read directly from the PDF vector paths, no tracing",
+   "the manual prints the characteristic curves only (no spectral sensitivity or dye density plots)",
+   "characteristic curves printed against log H (lux-seconds), bar notation on the axis"
+  ]
+ }
+}

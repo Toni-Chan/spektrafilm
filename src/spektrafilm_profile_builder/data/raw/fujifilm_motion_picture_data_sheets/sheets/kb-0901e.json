@@ -1,0 +1,435 @@
+{
+ "doc": "KB-0901E",
+ "publisher": "FUJIFILM motion picture film data sheet",
+ "date": "2009-04 (print code SK-09.04)",
+ "title": "FUJICOLOR NEGATIVE FILM ETERNA Vivid 500 35mm Type 8547 / 16mm Type 8647",
+ "pdf": "eterna_vivid500.pdf",
+ "url": "https://modusdever.com/assets/Manuais/fuji/eterna_vivid500.pdf",
+ "derotate": true,
+ "stocks": [
+  {
+   "id": "fujifilm_eterna_vivid_500_kb0901e",
+   "name": "FUJICOLOR ETERNA Vivid 500 8547 / 8647",
+   "type": "negative",
+   "meta": {
+    "speed": "EI 500 tungsten 3200K (EI 320 daylight with No. 85)",
+    "process": "ECN-2",
+    "densitometry": "Status M",
+    "exposure": "3200K light source, 1/50 s, Fuji Filter SC-41",
+    "sensitivity_defined_at": "0.40 above minimum density",
+    "art": "raster (the whole left spread is one embedded ~150 dpi colour image), page 1"
+   },
+   "notes": [
+    "the page is one embedded colour image (about 150 dpi): curves traced from the 600 dpi render, each colour curve only through pixels of its printed colour",
+    "characteristic curves printed against camera stops (-6..+6), converted to relative log H",
+    "ETERNA Vivid: FUJIFILM's high-saturation, high-contrast cine negative"
+   ],
+   "plots": [
+    {
+     "kind": "char",
+     "page": 1,
+     "rect": [
+      352,
+      248,
+      550,
+      395
+     ],
+     "x": [
+      [
+       -1.80618,
+       370.84
+      ],
+      [
+       -1.50515,
+       384.4
+      ],
+      [
+       -1.20412,
+       397.84
+      ],
+      [
+       -0.90309,
+       411.4
+      ],
+      [
+       -0.60206,
+       424.9
+      ],
+      [
+       -0.30103,
+       438.4
+      ],
+      [
+       0.0,
+       451.9
+      ],
+      [
+       0.30103,
+       465.4
+      ],
+      [
+       0.60206,
+       478.96
+      ],
+      [
+       0.90309,
+       492.46
+      ],
+      [
+       1.20412,
+       505.96
+      ],
+      [
+       1.50515,
+       519.46
+      ],
+      [
+       1.80618,
+       532.96
+      ]
+     ],
+     "y": [
+      [
+       0,
+       391.06
+      ],
+      [
+       0.5,
+       366.76
+      ],
+      [
+       1,
+       344.08
+      ],
+      [
+       1.5,
+       321.46
+      ],
+      [
+       2,
+       298.84
+      ],
+      [
+       3,
+       251.86
+      ]
+     ],
+     "curves": {
+      "b": {
+       "rgb": [
+        0,
+        90,
+        172
+       ],
+       "rgb_tol": 80,
+       "gap": 90,
+       "seeds": [
+        {
+         "col": -1.2,
+         "rank": 0
+        },
+        {
+         "col": 0.6,
+         "rank": 0
+        }
+       ]
+      },
+      "g": {
+       "rgb": [
+        0,
+        153,
+        68
+       ],
+       "rgb_tol": 80,
+       "gap": 90,
+       "seeds": [
+        {
+         "col": -1.2,
+         "rank": 0
+        },
+        {
+         "col": 0.6,
+         "rank": 0
+        }
+       ]
+      },
+      "r": {
+       "rgb": [
+        231,
+        40,
+        17
+       ],
+       "rgb_tol": 80,
+       "gap": 90,
+       "seeds": [
+        {
+         "col": -1.2,
+         "rank": 0
+        },
+        {
+         "col": 0.6,
+         "rank": 0
+        }
+       ]
+      }
+     },
+     "mask": [
+      [
+       1.06,
+       2.0,
+       1.15,
+       2.14
+      ],
+      [
+       1.06,
+       1.66,
+       1.15,
+       1.83
+      ],
+      [
+       1.06,
+       1.34,
+       1.15,
+       1.46
+      ]
+     ]
+    },
+    {
+     "kind": "sens",
+     "page": 1,
+     "rect": [
+      352,
+      525,
+      550,
+      642
+     ],
+     "x": [
+      [
+       400,
+       368.08
+      ],
+      [
+       450,
+       396.04
+      ],
+      [
+       500,
+       424.0
+      ],
+      [
+       550,
+       451.96
+      ],
+      [
+       600,
+       479.92
+      ],
+      [
+       650,
+       507.88
+      ],
+      [
+       700,
+       535.78
+      ]
+     ],
+     "y": [
+      [
+       0,
+       637.92
+      ],
+      [
+       1,
+       600.96
+      ],
+      [
+       2,
+       565.8
+      ],
+      [
+       3,
+       529.38
+      ]
+     ],
+     "curves": {
+      "b": {
+       "rgb": [
+        0,
+        90,
+        172
+       ],
+       "rgb_tol": 80,
+       "gap": 90,
+       "seeds": [
+        {
+         "col": 430,
+         "rank": 0
+        }
+       ]
+      },
+      "g": {
+       "rgb": [
+        0,
+        153,
+        68
+       ],
+       "rgb_tol": 80,
+       "gap": 90,
+       "seeds": [
+        {
+         "col": 540,
+         "rank": 0
+        }
+       ]
+      },
+      "r": {
+       "rgb": [
+        231,
+        56,
+        14
+       ],
+       "rgb_tol": 80,
+       "gap": 90,
+       "seeds": [
+        {
+         "col": 610,
+         "rank": 0
+        }
+       ]
+      }
+     },
+     "mask": [
+      [
+       438,
+       2.06,
+       450,
+       2.22
+      ],
+      [
+       571,
+       1.8,
+       584,
+       1.93
+      ],
+      [
+       621,
+       1.19,
+       633,
+       1.31
+      ]
+     ]
+    },
+    {
+     "kind": "dye",
+     "page": 1,
+     "rect": [
+      117,
+      246,
+      280,
+      456
+     ],
+     "x": [
+      [
+       400,
+       121.26
+      ],
+      [
+       500,
+       173.04
+      ],
+      [
+       600,
+       223.74
+      ],
+      [
+       700,
+       274.3
+      ]
+     ],
+     "y": [
+      [
+       0,
+       452.0
+      ],
+      [
+       0.5,
+       401.06
+      ],
+      [
+       1,
+       351.92
+      ],
+      [
+       1.5,
+       302.84
+      ],
+      [
+       2,
+       250.94
+      ]
+     ],
+     "curves": {
+      "mid": {
+       "gap": 90,
+       "seeds": [
+        {
+         "col": 450,
+         "rank": 0
+        },
+        {
+         "col": 650,
+         "rank": 0
+        }
+       ]
+      },
+      "min": {
+       "gap": 120,
+       "seeds": [
+        {
+         "col": 450,
+         "rank": 1
+        },
+        {
+         "col": 600,
+         "rank": 1
+        }
+       ]
+      }
+     },
+     "mask": [
+      [
+       505,
+       1.68,
+       700,
+       1.98
+      ],
+      [
+       540,
+       0.12,
+       660,
+       0.3
+      ]
+     ]
+    }
+   ],
+   "recipe": {
+    "stock": "fujifilm_eterna_vivid_500_kb0901e",
+    "name": "Fujifilm Eterna Vivid 500 (KB-0901E)",
+    "target_print": "kodak_2383",
+    "reference_illuminant": "T",
+    "use": "cine",
+    "density_over_min": 0.4,
+    "data_trustability": 0.3,
+    "estimates": [
+     "the characteristic curves are printed against camera stops: converted to relative log H (1 stop = 0.30103), the absolute exposure scale comes from the builder's speed-point anchoring",
+     "spectral sensitivity on a relative log scale (one log unit = the interval marked '1.0'), absolute level from the builder's mid-grey anchoring",
+     "sensitivity tails beyond the printed curves",
+     "base+fog and mid-scale dye densities read from the sheet, individual CMY dyes reconstructed by the builder (not printed)",
+     "dye densities outside the printed 400-700 nm",
+     "print stock: KODAK VISION 2383 (the shipped cine print profile; FUJIFILM ETERNA-CP 3513/3514 is not in the repository)",
+     "interlayer DIR coupler strength (not on any data sheet; runtime default for negatives)"
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,41 @@
+FUJICOLOR F-250 8552 / 8652
+Datasheet: FUJI PHOTO FILM motion picture film data sheet KB-914E (2000-05 (print code SK-00.05)), F-250.pdf, PDF page(s) 1
+Source URL: https://www.cinematography.net/Files/F-250.pdf
+Publication: KB-914E
+Publication date: 2000-05 (print code SK-00.05)
+Type: negative
+Densitometry: Status M
+Process: ECN-2
+Exposure: 3200K tungsten lamp, 1/50 s, Fuji Filter SC-41
+Sensitivity defined at: 0.40 above minimum density
+Speed: EI 250 tungsten 3200K (EI 160 daylight with LBA-12 / No. 85)
+
+Files (x range, y range, n points):
+  density_curve_b.csv  x -2.984..0.789  y 0.825..2.478  n=38
+  density_curve_g.csv  x -2.984..0.823  y 0.569..2.203  n=44
+  density_curve_r.csv  x -2.989..0.794  y 0.201..1.556  n=41
+  dye_density_mid.csv  x 409.279..698.053  y 0.64..1.485  n=125
+  dye_density_min.csv  x 414.028..698.042  y 0.077..0.832  n=86
+  log_sensitivity_b.csv  x 386.188..509.216  y 0.884..2.803  n=57
+  log_sensitivity_g.csv  x 487.192..591.451  y 0.884..2.385  n=59
+  log_sensitivity_r.csv  x 574.725..674.939  y 0.59..1.959  n=45
+
+Units: log_sensitivity_* = wavelength nm, log10 sensitivity (relative where the sheet prints no
+  absolute scale); density_curve_* = log10 H (lux-seconds), total density as printed (base+fog
+  included); dye_density_* = wavelength nm, spectral diffuse density (c/m/y: individual dyes as
+  printed; mid: mid-scale neutral; min: minimum density).
+Extraction: the plot is rendered from the PDF at 600 dpi (the curves are embedded 1-bit scans or
+  vector strokes), grid lines are found as long straight dark runs and removed except where a curve
+  crosses them, axes are calibrated piecewise-linearly through the printed grid lines named in the
+  sheet config (sheets/*.json), and each curve is followed column by column from a seed point
+  (script: scripts/extract_filmcolors_datasheets.py). Typical accuracy ~0.2-0.5 pt on the page
+  (about 1-2 nm, 0.01-0.02 log H or density) plus the accuracy of the original drawing / scan.
+Calibration:
+  char_p1: {"x_labels": [-3.5, -3.0, -2.5, -2.0, -1.5, -1.0, -0.5, 0.0, 0.5, 1.0], "y_labels": [0.0, 0.5, 1.0, 1.5, 2.0, 2.5, 3.0], "x_resid_pt": 0.061, "y_resid_pt": 0.089, "stroke_px": 8.0, "grid_lines": {"h": 6, "v": 10}}
+  sens_p1: {"x_labels": [400, 500, 600, 700], "y_labels": [0, 1, 2, 3], "x_resid_pt": 0.024, "y_resid_pt": 0.378, "stroke_px": 9.0, "grid_lines": {"h": 4, "v": 9}}
+  dye_p1: {"x_labels": [400, 500, 600, 700], "y_labels": [0.0, 0.5, 1.0, 1.5, 2.0], "x_resid_pt": 0.216, "y_resid_pt": 0.072, "stroke_px": 7.0, "grid_lines": {"h": 5, "v": 4}}
+Distance of the written curves to the printed strokes (pt): {"char:b": {"median_pt": 0.0, "p95_pt": 0.0, "max_pt": 0.24}, "char:g": {"median_pt": 0.0, "p95_pt": 0.0, "max_pt": 0.24}, "char:r": {"median_pt": 0.0, "p95_pt": 0.0, "max_pt": 0.12}, "sens:b": {"median_pt": 0.0, "p95_pt": 0.0, "max_pt": 0.0}, "sens:g": {"median_pt": 0.0, "p95_pt": 0.0, "max_pt": 0.12}, "sens:r": {"median_pt": 0.0, "p95_pt": 0.0, "max_pt": 0.12}, "dye:mid": {"median_pt": 0.0, "p95_pt": 0.0, "max_pt": 0.12}, "dye:min": {"median_pt": 0.12, "p95_pt": 0.7, "max_pt": 0.768}}
+Caveats:
+  curves read directly from the PDF vector paths (page 1), no tracing
+  characteristic curves printed against log H (lux-seconds), bar notation on the axis
+  y label 2.5: no grid line within 3.0 pt of 130.72; used as given

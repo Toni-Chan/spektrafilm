@@ -1,0 +1,300 @@
+{
+ "doc": "KB-0701E",
+ "publisher": "FUJIFILM motion picture film data sheet",
+ "date": "2007-03 (print code SK-07.03)",
+ "title": "FUJICOLOR NEGATIVE FILM ETERNA Vivid 160 35mm Type 8543 / 16mm Type 8643",
+ "pdf": "eterna_vivid160.pdf",
+ "url": "https://modusdever.com/assets/Manuais/fuji/eterna_vivid160.pdf",
+ "derotate": true,
+ "stocks": [
+  {
+   "id": "fujifilm_eterna_vivid_160_kb0701e",
+   "name": "FUJICOLOR ETERNA Vivid 160 8543 / 8643",
+   "type": "negative",
+   "meta": {
+    "speed": "EI 160 tungsten 3200K (EI 100 daylight with No. 85)",
+    "process": "ECN-2",
+    "densitometry": "Status M",
+    "exposure": "3200K light source, 1/50 s, Fuji Filter SC-41",
+    "sensitivity_defined_at": "0.40 above minimum density",
+    "art": "vector (PDF paths, page 1; stored rotated, read as displayed)"
+   },
+   "notes": [
+    "curves read directly from the PDF vector paths (page 1), no tracing",
+    "characteristic curves printed against camera stops (-6..+6), converted to relative log H",
+    "ETERNA Vivid: FUJIFILM's high-saturation, high-contrast cine negative"
+   ],
+   "plots": [
+    {
+     "kind": "char",
+     "page": 1,
+     "rect": [
+      327,
+      100,
+      545,
+      258
+     ],
+     "x": [
+      [
+       -1.80618,
+       345.94
+      ],
+      [
+       -1.20412,
+       375.96
+      ],
+      [
+       -0.60206,
+       405.98
+      ],
+      [
+       0.0,
+       436.0
+      ],
+      [
+       0.60206,
+       466.03
+      ],
+      [
+       1.20412,
+       496.05
+      ],
+      [
+       1.80618,
+       526.07
+      ]
+     ],
+     "y": [
+      [
+       0,
+       254.44
+      ],
+      [
+       0.5,
+       229.3
+      ],
+      [
+       1,
+       204.13
+      ],
+      [
+       1.5,
+       178.98
+      ],
+      [
+       2,
+       153.82
+      ],
+      [
+       2.5,
+       128.66
+      ],
+      [
+       3,
+       103.5
+      ]
+     ],
+     "curves": {
+      "b": [
+       {
+        "path": [
+         64,
+         0
+        ]
+       }
+      ],
+      "g": [
+       {
+        "path": [
+         65,
+         0
+        ]
+       }
+      ],
+      "r": [
+       {
+        "path": [
+         66,
+         0
+        ]
+       }
+      ]
+     },
+     "dense_lines": true
+    },
+    {
+     "kind": "sens",
+     "page": 1,
+     "rect": [
+      328,
+      408,
+      544,
+      532
+     ],
+     "x": [
+      [
+       400,
+       343.62
+      ],
+      [
+       450,
+       374.55
+      ],
+      [
+       500,
+       404.79
+      ],
+      [
+       550,
+       435.38
+      ],
+      [
+       600,
+       466.31
+      ],
+      [
+       650,
+       497.23
+      ],
+      [
+       700,
+       528.16
+      ]
+     ],
+     "y": [
+      [
+       0,
+       528.6
+      ],
+      [
+       1,
+       489.14
+      ],
+      [
+       2,
+       450.61
+      ],
+      [
+       3,
+       411.39
+      ]
+     ],
+     "curves": {
+      "b": [
+       {
+        "path": [
+         49,
+         0
+        ]
+       }
+      ],
+      "g": [
+       {
+        "path": [
+         48,
+         0
+        ]
+       }
+      ],
+      "r": [
+       {
+        "path": [
+         47,
+         0
+        ]
+       }
+      ]
+     },
+     "dense_lines": true
+    },
+    {
+     "kind": "dye",
+     "page": 1,
+     "rect": [
+      66,
+      100,
+      242,
+      325
+     ],
+     "x": [
+      [
+       400,
+       69.86
+      ],
+      [
+       500,
+       125.26
+      ],
+      [
+       600,
+       182.53
+      ],
+      [
+       700,
+       238.86
+      ]
+     ],
+     "y": [
+      [
+       0,
+       321.91
+      ],
+      [
+       0.5,
+       267.0
+      ],
+      [
+       1,
+       212.98
+      ],
+      [
+       1.5,
+       158.07
+      ],
+      [
+       2,
+       103.6
+      ]
+     ],
+     "curves": {
+      "mid": [
+       {
+        "path": [
+         44,
+         0
+        ]
+       }
+      ],
+      "min": [
+       {
+        "path": [
+         43,
+         0
+        ]
+       }
+      ]
+     },
+     "dense_lines": true
+    }
+   ],
+   "recipe": {
+    "stock": "fujifilm_eterna_vivid_160_kb0701e",
+    "name": "Fujifilm Eterna Vivid 160 (KB-0701E)",
+    "target_print": "kodak_2383",
+    "reference_illuminant": "T",
+    "use": "cine",
+    "density_over_min": 0.4,
+    "data_trustability": 0.3,
+    "estimates": [
+     "the characteristic curves are printed against camera stops: converted to relative log H (1 stop = 0.30103), the absolute exposure scale comes from the builder's speed-point anchoring",
+     "spectral sensitivity on a relative log scale (one log unit = the interval marked '1.0'), absolute level from the builder's mid-grey anchoring",
+     "sensitivity tails beyond the printed curves",
+     "base+fog and mid-scale dye densities read from the sheet, individual CMY dyes reconstructed by the builder (not printed)",
+     "dye densities outside the printed 400-700 nm",
+     "print stock: KODAK VISION 2383 (the shipped cine print profile; FUJIFILM ETERNA-CP 3513/3514 is not in the repository)",
+     "interlayer DIR coupler strength (not on any data sheet; runtime default for negatives)"
+    ]
+   }
+  }
+ ]
+}

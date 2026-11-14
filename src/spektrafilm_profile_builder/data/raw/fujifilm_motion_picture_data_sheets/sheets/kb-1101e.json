@@ -1,0 +1,620 @@
+{
+ "doc": "KB-1101E",
+ "publisher": "FUJIFILM Motion Picture Film manual",
+ "date": "2011-02 (print code SK-11.02)",
+ "title": "FUJIFILM Motion Picture Film (product manual, characteristic curves only)",
+ "pdf": "fujifilm_motion_picture_film_manual.pdf",
+ "url": "https://vfxcamdb.com/wp-content/uploads/2015/06/fujifilm_motion_picture_film_manual.pdf",
+ "stocks": [
+  {
+   "id": "fujifilm_eterna_250_kb1101e",
+   "name": "FUJICOLOR ETERNA 250 8553 / 8653",
+   "type": "negative",
+   "meta": {
+    "speed": "EI 250 tungsten 3200K (EI 160 daylight with No. 85)",
+    "process": "ECN-2",
+    "densitometry": "Status M",
+    "exposure": "3200K light source, 1/50 s, Fuji Filter SC-41",
+    "sensitivity_defined_at": "0.40 above minimum density",
+    "art": "vector (PDF paths, page 10)"
+   },
+   "notes": [
+    "curves read directly from the PDF vector paths, no tracing",
+    "the manual prints the characteristic curves only (no spectral sensitivity or dye density plots)",
+    "characteristic curves printed against camera stops (-6..+6), converted to relative log H"
+   ],
+   "plots": [
+    {
+     "kind": "char",
+     "page": 10,
+     "rect": [
+      261,
+      79,
+      443,
+      211
+     ],
+     "x": [
+      [
+       -1.80618,
+       277.54
+      ],
+      [
+       -1.20412,
+       302.36
+      ],
+      [
+       -0.60206,
+       327.18
+      ],
+      [
+       0.0,
+       352.01
+      ],
+      [
+       0.60206,
+       376.83
+      ],
+      [
+       1.20412,
+       401.65
+      ],
+      [
+       1.80618,
+       426.47
+      ]
+     ],
+     "y": [
+      [
+       0,
+       207.63
+      ],
+      [
+       0.5,
+       186.84
+      ],
+      [
+       1,
+       166.04
+      ],
+      [
+       1.5,
+       145.24
+      ],
+      [
+       2,
+       124.43
+      ],
+      [
+       2.5,
+       103.63
+      ],
+      [
+       3,
+       82.84
+      ]
+     ],
+     "curves": {
+      "b": [
+       {
+        "path": [
+         7,
+         0
+        ]
+       }
+      ],
+      "g": [
+       {
+        "path": [
+         6,
+         0
+        ]
+       }
+      ],
+      "r": [
+       {
+        "path": [
+         5,
+         0
+        ]
+       }
+      ]
+     },
+     "dense_lines": true
+    }
+   ],
+   "borrow": {
+    "from": "fujifilm_f250_kb914e",
+    "files": [
+     "log_sensitivity_b",
+     "log_sensitivity_g",
+     "log_sensitivity_r",
+     "dye_density_mid",
+     "dye_density_min"
+    ],
+    "why": "tungsten EI 250 Fujifilm cine negative with its own data sheet, the stock ETERNA 250 replaced"
+   },
+   "recipe": {
+    "stock": "fujifilm_eterna_250_kb1101e",
+    "name": "Fujifilm Eterna 250 (KB-1101E)",
+    "target_print": "kodak_2383",
+    "reference_illuminant": "T",
+    "use": "cine",
+    "density_over_min": 0.4,
+    "data_trustability": 0.2,
+    "estimates": [
+     "spectral sensitivities and dye densities (minimum and mid-scale) are not in the manual: borrowed from fujifilm_f250_kb914e (tungsten EI 250 Fujifilm cine negative with its own data sheet, the stock ETERNA 250 replaced)",
+     "the characteristic curves are printed against camera stops: converted to relative log H (1 stop = 0.30103), the absolute exposure scale comes from the builder's speed-point anchoring",
+     "spectral sensitivity on a relative log scale (one log unit = the interval marked '1.0'), absolute level from the builder's mid-grey anchoring",
+     "sensitivity tails beyond the printed curves",
+     "base+fog and mid-scale dye densities read from the sheet, individual CMY dyes reconstructed by the builder (not printed)",
+     "dye densities outside the printed 400-700 nm",
+     "print stock: KODAK VISION 2383 (the shipped cine print profile; FUJIFILM ETERNA-CP 3513/3514 is not in the repository)",
+     "interlayer DIR coupler strength (not on any data sheet; runtime default for negatives)"
+    ]
+   }
+  },
+  {
+   "id": "fujifilm_eterna_400_kb1101e",
+   "name": "FUJICOLOR ETERNA 400 8583 / 8683",
+   "type": "negative",
+   "meta": {
+    "speed": "EI 400 tungsten 3200K (EI 250 daylight with No. 85)",
+    "process": "ECN-2",
+    "densitometry": "Status M",
+    "exposure": "3200K light source, 1/50 s, Fuji Filter SC-41",
+    "sensitivity_defined_at": "0.40 above minimum density",
+    "art": "vector (PDF paths, page 12)"
+   },
+   "notes": [
+    "curves read directly from the PDF vector paths, no tracing",
+    "the manual prints the characteristic curves only (no spectral sensitivity or dye density plots)",
+    "characteristic curves printed against camera stops (-6..+6), converted to relative log H"
+   ],
+   "plots": [
+    {
+     "kind": "char",
+     "page": 12,
+     "rect": [
+      261,
+      79,
+      443,
+      211
+     ],
+     "x": [
+      [
+       -1.80618,
+       277.54
+      ],
+      [
+       -1.20412,
+       302.36
+      ],
+      [
+       -0.60206,
+       327.18
+      ],
+      [
+       0.0,
+       352.01
+      ],
+      [
+       0.60206,
+       376.83
+      ],
+      [
+       1.20412,
+       401.65
+      ],
+      [
+       1.80618,
+       426.47
+      ]
+     ],
+     "y": [
+      [
+       0,
+       207.63
+      ],
+      [
+       0.5,
+       186.84
+      ],
+      [
+       1,
+       166.04
+      ],
+      [
+       1.5,
+       145.24
+      ],
+      [
+       2,
+       124.43
+      ],
+      [
+       2.5,
+       103.63
+      ],
+      [
+       3,
+       82.84
+      ]
+     ],
+     "curves": {
+      "b": [
+       {
+        "path": [
+         5,
+         0
+        ]
+       }
+      ],
+      "g": [
+       {
+        "path": [
+         6,
+         0
+        ]
+       }
+      ],
+      "r": [
+       {
+        "path": [
+         7,
+         0
+        ]
+       }
+      ]
+     },
+     "dense_lines": true
+    }
+   ],
+   "borrow": {
+    "from": "fujifilm_eterna_vivid_500_kb0901e",
+    "files": [
+     "log_sensitivity_b",
+     "log_sensitivity_g",
+     "log_sensitivity_r",
+     "dye_density_mid",
+     "dye_density_min"
+    ],
+    "why": "nearest-speed tungsten ETERNA negative with its own data sheet"
+   },
+   "recipe": {
+    "stock": "fujifilm_eterna_400_kb1101e",
+    "name": "Fujifilm Eterna 400 (KB-1101E)",
+    "target_print": "kodak_2383",
+    "reference_illuminant": "T",
+    "use": "cine",
+    "density_over_min": 0.4,
+    "data_trustability": 0.2,
+    "estimates": [
+     "spectral sensitivities and dye densities (minimum and mid-scale) are not in the manual: borrowed from fujifilm_eterna_vivid_500_kb0901e (nearest-speed tungsten ETERNA negative with its own data sheet)",
+     "the characteristic curves are printed against camera stops: converted to relative log H (1 stop = 0.30103), the absolute exposure scale comes from the builder's speed-point anchoring",
+     "spectral sensitivity on a relative log scale (one log unit = the interval marked '1.0'), absolute level from the builder's mid-grey anchoring",
+     "sensitivity tails beyond the printed curves",
+     "base+fog and mid-scale dye densities read from the sheet, individual CMY dyes reconstructed by the builder (not printed)",
+     "dye densities outside the printed 400-700 nm",
+     "print stock: KODAK VISION 2383 (the shipped cine print profile; FUJIFILM ETERNA-CP 3513/3514 is not in the repository)",
+     "interlayer DIR coupler strength (not on any data sheet; runtime default for negatives)"
+    ]
+   }
+  },
+  {
+   "id": "fujifilm_f64d_kb1101e",
+   "name": "FUJICOLOR F-64D 8522 / 8622",
+   "type": "negative",
+   "meta": {
+    "speed": "EI 64 daylight",
+    "process": "ECN-2",
+    "densitometry": "Status M",
+    "exposure": "5400K light source, 1/50 s, Fuji Filter SC-41",
+    "sensitivity_defined_at": "0.40 above minimum density",
+    "art": "vector (PDF paths, page 18)"
+   },
+   "notes": [
+    "curves read directly from the PDF vector paths, no tracing",
+    "the manual prints the characteristic curves only (no spectral sensitivity or dye density plots)",
+    "characteristic curves printed against log H (lux-seconds), bar notation on the axis"
+   ],
+   "plots": [
+    {
+     "kind": "char",
+     "page": 18,
+     "rect": [
+      261,
+      79,
+      443,
+      211
+     ],
+     "x": [
+      [
+       -4.0,
+       265.13
+      ],
+      [
+       -3.5,
+       284.43
+      ],
+      [
+       -3.0,
+       303.72
+      ],
+      [
+       -2.5,
+       323.02
+      ],
+      [
+       -2.0,
+       342.32
+      ],
+      [
+       -1.5,
+       361.61
+      ],
+      [
+       -1.0,
+       380.91
+      ],
+      [
+       -0.5,
+       400.21
+      ],
+      [
+       0.0,
+       419.51
+      ],
+      [
+       0.5,
+       438.87
+      ]
+     ],
+     "y": [
+      [
+       0,
+       207.63
+      ],
+      [
+       0.5,
+       186.84
+      ],
+      [
+       1,
+       166.04
+      ],
+      [
+       1.5,
+       145.24
+      ],
+      [
+       2,
+       124.43
+      ],
+      [
+       2.5,
+       103.63
+      ],
+      [
+       3,
+       82.84
+      ]
+     ],
+     "curves": {
+      "b": [
+       {
+        "path": [
+         5,
+         0
+        ]
+       }
+      ],
+      "g": [
+       {
+        "path": [
+         6,
+         0
+        ]
+       }
+      ],
+      "r": [
+       {
+        "path": [
+         7,
+         0
+        ]
+       }
+      ]
+     },
+     "dense_lines": true
+    }
+   ],
+   "borrow": {
+    "from": "fujifilm_eterna_250d_kb0507er",
+    "files": [
+     "log_sensitivity_b",
+     "log_sensitivity_g",
+     "log_sensitivity_r",
+     "dye_density_mid",
+     "dye_density_min"
+    ],
+    "why": "the only daylight Fujifilm cine negative with spectral data sheets"
+   },
+   "recipe": {
+    "stock": "fujifilm_f64d_kb1101e",
+    "name": "Fujifilm F-64D (KB-1101E)",
+    "target_print": "kodak_2383",
+    "reference_illuminant": "D55",
+    "use": "cine",
+    "density_over_min": 0.4,
+    "data_trustability": 0.2,
+    "estimates": [
+     "spectral sensitivities and dye densities (minimum and mid-scale) are not in the manual: borrowed from fujifilm_eterna_250d_kb0507er (the only daylight Fujifilm cine negative with spectral data sheets)",
+     "spectral sensitivity on a relative log scale (one log unit = the interval marked '1.0'), absolute level from the builder's mid-grey anchoring",
+     "sensitivity tails beyond the printed curves",
+     "base+fog and mid-scale dye densities read from the sheet, individual CMY dyes reconstructed by the builder (not printed)",
+     "dye densities outside the printed 400-700 nm",
+     "print stock: KODAK VISION 2383 (the shipped cine print profile; FUJIFILM ETERNA-CP 3513/3514 is not in the repository)",
+     "interlayer DIR coupler strength (not on any data sheet; runtime default for negatives)"
+    ]
+   }
+  },
+  {
+   "id": "fujifilm_reala_500d_kb1101e",
+   "name": "FUJICOLOR REALA 500D 8592 / 8692",
+   "type": "negative",
+   "meta": {
+    "speed": "EI 500 daylight",
+    "process": "ECN-2",
+    "densitometry": "Status M",
+    "exposure": "5400K light source, 1/50 s, Fuji Filter SC-41",
+    "sensitivity_defined_at": "0.40 above minimum density",
+    "art": "vector (PDF paths, page 24)"
+   },
+   "notes": [
+    "curves read directly from the PDF vector paths, no tracing",
+    "the manual prints the characteristic curves only (no spectral sensitivity or dye density plots)",
+    "characteristic curves printed against log H (lux-seconds), bar notation on the axis"
+   ],
+   "plots": [
+    {
+     "kind": "char",
+     "page": 24,
+     "rect": [
+      261,
+      79,
+      443,
+      211
+     ],
+     "x": [
+      [
+       -4.0,
+       265.13
+      ],
+      [
+       -3.5,
+       284.43
+      ],
+      [
+       -3.0,
+       303.72
+      ],
+      [
+       -2.5,
+       323.02
+      ],
+      [
+       -2.0,
+       342.32
+      ],
+      [
+       -1.5,
+       361.61
+      ],
+      [
+       -1.0,
+       380.91
+      ],
+      [
+       -0.5,
+       400.21
+      ],
+      [
+       0.0,
+       419.51
+      ],
+      [
+       0.5,
+       438.87
+      ]
+     ],
+     "y": [
+      [
+       0,
+       207.63
+      ],
+      [
+       0.5,
+       186.84
+      ],
+      [
+       1,
+       166.04
+      ],
+      [
+       1.5,
+       145.24
+      ],
+      [
+       2,
+       124.43
+      ],
+      [
+       2.5,
+       103.63
+      ],
+      [
+       3,
+       82.84
+      ]
+     ],
+     "curves": {
+      "b": [
+       {
+        "path": [
+         3,
+         0
+        ]
+       }
+      ],
+      "g": [
+       {
+        "path": [
+         4,
+         0
+        ]
+       }
+      ],
+      "r": [
+       {
+        "path": [
+         5,
+         0
+        ]
+       }
+      ]
+     },
+     "dense_lines": true
+    }
+   ],
+   "borrow": {
+    "from": "fujifilm_eterna_250d_kb0507er",
+    "files": [
+     "log_sensitivity_b",
+     "log_sensitivity_g",
+     "log_sensitivity_r",
+     "dye_density_mid",
+     "dye_density_min"
+    ],
+    "why": "the only daylight Fujifilm cine negative with spectral data sheets; REALA's fourth (cyan-sensitive) layer is not modelled"
+   },
+   "recipe": {
+    "stock": "fujifilm_reala_500d_kb1101e",
+    "name": "Fujifilm Reala 500D (KB-1101E)",
+    "target_print": "kodak_2383",
+    "reference_illuminant": "D55",
+    "use": "cine",
+    "density_over_min": 0.4,
+    "data_trustability": 0.2,
+    "estimates": [
+     "spectral sensitivities and dye densities (minimum and mid-scale) are not in the manual: borrowed from fujifilm_eterna_250d_kb0507er (the only daylight Fujifilm cine negative with spectral data sheets; REALA's fourth (cyan-sensitive) layer is not modelled)",
+     "spectral sensitivity on a relative log scale (one log unit = the interval marked '1.0'), absolute level from the builder's mid-grey anchoring",
+     "sensitivity tails beyond the printed curves",
+     "base+fog and mid-scale dye densities read from the sheet, individual CMY dyes reconstructed by the builder (not printed)",
+     "dye densities outside the printed 400-700 nm",
+     "print stock: KODAK VISION 2383 (the shipped cine print profile; FUJIFILM ETERNA-CP 3513/3514 is not in the repository)",
+     "interlayer DIR coupler strength (not on any data sheet; runtime default for negatives)"
+    ]
+   }
+  }
+ ]
+}
