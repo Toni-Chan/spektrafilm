@@ -61,6 +61,12 @@ Everything a sheet does not print is an estimate, listed in each recipe's
   scale 1.35, `"estimate": true`), which from its curves alone rendered below
   NPS although FUJIFILM sells it as the more saturated, higher-contrast
   sibling;
+  Super HG 1600 renders flatter than its successor SUPERIA 1600 (ColorChecker
+  C* 48.0 vs 55.2 printed; 29.6 vs 40.9 through the Frontier SP500), but an
+  interlayer scale cannot fix it without breaking the grey scale (1.3 already
+  shifts a grey patch by 4.3 a*b*), so it keeps the default; its mid-scale /
+  D-min dye pair is also the hardest for the CMY reconstruction (fit cost 0.27
+  vs 0.03-0.1 for the other sheets);
 - target print `fujifilm_crystal_archive_typeii`, reference illuminant D55.
 
 The fourth (cyan-sensitive, "4th colour layer") curve printed on the later
