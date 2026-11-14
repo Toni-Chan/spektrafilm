@@ -91,6 +91,22 @@ STOCKS = [
     ('kodak_advantix_bright_sun_flash_hd200', 'KODAK ADVANTiX Bright Sun & Flash / High Definition 200 (APS)', 'negative', 'e7003',
      S((6, 'char', 'R', 0), (7, 'sens', 'L', 0), (7, 'dye', 'L', 0))),
     ('kodak_advantix_versatility', 'KODAK ADVANTiX Versatility (APS)', 'negative', 'e7003', S((7, 'char', 'R', 0), (7, 'sens', 'R', 0), (8, 'dye'))),
+    # filmcolors.org catalogue: Supra (E-2519 and E-4029: Supra 400/800 on both), Royal Supra, Ultra Color, Profoto, LE
+    ('kodak_profoto_100', 'KODAK PROFESSIONAL PROFOTO 100', 'negative', 'e2e', P(3)),
+    ('kodak_supra_100', 'KODAK PROFESSIONAL SUPRA 100', 'negative', 'e2519', P(7)),
+    ('kodak_supra_400', 'KODAK PROFESSIONAL SUPRA 400', 'negative', 'e2519', S((8, 'char', None, r'^Characteristic Curves$'), (8, 'sens'), (8, 'dye'))),
+    ('kodak_supra_800', 'KODAK PROFESSIONAL SUPRA 800', 'negative', 'e2519', S((9, 'char', None, r'^Characteristic Curves$'), (10, 'sens'), (10, 'dye'))),
+    ('kodak_supra_200', 'KODAK PROFESSIONAL SUPRA 200', 'negative', 'e4029', P(7)),
+    ('kodak_supra_400', 'KODAK PROFESSIONAL SUPRA 400', 'negative', 'e4029', S((8, 'char', None, r'^Characteristic Curves$'), (8, 'sens'), (8, 'dye'))),
+    ('kodak_supra_800', 'KODAK PROFESSIONAL SUPRA 800', 'negative', 'e4029', S((9, 'char', None, r'^Characteristic Curves$'), (9, 'sens'), (10, 'dye'))),
+    ('kodak_royal_supra_200', 'KODAK PROFESSIONAL ROYAL SUPRA 200', 'negative', 'e4026', P(7)),
+    ('kodak_royal_supra_400', 'KODAK PROFESSIONAL ROYAL SUPRA 400', 'negative', 'e4026', S((8, 'char', None, r'^Characteristic Curves$'), (8, 'sens'), (8, 'dye'))),
+    ('kodak_royal_supra_800', 'KODAK PROFESSIONAL ROYAL SUPRA 800', 'negative', 'e4026', S((9, 'char', None, r'^Characteristic Curves$'), (9, 'sens'), (10, 'dye'))),
+    ('kodak_ultra_color_100uc', 'KODAK PROFESSIONAL ULTRA COLOR 100UC', 'negative', 'e4035', S((6, 'char'), (6, 'sens'), (6, 'dye'), (6, 'mtf'))),
+    ('kodak_ultra_color_400uc', 'KODAK PROFESSIONAL ULTRA COLOR 400UC', 'negative', 'e4035', S((7, 'char', None, r'EI 400'), (7, 'sens'), (7, 'dye'))),  # the p. 8 MTF plot frame is not detected
+    ('kodak_le100', 'KODAK PROFESSIONAL Law Enforcement LE100', 'negative', 'le1', P(5)),
+    ('kodak_le400', 'KODAK PROFESSIONAL Law Enforcement LE400', 'negative', 'le1', S((6, 'char', None, r'^Characteristic Curves$'), (6, 'sens'), (7, 'dye'))),
+    ('kodak_le800', 'KODAK PROFESSIONAL Law Enforcement LE800', 'negative', 'le1', S((7, 'char', None, r'^Characteristic Curves$'), (8, 'sens'), (8, 'dye'))),
     # ---- colour reversal films
     ('kodak_ektachrome_64', 'KODAK EKTACHROME 64 Professional [EPR]', 'positive', 'e8', P(5)),
     ('kodak_ektachrome_100', 'KODAK EKTACHROME 100 Professional [EPN]', 'positive', 'e27-1', P(5)),
@@ -161,11 +177,34 @@ STOCKS = [
 STATUS_A_TYPES = ('positive', 'paper', 'display', 'paper_digital', 'display_digital', 'reversal_paper', 'duplicating')
 MONTHS = 'January|February|March|April|May|June|July|August|September|October|November|December'
 
+# Sheets catalogued by filmcolors.org that are not in docs/unsorted/kodak/: 125px.com mirrors them under
+# docs/film/kodak/ with a date / product suffix, so the local file is saved under the plain stem and the
+# full source URL is given here; LE-1 and TI-2323 are not E-series publication codes.
+SOURCE_FILES = {
+    'e2e': 'https://125px.com/docs/film/kodak/e2e-Profoto_100.pdf',
+    'e2519': 'https://125px.com/docs/film/kodak/e2519-2003_05.pdf',
+    'e4026': 'https://125px.com/docs/film/kodak/e4026-2002_06.pdf',
+    'e4029': 'https://125px.com/docs/film/kodak/e4029-2003_05.pdf',
+    'e4035': 'https://125px.com/docs/film/kodak/e4035-100UC_400UC.pdf',
+    'ti2323': 'https://125px.com/docs/film/kodak/ti2323-Ektachrome_EIR.pdf',
+}
+PUB_CODES = {'le1': 'LE-1', 'ti2323': 'TI-2323'}
+_source_url_by_folder = source_url
+
+
+def source_url(stem):  # noqa: F811 (full URLs for the sheets above; folder + stem otherwise)
+    return SOURCE_FILES.get(stem) or _source_url_by_folder(stem)
+
+
+def pub_code(stem):
+    """publication code from the file stem (-1 = the site's revision suffix)"""
+    return PUB_CODES.get(stem) or 'E-' + stem[1:].split('-')[0].upper()
+
 
 # ---------------------------------------------------------------------------------------------
 def pub_info(doc):
     t = doc[0].get_text()
-    m = re.search(rf'({MONTHS})\s+(\d{{4}})\s*•\s*(E-?\s?\w+)', t)
+    m = re.search(rf'({MONTHS})\s+(\d{{4}})\s*•\s*((?:LE|TI|E)-?\s?\w+)', t)
     if not m:  # e163-1 has an obfuscated date font
         m2 = re.search(r'©Eastman Kodak Company,\s*(\d{4})', t)
         code = re.search(r'•\s*(E-?\s?\d+\w*)', t)
@@ -613,7 +652,7 @@ def extract_all(pdf_dir, out, chk, only=None):
                 pg = doc[pn - 1]
                 caches[pdf][pn] = (*K.find_plots(pg), K.curve_drawings(pg), K.axis_lines(pg))
         date, pub = pub_info(doc)
-        pub = 'E-' + pdf[1:].split('-')[0].upper()  # the stem is the publication code; -1 = site's revision suffix
+        pub = pub_code(pdf)  # the stem is the publication code
         newer = pdf + '-1' in stems
         older = pdf.endswith('-1') and pdf[:-2] in stems
         rev = ''

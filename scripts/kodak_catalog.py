@@ -40,6 +40,16 @@ TYPE_LABEL = {
 
 # Sheets whose first page names the product without the word KODAK (checked by hand).
 TITLES = {'e55': 'KODACHROME 25, 64, and 200 Professional Film'}
+# filmcolors.org catalogue sheets (125px.com docs/film/kodak/): first-page lines are split or cover text.
+TITLES.update({
+    'e2e': 'KODAK PROFESSIONAL PROFOTO 100 Colour Negative Film',
+    'e2519': 'KODAK PROFESSIONAL SUPRA Color Negative Films (100, 400, 800)',
+    'e4026': 'KODAK PROFESSIONAL ROYAL SUPRA Color Negative Films (200, 400, 800)',
+    'e4029': 'KODAK PROFESSIONAL SUPRA Color Negative Films (200, 400, 800)',
+    'e4035': 'KODAK PROFESSIONAL ULTRA COLOR Films / 100UC and 400UC',
+    'le1': 'KODAK PROFESSIONAL Law Enforcement Films (LE100, LE400, LE800)',
+    'ti2323': 'KODAK EKTACHROME Professional Infrared EIR Film',
+})
 
 
 def title_of(doc, stem=''):
@@ -62,13 +72,13 @@ def main():
     with open(os.path.join(a.records, 'records.csv')) as f:
         for r in csv.DictReader(f):
             recs[r['pdf']].append(r)
-    stems = sorted(f[:-4] for f in os.listdir(a.pdfs) if re.match(r'e.*\.pdf$', f))
+    stems = sorted(f[:-4] for f in os.listdir(a.pdfs) if re.match(r'(e|le|ti)\d.*\.pdf$', f))
     newer = {s.split('-')[0]: s for s in stems if '-' in s}
     rows = []
     for stem in stems:
         doc = pymupdf.open(os.path.join(a.pdfs, stem + '.pdf'))
         date, _ = E.pub_info(doc)
-        pub = 'E-' + stem[1:].split('-')[0].upper()
+        pub = E.pub_code(stem)
         nimg = sum(len(p.get_images()) for p in doc)
         nseg = sum(len(p.get_drawings()) for p in doc)
         kinds = collections.Counter()
