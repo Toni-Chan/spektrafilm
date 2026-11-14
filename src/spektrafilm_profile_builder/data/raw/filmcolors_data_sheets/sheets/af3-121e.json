@@ -1,0 +1,267 @@
+{
+ "doc": "AF3-121E",
+ "publisher": "FUJIFILM data sheet",
+ "date": "2002-07 (print code EIGI-02.7)",
+ "title": "FUJICOLOR PORTRAIT FILM NPH 400 PROFESSIONAL [NPH]",
+ "pdf": "Fujicolor-Portrait-Film-NPH-400-Professional-_AF3-121E.pdf",
+ "url": "https://filmcolors.org/wp-content/uploads/2025/12/Fujicolor-Portrait-Film-NPH-400-Professional-_AF3-121E.pdf",
+ "entry": "https://filmcolors.org/timeline-entry/40681/",
+ "stocks": [
+  {
+   "id": "fujifilm_nph_400_af3121e",
+   "name": "FUJICOLOR PORTRAIT FILM NPH 400 PROFESSIONAL [NPH] (2002)",
+   "type": "negative",
+   "meta": {
+    "speed": "ISO 400 (daylight)",
+    "process": "C-41",
+    "densitometry": "Status M",
+    "exposure": "Daylight, 1/125 sec",
+    "sensitivity_defined_at": "1.0 above D-min",
+    "art": "vector (PDF paths, page 8)"
+   },
+   "notes": [
+    "curves read directly from the PDF vector paths (page 8), no tracing",
+    "built from this 2002 bulletin; the 1995 sheet AF3-865E (older emulsion, no fourth layer) is kept as a record only",
+    "the sheet also prints a fourth (cyan-sensitive) layer, kept as log_sensitivity_cyan_layer.csv"
+   ],
+   "plots": [
+    {
+     "kind": "char",
+     "page": 8,
+     "rect": [
+      76,
+      119,
+      287,
+      268
+     ],
+     "x": [
+      [
+       -4,
+       79.3
+      ],
+      [
+       -3,
+       120.37
+      ],
+      [
+       -2,
+       161.27
+      ],
+      [
+       -1,
+       202.21
+      ],
+      [
+       0,
+       243.01
+      ],
+      [
+       1,
+       284.0
+      ]
+     ],
+     "y": [
+      [
+       0,
+       265.7
+      ],
+      [
+       1,
+       224.6
+      ],
+      [
+       2,
+       183.63
+      ],
+      [
+       3,
+       142.68
+      ],
+      [
+       3.5,
+       122.3
+      ]
+     ],
+     "curves": {
+      "b": [
+       {
+        "path": [
+         11,
+         0
+        ]
+       }
+      ],
+      "g": [
+       {
+        "path": [
+         11,
+         1
+        ]
+       }
+      ],
+      "r": [
+       {
+        "path": [
+         11,
+         2
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "kind": "sens",
+     "page": 8,
+     "rect": [
+      341,
+      118,
+      525,
+      277
+     ],
+     "x": [
+      [
+       400,
+       355.31
+      ],
+      [
+       500,
+       406.99
+      ],
+      [
+       600,
+       458.89
+      ],
+      [
+       700,
+       511.32
+      ]
+     ],
+     "y": [
+      [
+       1,
+       172.7
+      ],
+      [
+       0,
+       223.32
+      ]
+     ],
+     "curves": {
+      "b": [
+       {
+        "path": [
+         427,
+         0
+        ]
+       }
+      ],
+      "g": [
+       {
+        "path": [
+         427,
+         1
+        ]
+       }
+      ],
+      "r": [
+       {
+        "path": [
+         427,
+         2
+        ]
+       }
+      ],
+      "cyan_layer": [
+       {
+        "path": [
+         432,
+         0
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "kind": "dye",
+     "page": 8,
+     "rect": [
+      345,
+      390,
+      522,
+      570
+     ],
+     "x": [
+      [
+       400,
+       357.19
+      ],
+      [
+       500,
+       408.43
+      ],
+      [
+       600,
+       459.2
+      ],
+      [
+       700,
+       509.46
+      ]
+     ],
+     "y": [
+      [
+       2,
+       406.36
+      ],
+      [
+       1.5,
+       446.66
+      ],
+      [
+       1,
+       486.82
+      ],
+      [
+       0.5,
+       528.59
+      ],
+      [
+       0,
+       567.5
+      ]
+     ],
+     "curves": {
+      "mid": [
+       {
+        "path": [
+         425,
+         0
+        ]
+       }
+      ],
+      "min": [
+       {
+        "path": [
+         425,
+         1
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "recipe": {
+    "stock": "fujifilm_nph_400_af3121e",
+    "name": "Fujifilm NPH 400 (AF3-121E, 2002)",
+    "target_print": "fujifilm_crystal_archive_typeii",
+    "reference_illuminant": "D55",
+    "estimates": [
+     "base+fog and mid-scale dye densities read from the sheet, individual CMY dyes reconstructed by the builder (not printed)",
+     "spectral sensitivity on a relative log scale (one log unit = the interval marked '1.0'), absolute level from the builder's mid-grey anchoring",
+     "sensitivity tails beyond the printed curves",
+     "interlayer DIR coupler strength (not on any data sheet; runtime default for negatives)"
+    ]
+   }
+  }
+ ]
+}

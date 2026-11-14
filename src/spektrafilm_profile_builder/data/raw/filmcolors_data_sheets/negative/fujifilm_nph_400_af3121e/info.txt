@@ -1,0 +1,44 @@
+FUJICOLOR PORTRAIT FILM NPH 400 PROFESSIONAL [NPH] (2002)
+Datasheet: FUJIFILM data sheet AF3-121E (2002-07 (print code EIGI-02.7)), Fujicolor-Portrait-Film-NPH-400-Professional-_AF3-121E.pdf, PDF page(s) 8
+Source URL: https://filmcolors.org/wp-content/uploads/2025/12/Fujicolor-Portrait-Film-NPH-400-Professional-_AF3-121E.pdf
+Catalogue entry: https://filmcolors.org/timeline-entry/40681/
+Publication: AF3-121E
+Publication date: 2002-07 (print code EIGI-02.7)
+Type: negative
+Densitometry: Status M
+Process: C-41
+Exposure: Daylight, 1/125 sec
+Sensitivity defined at: 1.0 above D-min
+Speed: ISO 400 (daylight)
+
+Files (x range, y range, n points):
+  density_curve_b.csv  x -3.584..0.673  y 0.95..2.603  n=17
+  density_curve_g.csv  x -3.581..0.67  y 0.681..2.363  n=27
+  density_curve_r.csv  x -3.585..0.671  y 0.165..1.937  n=24
+  dye_density_mid.csv  x 400.602..716.908  y 0.746..1.994  n=111
+  dye_density_min.csv  x 399.697..716.313  y 0.168..1.454  n=69
+  log_sensitivity_b.csv  x 383.701..515.233  y -0.758..1.527  n=60
+  log_sensitivity_cyan_layer.csv  x 474.035..552.562  y -0.131..0.418  n=29
+  log_sensitivity_g.csv  x 450.592..594.698  y -0.79..1.352  n=49
+  log_sensitivity_r.csv  x 555.796..664.184  y -0.759..1.056  n=51
+
+Units: log_sensitivity_* = wavelength nm, log10 sensitivity (relative where the sheet prints no
+  absolute scale); density_curve_* = log10 H (lux-seconds), total density as printed (base+fog
+  included); dye_density_* = wavelength nm, spectral diffuse density (c/m/y: individual dyes as
+  printed; mid: mid-scale neutral; min: minimum density).
+Extraction: the plot is rendered from the PDF at 600 dpi (the curves are embedded 1-bit scans or
+  vector strokes), grid lines are found as long straight dark runs and removed except where a curve
+  crosses them, axes are calibrated piecewise-linearly through the printed grid lines named in the
+  sheet config (sheets/*.json), and each curve is followed column by column from a seed point
+  (script: scripts/extract_filmcolors_datasheets.py). Typical accuracy ~0.2-0.5 pt on the page
+  (about 1-2 nm, 0.01-0.02 log H or density) plus the accuracy of the original drawing / scan.
+Calibration:
+  char_p8: {"x_labels": [-4, -3, -2, -1, 0, 1], "y_labels": [0, 1, 2, 3, 3.5], "x_resid_pt": 0.074, "y_resid_pt": 0.098, "stroke_px": 10.0, "grid_lines": {"h": 8, "v": 11}}
+  sens_p8: {"x_labels": [400, 500, 600, 700], "y_labels": [1, 0], "x_resid_pt": 0.24, "y_resid_pt": 0.0, "stroke_px": 4.0, "grid_lines": {"h": 4, "v": 6}}
+  dye_p8: {"x_labels": [400, 500, 600, 700], "y_labels": [2, 1.5, 1, 0.5, 0], "x_resid_pt": 0.241, "y_resid_pt": 0.992, "stroke_px": 5.0, "grid_lines": {"h": 5, "v": 6}}
+Distance of the written curves to the printed strokes (pt): {"char:b": {"median_pt": 0.0, "p95_pt": 0.0, "max_pt": 0.12}, "char:g": {"median_pt": 0.0, "p95_pt": 0.0, "max_pt": 0.0}, "char:r": {"median_pt": 0.0, "p95_pt": 0.0, "max_pt": 0.0}, "sens:b": {"median_pt": 0.0, "p95_pt": 0.0, "max_pt": 0.0}, "sens:g": {"median_pt": 0.0, "p95_pt": 0.0, "max_pt": 0.0}, "sens:r": {"median_pt": 0.0, "p95_pt": 0.0, "max_pt": 0.0}, "sens:cyan_layer": {"median_pt": 0.0, "p95_pt": 0.849, "max_pt": 1.025}, "dye:mid": {"median_pt": 0.0, "p95_pt": 0.0, "max_pt": 0.0}, "dye:min": {"median_pt": 0.0, "p95_pt": 0.0, "max_pt": 0.12}}
+Caveats:
+  curves read directly from the PDF vector paths (page 8), no tracing
+  built from this 2002 bulletin; the 1995 sheet AF3-865E (older emulsion, no fourth layer) is kept as a record only
+  the sheet also prints a fourth (cyan-sensitive) layer, kept as log_sensitivity_cyan_layer.csv
+  y label 2: no grid line within 3.0 pt of 406.36; used as given

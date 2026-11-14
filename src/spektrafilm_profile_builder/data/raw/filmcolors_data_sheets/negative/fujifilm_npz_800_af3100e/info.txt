@@ -1,0 +1,40 @@
+FUJICOLOR PORTRAIT FILM NPZ 800 PROFESSIONAL [NPZ]
+Datasheet: FUJIFILM data sheet AF3-100E (2001-04 (print code EIGI-01.4)), Fujicolor-Portrait-Film-NPZ-800-Professional_AF3-100E.pdf, PDF page(s) 5
+Source URL: https://filmcolors.org/wp-content/uploads/2025/12/Fujicolor-Portrait-Film-NPZ-800-Professional_AF3-100E.pdf
+Catalogue entry: https://filmcolors.org/timeline-entry/40678/
+Publication: AF3-100E
+Publication date: 2001-04 (print code EIGI-01.4)
+Type: negative
+Densitometry: Status M
+Process: C-41 / CN-16
+Exposure: Daylight, 1/125 sec
+Sensitivity defined at: 1.0 above D-min
+Speed: ISO 800 (daylight)
+
+Files (x range, y range, n points):
+  density_curve_b.csv  x -3.592..0.703  y 0.915..2.55  n=94
+  density_curve_g.csv  x -3.584..0.68  y 0.635..2.376  n=57
+  density_curve_r.csv  x -3.595..0.683  y 0.191..2.109  n=65
+  dye_density_mid.csv  x 398.481..716.627  y 0.739..1.915  n=109
+  dye_density_min.csv  x 397.547..716.388  y 0.195..1.331  n=89
+  log_sensitivity_b.csv  x 397.603..521.512  y -0.599..1.648  n=52
+  log_sensitivity_g.csv  x 487.785..595.93  y -0.578..1.464  n=36
+  log_sensitivity_r.csv  x 550.116..669.444  y -0.636..1.068  n=46
+
+Units: log_sensitivity_* = wavelength nm, log10 sensitivity (relative where the sheet prints no
+  absolute scale); density_curve_* = log10 H (lux-seconds), total density as printed (base+fog
+  included); dye_density_* = wavelength nm, spectral diffuse density (c/m/y: individual dyes as
+  printed; mid: mid-scale neutral; min: minimum density).
+Extraction: the plot is rendered from the PDF at 600 dpi (the curves are embedded 1-bit scans or
+  vector strokes), grid lines are found as long straight dark runs and removed except where a curve
+  crosses them, axes are calibrated piecewise-linearly through the printed grid lines named in the
+  sheet config (sheets/*.json), and each curve is followed column by column from a seed point
+  (script: scripts/extract_filmcolors_datasheets.py). Typical accuracy ~0.2-0.5 pt on the page
+  (about 1-2 nm, 0.01-0.02 log H or density) plus the accuracy of the original drawing / scan.
+Calibration:
+  char_p5: {"x_labels": [-4, -3, -2, -1, 0, 1], "y_labels": [3.5, 3, 2, 1, 0], "x_resid_pt": 0.071, "y_resid_pt": 0.086, "stroke_px": 10.0, "grid_lines": {"h": 8, "v": 11}}
+  sens_p5: {"x_labels": [400, 500, 600, 700], "y_labels": [1, 0], "x_resid_pt": 0.36, "y_resid_pt": 0.0, "stroke_px": 6.0, "grid_lines": {"h": 4, "v": 6}}
+  dye_p5: {"x_labels": [400, 500, 600, 700], "y_labels": [1.5, 1, 0.5, 0], "x_resid_pt": 0.302, "y_resid_pt": 0.754, "stroke_px": 8.0, "grid_lines": {"h": 6, "v": 6}}
+Distance of the written curves to the printed strokes (pt): {"char:b": {"median_pt": 0.0, "p95_pt": 0.0, "max_pt": 0.0}, "char:g": {"median_pt": 0.0, "p95_pt": 0.0, "max_pt": 0.0}, "char:r": {"median_pt": 0.0, "p95_pt": 0.0, "max_pt": 0.0}, "sens:b": {"median_pt": 0.0, "p95_pt": 0.12, "max_pt": 0.24}, "sens:g": {"median_pt": 0.0, "p95_pt": 0.12, "max_pt": 0.36}, "sens:r": {"median_pt": 0.0, "p95_pt": 0.12, "max_pt": 0.24}, "dye:mid": {"median_pt": 0.0, "p95_pt": 0.0, "max_pt": 0.12}, "dye:min": {"median_pt": 0.0, "p95_pt": 0.0, "max_pt": 0.24}}
+Caveats:
+  traced from the scanned raster artwork (no vector paths in this PDF); grid calibrated from detected grid lines

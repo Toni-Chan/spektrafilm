@@ -1,0 +1,262 @@
+{
+ "doc": "AF3-0232E",
+ "publisher": "FUJIFILM data sheet",
+ "date": "2010-03 (print code KAMISF-10.3)",
+ "title": "FUJICOLOR PRO 160 NS PROFESSIONAL",
+ "pdf": "Fujicolor-Pro-160-NS-Professional_AF3-0232E.pdf",
+ "url": "https://filmcolors.org/wp-content/uploads/2025/12/Fujicolor-Pro-160-NS-Professional_AF3-0232E.pdf",
+ "entry": "https://filmcolors.org/timeline-entry/40668/",
+ "stocks": [
+  {
+   "id": "fujifilm_pro_160ns_af30232e",
+   "name": "FUJICOLOR PRO 160 NS PROFESSIONAL",
+   "type": "negative",
+   "meta": {
+    "speed": "ISO 160 (daylight)",
+    "process": "C-41",
+    "densitometry": "Status M",
+    "exposure": "Daylight, 1/125 sec",
+    "sensitivity_defined_at": "1.0 above D-min",
+    "art": "vector (PDF paths, page 7)"
+   },
+   "notes": [
+    "curves read directly from the PDF vector paths (page 7), no tracing",
+    "the sheet also prints a fourth (cyan-sensitive) layer, kept as log_sensitivity_cyan_layer.csv"
+   ],
+   "plots": [
+    {
+     "kind": "char",
+     "page": 7,
+     "rect": [
+      77,
+      120,
+      283,
+      304
+     ],
+     "x": [
+      [
+       -4,
+       80.4
+      ],
+      [
+       -3.5,
+       102.58
+      ],
+      [
+       -3,
+       125.06
+      ],
+      [
+       -2,
+       169.17
+      ],
+      [
+       -1,
+       213.28
+      ],
+      [
+       0,
+       257.67
+      ]
+     ],
+     "y": [
+      [
+       0,
+       301.6
+      ],
+      [
+       0.5,
+       279.49
+      ],
+      [
+       1,
+       257.29
+      ],
+      [
+       2,
+       212.88
+      ],
+      [
+       3,
+       168.47
+      ],
+      [
+       4,
+       123.3
+      ]
+     ],
+     "curves": {
+      "r": [
+       {
+        "path": [
+         51,
+         0
+        ]
+       }
+      ],
+      "g": [
+       {
+        "path": [
+         51,
+         1
+        ]
+       }
+      ],
+      "b": [
+       {
+        "path": [
+         51,
+         2
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "kind": "sens",
+     "page": 7,
+     "rect": [
+      333,
+      119,
+      540,
+      302
+     ],
+     "x": [
+      [
+       400,
+       348.33
+      ],
+      [
+       500,
+       407.66
+      ],
+      [
+       600,
+       465.91
+      ],
+      [
+       700,
+       524.68
+      ]
+     ],
+     "y": [
+      [
+       1,
+       181.32
+      ],
+      [
+       0,
+       240.22
+      ]
+     ],
+     "curves": {
+      "b": [
+       {
+        "path": [
+         202,
+         2
+        ]
+       }
+      ],
+      "g": [
+       {
+        "path": [
+         202,
+         1
+        ]
+       }
+      ],
+      "r": [
+       {
+        "path": [
+         202,
+         0
+        ]
+       }
+      ],
+      "cyan_layer": [
+       {
+        "path": [
+         203,
+         0
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "kind": "dye",
+     "page": 7,
+     "rect": [
+      330,
+      406,
+      536,
+      577
+     ],
+     "x": [
+      [
+       400,
+       333.0
+      ],
+      [
+       500,
+       395.35
+      ],
+      [
+       600,
+       457.78
+      ],
+      [
+       700,
+       520.69
+      ]
+     ],
+     "y": [
+      [
+       2,
+       442.4
+      ],
+      [
+       1,
+       508.24
+      ],
+      [
+       0,
+       573.6
+      ]
+     ],
+     "curves": {
+      "mid": [
+       {
+        "path": [
+         539,
+         1
+        ]
+       }
+      ],
+      "min": [
+       {
+        "path": [
+         539,
+         0
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "recipe": {
+    "stock": "fujifilm_pro_160ns_af30232e",
+    "name": "Fujifilm Pro 160NS (AF3-0232E)",
+    "target_print": "fujifilm_crystal_archive_typeii",
+    "reference_illuminant": "D55",
+    "estimates": [
+     "base+fog and mid-scale dye densities read from the sheet, individual CMY dyes reconstructed by the builder (not printed)",
+     "spectral sensitivity on a relative log scale (one log unit = the interval marked '1.0'), absolute level from the builder's mid-grey anchoring",
+     "sensitivity tails beyond the printed curves",
+     "interlayer DIR coupler strength (not on any data sheet; runtime default for negatives)"
+    ]
+   }
+  }
+ ]
+}

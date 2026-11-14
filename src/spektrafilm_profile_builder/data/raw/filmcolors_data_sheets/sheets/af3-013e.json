@@ -1,0 +1,255 @@
+{
+ "doc": "AF3-013E",
+ "publisher": "FUJIFILM data sheet",
+ "date": "1998-10 (print code EIGI-98.10)",
+ "title": "FUJICOLOR nexia H 400 (APS)",
+ "pdf": "Fujicolor_NexiaH400_AF3-013E.pdf",
+ "url": "https://filmcolors.org/wp-content/uploads/2013/05/Fujicolor_NexiaH400_AF3-013E.pdf",
+ "entry": "https://filmcolors.org/timeline-entry/40648/",
+ "stocks": [
+  {
+   "id": "fujifilm_nexia_h400_af3013e",
+   "name": "FUJICOLOR nexia H 400 [APS]",
+   "type": "negative",
+   "meta": {
+    "speed": "ISO 400 (daylight)",
+    "process": "CN-16X (C-41 compatible)",
+    "densitometry": "Status M",
+    "exposure": "Daylight, 1/125 sec",
+    "sensitivity_defined_at": "1.0 above D-min",
+    "art": "vector (PDF paths, page 5)"
+   },
+   "notes": [
+    "curves read directly from the PDF vector paths (page 5), no tracing",
+    "the dye plot runs to about 780 nm",
+    "the sheet also prints a fourth (cyan-sensitive) layer, kept as log_sensitivity_cyan_layer.csv"
+   ],
+   "plots": [
+    {
+     "kind": "char",
+     "page": 5,
+     "rect": [
+      88,
+      109,
+      292,
+      293
+     ],
+     "x": [
+      [
+       -4,
+       91.1
+      ],
+      [
+       -3,
+       134.96
+      ],
+      [
+       -2,
+       179.07
+      ],
+      [
+       -1,
+       222.52
+      ],
+      [
+       0,
+       267.0
+      ]
+     ],
+     "y": [
+      [
+       0,
+       290.2
+      ],
+      [
+       1,
+       246.55
+      ],
+      [
+       2,
+       201.05
+      ],
+      [
+       3,
+       156.85
+      ],
+      [
+       4,
+       112.1
+      ]
+     ],
+     "curves": {
+      "b": [
+       {
+        "path": [
+         11,
+         0
+        ]
+       }
+      ],
+      "r": [
+       {
+        "path": [
+         12,
+         0
+        ]
+       }
+      ],
+      "g": [
+       {
+        "path": [
+         12,
+         1
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "kind": "sens",
+     "page": 5,
+     "rect": [
+      345,
+      108,
+      556,
+      294
+     ],
+     "x": [
+      [
+       400,
+       361.29
+      ],
+      [
+       500,
+       421.38
+      ],
+      [
+       600,
+       480.86
+      ],
+      [
+       700,
+       541.11
+      ]
+     ],
+     "y": [
+      [
+       1,
+       171.84
+      ],
+      [
+       0,
+       231.35
+      ]
+     ],
+     "curves": {
+      "b": [
+       {
+        "path": [
+         375,
+         0
+        ]
+       }
+      ],
+      "g": [
+       {
+        "path": [
+         186,
+         0
+        ]
+       }
+      ],
+      "r": [
+       {
+        "path": [
+         186,
+         1
+        ]
+       }
+      ],
+      "cyan_layer": [
+       {
+        "path": [
+         356,
+         0
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "kind": "dye",
+     "page": 5,
+     "rect": [
+      355,
+      395,
+      530,
+      545
+     ],
+     "x": [
+      [
+       400,
+       366.56
+      ],
+      [
+       500,
+       408.4
+      ],
+      [
+       600,
+       449.43
+      ],
+      [
+       700,
+       489.75
+      ]
+     ],
+     "y": [
+      [
+       3,
+       420.67
+      ],
+      [
+       2,
+       461.64
+      ],
+      [
+       0,
+       542.4
+      ]
+     ],
+     "curves": {
+      "mid": [
+       {
+        "path": [
+         379,
+         0
+        ]
+       }
+      ],
+      "min": [
+       {
+        "path": [
+         377,
+         0
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "recipe": {
+    "stock": "fujifilm_nexia_h400_af3013e",
+    "name": "Fujifilm nexia H 400 (AF3-013E)",
+    "target_print": "fujifilm_crystal_archive_typeii",
+    "reference_illuminant": "D55",
+    "estimates": [
+     "base+fog and mid-scale dye densities read from the sheet, individual CMY dyes reconstructed by the builder (not printed)",
+     "spectral sensitivity on a relative log scale (one log unit = the interval marked '1.0'), absolute level from the builder's mid-grey anchoring",
+     "sensitivity tails beyond the printed curves",
+     "interlayer DIR coupler strength (not on any data sheet; runtime default for negatives)"
+    ]
+   }
+  }
+ ]
+}

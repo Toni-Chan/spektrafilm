@@ -1,0 +1,333 @@
+{
+ "doc": "AF3-659EN",
+ "publisher": "FUJIFILM data sheet",
+ "date": "undated (filmcolors.org: ca. 1990)",
+ "title": "FUJICOLOR SUPER HG 1600 CU",
+ "pdf": "Fujicolor-Super-HG-1600-CU_AF3-659EN.pdf",
+ "url": "https://filmcolors.org/wp-content/uploads/2025/12/Fujicolor-Super-HG-1600-CU_AF3-659EN.pdf",
+ "entry": "https://filmcolors.org/timeline-entry/40685/",
+ "stocks": [
+  {
+   "id": "fujifilm_super_hg_1600_af3659en",
+   "name": "FUJICOLOR SUPER HG 1600 CU",
+   "type": "negative",
+   "meta": {
+    "speed": "ISO 1600 (daylight)",
+    "process": "CN-16 / C-41",
+    "densitometry": "Status M",
+    "exposure": "Daylight, 1/125 sec",
+    "sensitivity_defined_at": "1.0 above D-min",
+    "art": "raster scan (pages 5-7)"
+   },
+   "notes": [
+    "traced from the scanned raster artwork (no vector paths in this PDF); the characteristic and dye plots are deskewed by -0.5 and +0.2 degrees before tracing; grid calibrated from detected grid lines",
+    "undated sheet; filmcolors.org dates the stock ca. 1990",
+    "the dye plot gives only mid-scale and minimum density (no separated CMY dyes); mid-scale density is clipped at D 2.5 below ~415 nm"
+   ],
+   "plots": [
+    {
+     "kind": "char",
+     "page": 6,
+     "rect": [
+      140,
+      84,
+      418,
+      279
+     ],
+     "x": [
+      [
+       -4,
+       193.88
+      ],
+      [
+       -3,
+       249.62
+      ],
+      [
+       -2,
+       305.72
+      ],
+      [
+       -1,
+       361.58
+      ],
+      [
+       0,
+       417.8
+      ]
+     ],
+     "y": [
+      [
+       3,
+       111.84
+      ],
+      [
+       2.5,
+       140.34
+      ],
+      [
+       2,
+       168.24
+      ],
+      [
+       1.5,
+       196.2
+      ],
+      [
+       1,
+       224.64
+      ],
+      [
+       0.5,
+       253.08
+      ],
+      [
+       0,
+       281.3
+      ]
+     ],
+     "mask": [
+      [
+       -5,
+       2.6,
+       -2.55,
+       3.5
+      ]
+     ],
+     "curves": {
+      "b": [
+       {
+        "col": -3.75,
+        "rank": 0
+       }
+      ],
+      "g": [
+       {
+        "col": -3.75,
+        "rank": 1
+       }
+      ],
+      "r": [
+       {
+        "col": -3.75,
+        "rank": 2
+       }
+      ]
+     },
+     "extra_h": [
+      0.0
+     ],
+     "rotate": -0.5,
+     "line_frac": 0.4
+    },
+    {
+     "kind": "sens",
+     "page": 5,
+     "rect": [
+      136.5,
+      375,
+      334,
+      542.5
+     ],
+     "x": [
+      [
+       400,
+       150.18
+      ],
+      [
+       500,
+       206.16
+      ],
+      [
+       600,
+       262.74
+      ],
+      [
+       700,
+       319.32
+      ]
+     ],
+     "y": [
+      [
+       1,
+       430.68
+      ],
+      [
+       0,
+       486.6
+      ]
+     ],
+     "mask": [
+      [
+       380,
+       1.1,
+       730,
+       2.0
+      ]
+     ],
+     "curves": {
+      "b": {
+       "seeds": [
+        {
+         "col": 440,
+         "rank": 0
+        }
+       ],
+       "xlim": [
+        380,
+        520
+       ]
+      },
+      "g": {
+       "seeds": [
+        {
+         "col": 560,
+         "rank": 0
+        }
+       ],
+       "xlim": [
+        385,
+        600
+       ]
+      },
+      "r": {
+       "seeds": [
+        {
+         "col": 650,
+         "rank": 0
+        }
+       ],
+       "xlim": [
+        540,
+        720
+       ]
+      }
+     },
+     "extra_v": [
+      374.9,
+      400,
+      500,
+      600,
+      700,
+      728.0
+     ],
+     "extra_h": [
+      -1.012,
+      0,
+      1,
+      2.017
+     ]
+    },
+    {
+     "kind": "dye",
+     "page": 7,
+     "rect": [
+      158.5,
+      81,
+      354,
+      324
+     ],
+     "x": [
+      [
+       400,
+       172.42
+      ],
+      [
+       500,
+       228.16
+      ],
+      [
+       600,
+       284.44
+      ],
+      [
+       700,
+       340.24
+      ]
+     ],
+     "y": [
+      [
+       2.5,
+       95.7
+      ],
+      [
+       2,
+       140.82
+      ],
+      [
+       1.5,
+       186.9
+      ],
+      [
+       1,
+       233.7
+      ],
+      [
+       0.5,
+       278.58
+      ],
+      [
+       0,
+       323.52
+      ]
+     ],
+     "mask": [
+      [
+       512,
+       1.95,
+       730,
+       2.07
+      ],
+      [
+       600,
+       2.15,
+       730,
+       2.6
+      ],
+      [
+       540,
+       0.68,
+       680,
+       0.9
+      ]
+     ],
+     "curves": {
+      "mid": [
+       {
+        "col": 435,
+        "rank": 0
+       }
+      ],
+      "min": [
+       {
+        "col": 435,
+        "rank": 1
+       }
+      ]
+     },
+     "extra_v": [
+      375.6,
+      726.2
+     ],
+     "extra_h": [
+      2.67
+     ],
+     "rotate": 0.2,
+     "line_frac": 0.4
+    }
+   ],
+   "recipe": {
+    "stock": "fujifilm_super_hg_1600_af3659en",
+    "name": "Fujifilm Super HG 1600 (AF3-659EN)",
+    "target_print": "fujifilm_crystal_archive_typeii",
+    "reference_illuminant": "D55",
+    "estimates": [
+     "base+fog and mid-scale dye densities read from the sheet, individual CMY dyes reconstructed by the builder (not printed)",
+     "spectral sensitivity on a relative log scale (one log unit = the interval marked '1.0'), absolute level from the builder's mid-grey anchoring",
+     "sensitivity tails beyond the printed curves",
+     "interlayer DIR coupler strength (not on any data sheet; runtime default for negatives)"
+    ]
+   }
+  }
+ ]
+}

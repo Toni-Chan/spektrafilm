@@ -1,0 +1,255 @@
+{
+ "doc": "AF3-100E",
+ "publisher": "FUJIFILM data sheet",
+ "date": "2001-04 (print code EIGI-01.4)",
+ "title": "FUJICOLOR PORTRAIT FILM NPZ 800 PROFESSIONAL [NPZ]",
+ "pdf": "Fujicolor-Portrait-Film-NPZ-800-Professional_AF3-100E.pdf",
+ "url": "https://filmcolors.org/wp-content/uploads/2025/12/Fujicolor-Portrait-Film-NPZ-800-Professional_AF3-100E.pdf",
+ "entry": "https://filmcolors.org/timeline-entry/40678/",
+ "stocks": [
+  {
+   "id": "fujifilm_npz_800_af3100e",
+   "name": "FUJICOLOR PORTRAIT FILM NPZ 800 PROFESSIONAL [NPZ]",
+   "type": "negative",
+   "meta": {
+    "speed": "ISO 800 (daylight)",
+    "process": "C-41 / CN-16",
+    "densitometry": "Status M",
+    "exposure": "Daylight, 1/125 sec",
+    "sensitivity_defined_at": "1.0 above D-min",
+    "art": "raster scan (page 5)"
+   },
+   "notes": [
+    "traced from the scanned raster artwork (no vector paths in this PDF); grid calibrated from detected grid lines"
+   ],
+   "plots": [
+    {
+     "kind": "char",
+     "page": 5,
+     "rect": [
+      68.7,
+      104.6,
+      299,
+      271
+     ],
+     "x": [
+      [
+       -4,
+       90.72
+      ],
+      [
+       -3,
+       131.64
+      ],
+      [
+       -2,
+       172.56
+      ],
+      [
+       -1,
+       213.6
+      ],
+      [
+       0,
+       254.4
+      ],
+      [
+       1,
+       295.44
+      ]
+     ],
+     "y": [
+      [
+       3.5,
+       106.82
+      ],
+      [
+       3,
+       127.34
+      ],
+      [
+       2,
+       168.26
+      ],
+      [
+       1,
+       209.3
+      ],
+      [
+       0,
+       250.1
+      ]
+     ],
+     "mask": [
+      [
+       -4,
+       2.65,
+       1.0,
+       3.5
+      ]
+     ],
+     "min_component": 90,
+     "curves": {
+      "b": [
+       {
+        "col": -3.5,
+        "rank": 0
+       }
+      ],
+      "g": [
+       {
+        "col": -3.5,
+        "rank": 1
+       }
+      ],
+      "r": [
+       {
+        "col": -3.5,
+        "rank": 2
+       }
+      ]
+     }
+    },
+    {
+     "kind": "sens",
+     "page": 5,
+     "rect": [
+      330.2,
+      106.3,
+      531.8,
+      279.5
+     ],
+     "x": [
+      [
+       400,
+       364.46
+      ],
+      [
+       500,
+       417.02
+      ],
+      [
+       600,
+       468.62
+      ],
+      [
+       700,
+       520.46
+      ]
+     ],
+     "y": [
+      [
+       1,
+       157.36
+      ],
+      [
+       0,
+       208.24
+      ]
+     ],
+     "curves": {
+      "b": [
+       [
+        430,
+        1.4,
+        397,
+        522
+       ]
+      ],
+      "g": [
+       [
+        550,
+        1.45,
+        488,
+        597
+       ]
+      ],
+      "r": [
+       [
+        620,
+        1.05,
+        546,
+        670
+       ]
+      ]
+     }
+    },
+    {
+     "kind": "dye",
+     "page": 5,
+     "rect": [
+      337.3,
+      377.3,
+      530,
+      575.7
+     ],
+     "x": [
+      [
+       400,
+       368.32
+      ],
+      [
+       500,
+       419.68
+      ],
+      [
+       600,
+       470.44
+      ],
+      [
+       700,
+       520.6
+      ]
+     ],
+     "y": [
+      [
+       1.5,
+       430.64
+      ],
+      [
+       1,
+       470.72
+      ],
+      [
+       0.5,
+       512.36
+      ],
+      [
+       0,
+       551.72
+      ]
+     ],
+     "extra_h": [
+      2.0
+     ],
+     "curves": {
+      "mid": [
+       [
+        450,
+        1.9
+       ]
+      ],
+      "min": [
+       [
+        450,
+        0.98
+       ]
+      ]
+     }
+    }
+   ],
+   "recipe": {
+    "stock": "fujifilm_npz_800_af3100e",
+    "name": "Fujifilm NPZ 800 (AF3-100E)",
+    "target_print": "fujifilm_crystal_archive_typeii",
+    "reference_illuminant": "D55",
+    "estimates": [
+     "base+fog and mid-scale dye densities read from the sheet, individual CMY dyes reconstructed by the builder (not printed)",
+     "spectral sensitivity on a relative log scale (one log unit = the interval marked '1.0'), absolute level from the builder's mid-grey anchoring",
+     "sensitivity tails beyond the printed curves",
+     "interlayer DIR coupler strength (not on any data sheet; runtime default for negatives)"
+    ]
+   }
+  }
+ ]
+}
