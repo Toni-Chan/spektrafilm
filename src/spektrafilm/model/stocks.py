@@ -11,6 +11,15 @@ class FilmStocks(Enum):
     # kodak consumer
     kodak_gold_200 = 'kodak_gold_200'
     kodak_ultramax_400 = 'kodak_ultramax_400'
+    # kodak cine EXR / VISION (KODAK motion picture technical data sheets H-1 / TI series, built with spektrafilm_profile_builder)
+    kodak_exr_50d_5245 = 'kodak_exr_50d_5245'
+    kodak_exr_100t_5248 = 'kodak_exr_100t_5248'
+    kodak_exr_200t_5293 = 'kodak_exr_200t_5293'
+    kodak_exr_500t_5298 = 'kodak_exr_500t_5298'
+    kodak_vision_250d_5246 = 'kodak_vision_250d_5246'
+    kodak_vision_320t_5277 = 'kodak_vision_320t_5277'
+    kodak_vision_500t_5279 = 'kodak_vision_500t_5279'
+    kodak_vision_500t_5263 = 'kodak_vision_500t_5263'
     # kodak cine
     kodak_vision3_50d = 'kodak_vision3_50d'
     kodak_vision3_250d = 'kodak_vision3_250d'
