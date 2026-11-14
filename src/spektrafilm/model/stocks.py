@@ -44,6 +44,14 @@ class FilmStocks(Enum):
     fujifilm_nexia_a200_fdg = 'fujifilm_nexia_a200_fdg'
     fujifilm_nexia_400_fdg = 'fujifilm_nexia_400_fdg'
     fujifilm_nexia_800_fdg = 'fujifilm_nexia_800_fdg'
+    # FUJIFILM data sheets / product information bulletins (filmcolors.org), negative
+    fujifilm_super_hg_1600_af3659en = 'fujifilm_super_hg_1600_af3659en'
+    fujifilm_npc_160_af3065e = 'fujifilm_npc_160_af3065e'
+    fujifilm_nps_160_af3809e = 'fujifilm_nps_160_af3809e'
+    fujifilm_nph_400_af3121e = 'fujifilm_nph_400_af3121e'
+    fujifilm_npz_800_af3100e = 'fujifilm_npz_800_af3100e'
+    fujifilm_pro_160ns_af30232e = 'fujifilm_pro_160ns_af30232e'
+    fujifilm_nexia_h400_af3013e = 'fujifilm_nexia_h400_af3013e'
     # positive
     fujifilm_velvia_50_fdg = 'fujifilm_velvia_50_fdg'
     fujifilm_velvia_100_fdg = 'fujifilm_velvia_100_fdg'

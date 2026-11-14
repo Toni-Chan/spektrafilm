@@ -176,7 +176,9 @@ the spektrafilm profile attribution (see `SPEKTRAFILM_LICENSE.txt`); the
 `metadata.datasource` of each profile names the source page. The raw curves
 are digitised from the Fujifilm Professional Data Guide AF3-207U (2005),
 publicly published by FUJIFILM Corporation, and from the KODAK technical data
-sheets (E-series) published by Eastman Kodak Company; the data remain property
-of their holders and the source PDFs are not redistributed. See
-[data/raw/fujifilm_professional_data_guide/README.md](data/raw/fujifilm_professional_data_guide/README.md)
-and [data/raw/kodak_technical_data/README.md](data/raw/kodak_technical_data/README.md).
+sheets (E-series) published by Eastman Kodak Company, and from data sheets
+catalogued by filmcolors.org (Timeline of Historical Film Colors); the data
+remain property of their holders and the source PDFs are not redistributed. See
+[data/raw/fujifilm_professional_data_guide/README.md](data/raw/fujifilm_professional_data_guide/README.md),
+[data/raw/kodak_technical_data/README.md](data/raw/kodak_technical_data/README.md)
+and [data/raw/filmcolors_data_sheets/README.md](data/raw/filmcolors_data_sheets/README.md).
