@@ -40,7 +40,33 @@ NEGATIVES = {
     'kodak_advantix_100_e7003': ('Kodak Advantix 100', 'D55', 'weak'),
     'kodak_advantix_bright_sun_flash_hd200_e7003': ('Kodak Advantix Bright Sun & Flash 200', 'D55', 'weak'),
     'kodak_advantix_versatility_e7003': ('Kodak Advantix Versatility 400', 'D55', 'weak'),
+    # filmcolors.org catalogue. SUPRA 100 / 400 / 800 are built from E-2519 (the original SUPRA films, discontinued
+    # 2003); the 2003 SUPRA 200 / 400 / 800 of E-4029 print the ROYAL SUPRA curves of E-4026 (same within 0.001),
+    # so only SUPRA 200 is built from E-4029 and its 400 / 800 stay records only.
+    'kodak_profoto_100_e2e': ('Kodak Profoto 100', 'D55', 'strong'),
+    'kodak_supra_100_e2519': ('Kodak Supra 100', 'D55', 'strong'),
+    'kodak_supra_400_e2519': ('Kodak Supra 400', 'D55', 'strong'),
+    'kodak_supra_800_e2519': ('Kodak Supra 800', 'D55', 'strong'),
+    'kodak_supra_200_e4029': ('Kodak Supra 200', 'D55', 'strong'),
+    'kodak_royal_supra_200_e4026': ('Kodak Royal Supra 200', 'D55', 'strong'),
+    'kodak_royal_supra_400_e4026': ('Kodak Royal Supra 400', 'D55', 'strong'),
+    'kodak_royal_supra_800_e4026': ('Kodak Royal Supra 800', 'D55', 'strong'),
+    'kodak_ultra_color_100uc_e4035': ('Kodak Ultra Color 100UC', 'D55', 'strong'),
+    'kodak_ultra_color_400uc_e4035': ('Kodak Ultra Color 400UC', 'D55', 'strong'),
+    'kodak_le100_le1': ('Kodak Law Enforcement LE100', 'D55', 'strong'),
+    'kodak_le400_le1': ('Kodak Law Enforcement LE400', 'D55', 'strong'),
+    'kodak_le800_le1': ('Kodak Law Enforcement LE800', 'D55', 'strong'),
 }
+# filmcolors.org negatives: hanatos2025 donors pinned to upstream's Kodak still-camera negatives and the
+# Kodak technical-data negatives above (the default, every shipped kodak_ negative, depends on build order)
+_FILMCOLORS_NEG = [k for k in NEGATIVES if k.endswith(('_e2e', '_e2519', '_e4029', '_e4026', '_e4035', '_le1'))]
+_NEG_DONORS = ' '.join(['kodak_ektar_100', 'kodak_gold_200', 'kodak_portra_160', 'kodak_portra_400',
+                        'kodak_portra_800', 'kodak_ultramax_400'] + [k for k in NEGATIVES if k not in _FILMCOLORS_NEG])
+NEG_EXTRA = {sid: dict(adaptation_donors=_NEG_DONORS) for sid in _FILMCOLORS_NEG}
+NEG_ESTIMATE_NOTE = ('Estimate placeholders (not on the sheet): individual CMY dyes reconstructed by the builder '
+                     'from the mid-scale neutral and D-min curves, sensitivity tails beyond the printed curves, '
+                     'hanatos2025 adaptation parameters (averaged from pinned Kodak negatives), interlayer DIR '
+                     'coupler strength (runtime default for negatives unless film_render_overrides says otherwise).')
 POSITIVES = {
     'kodak_ektachrome_64_e8': ('Kodak Ektachrome 64 (EPR)', 'D55', 'strong'),
     'kodak_ektachrome_100_e27': ('Kodak Ektachrome 100 (EPN)', 'D55', 'strong'),
@@ -103,9 +129,15 @@ def main():
         rid = r['id']
         info = open(os.path.join(root, r['folder'], 'info.txt')).read()
         tag = f"{r['publication']}, {year(r['date'])}"
+        m = re.search(r'^Source URL:[ \t]*(\S+)', info, re.M)
+        url = m.group(1) if m else f"https://125px.com/docs/unsorted/kodak/{r['pdf']}"
         src = (f"KODAK technical data {r['publication']} ({r['date']}), {r['pdf']}, PDF page(s) {r['pages']}, "
-               f"{r['name']}: https://125px.com/docs/unsorted/kodak/{r['pdf']}")
-        base = dict(stock=rid, record=r['folder'], datasource=src, source_id=rid, page=r['pages'])
+               f"{r['name']}: {url}")
+        extra = NEG_EXTRA.get(rid, {})
+        if extra:
+            src += ' ' + NEG_ESTIMATE_NOTE
+        base = dict(stock=rid, record=r['folder'], datasource=src, source_id=rid, page=r['pages'],
+                    adaptation_donors=extra.get('adaptation_donors', ''))
         if rid in NEGATIVES:
             name, ill, ah = NEGATIVES[rid]
             out.append(dict(base, name=f'{name} ({tag})', type='negative', target_print='kodak_portra_endura',
@@ -126,7 +158,7 @@ def main():
                             data_trustability=1.0, support=support))
     cols = ['stock', 'name', 'type', 'record', 'support', 'target_print', 'reference_illuminant',
             'viewing_illuminant', 'antihalation', 'log_sensitivity_density_over_min', 'data_trustability',
-            'datasource', 'source_id', 'page']
+            'adaptation_donors', 'datasource', 'source_id', 'page']
     with open(os.path.join(root, 'recipes.csv'), 'w', newline='') as f:
         w = csv.DictWriter(f, fieldnames=cols)
         w.writeheader(); w.writerows(out)

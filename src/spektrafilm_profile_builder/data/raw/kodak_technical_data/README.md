@@ -71,6 +71,21 @@ of this repository and name their source sheet in `metadata.datasource`.
 | `negative/kodak_advantix_100_e7003` | KODAK ADVANTiX 100 (APS) | E-7003 (February 2002) | e7003.pdf p. 6 | negative | `kodak_advantix_100_e7003` |
 | `negative/kodak_advantix_bright_sun_flash_hd200_e7003` | KODAK ADVANTiX Bright Sun & Flash / High Definition 200 (APS) | E-7003 (February 2002) | e7003.pdf p. 6;7 | negative | `kodak_advantix_bright_sun_flash_hd200_e7003` |
 | `negative/kodak_advantix_versatility_e7003` | KODAK ADVANTiX Versatility (APS) | E-7003 (February 2002) | e7003.pdf p. 7;8 | negative | `kodak_advantix_versatility_e7003` |
+| `negative/kodak_profoto_100_e2e` | KODAK PROFESSIONAL PROFOTO 100 | E-2E (July 1997) | e2e.pdf p. 3 | negative | `kodak_profoto_100_e2e` |
+| `negative/kodak_supra_100_e2519` | KODAK PROFESSIONAL SUPRA 100 | E-2519 (May 2003) | e2519.pdf p. 7 | negative | `kodak_supra_100_e2519` |
+| `negative/kodak_supra_400_e2519` | KODAK PROFESSIONAL SUPRA 400 | E-2519 (May 2003) | e2519.pdf p. 8 | negative | `kodak_supra_400_e2519` |
+| `negative/kodak_supra_800_e2519` | KODAK PROFESSIONAL SUPRA 800 | E-2519 (May 2003) | e2519.pdf p. 9;10 | negative | `kodak_supra_800_e2519` |
+| `negative/kodak_supra_200_e4029` | KODAK PROFESSIONAL SUPRA 200 | E-4029 (May 2003) | e4029.pdf p. 7 | negative | `kodak_supra_200_e4029` |
+| `negative/kodak_supra_400_e4029` | KODAK PROFESSIONAL SUPRA 400 | E-4029 (May 2003) | e4029.pdf p. 8 | negative | — (same curves as the E-4026 ROYAL SUPRA sheet; records only) |
+| `negative/kodak_supra_800_e4029` | KODAK PROFESSIONAL SUPRA 800 | E-4029 (May 2003) | e4029.pdf p. 9;10 | negative | — (same curves as the E-4026 ROYAL SUPRA sheet; records only) |
+| `negative/kodak_royal_supra_200_e4026` | KODAK PROFESSIONAL ROYAL SUPRA 200 | E-4026 (June 2002) | e4026.pdf p. 7 | negative | `kodak_royal_supra_200_e4026` |
+| `negative/kodak_royal_supra_400_e4026` | KODAK PROFESSIONAL ROYAL SUPRA 400 | E-4026 (June 2002) | e4026.pdf p. 8 | negative | `kodak_royal_supra_400_e4026` |
+| `negative/kodak_royal_supra_800_e4026` | KODAK PROFESSIONAL ROYAL SUPRA 800 | E-4026 (June 2002) | e4026.pdf p. 9;10 | negative | `kodak_royal_supra_800_e4026` |
+| `negative/kodak_ultra_color_100uc_e4035` | KODAK PROFESSIONAL ULTRA COLOR 100UC | E-4035 (May 2007) | e4035.pdf p. 6 | negative | `kodak_ultra_color_100uc_e4035` |
+| `negative/kodak_ultra_color_400uc_e4035` | KODAK PROFESSIONAL ULTRA COLOR 400UC | E-4035 (May 2007) | e4035.pdf p. 7 | negative | `kodak_ultra_color_400uc_e4035` |
+| `negative/kodak_le100_le1` | KODAK PROFESSIONAL Law Enforcement LE100 | LE-1 (October 1998) | le1.pdf p. 5 | negative | `kodak_le100_le1` |
+| `negative/kodak_le400_le1` | KODAK PROFESSIONAL Law Enforcement LE400 | LE-1 (October 1998) | le1.pdf p. 6;7 | negative | `kodak_le400_le1` |
+| `negative/kodak_le800_le1` | KODAK PROFESSIONAL Law Enforcement LE800 | LE-1 (October 1998) | le1.pdf p. 7;8 | negative | `kodak_le800_le1` |
 | `positive/kodak_ektachrome_64_e8` | KODAK EKTACHROME 64 Professional [EPR] | E-8 (June 2003) | e8.pdf p. 5 | positive | `kodak_ektachrome_64_e8` |
 | `positive/kodak_ektachrome_100_e27` | KODAK EKTACHROME 100 Professional [EPN] | E-27 (June 2003) | e27-1.pdf p. 5 | positive | `kodak_ektachrome_100_e27` |
 | `positive/kodak_ektachrome_100_e27_1998` | KODAK EKTACHROME 100 Professional [EPN] | E-27 (May 1998) | e27.pdf p. 5 | positive | — (superseded revision; the current sheet is built) |
@@ -200,6 +215,37 @@ Digital: text only) and E-4013 (Day/Night Digital Display Material).
   sensitivities sit about 50 nm shorter than E-4021's (whose peaks match every
   other RA-4 paper sheet), so its raw data most likely came from another source
   or carry a wavelength-axis offset; the shipped profile is unchanged.
+
+## filmcolors.org negatives (PROFOTO, SUPRA, ROYAL SUPRA, ULTRA COLOR, LE)
+
+Six more sheets listed in the [filmcolors.org](https://filmcolors.org/) Kodak
+timeline, all vector PDFs: E-2E PROFOTO 100 (July 1997), E-2519 SUPRA 100 /
+400 / 800 (May 2003, with its discontinuance notice), E-4029 SUPRA 200 / 400 /
+800 (May 2003), E-4026 ROYAL SUPRA 200 / 400 / 800 (June 2002), E-4035 ULTRA
+COLOR 100UC / 400UC (May 2007), mirrored at <https://125px.com/docs/film/kodak/>
+(saved locally under the plain stem; `SOURCE_FILES` in the extractor gives
+the full URL), and LE-1 Law Enforcement Films LE100 / LE400 / LE800 (October
+1998) at <https://125px.com/docs/unsorted/kodak/le1.pdf> (filmcolors.org
+links a 2003 reprint). `index.csv` catalogues them too (76 rows).
+
+* **SUPRA editions.** E-2519 describes the original SUPRA films; the 2003
+  SUPRA 200 / 400 / 800 of E-4029 print the ROYAL SUPRA curves of E-4026
+  (all curves agree within 0.001 density / log H). SUPRA 100 / 400 / 800 are
+  built from E-2519, SUPRA 200 (only on E-4029) from E-4029, ROYAL SUPRA from
+  E-4026; E-4029 SUPRA 400 / 800 are records only.
+* **Plots used.** Normal-process characteristic curves only (push 1 / push 2
+  and ULTRA COLOR 400UC at EI 800 are not used); ULTRA COLOR 400UC's MTF on
+  p. 8 is not read (frame not detected), 100UC's is.
+* **Estimates** (not on the sheets, also written into each profile's
+  `metadata.datasource`): individual CMY dyes reconstructed by the builder
+  from the mid-scale neutral and D-min curves, sensitivity tails beyond the
+  printed curves, hanatos2025 adaptation parameters (donors pinned to
+  upstream's Kodak still negatives and the E-series negatives above), and the
+  interlayer DIR strength (runtime default; no film_render_overrides).
+* **ROYAL SUPRA / SUPRA 200 dyes.** Their mid-scale neutral rises steeply
+  below 400 nm (to D 2.5 at 380 nm), which the generic dye start reproduces
+  less well: reconstruction cost 0.27-0.41 against 0.003-0.19 for the other
+  sheets.
 
 ## KODACHROME 25 / 64 / 200 (E-55, June 2009)
 
