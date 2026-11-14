@@ -1,0 +1,7 @@
+{
+  "stock": "kodak_ultra_color_400uc_e4035",
+  "estimate": true,
+  "dir_couplers_interlayer_scale": 1.25,
+  "note": "E-4035 (May 2007) sells ULTRA COLOR 100UC / 400UC as the 'extra punch of color', 'deep, saturated color' successors of PORTRA UC, but from the curves alone 400UC rendered at the PORTRA NC / ROYAL SUPRA level (C* 46.0 vs PORTRA 400NC 43.8, 400VC 46.8, 400UC 49.6). Digitisation verified against the PDF (vector paths); the missing saturation is interimage (DIR) effect that a neutral-exposure sheet cannot show.",
+  "calibration": "Target: PORTRA 400UC (kodak_portra_400uc_e190, C* 49.6 with its override). ColorChecker C* (printed on kodak_portra_endura): 46.0 -> 49.7; mid-grey a*b* (-0.1/-0.2, 0.2) before and (-0.2, 0.3) after rebuilding the profile with the override (the builder grey-ramp fit renders with it); grey-ramp max delta a*b* vs no override 0.59."
+}

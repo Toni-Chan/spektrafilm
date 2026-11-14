@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import csv
+import re
 import json
 from dataclasses import fields
 from pathlib import Path
@@ -47,11 +48,52 @@ def _raw_json(stock):
     return json.loads((r.files('spektrafilm.data.profiles') / f'{stock}.json').read_text())
 
 
-def test_catalogue_lists_all_69_sheets():
+def test_catalogue_lists_all_69_sheets_and_e55():
     rows = list(csv.DictReader((RAW / 'index.csv').open()))
-    assert len(rows) == 69
-    assert {r['file'] for r in rows} >= {'e190-1.pdf', 'e190.pdf', 'e4021.pdf', 'e8.pdf'}
-    assert all(r['publication'].startswith('E-') for r in rows)
+    # the 69 sheets of 125px.com/docs/unsorted/kodak/ + E-55 + the six filmcolors.org negative sheets
+    assert len(rows) == 76
+    assert {r['file'] for r in rows} >= {'e190-1.pdf', 'e190.pdf', 'e4021.pdf', 'e8.pdf', 'le1.pdf', 'e4035.pdf'}
+    assert all(r['publication'].startswith(('E-', 'LE-')) for r in rows)
+
+
+FILMCOLORS_NEGATIVES = ['kodak_profoto_100_e2e', 'kodak_supra_100_e2519', 'kodak_supra_400_e2519',
+                        'kodak_supra_800_e2519', 'kodak_supra_200_e4029', 'kodak_royal_supra_200_e4026',
+                        'kodak_royal_supra_400_e4026', 'kodak_royal_supra_800_e4026',
+                        'kodak_ultra_color_100uc_e4035', 'kodak_ultra_color_400uc_e4035',
+                        'kodak_le100_le1', 'kodak_le400_le1', 'kodak_le800_le1']
+
+
+def test_filmcolors_negatives_are_built_with_pinned_donors_and_estimate_note():
+    rows = {r['stock']: r for r in ROWS}
+    records = {r['id'] for r in csv.DictReader((RAW / 'records.csv').open())}
+    for stock in FILMCOLORS_NEGATIVES:
+        r = rows[stock]
+        assert r['type'] == 'negative' and r['target_print'] == 'kodak_portra_endura'
+        donors = r['adaptation_donors'].split()
+        assert donors and not set(donors) & set(FILMCOLORS_NEGATIVES)
+        assert 'Estimate placeholders' in r['datasource'] and 'https://125px.com/docs/' in r['datasource']
+    # E-4029 SUPRA 400 / 800 print the E-4026 ROYAL SUPRA curves: records only
+    assert {'kodak_supra_400_e4029', 'kodak_supra_800_e4029'} <= records
+    assert not {'kodak_supra_400_e4029', 'kodak_supra_800_e4029'} & set(rows)
+
+
+@pytest.mark.parametrize('n', [200, 400, 800])
+def test_e4029_supra_curves_match_e4026_royal_supra(n):
+    a = load_record(RAW / 'negative' / f'kodak_supra_{n}_e4029')
+    b = load_record(RAW / 'negative' / f'kodak_royal_supra_{n}_e4026')
+    for xa, xb in zip(a.density_curves_xy, b.density_curves_xy):
+        xa, xb = np.asarray(xa), np.asarray(xb)
+        assert np.max(np.abs(xa[1] - np.interp(xa[0], xb[0], xb[1]))) < 0.01
+
+
+@pytest.mark.parametrize('stock', FILMCOLORS_NEGATIVES)
+def test_filmcolors_negative_densities_finite_in_band(stock):
+    p = load_profile(stock)
+    wl = np.asarray(p.data.wavelengths, dtype=float).ravel()
+    band = (wl >= 385) & (wl <= 745)
+    cd = np.asarray(p.data.channel_density, dtype=float)[band]
+    assert np.all(np.isfinite(cd)) and np.all(cd > -0.1)  # small reconstruction undershoot, as the E-190 profiles
+    assert np.all(np.nanmax(cd, axis=0) > 0.5)
 
 
 def test_recipes_are_registered_and_do_not_collide():
@@ -82,7 +124,7 @@ def test_profile_json_uses_only_upstream_schema_keys(stock):
     assert set(payload['data']) <= {f.name for f in fields(ProfileData)}
     assert set(payload['info']) <= {f.name for f in fields(ProfileInfo)}
     assert set(payload['metadata']) <= {f.name for f in fields(ProfileMetadata)}
-    assert 'KODAK technical data E-' in payload['metadata']['datasource']
+    assert re.search(r'KODAK technical data (E|LE)-', payload['metadata']['datasource'])
 
 
 @pytest.mark.parametrize('stock', STOCKS)
@@ -91,7 +133,7 @@ def test_profile_loads_with_expected_info_and_shapes(stock):
     p = load_profile(stock)  # spektrafilm's own validation
     info, d = p.info, p.data
     assert info.stock == stock
-    assert '(E-' in info.name and info.name.startswith('Kodak')
+    assert re.search(r'\((E|LE)-', info.name) and info.name.startswith('Kodak')
     assert info.channel_model == 'color'
     assert d.wavelengths.shape == (81,)
     assert d.log_exposure.shape == (256,)

@@ -125,6 +125,10 @@ def _add_recipe_args(ap):
     ap.add_argument('--no-grey-ramp', action='store_true', help='skip the runtime grey-ramp refinement')
     ap.add_argument('--data-trustability', type=float, default=0.3)
     ap.add_argument('--adaptation-donors', default='', help='comma-separated shipped profile ids')
+    ap.add_argument('--density-min', default='',
+                    help="base+fog 'r,g,b' (status density) instead of the toe fit: an estimate for curves cut off before D-min")
+    ap.add_argument('--dye-extension', choices=('none', 'hold_decay'), default='none',
+                    help="positives: continue dyes outside the printed range ('hold_decay', an estimate placeholder)")
     ap.add_argument('--datasource', default='')
 
 
@@ -181,7 +185,7 @@ def main(argv=None):
             dye_start=args.dye_start, grey_ramp_correction=not args.no_grey_ramp,
             data_trustability=args.data_trustability,
             adaptation_donors=[d for d in args.adaptation_donors.split(',') if d],
-            datasource=args.datasource,
+            density_min=args.density_min, dye_extension=args.dye_extension, datasource=args.datasource,
         )
         jobs = [(record, recipe)]
     else:

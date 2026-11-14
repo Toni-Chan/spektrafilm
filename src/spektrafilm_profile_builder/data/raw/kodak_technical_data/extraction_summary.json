@@ -6970,6 +6970,2831 @@
    }
   }
  },
+ "kodak_profoto_100_e2e": {
+  "files": {
+   "density_curve_b": {
+    "n": 67,
+    "x": [
+     -3.14,
+     0.86
+    ],
+    "y": [
+     0.954,
+     3.148
+    ]
+   },
+   "density_curve_g": {
+    "n": 81,
+    "x": [
+     -3.14,
+     0.86
+    ],
+    "y": [
+     0.704,
+     2.589
+    ]
+   },
+   "density_curve_r": {
+    "n": 59,
+    "x": [
+     -3.14,
+     0.86
+    ],
+    "y": [
+     0.247,
+     2.038
+    ]
+   },
+   "log_sensitivity_b": {
+    "n": 71,
+    "x": [
+     369.963,
+     510.188
+    ],
+    "y": [
+     0.306,
+     2.523
+    ]
+   },
+   "log_sensitivity_g": {
+    "n": 73,
+    "x": [
+     440.076,
+     590.163
+    ],
+    "y": [
+     0.703,
+     2.414
+    ]
+   },
+   "log_sensitivity_r": {
+    "n": 62,
+    "x": [
+     530.092,
+     660.276
+    ],
+    "y": [
+     0.612,
+     2.356
+    ]
+   },
+   "dye_density_mid": {
+    "n": 153,
+    "x": [
+     403.034,
+     699.66
+    ],
+    "y": [
+     0.761,
+     2.495
+    ]
+   },
+   "dye_density_min": {
+    "n": 126,
+    "x": [
+     400.223,
+     699.66
+    ],
+    "y": [
+     0.242,
+     2.123
+    ]
+   }
+  },
+  "notes": [],
+  "calib": {
+   "char_p3": {
+    "x_bar_notation": true,
+    "x_labels_used": [
+     -3.0,
+     -2.0,
+     -1.0,
+     0.0,
+     1.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.029,
+    "x_snapped_to_ticks": 5,
+    "y_labels_used": [
+     4.0,
+     3.0,
+     2.0,
+     1.0,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.022,
+    "y_snapped_to_ticks": 5
+   },
+   "sens_p3": {
+    "x_labels_used": [
+     250.0,
+     300.0,
+     350.0,
+     400.0,
+     450.0,
+     500.0,
+     550.0,
+     600.0,
+     650.0,
+     700.0,
+     750.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.314,
+    "x_snapped_to_ticks": 11,
+    "y_labels_used": [
+     4.0,
+     3.0,
+     2.0,
+     1.0,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.0,
+    "y_snapped_to_ticks": 5
+   },
+   "dye_p3": {
+    "x_labels_used": [
+     400.0,
+     500.0,
+     600.0,
+     700.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.022,
+    "x_snapped_to_ticks": 4,
+    "y_labels_used": [
+     2.5,
+     2.0,
+     1.5,
+     1.0,
+     0.5,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.0,
+    "y_snapped_to_ticks": 6
+   }
+  },
+  "meta": {
+   "char": {
+    "process": "C-41",
+    "exposure": "Daylight",
+    "densitometry": "Status M"
+   },
+   "sens": {
+    "process": "C-41",
+    "effective_exposure": "1/50 second",
+    "densitometry": "Status M",
+    "sensitivity_density": "0.2 above D-min"
+   },
+   "dye": {
+    "process": "C-41"
+   }
+  }
+ },
+ "kodak_supra_100_e2519": {
+  "files": {
+   "log_sensitivity_b": {
+    "n": 45,
+    "x": [
+     401.087,
+     501.184
+    ],
+    "y": [
+     0.654,
+     2.212
+    ]
+   },
+   "log_sensitivity_g": {
+    "n": 48,
+    "x": [
+     471.157,
+     591.265
+    ],
+    "y": [
+     0.394,
+     2.107
+    ]
+   },
+   "log_sensitivity_r": {
+    "n": 55,
+    "x": [
+     551.234,
+     681.368
+    ],
+    "y": [
+     0.185,
+     2.019
+    ]
+   },
+   "density_curve_b": {
+    "n": 33,
+    "x": [
+     -2.84,
+     1.16
+    ],
+    "y": [
+     0.93,
+     3.024
+    ]
+   },
+   "density_curve_g": {
+    "n": 33,
+    "x": [
+     -2.84,
+     1.16
+    ],
+    "y": [
+     0.717,
+     2.53
+    ]
+   },
+   "density_curve_r": {
+    "n": 34,
+    "x": [
+     -2.84,
+     1.16
+    ],
+    "y": [
+     0.28,
+     2.023
+    ]
+   },
+   "dye_density_mid": {
+    "n": 156,
+    "x": [
+     400.0,
+     699.999
+    ],
+    "y": [
+     0.826,
+     2.545
+    ]
+   },
+   "dye_density_min": {
+    "n": 113,
+    "x": [
+     400.0,
+     699.999
+    ],
+    "y": [
+     0.271,
+     1.925
+    ]
+   }
+  },
+  "notes": [],
+  "calib": {
+   "sens_p7": {
+    "x_labels_used": [
+     250.0,
+     300.0,
+     350.0,
+     400.0,
+     450.0,
+     500.0,
+     550.0,
+     600.0,
+     650.0,
+     700.0,
+     750.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.296,
+    "x_snapped_to_ticks": 11,
+    "y_labels_used": [
+     4.0,
+     3.0,
+     2.0,
+     1.0,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.001,
+    "y_snapped_to_ticks": 5
+   },
+   "char_p7": {
+    "x_bar_notation": true,
+    "x_labels_used": [
+     -4.0,
+     -3.0,
+     -2.0,
+     -1.0,
+     0.0,
+     1.0,
+     2.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.0,
+    "x_snapped_to_ticks": 7,
+    "y_labels_used": [
+     4.0,
+     3.0,
+     2.0,
+     1.0,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.0,
+    "y_snapped_to_ticks": 5
+   },
+   "dye_p7": {
+    "x_labels_used": [
+     400.0,
+     450.0,
+     500.0,
+     550.0,
+     600.0,
+     650.0,
+     700.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.001,
+    "x_snapped_to_ticks": 7,
+    "y_labels_used": [
+     2.5,
+     2.0,
+     1.5,
+     1.0,
+     0.5,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.0,
+    "y_snapped_to_ticks": 6
+   }
+  },
+  "meta": {
+   "sens": {
+    "effective_exposure": "1/25 second",
+    "densitometry": "Status M",
+    "sensitivity_density": "0.2>D-min"
+   },
+   "char": {
+    "exposure": "Daylight",
+    "densitometry": "Status M"
+   },
+   "dye": {}
+  }
+ },
+ "kodak_supra_400_e2519": {
+  "files": {
+   "density_curve_b": {
+    "n": 31,
+    "x": [
+     -3.44,
+     0.56
+    ],
+    "y": [
+     1.062,
+     3.256
+    ]
+   },
+   "density_curve_g": {
+    "n": 25,
+    "x": [
+     -3.44,
+     0.56
+    ],
+    "y": [
+     0.762,
+     2.709
+    ]
+   },
+   "density_curve_r": {
+    "n": 28,
+    "x": [
+     -3.44,
+     0.56
+    ],
+    "y": [
+     0.314,
+     2.236
+    ]
+   },
+   "log_sensitivity_b": {
+    "n": 56,
+    "x": [
+     379.979,
+     500.09
+    ],
+    "y": [
+     0.8,
+     2.756
+    ]
+   },
+   "log_sensitivity_g": {
+    "n": 54,
+    "x": [
+     470.068,
+     600.201
+    ],
+    "y": [
+     0.8,
+     2.452
+    ]
+   },
+   "log_sensitivity_r": {
+    "n": 49,
+    "x": [
+     570.164,
+     680.269
+    ],
+    "y": [
+     0.8,
+     2.388
+    ]
+   },
+   "dye_density_mid": {
+    "n": 148,
+    "x": [
+     399.999,
+     700.0
+    ],
+    "y": [
+     0.735,
+     2.152
+    ]
+   },
+   "dye_density_min": {
+    "n": 116,
+    "x": [
+     399.999,
+     700.0
+    ],
+    "y": [
+     0.271,
+     1.605
+    ]
+   }
+  },
+  "notes": [],
+  "calib": {
+   "char_p8": {
+    "x_bar_notation": true,
+    "x_labels_used": [
+     -5.0,
+     -4.0,
+     -3.0,
+     -2.0,
+     -1.0,
+     0.0,
+     1.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.0,
+    "x_snapped_to_ticks": 7,
+    "y_labels_used": [
+     4.0,
+     3.0,
+     2.0,
+     1.0,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.0,
+    "y_snapped_to_ticks": 5
+   },
+   "sens_p8": {
+    "x_labels_used": [
+     250.0,
+     300.0,
+     350.0,
+     400.0,
+     450.0,
+     500.0,
+     550.0,
+     600.0,
+     650.0,
+     700.0,
+     750.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.295,
+    "x_snapped_to_ticks": 11,
+    "y_labels_used": [
+     4.0,
+     3.0,
+     2.0,
+     1.0,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.002,
+    "y_snapped_to_ticks": 5
+   },
+   "dye_p8": {
+    "x_labels_used": [
+     400.0,
+     450.0,
+     500.0,
+     550.0,
+     600.0,
+     650.0,
+     700.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.001,
+    "x_snapped_to_ticks": 7,
+    "y_labels_used": [
+     3.0,
+     2.5,
+     2.0,
+     1.5,
+     1.0,
+     0.5,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.001,
+    "y_snapped_to_ticks": 7
+   }
+  },
+  "meta": {
+   "char": {
+    "exposure": "Daylight",
+    "densitometry": "Status M"
+   },
+   "sens": {
+    "effective_exposure": "1/50 Second",
+    "densitometry": "Status M",
+    "sensitivity_density": "0.2>D-min"
+   },
+   "dye": {}
+  }
+ },
+ "kodak_supra_800_e2519": {
+  "files": {
+   "density_curve_b": {
+    "n": 34,
+    "x": [
+     -3.74,
+     0.26
+    ],
+    "y": [
+     1.027,
+     3.124
+    ]
+   },
+   "density_curve_g": {
+    "n": 30,
+    "x": [
+     -3.74,
+     0.26
+    ],
+    "y": [
+     0.741,
+     2.575
+    ]
+   },
+   "density_curve_r": {
+    "n": 32,
+    "x": [
+     -3.74,
+     0.26
+    ],
+    "y": [
+     0.312,
+     2.043
+    ]
+   },
+   "log_sensitivity_b": {
+    "n": 60,
+    "x": [
+     379.979,
+     520.119
+    ],
+    "y": [
+     0.793,
+     2.758
+    ]
+   },
+   "log_sensitivity_g": {
+    "n": 94,
+    "x": [
+     399.998,
+     600.194
+    ],
+    "y": [
+     0.574,
+     2.761
+    ]
+   },
+   "log_sensitivity_r": {
+    "n": 95,
+    "x": [
+     490.087,
+     700.288
+    ],
+    "y": [
+     0.44,
+     2.625
+    ]
+   },
+   "dye_density_mid": {
+    "n": 134,
+    "x": [
+     400.0,
+     700.0
+    ],
+    "y": [
+     0.755,
+     2.477
+    ]
+   },
+   "dye_density_min": {
+    "n": 107,
+    "x": [
+     400.0,
+     700.0
+    ],
+    "y": [
+     0.23,
+     1.904
+    ]
+   }
+  },
+  "notes": [],
+  "calib": {
+   "char_p9": {
+    "x_bar_notation": true,
+    "x_labels_used": [
+     -5.0,
+     -4.0,
+     -3.0,
+     -2.0,
+     -1.0,
+     0.0,
+     1.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.0,
+    "x_snapped_to_ticks": 7,
+    "y_labels_used": [
+     4.0,
+     3.0,
+     2.0,
+     1.0,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.0,
+    "y_snapped_to_ticks": 5
+   },
+   "sens_p10": {
+    "x_labels_used": [
+     250.0,
+     300.0,
+     350.0,
+     400.0,
+     450.0,
+     500.0,
+     550.0,
+     600.0,
+     650.0,
+     700.0,
+     750.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.296,
+    "x_snapped_to_ticks": 11,
+    "y_labels_used": [
+     4.0,
+     3.0,
+     2.0,
+     1.0,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.001,
+    "y_snapped_to_ticks": 5
+   },
+   "dye_p10": {
+    "x_labels_used": [
+     400.0,
+     450.0,
+     500.0,
+     550.0,
+     600.0,
+     650.0,
+     700.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.0,
+    "x_snapped_to_ticks": 7,
+    "y_labels_used": [
+     3.5,
+     3.0,
+     2.5,
+     2.0,
+     1.5,
+     1.0,
+     0.5,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.001,
+    "y_snapped_to_ticks": 8
+   }
+  },
+  "meta": {
+   "char": {
+    "exposure": "Daylight",
+    "densitometry": "Status M"
+   },
+   "sens": {
+    "effective_exposure": "1/200 second",
+    "densitometry": "Status M",
+    "sensitivity_density": "0.2>D-min"
+   },
+   "dye": {}
+  }
+ },
+ "kodak_supra_200_e4029": {
+  "files": {
+   "density_curve_b": {
+    "n": 33,
+    "x": [
+     -3.14,
+     0.86
+    ],
+    "y": [
+     1.005,
+     3.033
+    ]
+   },
+   "density_curve_g": {
+    "n": 33,
+    "x": [
+     -3.14,
+     0.86
+    ],
+    "y": [
+     0.719,
+     2.511
+    ]
+   },
+   "density_curve_r": {
+    "n": 35,
+    "x": [
+     -3.14,
+     0.86
+    ],
+    "y": [
+     0.307,
+     1.995
+    ]
+   },
+   "log_sensitivity_b": {
+    "n": 97,
+    "x": [
+     375.002,
+     513.746
+    ],
+    "y": [
+     0.0,
+     2.378
+    ]
+   },
+   "log_sensitivity_g": {
+    "n": 116,
+    "x": [
+     395.002,
+     597.416
+    ],
+    "y": [
+     0.0,
+     2.331
+    ]
+   },
+   "log_sensitivity_r": {
+    "n": 116,
+    "x": [
+     493.978,
+     695.001
+    ],
+    "y": [
+     0.0,
+     2.289
+    ]
+   },
+   "dye_density_mid": {
+    "n": 163,
+    "x": [
+     380.001,
+     750.004
+    ],
+    "y": [
+     0.791,
+     2.872
+    ]
+   },
+   "dye_density_min": {
+    "n": 111,
+    "x": [
+     380.001,
+     750.004
+    ],
+    "y": [
+     0.249,
+     2.549
+    ]
+   }
+  },
+  "notes": [],
+  "calib": {
+   "char_p7": {
+    "x_bar_notation": true,
+    "x_labels_used": [
+     -4.0,
+     -3.0,
+     -2.0,
+     -1.0,
+     0.0,
+     1.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.0,
+    "x_snapped_to_ticks": 6,
+    "y_labels_used": [
+     4.0,
+     3.0,
+     2.0,
+     1.0,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.0,
+    "y_snapped_to_ticks": 5
+   },
+   "sens_p7": {
+    "x_labels_used": [
+     350.0,
+     400.0,
+     450.0,
+     500.0,
+     550.0,
+     600.0,
+     650.0,
+     700.0,
+     750.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.002,
+    "x_snapped_to_ticks": 9,
+    "y_labels_used": [
+     4.0,
+     3.0,
+     2.0,
+     1.0,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.001,
+    "y_snapped_to_ticks": 5
+   },
+   "dye_p7": {
+    "x_labels_used": [
+     350.0,
+     450.0,
+     550.0,
+     650.0,
+     750.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.0,
+    "x_snapped_to_ticks": 5,
+    "y_labels_used": [
+     3.0,
+     2.5,
+     2.0,
+     1.5,
+     1.0,
+     0.5,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.001,
+    "y_snapped_to_ticks": 7
+   }
+  },
+  "meta": {
+   "char": {
+    "densitometry": "Status M",
+    "exposure": "Daylight",
+    "process": "C-41"
+   },
+   "sens": {
+    "process": "C-41",
+    "effective_exposure": "1/50 Second",
+    "densitometry": "Status M",
+    "sensitivity_density": "0.2 > D-min"
+   },
+   "dye": {
+    "process": "C-41"
+   }
+  }
+ },
+ "kodak_supra_400_e4029": {
+  "files": {
+   "density_curve_b": {
+    "n": 33,
+    "x": [
+     -3.44,
+     0.56
+    ],
+    "y": [
+     1.045,
+     3.113
+    ]
+   },
+   "density_curve_g": {
+    "n": 29,
+    "x": [
+     -3.44,
+     0.56
+    ],
+    "y": [
+     0.758,
+     2.562
+    ]
+   },
+   "density_curve_r": {
+    "n": 30,
+    "x": [
+     -3.44,
+     0.56
+    ],
+    "y": [
+     0.328,
+     2.061
+    ]
+   },
+   "log_sensitivity_b": {
+    "n": 87,
+    "x": [
+     380.001,
+     519.995
+    ],
+    "y": [
+     0.038,
+     2.7
+    ]
+   },
+   "log_sensitivity_g": {
+    "n": 126,
+    "x": [
+     395.0,
+     600.0
+    ],
+    "y": [
+     0.158,
+     2.571
+    ]
+   },
+   "log_sensitivity_r": {
+    "n": 132,
+    "x": [
+     485.001,
+     694.997
+    ],
+    "y": [
+     0.133,
+     2.549
+    ]
+   },
+   "dye_density_mid": {
+    "n": 165,
+    "x": [
+     379.999,
+     750.001
+    ],
+    "y": [
+     0.732,
+     2.943
+    ]
+   },
+   "dye_density_min": {
+    "n": 120,
+    "x": [
+     379.999,
+     750.001
+    ],
+    "y": [
+     0.247,
+     2.579
+    ]
+   }
+  },
+  "notes": [],
+  "calib": {
+   "char_p8": {
+    "x_bar_notation": true,
+    "x_labels_used": [
+     -4.0,
+     -3.0,
+     -2.0,
+     -1.0,
+     0.0,
+     1.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.0,
+    "x_snapped_to_ticks": 6,
+    "y_labels_used": [
+     4.0,
+     3.0,
+     2.0,
+     1.0,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.0,
+    "y_snapped_to_ticks": 5
+   },
+   "sens_p8": {
+    "x_labels_used": [
+     350.0,
+     400.0,
+     450.0,
+     500.0,
+     550.0,
+     600.0,
+     650.0,
+     700.0,
+     750.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.003,
+    "x_snapped_to_ticks": 9,
+    "y_labels_used": [
+     4.0,
+     3.0,
+     2.0,
+     1.0,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.001,
+    "y_snapped_to_ticks": 5
+   },
+   "dye_p8": {
+    "x_labels_used": [
+     350.0,
+     450.0,
+     550.0,
+     650.0,
+     750.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.0,
+    "x_snapped_to_ticks": 5,
+    "y_labels_used": [
+     3.0,
+     2.5,
+     2.0,
+     1.5,
+     1.0,
+     0.5,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.0,
+    "y_snapped_to_ticks": 7
+   }
+  },
+  "meta": {
+   "char": {
+    "process": "C-41",
+    "exposure": "Daylight",
+    "densitometry": "Status M"
+   },
+   "sens": {
+    "sensitivity_density": "0.2 > D-min",
+    "densitometry": "Status M",
+    "effective_exposure": "1/50 Second",
+    "process": "C-41"
+   },
+   "dye": {
+    "process": "C-41"
+   }
+  }
+ },
+ "kodak_supra_800_e4029": {
+  "files": {
+   "density_curve_b": {
+    "n": 33,
+    "x": [
+     -3.74,
+     0.26
+    ],
+    "y": [
+     1.027,
+     3.124
+    ]
+   },
+   "density_curve_g": {
+    "n": 30,
+    "x": [
+     -3.74,
+     0.26
+    ],
+    "y": [
+     0.741,
+     2.575
+    ]
+   },
+   "density_curve_r": {
+    "n": 32,
+    "x": [
+     -3.74,
+     0.26
+    ],
+    "y": [
+     0.312,
+     2.043
+    ]
+   },
+   "log_sensitivity_b": {
+    "n": 60,
+    "x": [
+     379.979,
+     520.12
+    ],
+    "y": [
+     0.793,
+     2.758
+    ]
+   },
+   "log_sensitivity_g": {
+    "n": 92,
+    "x": [
+     400.0,
+     600.195
+    ],
+    "y": [
+     0.574,
+     2.761
+    ]
+   },
+   "log_sensitivity_r": {
+    "n": 94,
+    "x": [
+     490.087,
+     700.288
+    ],
+    "y": [
+     0.44,
+     2.625
+    ]
+   },
+   "dye_density_mid": {
+    "n": 134,
+    "x": [
+     399.999,
+     699.999
+    ],
+    "y": [
+     0.755,
+     2.477
+    ]
+   },
+   "dye_density_min": {
+    "n": 108,
+    "x": [
+     399.999,
+     699.999
+    ],
+    "y": [
+     0.23,
+     1.904
+    ]
+   }
+  },
+  "notes": [],
+  "calib": {
+   "char_p9": {
+    "x_bar_notation": true,
+    "x_labels_used": [
+     -5.0,
+     -4.0,
+     -3.0,
+     -2.0,
+     -1.0,
+     0.0,
+     1.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.001,
+    "x_snapped_to_ticks": 7,
+    "y_labels_used": [
+     4.0,
+     3.0,
+     2.0,
+     1.0,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.0,
+    "y_snapped_to_ticks": 5
+   },
+   "sens_p9": {
+    "x_labels_used": [
+     250.0,
+     300.0,
+     350.0,
+     400.0,
+     450.0,
+     500.0,
+     550.0,
+     600.0,
+     650.0,
+     700.0,
+     750.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.296,
+    "x_snapped_to_ticks": 11,
+    "y_labels_used": [
+     4.0,
+     3.0,
+     2.0,
+     1.0,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.001,
+    "y_snapped_to_ticks": 5
+   },
+   "dye_p10": {
+    "x_labels_used": [
+     400.0,
+     450.0,
+     500.0,
+     550.0,
+     600.0,
+     650.0,
+     700.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.001,
+    "x_snapped_to_ticks": 7,
+    "y_labels_used": [
+     3.5,
+     3.0,
+     2.5,
+     2.0,
+     1.5,
+     1.0,
+     0.5,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.0,
+    "y_snapped_to_ticks": 8
+   }
+  },
+  "meta": {
+   "char": {
+    "densitometry": "Status M",
+    "exposure": "Daylight"
+   },
+   "sens": {
+    "sensitivity_density": "0.2>D-min",
+    "densitometry": "Status M",
+    "effective_exposure": "1/200 second"
+   },
+   "dye": {}
+  }
+ },
+ "kodak_royal_supra_200_e4026": {
+  "files": {
+   "log_sensitivity_b": {
+    "n": 98,
+    "x": [
+     375.001,
+     513.745
+    ],
+    "y": [
+     0.0,
+     2.378
+    ]
+   },
+   "log_sensitivity_g": {
+    "n": 116,
+    "x": [
+     395.001,
+     597.416
+    ],
+    "y": [
+     0.0,
+     2.331
+    ]
+   },
+   "log_sensitivity_r": {
+    "n": 115,
+    "x": [
+     493.979,
+     695.0
+    ],
+    "y": [
+     0.0,
+     2.289
+    ]
+   },
+   "density_curve_b": {
+    "n": 33,
+    "x": [
+     -3.14,
+     0.86
+    ],
+    "y": [
+     1.005,
+     3.033
+    ]
+   },
+   "density_curve_g": {
+    "n": 33,
+    "x": [
+     -3.14,
+     0.86
+    ],
+    "y": [
+     0.719,
+     2.511
+    ]
+   },
+   "density_curve_r": {
+    "n": 34,
+    "x": [
+     -3.14,
+     0.86
+    ],
+    "y": [
+     0.307,
+     1.995
+    ]
+   },
+   "dye_density_mid": {
+    "n": 163,
+    "x": [
+     379.999,
+     750.003
+    ],
+    "y": [
+     0.791,
+     2.872
+    ]
+   },
+   "dye_density_min": {
+    "n": 110,
+    "x": [
+     379.999,
+     750.003
+    ],
+    "y": [
+     0.249,
+     2.549
+    ]
+   }
+  },
+  "notes": [],
+  "calib": {
+   "sens_p7": {
+    "x_labels_used": [
+     350.0,
+     400.0,
+     450.0,
+     500.0,
+     550.0,
+     600.0,
+     650.0,
+     700.0,
+     750.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.002,
+    "x_snapped_to_ticks": 9,
+    "y_labels_used": [
+     4.0,
+     3.0,
+     2.0,
+     1.0,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.001,
+    "y_snapped_to_ticks": 5
+   },
+   "char_p7": {
+    "x_bar_notation": true,
+    "x_labels_used": [
+     -4.0,
+     -3.0,
+     -2.0,
+     -1.0,
+     0.0,
+     1.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.0,
+    "x_snapped_to_ticks": 6,
+    "y_labels_used": [
+     4.0,
+     3.0,
+     2.0,
+     1.0,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.0,
+    "y_snapped_to_ticks": 5
+   },
+   "dye_p7": {
+    "x_labels_used": [
+     350.0,
+     450.0,
+     550.0,
+     650.0,
+     750.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.0,
+    "x_snapped_to_ticks": 5,
+    "y_labels_used": [
+     3.0,
+     2.5,
+     2.0,
+     1.5,
+     1.0,
+     0.5,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.0,
+    "y_snapped_to_ticks": 7
+   }
+  },
+  "meta": {
+   "sens": {
+    "process": "C-41",
+    "effective_exposure": "1/50 Second",
+    "densitometry": "Status M",
+    "sensitivity_density": "0.2 > D-min"
+   },
+   "char": {
+    "densitometry": "Status M",
+    "exposure": "Daylight",
+    "process": "C-41"
+   },
+   "dye": {
+    "process": "C-41"
+   }
+  }
+ },
+ "kodak_royal_supra_400_e4026": {
+  "files": {
+   "density_curve_b": {
+    "n": 33,
+    "x": [
+     -3.44,
+     0.56
+    ],
+    "y": [
+     1.045,
+     3.113
+    ]
+   },
+   "density_curve_g": {
+    "n": 30,
+    "x": [
+     -3.44,
+     0.56
+    ],
+    "y": [
+     0.758,
+     2.562
+    ]
+   },
+   "density_curve_r": {
+    "n": 30,
+    "x": [
+     -3.44,
+     0.56
+    ],
+    "y": [
+     0.328,
+     2.061
+    ]
+   },
+   "log_sensitivity_b": {
+    "n": 87,
+    "x": [
+     380.0,
+     519.995
+    ],
+    "y": [
+     0.038,
+     2.7
+    ]
+   },
+   "log_sensitivity_g": {
+    "n": 127,
+    "x": [
+     395.0,
+     600.001
+    ],
+    "y": [
+     0.158,
+     2.571
+    ]
+   },
+   "log_sensitivity_r": {
+    "n": 132,
+    "x": [
+     485.0,
+     694.998
+    ],
+    "y": [
+     0.133,
+     2.549
+    ]
+   },
+   "dye_density_mid": {
+    "n": 163,
+    "x": [
+     379.999,
+     750.002
+    ],
+    "y": [
+     0.732,
+     2.943
+    ]
+   },
+   "dye_density_min": {
+    "n": 120,
+    "x": [
+     379.999,
+     750.002
+    ],
+    "y": [
+     0.247,
+     2.579
+    ]
+   }
+  },
+  "notes": [],
+  "calib": {
+   "char_p8": {
+    "x_bar_notation": true,
+    "x_labels_used": [
+     -4.0,
+     -3.0,
+     -2.0,
+     -1.0,
+     0.0,
+     1.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.0,
+    "x_snapped_to_ticks": 6,
+    "y_labels_used": [
+     4.0,
+     3.0,
+     2.0,
+     1.0,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.0,
+    "y_snapped_to_ticks": 5
+   },
+   "sens_p8": {
+    "x_labels_used": [
+     350.0,
+     400.0,
+     450.0,
+     500.0,
+     550.0,
+     600.0,
+     650.0,
+     700.0,
+     750.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.002,
+    "x_snapped_to_ticks": 9,
+    "y_labels_used": [
+     4.0,
+     3.0,
+     2.0,
+     1.0,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.001,
+    "y_snapped_to_ticks": 5
+   },
+   "dye_p8": {
+    "x_labels_used": [
+     350.0,
+     450.0,
+     550.0,
+     650.0,
+     750.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.0,
+    "x_snapped_to_ticks": 5,
+    "y_labels_used": [
+     3.0,
+     2.5,
+     2.0,
+     1.5,
+     1.0,
+     0.5,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.0,
+    "y_snapped_to_ticks": 7
+   }
+  },
+  "meta": {
+   "char": {
+    "process": "C-41",
+    "exposure": "Daylight",
+    "densitometry": "Status M"
+   },
+   "sens": {
+    "sensitivity_density": "0.2 > D-min",
+    "densitometry": "Status M",
+    "effective_exposure": "1/50 Second",
+    "process": "C-41"
+   },
+   "dye": {
+    "process": "C-41"
+   }
+  }
+ },
+ "kodak_royal_supra_800_e4026": {
+  "files": {
+   "density_curve_b": {
+    "n": 33,
+    "x": [
+     -3.74,
+     0.26
+    ],
+    "y": [
+     1.027,
+     3.124
+    ]
+   },
+   "density_curve_g": {
+    "n": 29,
+    "x": [
+     -3.74,
+     0.26
+    ],
+    "y": [
+     0.741,
+     2.575
+    ]
+   },
+   "density_curve_r": {
+    "n": 32,
+    "x": [
+     -3.74,
+     0.26
+    ],
+    "y": [
+     0.312,
+     2.043
+    ]
+   },
+   "log_sensitivity_b": {
+    "n": 60,
+    "x": [
+     379.98,
+     520.12
+    ],
+    "y": [
+     0.793,
+     2.758
+    ]
+   },
+   "log_sensitivity_g": {
+    "n": 93,
+    "x": [
+     399.999,
+     600.193
+    ],
+    "y": [
+     0.574,
+     2.761
+    ]
+   },
+   "log_sensitivity_r": {
+    "n": 94,
+    "x": [
+     490.088,
+     700.287
+    ],
+    "y": [
+     0.44,
+     2.625
+    ]
+   },
+   "dye_density_mid": {
+    "n": 136,
+    "x": [
+     400.0,
+     699.999
+    ],
+    "y": [
+     0.755,
+     2.477
+    ]
+   },
+   "dye_density_min": {
+    "n": 105,
+    "x": [
+     400.0,
+     699.999
+    ],
+    "y": [
+     0.23,
+     1.904
+    ]
+   }
+  },
+  "notes": [],
+  "calib": {
+   "char_p9": {
+    "x_bar_notation": true,
+    "x_labels_used": [
+     -5.0,
+     -4.0,
+     -3.0,
+     -2.0,
+     -1.0,
+     0.0,
+     1.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.0,
+    "x_snapped_to_ticks": 7,
+    "y_labels_used": [
+     4.0,
+     3.0,
+     2.0,
+     1.0,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.0,
+    "y_snapped_to_ticks": 5
+   },
+   "sens_p9": {
+    "x_labels_used": [
+     250.0,
+     300.0,
+     350.0,
+     400.0,
+     450.0,
+     500.0,
+     550.0,
+     600.0,
+     650.0,
+     700.0,
+     750.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.295,
+    "x_snapped_to_ticks": 11,
+    "y_labels_used": [
+     4.0,
+     3.0,
+     2.0,
+     1.0,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.001,
+    "y_snapped_to_ticks": 5
+   },
+   "dye_p10": {
+    "x_labels_used": [
+     400.0,
+     450.0,
+     500.0,
+     550.0,
+     600.0,
+     650.0,
+     700.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.0,
+    "x_snapped_to_ticks": 7,
+    "y_labels_used": [
+     3.5,
+     3.0,
+     2.5,
+     2.0,
+     1.5,
+     1.0,
+     0.5,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.001,
+    "y_snapped_to_ticks": 8
+   }
+  },
+  "meta": {
+   "char": {
+    "exposure": "Daylight",
+    "densitometry": "Status M"
+   },
+   "sens": {
+    "effective_exposure": "1/200 second",
+    "densitometry": "Status M",
+    "sensitivity_density": "0.2>D-min"
+   },
+   "dye": {}
+  }
+ },
+ "kodak_ultra_color_100uc_e4035": {
+  "files": {
+   "density_curve_b": {
+    "n": 24,
+    "x": [
+     -3.138,
+     0.261
+    ],
+    "y": [
+     1.005,
+     2.682
+    ]
+   },
+   "density_curve_g": {
+    "n": 26,
+    "x": [
+     -3.138,
+     0.281
+    ],
+    "y": [
+     0.716,
+     2.204
+    ]
+   },
+   "density_curve_r": {
+    "n": 18,
+    "x": [
+     -3.138,
+     -0.537
+    ],
+    "y": [
+     0.308,
+     1.297
+    ]
+   },
+   "log_sensitivity_b": {
+    "n": 111,
+    "x": [
+     383.954,
+     520.238
+    ],
+    "y": [
+     -0.282,
+     2.407
+    ]
+   },
+   "log_sensitivity_g": {
+    "n": 128,
+    "x": [
+     395.194,
+     600.142
+    ],
+    "y": [
+     -0.226,
+     2.345
+    ]
+   },
+   "log_sensitivity_r": {
+    "n": 134,
+    "x": [
+     485.132,
+     695.093
+    ],
+    "y": [
+     -0.127,
+     2.3
+    ]
+   },
+   "dye_density_mid": {
+    "n": 105,
+    "x": [
+     400.071,
+     699.915
+    ],
+    "y": [
+     0.794,
+     1.932
+    ]
+   },
+   "dye_density_min": {
+    "n": 83,
+    "x": [
+     399.915,
+     700.052
+    ],
+    "y": [
+     0.287,
+     1.43
+    ]
+   },
+   "mtf_b": {
+    "n": 44,
+    "x": [
+     2.507,
+     80.161
+    ],
+    "y": [
+     53.178,
+     106.658
+    ]
+   },
+   "mtf_g": {
+    "n": 51,
+    "x": [
+     2.507,
+     80.161
+    ],
+    "y": [
+     44.256,
+     120.355
+    ]
+   },
+   "mtf_r": {
+    "n": 49,
+    "x": [
+     2.507,
+     80.161
+    ],
+    "y": [
+     19.087,
+     110.331
+    ]
+   }
+  },
+  "notes": [],
+  "calib": {
+   "char_p6": {
+    "x_labels_used": [
+     -4.0,
+     -3.0,
+     -2.0,
+     -1.0,
+     0.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.034,
+    "x_snapped_to_ticks": 5,
+    "y_labels_used": [
+     4.0,
+     3.0,
+     2.0,
+     1.0,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.001,
+    "y_snapped_to_ticks": 5
+   },
+   "sens_p6": {
+    "x_labels_used": [
+     400.0,
+     450.0,
+     500.0,
+     550.0,
+     600.0,
+     700.0,
+     750.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.046,
+    "x_snapped_to_ticks": 7,
+    "y_labels_used": [
+     3.0,
+     2.0,
+     1.0,
+     -1.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.088,
+    "y_snapped_to_ticks": 4
+   },
+   "dye_p6": {
+    "x_labels_used": [
+     400.0,
+     450.0,
+     500.0,
+     550.0,
+     600.0,
+     650.0,
+     700.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.0,
+    "x_snapped_to_ticks": 7,
+    "y_labels_used": [
+     3.0,
+     2.0,
+     1.5,
+     1.0,
+     0.5,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.056,
+    "y_snapped_to_ticks": 6
+   },
+   "mtf_p6": {
+    "x_labels_used": [
+     1.0,
+     10.0,
+     100.0,
+     600.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.032,
+    "x_snapped_to_ticks": 4,
+    "y_labels_used": [
+     200.0,
+     100.0,
+     10.0,
+     1.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.041,
+    "y_snapped_to_ticks": 4
+   }
+  },
+  "meta": {
+   "char": {
+    "exposure": "Daylight",
+    "densitometry": "Status M"
+   },
+   "sens": {
+    "effective_exposure": "1/50 Second",
+    "densitometry": "Status M",
+    "sensitivity_density": "0.2>D-min"
+   },
+   "dye": {},
+   "mtf": {
+    "exposure": "Daylight",
+    "process": "C-41"
+   }
+  }
+ },
+ "kodak_ultra_color_400uc_e4035": {
+  "files": {
+   "density_curve_b": {
+    "n": 30,
+    "x": [
+     -3.452,
+     0.558
+    ],
+    "y": [
+     1.047,
+     3.116
+    ]
+   },
+   "density_curve_g": {
+    "n": 23,
+    "x": [
+     -3.452,
+     0.558
+    ],
+    "y": [
+     0.761,
+     2.566
+    ]
+   },
+   "density_curve_r": {
+    "n": 29,
+    "x": [
+     -3.452,
+     0.558
+    ],
+    "y": [
+     0.332,
+     2.063
+    ]
+   },
+   "log_sensitivity_b": {
+    "n": 84,
+    "x": [
+     387.087,
+     520.142
+    ],
+    "y": [
+     0.04,
+     2.701
+    ]
+   },
+   "log_sensitivity_g": {
+    "n": 126,
+    "x": [
+     395.144,
+     600.201
+    ],
+    "y": [
+     0.161,
+     2.585
+    ]
+   },
+   "log_sensitivity_r": {
+    "n": 134,
+    "x": [
+     485.19,
+     695.241
+    ],
+    "y": [
+     0.135,
+     2.563
+    ]
+   },
+   "dye_density_mid": {
+    "n": 112,
+    "x": [
+     400.039,
+     699.982
+    ],
+    "y": [
+     0.748,
+     1.94
+    ]
+   },
+   "dye_density_min": {
+    "n": 85,
+    "x": [
+     399.948,
+     700.026
+    ],
+    "y": [
+     0.264,
+     1.449
+    ]
+   }
+  },
+  "notes": [
+   "char p7: x-axis label(s) [0.0] inconsistent with the scale, ignored",
+   "dye p7: x-axis label(s) [400.0] inconsistent with the scale, ignored"
+  ],
+  "calib": {
+   "char_p7": {
+    "x_labels_used": [
+     -4.0,
+     -3.0,
+     -1.0,
+     1.0
+    ],
+    "x_labels_dropped": [
+     0.0
+    ],
+    "x_fit_max_resid_pt": 0.777,
+    "x_snapped_to_ticks": 2,
+    "y_labels_used": [
+     4.0,
+     3.0,
+     2.0,
+     1.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.001,
+    "y_snapped_to_ticks": 4
+   },
+   "sens_p7": {
+    "x_labels_used": [
+     400.0,
+     450.0,
+     500.0,
+     650.0,
+     700.0,
+     750.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.031,
+    "x_snapped_to_ticks": 6,
+    "y_labels_used": [
+     4.0,
+     3.0,
+     2.0,
+     1.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.043,
+    "y_snapped_to_ticks": 4
+   },
+   "dye_p7": {
+    "x_labels_used": [
+     450.0,
+     500.0,
+     550.0,
+     600.0,
+     650.0,
+     700.0
+    ],
+    "x_labels_dropped": [
+     400.0
+    ],
+    "x_fit_max_resid_pt": 0.0,
+    "x_snapped_to_ticks": 6,
+    "y_labels_used": [
+     3.0,
+     2.5,
+     2.0,
+     1.5,
+     0.5,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.048,
+    "y_snapped_to_ticks": 6
+   }
+  },
+  "meta": {
+   "char": {
+    "exposure": "Daylight",
+    "densitometry": "Status M"
+   },
+   "sens": {
+    "effective_exposure": "1/50 Second",
+    "densitometry": "Status M",
+    "sensitivity_density": "0.2>D-min"
+   },
+   "dye": {}
+  }
+ },
+ "kodak_le100_le1": {
+  "files": {
+   "log_sensitivity_b": {
+    "n": 49,
+    "x": [
+     400.002,
+     500.101
+    ],
+    "y": [
+     0.654,
+     2.234
+    ]
+   },
+   "log_sensitivity_g": {
+    "n": 57,
+    "x": [
+     470.059,
+     590.286
+    ],
+    "y": [
+     0.394,
+     2.126
+    ]
+   },
+   "log_sensitivity_r": {
+    "n": 65,
+    "x": [
+     550.152,
+     680.27
+    ],
+    "y": [
+     0.185,
+     2.045
+    ]
+   },
+   "density_curve_b": {
+    "n": 15,
+    "x": [
+     -2.78,
+     1.317
+    ],
+    "y": [
+     0.931,
+     3.02
+    ]
+   },
+   "density_curve_g": {
+    "n": 32,
+    "x": [
+     -2.78,
+     1.317
+    ],
+    "y": [
+     0.718,
+     2.527
+    ]
+   },
+   "density_curve_r": {
+    "n": 33,
+    "x": [
+     -2.78,
+     1.317
+    ],
+    "y": [
+     0.282,
+     2.022
+    ]
+   },
+   "dye_density_mid": {
+    "n": 162,
+    "x": [
+     400.553,
+     700.107
+    ],
+    "y": [
+     0.826,
+     2.5
+    ]
+   },
+   "dye_density_min": {
+    "n": 118,
+    "x": [
+     400.0,
+     700.003
+    ],
+    "y": [
+     0.271,
+     1.925
+    ]
+   }
+  },
+  "notes": [
+   "dye plot: piece 401-420 nm joined to mid"
+  ],
+  "calib": {
+   "sens_p5": {
+    "x_labels_used": [
+     250.0,
+     300.0,
+     350.0,
+     400.0,
+     450.0,
+     500.0,
+     550.0,
+     600.0,
+     650.0,
+     700.0,
+     750.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.296,
+    "x_snapped_to_ticks": 11,
+    "y_labels_used": [
+     4.0,
+     3.0,
+     2.0,
+     1.0,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.001,
+    "y_snapped_to_ticks": 5
+   },
+   "char_p5": {
+    "x_bar_notation": true,
+    "x_labels_used": [
+     -3.0,
+     -2.0,
+     -1.0,
+     0.0,
+     1.0,
+     2.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.044,
+    "x_snapped_to_ticks": 6,
+    "y_labels_used": [
+     4.0,
+     3.0,
+     2.0,
+     1.0,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.0,
+    "y_snapped_to_ticks": 5
+   },
+   "dye_p5": {
+    "x_labels_used": [
+     400.0,
+     500.0,
+     600.0,
+     700.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.0,
+    "x_snapped_to_ticks": 4,
+    "y_labels_used": [
+     2.5,
+     2.0,
+     1.5,
+     1.0,
+     0.5,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.0,
+    "y_snapped_to_ticks": 6
+   }
+  },
+  "meta": {
+   "sens": {
+    "sensitivity_density": "0.2 above D-min",
+    "process": "C-41",
+    "effective_exposure": "1/25 second",
+    "densitometry": "Status M"
+   },
+   "char": {
+    "process": "C-41",
+    "exposure": "Daylight",
+    "densitometry": "Status M"
+   },
+   "dye": {
+    "process": "C-41"
+   }
+  }
+ },
+ "kodak_le400_le1": {
+  "files": {
+   "density_curve_b": {
+    "n": 23,
+    "x": [
+     -3.437,
+     0.552
+    ],
+    "y": [
+     1.007,
+     3.239
+    ]
+   },
+   "density_curve_g": {
+    "n": 26,
+    "x": [
+     -3.437,
+     0.552
+    ],
+    "y": [
+     0.792,
+     2.722
+    ]
+   },
+   "density_curve_r": {
+    "n": 23,
+    "x": [
+     -3.437,
+     0.552
+    ],
+    "y": [
+     0.37,
+     2.223
+    ]
+   },
+   "log_sensitivity_b": {
+    "n": 64,
+    "x": [
+     389.99,
+     510.098
+    ],
+    "y": [
+     0.633,
+     2.933
+    ]
+   },
+   "log_sensitivity_g": {
+    "n": 70,
+    "x": [
+     450.048,
+     600.194
+    ],
+    "y": [
+     0.233,
+     2.521
+    ]
+   },
+   "log_sensitivity_r": {
+    "n": 54,
+    "x": [
+     550.145,
+     680.28
+    ],
+    "y": [
+     0.673,
+     2.61
+    ]
+   },
+   "dye_density_mid": {
+    "n": 158,
+    "x": [
+     400.0,
+     700.0
+    ],
+    "y": [
+     0.832,
+     2.5
+    ]
+   },
+   "dye_density_min": {
+    "n": 101,
+    "x": [
+     400.0,
+     700.0
+    ],
+    "y": [
+     0.309,
+     1.945
+    ]
+   }
+  },
+  "notes": [],
+  "calib": {
+   "char_p6": {
+    "x_bar_notation": true,
+    "x_labels_used": [
+     -4.0,
+     -3.0,
+     -2.0,
+     -1.0,
+     0.0,
+     1.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.044,
+    "x_snapped_to_ticks": 6,
+    "y_labels_used": [
+     4.0,
+     3.0,
+     2.0,
+     1.0,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.0,
+    "y_snapped_to_ticks": 5
+   },
+   "sens_p6": {
+    "x_labels_used": [
+     250.0,
+     300.0,
+     350.0,
+     400.0,
+     450.0,
+     500.0,
+     550.0,
+     600.0,
+     650.0,
+     700.0,
+     750.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.296,
+    "x_snapped_to_ticks": 11,
+    "y_labels_used": [
+     4.0,
+     3.0,
+     2.0,
+     1.0,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.001,
+    "y_snapped_to_ticks": 5
+   },
+   "dye_p7": {
+    "x_labels_used": [
+     400.0,
+     500.0,
+     600.0,
+     700.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.0,
+    "x_snapped_to_ticks": 4,
+    "y_labels_used": [
+     2.5,
+     2.0,
+     1.5,
+     1.0,
+     0.5,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.0,
+    "y_snapped_to_ticks": 6
+   }
+  },
+  "meta": {
+   "char": {
+    "process": "C-41",
+    "exposure": "Daylight",
+    "densitometry": "Status M"
+   },
+   "sens": {
+    "effective_exposure": "1/100 second",
+    "process": "C-41",
+    "densitometry": "Status M"
+   },
+   "dye": {
+    "process": "C-41"
+   }
+  }
+ },
+ "kodak_le800_le1": {
+  "files": {
+   "density_curve_b": {
+    "n": 35,
+    "x": [
+     -3.534,
+     0.259
+    ],
+    "y": [
+     1.013,
+     3.133
+    ]
+   },
+   "density_curve_g": {
+    "n": 43,
+    "x": [
+     -3.534,
+     0.259
+    ],
+    "y": [
+     0.763,
+     2.433
+    ]
+   },
+   "density_curve_r": {
+    "n": 34,
+    "x": [
+     -3.534,
+     0.259
+    ],
+    "y": [
+     0.313,
+     2.093
+    ]
+   },
+   "log_sensitivity_b": {
+    "n": 68,
+    "x": [
+     378.952,
+     529.098
+    ],
+    "y": [
+     0.59,
+     2.939
+    ]
+   },
+   "log_sensitivity_g": {
+    "n": 53,
+    "x": [
+     459.029,
+     599.17
+    ],
+    "y": [
+     0.68,
+     2.727
+    ]
+   },
+   "log_sensitivity_r": {
+    "n": 60,
+    "x": [
+     539.107,
+     679.249
+    ],
+    "y": [
+     0.9,
+     2.737
+    ]
+   },
+   "dye_density_mid": {
+    "n": 148,
+    "x": [
+     403.86,
+     700.052
+    ],
+    "y": [
+     0.842,
+     2.5
+    ]
+   },
+   "dye_density_min": {
+    "n": 121,
+    "x": [
+     400.053,
+     700.053
+    ],
+    "y": [
+     0.321,
+     2.25
+    ]
+   }
+  },
+  "notes": [],
+  "calib": {
+   "char_p7": {
+    "x_bar_notation": true,
+    "x_labels_used": [
+     -4.0,
+     -3.0,
+     -2.0,
+     -1.0,
+     0.0,
+     1.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.044,
+    "x_snapped_to_ticks": 6,
+    "y_labels_used": [
+     4.0,
+     3.0,
+     2.0,
+     1.0,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.0,
+    "y_snapped_to_ticks": 5
+   },
+   "sens_p8": {
+    "x_labels_used": [
+     250.0,
+     300.0,
+     350.0,
+     400.0,
+     450.0,
+     500.0,
+     550.0,
+     600.0,
+     650.0,
+     700.0,
+     750.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.296,
+    "x_snapped_to_ticks": 11,
+    "y_labels_used": [
+     4.0,
+     3.0,
+     2.0,
+     1.0,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.001,
+    "y_snapped_to_ticks": 5
+   },
+   "dye_p8": {
+    "x_labels_used": [
+     400.0,
+     500.0,
+     600.0,
+     700.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.0,
+    "x_snapped_to_ticks": 4,
+    "y_labels_used": [
+     2.5,
+     2.0,
+     1.5,
+     1.0,
+     0.5,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.0,
+    "y_snapped_to_ticks": 6
+   }
+  },
+  "meta": {
+   "char": {
+    "process": "C-41",
+    "densitometry": "Status M",
+    "exposure": "Daylight, EI 800"
+   },
+   "sens": {
+    "process": "C-41",
+    "effective_exposure": "1/10 second",
+    "densitometry": "Status M"
+   },
+   "dye": {
+    "process": "C-41"
+   }
+  }
+ },
  "kodak_ektachrome_64_e8": {
   "files": {
    "log_sensitivity_b": {
@@ -13110,6 +15935,768 @@
     "sensitivity_density": "E.N.D.",
     "process": "E-6",
     "effective_exposure": "1.4 seconds"
+   }
+  }
+ },
+ "kodak_kodachrome_25_e55": {
+  "files": {
+   "dye_density_neutral": {
+    "n": 112,
+    "x": [
+     420.0,
+     699.998
+    ],
+    "y": [
+     0.62,
+     1.37
+    ]
+   },
+   "dye_density_m": {
+    "n": 112,
+    "x": [
+     420.0,
+     699.998
+    ],
+    "y": [
+     0.035,
+     1.063
+    ]
+   },
+   "dye_density_y": {
+    "n": 55,
+    "x": [
+     420.0,
+     699.998
+    ],
+    "y": [
+     -0.0,
+     0.771
+    ]
+   },
+   "dye_density_c": {
+    "n": 89,
+    "x": [
+     420.0,
+     699.998
+    ],
+    "y": [
+     0.013,
+     1.267
+    ]
+   },
+   "density_curve_r": {
+    "n": 55,
+    "x": [
+     -1.8,
+     0.63
+    ],
+    "y": [
+     0.18,
+     3.77
+    ]
+   },
+   "density_curve_g": {
+    "n": 53,
+    "x": [
+     -1.8,
+     0.63
+    ],
+    "y": [
+     0.16,
+     3.46
+    ]
+   },
+   "density_curve_b": {
+    "n": 50,
+    "x": [
+     -1.8,
+     0.63
+    ],
+    "y": [
+     0.16,
+     3.36
+    ]
+   },
+   "mtf": {
+    "n": 50,
+    "x": [
+     2.471,
+     79.127
+    ],
+    "y": [
+     10.001,
+     138.811
+    ]
+   },
+   "log_sensitivity_b": {
+    "n": 35,
+    "x": [
+     420.02,
+     540.131
+    ],
+    "y": [
+     -2.0,
+     0.903
+    ]
+   },
+   "log_sensitivity_g": {
+    "n": 56,
+    "x": [
+     480.078,
+     622.208
+    ],
+    "y": [
+     -2.0,
+     0.508
+    ]
+   },
+   "log_sensitivity_r": {
+    "n": 66,
+    "x": [
+     510.109,
+     702.287
+    ],
+    "y": [
+     -2.0,
+     0.62
+    ]
+   }
+  },
+  "notes": [
+   "dye p3: curves read up to the plot frame top (above the highest y label)",
+   "dye plot: visual-neutral (sum) curve kept as dye_density_neutral.csv (1 piece(s))"
+  ],
+  "calib": {
+   "dye_p3": {
+    "x_labels_used": [
+     400.0,
+     500.0,
+     600.0,
+     700.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.0,
+    "x_snapped_to_ticks": 4,
+    "y_labels_used": [
+     1.0,
+     0.5,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.0,
+    "y_snapped_to_ticks": 3
+   },
+   "char_p3": {
+    "x_bar_notation": true,
+    "x_labels_used": [
+     -2.0,
+     -1.0,
+     0.0,
+     1.0,
+     2.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.0,
+    "x_snapped_to_ticks": 5,
+    "y_labels_used": [
+     4.0,
+     3.0,
+     2.0,
+     1.0,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.0,
+    "y_snapped_to_ticks": 5
+   },
+   "mtf_p3": {
+    "x_labels_used": [
+     1.0,
+     2.0,
+     3.0,
+     4.0,
+     5.0,
+     10.0,
+     20.0,
+     50.0,
+     100.0,
+     200.0,
+     600.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.808,
+    "x_snapped_to_ticks": 11,
+    "y_labels_used": [
+     100.0,
+     70.0,
+     50.0,
+     30.0,
+     20.0,
+     10.0,
+     7.0,
+     5.0,
+     3.0,
+     2.0,
+     1.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.462,
+    "y_snapped_to_ticks": 11
+   },
+   "sens_p3": {
+    "y_bar_notation": true,
+    "x_labels_used": [
+     250.0,
+     300.0,
+     350.0,
+     400.0,
+     450.0,
+     500.0,
+     550.0,
+     600.0,
+     650.0,
+     700.0,
+     750.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.295,
+    "x_snapped_to_ticks": 11,
+    "y_labels_used": [
+     2.0,
+     1.0,
+     0.0,
+     -1.0,
+     -2.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.002,
+    "y_snapped_to_ticks": 5
+   }
+  },
+  "meta": {
+   "dye": {},
+   "char": {
+    "densitometry": "Status A",
+    "process": "K-14",
+    "exposure": "Daylight"
+   },
+   "mtf": {
+    "densitometry": "Diffuse visual",
+    "process": "K-14",
+    "exposure": "Daylight"
+   },
+   "sens": {
+    "sensitivity_density": "1.00",
+    "process": "K-14",
+    "densitometry": "E.N.D."
+   }
+  }
+ },
+ "kodak_kodachrome_64_e55": {
+  "files": {
+   "density_curve_r": {
+    "n": 63,
+    "x": [
+     -2.4,
+     0.4
+    ],
+    "y": [
+     0.18,
+     3.68
+    ]
+   },
+   "density_curve_g": {
+    "n": 58,
+    "x": [
+     -2.4,
+     0.4
+    ],
+    "y": [
+     0.19,
+     3.45
+    ]
+   },
+   "density_curve_b": {
+    "n": 57,
+    "x": [
+     -2.4,
+     0.4
+    ],
+    "y": [
+     0.2,
+     3.33
+    ]
+   },
+   "dye_density_neutral": {
+    "n": 119,
+    "x": [
+     420.0,
+     699.998
+    ],
+    "y": [
+     0.62,
+     1.369
+    ]
+   },
+   "dye_density_m": {
+    "n": 96,
+    "x": [
+     420.0,
+     699.998
+    ],
+    "y": [
+     0.02,
+     1.063
+    ]
+   },
+   "dye_density_y": {
+    "n": 60,
+    "x": [
+     420.0,
+     699.998
+    ],
+    "y": [
+     -0.0,
+     0.773
+    ]
+   },
+   "dye_density_c": {
+    "n": 90,
+    "x": [
+     420.0,
+     699.998
+    ],
+    "y": [
+     0.017,
+     1.266
+    ]
+   },
+   "log_sensitivity_b": {
+    "n": 35,
+    "x": [
+     410.015,
+     530.126
+    ],
+    "y": [
+     -1.7,
+     0.999
+    ]
+   },
+   "log_sensitivity_g": {
+    "n": 67,
+    "x": [
+     440.038,
+     610.198
+    ],
+    "y": [
+     -1.97,
+     0.726
+    ]
+   },
+   "log_sensitivity_r": {
+    "n": 94,
+    "x": [
+     480.077,
+     700.286
+    ],
+    "y": [
+     -1.86,
+     0.93
+    ]
+   },
+   "mtf": {
+    "n": 42,
+    "x": [
+     2.48,
+     80.357
+    ],
+    "y": [
+     10.608,
+     122.913
+    ]
+   }
+  },
+  "notes": [
+   "dye p4: curves read up to the plot frame top (above the highest y label)",
+   "dye plot: visual-neutral (sum) curve kept as dye_density_neutral.csv (1 piece(s))"
+  ],
+  "calib": {
+   "char_p4": {
+    "x_bar_notation": true,
+    "x_labels_used": [
+     -3.0,
+     -2.0,
+     -1.0,
+     0.0,
+     1.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.0,
+    "x_snapped_to_ticks": 5,
+    "y_labels_used": [
+     4.0,
+     3.0,
+     2.0,
+     1.0,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.0,
+    "y_snapped_to_ticks": 5
+   },
+   "dye_p4": {
+    "x_labels_used": [
+     400.0,
+     500.0,
+     600.0,
+     700.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.0,
+    "x_snapped_to_ticks": 4,
+    "y_labels_used": [
+     1.0,
+     0.5,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.001,
+    "y_snapped_to_ticks": 3
+   },
+   "sens_p4": {
+    "y_bar_notation": true,
+    "x_labels_used": [
+     250.0,
+     300.0,
+     350.0,
+     400.0,
+     450.0,
+     500.0,
+     550.0,
+     600.0,
+     650.0,
+     700.0,
+     750.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.296,
+    "x_snapped_to_ticks": 11,
+    "y_labels_used": [
+     2.0,
+     1.0,
+     0.0,
+     -1.0,
+     -2.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.001,
+    "y_snapped_to_ticks": 5
+   },
+   "mtf_p4": {
+    "x_labels_used": [
+     1.0,
+     2.0,
+     3.0,
+     4.0,
+     5.0,
+     10.0,
+     20.0,
+     50.0,
+     100.0,
+     200.0,
+     600.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.808,
+    "x_snapped_to_ticks": 11,
+    "y_labels_used": [
+     100.0,
+     70.0,
+     50.0,
+     30.0,
+     20.0,
+     10.0,
+     7.0,
+     5.0,
+     3.0,
+     2.0,
+     1.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.462,
+    "y_snapped_to_ticks": 11
+   }
+  },
+  "meta": {
+   "char": {
+    "densitometry": "Status A",
+    "process": "K-14",
+    "exposure": "Daylight"
+   },
+   "dye": {},
+   "sens": {
+    "sensitivity_density": "1.00",
+    "process": "K-14",
+    "densitometry": "E.N.D."
+   },
+   "mtf": {
+    "densitometry": "Diffuse visual",
+    "process": "K-14",
+    "exposure": "Daylight"
+   }
+  }
+ },
+ "kodak_kodachrome_200_e55": {
+  "files": {
+   "density_curve_r": {
+    "n": 60,
+    "x": [
+     -2.81,
+     -0.15
+    ],
+    "y": [
+     0.21,
+     3.51
+    ]
+   },
+   "density_curve_g": {
+    "n": 57,
+    "x": [
+     -2.81,
+     -0.15
+    ],
+    "y": [
+     0.2,
+     3.22
+    ]
+   },
+   "density_curve_b": {
+    "n": 56,
+    "x": [
+     -2.81,
+     -0.15
+    ],
+    "y": [
+     0.2,
+     3.14
+    ]
+   },
+   "dye_density_neutral": {
+    "n": 117,
+    "x": [
+     410.0,
+     700.004
+    ],
+    "y": [
+     0.72,
+     1.312
+    ]
+   },
+   "dye_density_m": {
+    "n": 109,
+    "x": [
+     410.0,
+     700.004
+    ],
+    "y": [
+     0.045,
+     1.002
+    ]
+   },
+   "dye_density_y": {
+    "n": 80,
+    "x": [
+     410.0,
+     700.004
+    ],
+    "y": [
+     -0.0,
+     0.754
+    ]
+   },
+   "dye_density_c": {
+    "n": 105,
+    "x": [
+     410.0,
+     700.004
+    ],
+    "y": [
+     0.02,
+     1.183
+    ]
+   },
+   "log_sensitivity_b": {
+    "n": 51,
+    "x": [
+     410.003,
+     557.155
+    ],
+    "y": [
+     -2.0,
+     1.795
+    ]
+   },
+   "log_sensitivity_g": {
+    "n": 67,
+    "x": [
+     410.01,
+     640.242
+    ],
+    "y": [
+     -2.0,
+     1.448
+    ]
+   },
+   "log_sensitivity_r": {
+    "n": 98,
+    "x": [
+     440.04,
+     730.325
+    ],
+    "y": [
+     -1.57,
+     1.296
+    ]
+   },
+   "mtf": {
+    "n": 42,
+    "x": [
+     2.48,
+     80.357
+    ],
+    "y": [
+     10.608,
+     122.916
+    ]
+   }
+  },
+  "notes": [
+   "dye p5: curves read up to the plot frame top (above the highest y label)",
+   "dye plot: visual-neutral (sum) curve kept as dye_density_neutral.csv (1 piece(s))"
+  ],
+  "calib": {
+   "char_p5": {
+    "x_bar_notation": true,
+    "x_labels_used": [
+     -3.0,
+     -2.0,
+     -1.0,
+     0.0,
+     1.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.0,
+    "x_snapped_to_ticks": 5,
+    "y_labels_used": [
+     4.0,
+     3.0,
+     2.0,
+     1.0,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.0,
+    "y_snapped_to_ticks": 5
+   },
+   "dye_p5": {
+    "x_labels_used": [
+     400.0,
+     500.0,
+     600.0,
+     700.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.0,
+    "x_snapped_to_ticks": 4,
+    "y_labels_used": [
+     1.0,
+     0.5,
+     0.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.001,
+    "y_snapped_to_ticks": 3
+   },
+   "sens_p5": {
+    "y_bar_notation": true,
+    "x_labels_used": [
+     250.0,
+     300.0,
+     350.0,
+     400.0,
+     450.0,
+     500.0,
+     550.0,
+     600.0,
+     650.0,
+     700.0,
+     750.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.296,
+    "x_snapped_to_ticks": 11,
+    "y_labels_used": [
+     2.0,
+     1.0,
+     0.0,
+     -1.0,
+     -2.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.001,
+    "y_snapped_to_ticks": 5
+   },
+   "mtf_p5": {
+    "x_labels_used": [
+     1.0,
+     2.0,
+     3.0,
+     4.0,
+     5.0,
+     10.0,
+     20.0,
+     50.0,
+     100.0,
+     200.0,
+     600.0
+    ],
+    "x_labels_dropped": [],
+    "x_fit_max_resid_pt": 0.808,
+    "x_snapped_to_ticks": 11,
+    "y_labels_used": [
+     100.0,
+     70.0,
+     50.0,
+     30.0,
+     20.0,
+     10.0,
+     7.0,
+     5.0,
+     3.0,
+     2.0,
+     1.0
+    ],
+    "y_labels_dropped": [],
+    "y_fit_max_resid_pt": 0.462,
+    "y_snapped_to_ticks": 11
+   }
+  },
+  "meta": {
+   "char": {
+    "densitometry": "Status A",
+    "process": "K-14",
+    "exposure": "Daylight"
+   },
+   "dye": {},
+   "sens": {
+    "sensitivity_density": "1.00",
+    "process": "K-14",
+    "densitometry": "E.N.D."
+   },
+   "mtf": {
+    "densitometry": "Diffuse visual",
+    "process": "K-14",
+    "exposure": "Daylight"
    }
   }
  },

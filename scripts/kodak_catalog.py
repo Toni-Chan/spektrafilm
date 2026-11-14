@@ -38,12 +38,30 @@ TYPE_LABEL = {
 }
 
 
-def title_of(doc):
+# Sheets whose first page names the product without the word KODAK (checked by hand).
+TITLES = {'e55': 'KODACHROME 25, 64, and 200 Professional Film'}
+
+
+def title_of(doc, stem=''):
+    if stem in TITLES:
+        return TITLES[stem]
     lines = [l.strip() for l in doc[0].get_text().splitlines() if l.strip()]
     for l in lines[:12]:
         if re.search(r'KODAK', l) and len(l) > 10:
             return l[:90]
     return lines[0][:90] if lines else ''
+
+
+# filmcolors.org catalogue sheets (125px.com docs/film/kodak/): first-page lines are split or cover text.
+TITLES.update({
+    'e2e': 'KODAK PROFESSIONAL PROFOTO 100 Colour Negative Film',
+    'e2519': 'KODAK PROFESSIONAL SUPRA Color Negative Films (100, 400, 800)',
+    'e4026': 'KODAK PROFESSIONAL ROYAL SUPRA Color Negative Films (200, 400, 800)',
+    'e4029': 'KODAK PROFESSIONAL SUPRA Color Negative Films (200, 400, 800)',
+    'e4035': 'KODAK PROFESSIONAL ULTRA COLOR Films / 100UC and 400UC',
+    'le1': 'KODAK PROFESSIONAL Law Enforcement Films (LE100, LE400, LE800)',
+    'ti2323': 'KODAK EKTACHROME Professional Infrared EIR Film',
+})
 
 
 def main():
@@ -56,13 +74,13 @@ def main():
     with open(os.path.join(a.records, 'records.csv')) as f:
         for r in csv.DictReader(f):
             recs[r['pdf']].append(r)
-    stems = sorted(f[:-4] for f in os.listdir(a.pdfs) if re.match(r'e.*\.pdf$', f))
+    stems = sorted(f[:-4] for f in os.listdir(a.pdfs) if re.match(r'(e|le|ti)\d.*\.pdf$', f))
     newer = {s.split('-')[0]: s for s in stems if '-' in s}
     rows = []
     for stem in stems:
         doc = pymupdf.open(os.path.join(a.pdfs, stem + '.pdf'))
         date, _ = E.pub_info(doc)
-        pub = 'E-' + stem[1:].split('-')[0].upper()
+        pub = E.pub_code(stem)
         nimg = sum(len(p.get_images()) for p in doc)
         nseg = sum(len(p.get_drawings()) for p in doc)
         kinds = collections.Counter()
@@ -86,14 +104,14 @@ def main():
             notes.append(f'{nimg} embedded image(s); curves are vector')
         rows.append({
             'file': stem + '.pdf', 'publication': pub, 'date': date, 'pages': len(doc),
-            'title': title_of(doc),
+            'title': title_of(doc, stem),
             'stocks': '; '.join(r['name'] for r in rr),
             'record_ids': '; '.join(r['id'] for r in rr),
             'type': typ,
             'curve_sets': '; '.join(f'{k}x{v}' for k, v in sorted(kinds.items())),
             'graphics': 'vector' if nseg and not nimg else ('vector+raster' if nseg else 'raster'),
             'superseded': sup, 'notes': ' | '.join(notes),
-            'url': E.BASE_URL + stem + '.pdf',
+            'url': E.source_url(stem),
         })
     with open(a.out, 'w', newline='') as f:
         w = csv.DictWriter(f, fieldnames=list(rows[0]))
