@@ -72,6 +72,21 @@ def test_positive_curves_are_plausible(rec):
 
 
 @pytest.mark.unit
+@pytest.mark.parametrize('rec', [r for r in RECORDS if r['type'] == 'negative'], ids=lambda r: r['id'])
+def test_negative_curves_are_plausible(rec):
+    for ch in 'rgb':
+        d = _xy(rec, f'density_curve_{ch}')
+        assert d[0, 1] < 1.2 and d[-1, 1] - d[0, 1] > 1.2  # negative: D-min at low exposure, rising
+        s = _xy(rec, f'log_sensitivity_{ch}')
+        lo, hi = {'b': (380, 500), 'g': (500, 600), 'r': (590, 700)}[ch]
+        assert lo <= s[np.argmax(s[:, 1]), 0] <= hi
+    mid, dmin = _xy(rec, 'dye_density_mid'), _xy(rec, 'dye_density_min')
+    w = np.linspace(max(mid[0, 0], dmin[0, 0]), min(mid[-1, 0], dmin[-1, 0]), 50)
+    assert np.all(np.interp(w, *mid.T) > np.interp(w, *dmin.T))  # mid-scale above D-min everywhere
+    assert dmin[:, 1].min() > 0.0
+
+
+@pytest.mark.unit
 def test_extraction_accuracy_is_recorded():
     summary = json.loads((RAW / 'extraction_summary.json').read_text())
     for rec in RECORDS:
@@ -79,13 +94,25 @@ def test_extraction_accuracy_is_recorded():
         assert acc and max(a['p95_pt'] for a in acc.values()) < 1.0, rec['id']
 
 
+@pytest.mark.unit
+def test_record_only_sheets_are_not_built():
+    for rec in RECORDS:
+        assert rec['build'] in (rec['id'], 'record only'), rec['id']
+        assert (rec['id'] in RECIPES) == (rec['build'] == rec['id']), rec['id']
+
+
 @pytest.mark.parametrize('stock', BUILT)
 def test_profiles_are_registered_finite_and_document_estimates(stock):
     assert stock in {s.value for s in FilmStocks}
     p = load_profile(stock)
     assert p.info.type == RECIPES[stock]['type']
-    assert np.all(np.isfinite(p.data.channel_density))  # dye_extension hold_decay
-    assert np.all(p.data.base_density >= 0)
+    if p.info.type == 'positive':
+        assert np.all(np.isfinite(p.data.channel_density))  # dye_extension hold_decay
+    else:  # negatives: NaN outside 385-745 nm, as for the shipped data-sheet negatives
+        w = np.asarray(p.data.wavelengths)
+        assert np.all(np.isfinite(p.data.channel_density[(w >= 385) & (w <= 745)]))
+    bd = np.asarray(p.data.base_density)
+    assert np.all(bd[np.isfinite(bd)] >= 0)
     assert 'Estimate placeholders' in p.metadata.datasource
     assert 'filmcolors.org' in p.metadata.datasource
     if p.info.type == 'positive':
@@ -99,7 +126,10 @@ def test_recipes_pin_donors_and_mark_estimates():
         assert 'Estimate placeholders' in r['datasource']
         if r['type'] == 'positive':
             assert r['dye_extension'] == 'hold_decay'
-    assert RECIPES['fujifilm_t64_rtp_af3178e']['reference_illuminant'] == 'T'
+        else:
+            assert r['target_print'] == 'fujifilm_crystal_archive_typeii'
+    if 'fujifilm_t64_rtp_af3178e' in RECIPES:
+        assert RECIPES['fujifilm_t64_rtp_af3178e']['reference_illuminant'] == 'T'
 
 
 def test_neutral_print_filters_cover_every_built_stock():

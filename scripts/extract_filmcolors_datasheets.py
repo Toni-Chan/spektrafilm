@@ -239,7 +239,7 @@ def snap_seed(runs, seed, stroke, win=12):
 
 
 COL = {'r': (230, 0, 0), 'g': (0, 170, 0), 'b': (0, 60, 255), 'c': (0, 190, 210), 'm': (230, 0, 200),
-       'y': (230, 170, 0), 'mid': (255, 120, 0), 'min': (160, 0, 200), 'neutral': (120, 120, 120)}
+       'y': (230, 170, 0), 'mid': (255, 120, 0), 'min': (160, 0, 200), 'neutral': (120, 120, 120), 'layer': (0, 120, 120)}
 
 
 def rdp(P, tol):
@@ -292,28 +292,33 @@ def remove_lines(dark, h, v):
     m = dark.copy()
     for c, t in h:
         r0, r1 = max(0, int(c - t / 2 - 2)), min(dark.shape[0], int(c + t / 2 + 3))
+        if r1 <= r0:
+            continue
         for x in range(dark.shape[1]):
             col = dark[:, x]
             if not col[r0:r1].any():
                 continue
             rl = _runlen(col[max(0, r0 - 12):r1 + 12])[r0 - max(0, r0 - 12):r0 - max(0, r0 - 12) + (r1 - r0)]
-            sel = (rl > 0) & (rl <= t + 4)
-            m[r0:r1, x][sel] = False
+            sel = ((rl > 0) & (rl <= t + 4))[:r1 - r0]
+            m[r0:r0 + len(sel), x][sel] = False
     for c, t in v:
         c0, c1 = max(0, int(c - t / 2 - 2)), min(dark.shape[1], int(c + t / 2 + 3))
+        if c1 <= c0:
+            continue
         for y in range(dark.shape[0]):
             row = dark[y, :]
             if not row[c0:c1].any():
                 continue
             rl = _runlen(row[max(0, c0 - 12):c1 + 12])[c0 - max(0, c0 - 12):c0 - max(0, c0 - 12) + (c1 - c0)]
-            sel = (rl > 0) & (rl <= t + 4)
-            m[y, c0:c1][sel] = False
+            sel = ((rl > 0) & (rl <= t + 4))[:c1 - c0]
+            m[y, c0:c0 + len(sel)][sel] = False
     # grid crossings: both runs are long there, so the rule above keeps them; clear them outright
     for c, t in h:
-        r0, r1 = max(0, int(c - t / 2 - 2)), min(dark.shape[0], int(c + t / 2 + 3))
+        r0, r1 = max(0, int(c - t / 2 - 2)), max(0, min(dark.shape[0], int(c + t / 2 + 3)))
         for c2, t2 in v:
             c0, c1 = max(0, int(c2 - t2 / 2 - 1)), min(dark.shape[1], int(c2 + t2 / 2 + 2))
-            m[r0:r1, c0:c1] = False
+            if c1 > c0 and r1 > r0:
+                m[r0:r1, c0:c1] = False
     return m
 
 
@@ -339,6 +344,8 @@ def vector_subpaths(doc, page, idx, n=24):
 def extract_plot(doc, pc, thr=160):
     rect = pc['rect']; s = DPI / 72
     g = render(doc, pc['page'], rect)
+    if pc.get('rotate'):  # deskew a tilted scan (degrees, about the centre of the plot rect)
+        g = ndimage.rotate(g, pc['rotate'], reshape=False, cval=255, order=1)
     dark = g < pc.get('threshold', thr)
     h, v = detect_lines(dark, frac=pc.get('line_frac', 0.5))
     notes = []
@@ -492,6 +499,8 @@ def accuracy(res, ctx, dark):
     dist = ndimage.distance_transform_edt(~dark) / ctx['s']
     X, Y = ctx['X'], ctx['Y']; rep = {}
     for name, xy in res.items():
+        if len(xy) < 2:
+            rep[name] = dict(median_pt=None, p95_pt=None, max_pt=None, points=len(xy)); continue
         px = X.inv(xy[:, 0]); py = Y.inv(xy[:, 1])
         t = np.r_[0, np.cumsum(np.hypot(np.diff(px), np.diff(py)))]
         tt = np.arange(0, t[-1], 1.0)
@@ -607,6 +616,12 @@ DEFAULT_DONORS = {
                  'fujifilm_provia_100f_fdg', 'fujifilm_provia_400f_fdg', 'fujifilm_sensia_100_fdg',
                  'fujifilm_sensia_200_fdg', 'fujifilm_sensia_400_fdg', 'fujifilm_velvia_100',
                  'fujifilm_velvia_100_fdg', 'fujifilm_velvia_100f_fdg', 'fujifilm_velvia_50_fdg'],
+    'negative': ['fujifilm_c200', 'fujifilm_nexia_400_fdg', 'fujifilm_nexia_800_fdg', 'fujifilm_nexia_a200_fdg',
+                 'fujifilm_npl_160_fdg', 'fujifilm_pro_160c_fdg', 'fujifilm_pro_160s_fdg', 'fujifilm_pro_400h',
+                 'fujifilm_pro_400h_fdg', 'fujifilm_pro_800z_fdg', 'fujifilm_superia_100_fdg',
+                 'fujifilm_superia_1600_fdg', 'fujifilm_superia_200_fdg', 'fujifilm_superia_reala_fdg',
+                 'fujifilm_superia_xtra_400_fdg', 'fujifilm_superia_xtra_800_fdg',
+                 'fujifilm_true_definition_400_fdg', 'fujifilm_xtra_400'],
 }
 
 
