@@ -94,6 +94,9 @@ class FilmStocks(Enum):
     kodak_ektachrome_320t_e145 = 'kodak_ektachrome_320t_e145'
     kodak_ektachrome_p1600_e147 = 'kodak_ektachrome_p1600_e147'
     kodak_ektachrome_400x_e161 = 'kodak_ektachrome_400x_e161'
+    # filmcolors.org catalogue (KODAK TI-2323 / H-1-5294)
+    kodak_ektachrome_eir_ti2323 = 'kodak_ektachrome_eir_ti2323'
+    kodak_ektachrome_100d_h15294 = 'kodak_ektachrome_100d_h15294'
     kodak_ektachrome_e100vs_e163 = 'kodak_ektachrome_e100vs_e163'
     kodak_ektachrome_e100s_e164 = 'kodak_ektachrome_e100s_e164'
     kodak_ektachrome_e100sw_e164 = 'kodak_ektachrome_e100sw_e164'
