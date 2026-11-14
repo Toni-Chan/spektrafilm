@@ -1,0 +1,7 @@
+{
+  "stock": "fujifilm_npc_160_af3065e",
+  "estimate": true,
+  "dir_couplers_interlayer_scale": 1.35,
+  "note": "FUJIFILM sells NPC as the higher-contrast, more saturated sibling of NPS (and NPC/NPS were succeeded by PRO 160C/160S), but from the AF3-065E curves alone the profile rendered slightly below NPS (C* 44.8 vs 45.5). The sheet prints only a modestly higher neutral gamma (status M R/G/B about 0.60/0.59/0.53 vs NPS 0.56/0.56/0.64 over 1.5 log H above the toe); the missing saturation is interimage (DIR) effect that a neutral-exposure sheet cannot show. Digitisation verified against the PDF (vector paths).",
+  "calibration": "Target: the successor PRO 160C (fujifilm_pro_160c_fdg, C* 49.8; PRO 160S 44.6). ColorChecker C* (printed on kodak_portra_endura): 44.8 -> 49.8; mid-grey a*b* (-0.2, 0.3) -> (-0.4, 1.4) before and (-0.2, 0.4) after rebuilding the profile with the override (the builder grey-ramp fit renders with it); grey-ramp max delta a*b* vs no override 1.04."
+}

@@ -1,0 +1,270 @@
+{
+ "doc": "AF3-065E",
+ "publisher": "FUJIFILM data sheet",
+ "date": "2001-01 (print code EIGI-01.1)",
+ "title": "FUJICOLOR NPC 160 PROFESSIONAL [NPC]",
+ "pdf": "Fujicolor-NPC-160-Professional_AF3-065E.pdf",
+ "url": "https://filmcolors.org/wp-content/uploads/2025/12/Fujicolor-NPC-160-Professional_AF3-065E.pdf",
+ "entry": "https://filmcolors.org/timeline-entry/40652/",
+ "stocks": [
+  {
+   "id": "fujifilm_npc_160_af3065e",
+   "name": "FUJICOLOR NPC 160 PROFESSIONAL [NPC]",
+   "type": "negative",
+   "meta": {
+    "speed": "ISO 160 (daylight)",
+    "process": "C-41",
+    "densitometry": "Status M",
+    "exposure": "Daylight, 1/125 sec",
+    "sensitivity_defined_at": "1.0 above D-min",
+    "art": "vector (PDF paths, page 5)"
+   },
+   "notes": [
+    "curves read directly from the PDF vector paths (page 5), no tracing",
+    "the sheet also prints a fourth (cyan-sensitive) layer, kept as log_sensitivity_cyan_layer.csv"
+   ],
+   "plots": [
+    {
+     "kind": "char",
+     "page": 5,
+     "rect": [
+      88,
+      104,
+      298,
+      279
+     ],
+     "x": [
+      [
+       -4,
+       91.6
+      ],
+      [
+       -3,
+       132.25
+      ],
+      [
+       -2,
+       173.45
+      ],
+      [
+       -1,
+       214.03
+      ],
+      [
+       0,
+       254.93
+      ],
+      [
+       1,
+       295.3
+      ]
+     ],
+     "y": [
+      [
+       0,
+       276.5
+      ],
+      [
+       1,
+       228.29
+      ],
+      [
+       2,
+       179.67
+      ],
+      [
+       3,
+       131.23
+      ],
+      [
+       3.5,
+       107.0
+      ]
+     ],
+     "curves": {
+      "r": [
+       {
+        "path": [
+         8,
+         0
+        ]
+       }
+      ],
+      "g": [
+       {
+        "path": [
+         8,
+         1
+        ]
+       }
+      ],
+      "b": [
+       {
+        "path": [
+         8,
+         2
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "kind": "sens",
+     "page": 5,
+     "rect": [
+      342,
+      105,
+      553,
+      281
+     ],
+     "x": [
+      [
+       400,
+       357.27
+      ],
+      [
+       500,
+       417.01
+      ],
+      [
+       600,
+       477.04
+      ],
+      [
+       700,
+       537.05
+      ]
+     ],
+     "y": [
+      [
+       3,
+       108.2
+      ],
+      [
+       2,
+       164.66
+      ],
+      [
+       1,
+       221.13
+      ],
+      [
+       0,
+       278.3
+      ]
+     ],
+     "curves": {
+      "b": [
+       {
+        "path": [
+         165,
+         0
+        ]
+       }
+      ],
+      "g": [
+       {
+        "path": [
+         165,
+         1
+        ]
+       }
+      ],
+      "r": [
+       {
+        "path": [
+         165,
+         2
+        ]
+       }
+      ],
+      "cyan_layer": [
+       {
+        "path": [
+         166,
+         0
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "kind": "dye",
+     "page": 5,
+     "rect": [
+      334,
+      398,
+      545,
+      551
+     ],
+     "x": [
+      [
+       400,
+       349.73
+      ],
+      [
+       500,
+       409.35
+      ],
+      [
+       600,
+       468.96
+      ],
+      [
+       700,
+       528.07
+      ]
+     ],
+     "y": [
+      [
+       3,
+       401.1
+      ],
+      [
+       2,
+       450.64
+      ],
+      [
+       1,
+       499.81
+      ],
+      [
+       0,
+       548.7
+      ]
+     ],
+     "curves": {
+      "mid": [
+       {
+        "path": [
+         470,
+         0
+        ]
+       }
+      ],
+      "min": [
+       {
+        "path": [
+         471,
+         0
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "recipe": {
+    "stock": "fujifilm_npc_160_af3065e",
+    "name": "Fujifilm NPC 160 (AF3-065E)",
+    "target_print": "fujifilm_crystal_archive_typeii",
+    "reference_illuminant": "D55",
+    "estimates": [
+     "base+fog and mid-scale dye densities read from the sheet, individual CMY dyes reconstructed by the builder (not printed)",
+     "spectral sensitivity on a relative log scale (one log unit = the interval marked '1.0'), absolute level from the builder's mid-grey anchoring",
+     "sensitivity tails beyond the printed curves",
+     "interlayer DIR coupler strength (not on any data sheet; runtime default for negatives)"
+    ]
+   }
+  }
+ ]
+}

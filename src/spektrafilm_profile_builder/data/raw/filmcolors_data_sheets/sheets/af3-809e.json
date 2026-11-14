@@ -1,0 +1,260 @@
+{
+ "doc": "AF3-809E",
+ "publisher": "FUJIFILM data sheet",
+ "date": "1999-01 (print code EIGI-99.1)",
+ "title": "FUJICOLOR NPS 160 PROFESSIONAL [NPS]",
+ "pdf": "Fujicolor_NPS160-Professional_AF3-809E.pdf",
+ "url": "https://filmcolors.org/wp-content/uploads/2025/11/Fujicolor_NPS160-Professional_AF3-809E.pdf",
+ "entry": "https://filmcolors.org/timeline-entry/40657/",
+ "stocks": [
+  {
+   "id": "fujifilm_nps_160_af3809e",
+   "name": "FUJICOLOR NPS 160 PROFESSIONAL [NPS]",
+   "type": "negative",
+   "meta": {
+    "speed": "ISO 160 (daylight, short exposures)",
+    "process": "C-41 / CN-16",
+    "densitometry": "Status M",
+    "exposure": "Daylight, 1/125 sec",
+    "sensitivity_defined_at": "1.0 above D-min",
+    "art": "raster scan (page 4)"
+   },
+   "notes": [
+    "traced from the scanned raster artwork (no vector paths in this PDF); grid calibrated from detected grid lines",
+    "the sheet prints a fourth (cyan-sensitive) layer as a dashed curve; it is not traced"
+   ],
+   "plots": [
+    {
+     "kind": "char",
+     "page": 4,
+     "rect": [
+      45.3,
+      105.6,
+      267.9,
+      310.5
+     ],
+     "x": [
+      [
+       -4,
+       72.12
+      ],
+      [
+       -3.5,
+       93.84
+      ],
+      [
+       -3,
+       115.56
+      ],
+      [
+       -2,
+       159.0
+      ],
+      [
+       -1.5,
+       180.12
+      ],
+      [
+       0,
+       246.48
+      ]
+     ],
+     "y": [
+      [
+       4,
+       109.62
+      ],
+      [
+       3,
+       154.02
+      ],
+      [
+       2,
+       197.7
+      ],
+      [
+       1,
+       241.62
+      ],
+      [
+       0.5,
+       263.58
+      ],
+      [
+       0,
+       285.54
+      ]
+     ],
+     "mask": [
+      [
+       -4,
+       3.2,
+       -1.4,
+       4.0
+      ]
+     ],
+     "min_component": 90,
+     "curves": {
+      "b": [
+       [
+        -3.3,
+        0.75
+       ]
+      ],
+      "g": [
+       [
+        -3.3,
+        0.64
+       ]
+      ],
+      "r": [
+       [
+        -3.3,
+        0.17
+       ]
+      ]
+     }
+    },
+    {
+     "kind": "sens",
+     "page": 4,
+     "rect": [
+      296.2,
+      107,
+      524.4,
+      333.6
+     ],
+     "x": [
+      [
+       400,
+       332.86
+      ],
+      [
+       500,
+       392.38
+      ],
+      [
+       700,
+       510.94
+      ]
+     ],
+     "y": [
+      [
+       1,
+       167.54
+      ],
+      [
+       0,
+       226.82
+      ]
+     ],
+     "curves": {
+      "b": [
+       [
+        440,
+        0.6,
+        395,
+        497
+       ]
+      ],
+      "g": [
+       [
+        530,
+        0.75,
+        488,
+        590
+       ]
+      ],
+      "r": [
+       [
+        625,
+        0.85,
+        578,
+        660
+       ]
+      ]
+     }
+    },
+    {
+     "kind": "dye",
+     "page": 4,
+     "rect": [
+      296.3,
+      409.5,
+      526,
+      585.3
+     ],
+     "x": [
+      [
+       400,
+       333.68
+      ],
+      [
+       500,
+       393.8
+      ],
+      [
+       600,
+       453.92
+      ],
+      [
+       700,
+       513.32
+      ]
+     ],
+     "y": [
+      [
+       2,
+       434.52
+      ],
+      [
+       0,
+       557.52
+      ]
+     ],
+     "extra_h": [
+      1.0
+     ],
+     "curves": {
+      "mid": {
+       "seeds": [
+        [
+         450,
+         2.18
+        ]
+       ],
+       "xlim": [
+        394,
+        725
+       ]
+      },
+      "min": {
+       "seeds": [
+        [
+         450,
+         0.85
+        ]
+       ],
+       "xlim": [
+        396,
+        725
+       ]
+      }
+     }
+    }
+   ],
+   "recipe": {
+    "stock": "fujifilm_nps_160_af3809e",
+    "name": "Fujifilm NPS 160 (AF3-809E)",
+    "target_print": "fujifilm_crystal_archive_typeii",
+    "reference_illuminant": "D55",
+    "estimates": [
+     "base+fog and mid-scale dye densities read from the sheet, individual CMY dyes reconstructed by the builder (not printed)",
+     "spectral sensitivity on a relative log scale (one log unit = the interval marked '1.0'), absolute level from the builder's mid-grey anchoring",
+     "sensitivity tails beyond the printed curves",
+     "interlayer DIR coupler strength (not on any data sheet; runtime default for negatives)"
+    ]
+   }
+  }
+ ]
+}

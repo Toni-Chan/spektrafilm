@@ -1,0 +1,43 @@
+FUJICOLOR SUPER HG 1600 CU
+Datasheet: FUJIFILM data sheet AF3-659EN (undated (filmcolors.org: ca. 1990)), Fujicolor-Super-HG-1600-CU_AF3-659EN.pdf, PDF page(s) 5, 6, 7
+Source URL: https://filmcolors.org/wp-content/uploads/2025/12/Fujicolor-Super-HG-1600-CU_AF3-659EN.pdf
+Catalogue entry: https://filmcolors.org/timeline-entry/40685/
+Publication: AF3-659EN
+Publication date: undated (filmcolors.org: ca. 1990)
+Type: negative
+Densitometry: Status M
+Process: CN-16 / C-41
+Exposure: Daylight, 1/125 sec
+Sensitivity defined at: 1.0 above D-min
+Speed: ISO 1600 (daylight)
+
+Files (x range, y range, n points):
+  density_curve_b.csv  x -4.35..-0.559  y 0.846..3.036  n=84
+  density_curve_g.csv  x -4.333..-0.457  y 0.539..2.692  n=86
+  density_curve_r.csv  x -4.314..-0.413  y 0.223..2.054  n=80
+  dye_density_mid.csv  x 400.861..723.656  y 0.993..2.651  n=127
+  dye_density_min.csv  x 395.264..722.903  y 0.312..1.971  n=104
+  log_sensitivity_b.csv  x 389.689..517.709  y -0.543..0.92  n=42
+  log_sensitivity_g.csv  x 385.177..600.0  y -0.426..0.835  n=75
+  log_sensitivity_r.csv  x 540.191..684.093  y -0.661..0.594  n=47
+
+Units: log_sensitivity_* = wavelength nm, log10 sensitivity (relative where the sheet prints no
+  absolute scale); density_curve_* = log10 H (lux-seconds), total density as printed (base+fog
+  included); dye_density_* = wavelength nm, spectral diffuse density (c/m/y: individual dyes as
+  printed; mid: mid-scale neutral; min: minimum density).
+Extraction: the plot is rendered from the PDF at 600 dpi (the curves are embedded 1-bit scans or
+  vector strokes), grid lines are found as long straight dark runs and removed except where a curve
+  crosses them, axes are calibrated piecewise-linearly through the printed grid lines named in the
+  sheet config (sheets/*.json), and each curve is followed column by column from a seed point
+  (script: scripts/extract_filmcolors_datasheets.py). Typical accuracy ~0.2-0.5 pt on the page
+  (about 1-2 nm, 0.01-0.02 log H or density) plus the accuracy of the original drawing / scan.
+Calibration:
+  char_p6: {"x_labels": [-4, -3, -2, -1, 0], "y_labels": [3, 2.5, 2, 1.5, 1, 0.5, 0], "x_resid_pt": 0.12, "y_resid_pt": 0.32, "stroke_px": 9.0, "grid_lines": {"h": 7, "v": 10}}
+  sens_p5: {"x_labels": [400, 500, 600, 700], "y_labels": [1, 0], "x_resid_pt": 0.288, "y_resid_pt": 0.0, "stroke_px": 10.0, "grid_lines": {"h": 6, "v": 11}}
+  dye_p7: {"x_labels": [400, 500, 600, 700], "y_labels": [2.5, 2, 1.5, 1, 0.5, 0], "x_resid_pt": 0.168, "y_resid_pt": 0.984, "stroke_px": 9.0, "grid_lines": {"h": 7, "v": 7}}
+Distance of the written curves to the printed strokes (pt): {"char:b": {"median_pt": 0.0, "p95_pt": 0.0, "max_pt": 0.12}, "char:g": {"median_pt": 0.0, "p95_pt": 0.0, "max_pt": 0.0}, "char:r": {"median_pt": 0.0, "p95_pt": 0.0, "max_pt": 0.0}, "sens:b": {"median_pt": 0.0, "p95_pt": 0.0, "max_pt": 0.17}, "sens:g": {"median_pt": 0.0, "p95_pt": 0.0, "max_pt": 0.12}, "sens:r": {"median_pt": 0.0, "p95_pt": 0.0, "max_pt": 0.0}, "dye:mid": {"median_pt": 0.0, "p95_pt": 0.0, "max_pt": 2.76}, "dye:min": {"median_pt": 0.0, "p95_pt": 0.0, "max_pt": 0.12}}
+Caveats:
+  traced from the scanned raster artwork (no vector paths in this PDF); the characteristic and dye plots are deskewed by -0.5 and +0.2 degrees before tracing; grid calibrated from detected grid lines
+  undated sheet; filmcolors.org dates the stock ca. 1990
+  the dye plot gives only mid-scale and minimum density (no separated CMY dyes); mid-scale density is clipped at D 2.5 below ~415 nm
+  y label 0: no grid line within 3.0 pt of 281.3; used as given
