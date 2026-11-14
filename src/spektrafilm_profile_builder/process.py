@@ -303,7 +303,8 @@ def build_profile(record: RawRecord, recipe: Recipe, report: BuildReport | None 
         if not record.has_mid_min:
             raise ValueError(f'{record.folder}: a negative needs dye_density_mid/min.csv')
         if record.has_cmy_dyes:
-            cmy_start = record.dye_density_cmy
+            # continue a dye printed over a shorter range than the others (NaN would black out the spectrum)
+            cmy_start = fill_dye_gaps(wl, record.dye_density_cmy)
         else:
             cmy_start = load_generic_dyes(recipe.dye_start, wl)
         rec = reconstruct_dye_density(wl, record.dye_density_mid, record.dye_density_min, cmy_start, dstm)
