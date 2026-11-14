@@ -1,0 +1,7 @@
+{
+  "stock": "kodak_kodachrome_64_e55",
+  "estimate": true,
+  "dir_couplers_interlayer_scale": 1.4,
+  "note": "E-55 (June 2009) describes KODACHROME 25/64/200 as 'natural colors' that reproduce 'subtle color naturally'; photographers rank KODACHROME 25/64 a little above the natural E-6 films (EKTACHROME 64/100, E100S/G, PROVIA 100F) and below VELVIA / E100VS. K-14 forms the dyes in the colour developers, so its interimage effects come from the black-and-white first development (as in E-6) and are not shown by the neutral-exposure curves. One scale for all three stocks: same process and dye set, so the sheet's own ranking (K25 ~ K64 > K200) is kept. Digitisation verified against the PDF.",
+  "calibration": "Target: K25/K64 between the natural E-6 group (ColorChecker C* 36.1-37.0: ektachrome_64_e8 36.1, e100s_e164 36.3, e100g_e4024 36.5, provia_100f_fdg 36.7, ektachrome_100_e27 37.0) and velvia_50_fdg (39.5 with its override); capped at 1.8 for positives. ColorChecker C* (scanned): 35.3 -> 38.0 (kodak_kodachrome_25_e55 34.7 -> 37.6, kodak_kodachrome_64_e55 35.3 -> 38.0, kodak_kodachrome_200_e55 31.1 -> 33.6; upstream kodak_kodachrome_64 35.2); mid-grey a*b* (-1.3, 0.8) -> (-1.2, 1.1)."
+}
