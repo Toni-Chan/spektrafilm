@@ -25,7 +25,8 @@ This script renders each plot at 600 dpi and digitises the raster:
    (`mask`, data units) or dropped as small connected components (`min_component`, px). Seeds are
    points `[x, y(, xmin, xmax)]`, `{"col": x, "rank": k}` (k-th stroke from the top in that column),
    or `{"row": y, "rank": k, "ylim": [..]}` (k-th stroke from the left, traced as x(y) for steep
-   stretches where overlapping characteristic curves are ordered left to right); a curve with
+   stretches where overlapping characteristic curves are ordered left to right); a curve with `rgb`
+   (and `rgb_tol`) is traced only through pixels of that colour (colour-printed curves that cross); a curve with
    `fill` takes another curve's points outside its own traced range (status-A curves that coincide
    on the sheet). Sheets whose curves are vector art use `{"path": [drawing, sub-path]}` seeds,
    which read the PDF path directly (no tracing) and share the same axis calibration;
@@ -360,11 +361,13 @@ def extract_plot(doc, pc, thr=160):
     for val in pc.get('extra_v', []):
         v.append((float(X.inv(val)), 6))
     m = remove_lines(dark, h, v)
+    keep_m = np.ones_like(m)
     for (a, b, c_, d) in pc.get('mask', []):  # data coords
         xa, xb = sorted([X.inv(a), X.inv(c_)]); ya, yb = sorted([Y.inv(b), Y.inv(d)])
-        m[max(0, int(ya)):int(yb) + 1, max(0, int(xa)):int(xb) + 1] = False
+        keep_m[max(0, int(ya)):int(yb) + 1, max(0, int(xa)):int(xb) + 1] = False
     for (a, b, c_, d) in pc.get('mask_pt', []):  # page pt
-        m[max(0, int((b - rect[1]) * s)):int((d - rect[1]) * s) + 1, max(0, int((a - rect[0]) * s)):int((c_ - rect[0]) * s) + 1] = False
+        keep_m[max(0, int((b - rect[1]) * s)):int((d - rect[1]) * s) + 1, max(0, int((a - rect[0]) * s)):int((c_ - rect[0]) * s) + 1] = False
+    m &= keep_m
     mc = pc.get('min_component', 0)
     if mc:
 
@@ -383,10 +386,21 @@ def extract_plot(doc, pc, thr=160):
     ys = sorted(c for c, t in h)
     y_lo, y_hi = (ys[0], ys[-1]) if len(ys) >= 2 else (0, m.shape[0] - 1)
     res = {}
+    rgb_img = None
     for name, cfg in pc['curves'].items():
         seeds = cfg['seeds'] if isinstance(cfg, dict) else cfg
         opts = cfg if isinstance(cfg, dict) else {}
         lo, hi = x_lo, x_hi
+        runs_use = runs
+        if 'rgb' in opts:
+            # colour-printed curves that cross each other: trace only the pixels of this curve's colour
+            # ('rgb': [R, G, B] of the stroke, 'rgb_tol': Euclidean distance in 8-bit RGB)
+            if rgb_img is None:
+                rgb_img = render(doc, pc['page'], rect, rgb=True)[..., :3].astype(float)
+                if pc.get('rotate'):
+                    rgb_img = ndimage.rotate(rgb_img, pc['rotate'], axes=(1, 0), reshape=False, cval=255, order=1)
+            mc = np.linalg.norm(rgb_img - np.asarray(opts['rgb'], float), axis=2) < opts.get('rgb_tol', 90)
+            runs_use = column_runs(remove_lines(mc, h, v) & keep_m)
         if 'xlim' in opts:
             a, b = sorted([X.inv(opts['xlim'][0]), X.inv(opts['xlim'][1])]); lo, hi = max(lo, int(a)), min(hi, int(b))
         parts = []
@@ -417,8 +431,8 @@ def extract_plot(doc, pc, thr=160):
                 continue
             if isinstance(sd, dict) and 'col' in sd:
                 xx = int(round(float(X.inv(sd['col']))))
-                xx = max(range(xx - 10, xx + 11), key=lambda q: (len(runs[q]), -abs(q - xx)))  # dashes: densest column
-                rr = sorted(runs[xx], key=lambda r: r[0])
+                xx = max(range(xx - 10, xx + 11), key=lambda q: (len(runs_use[q]), -abs(q - xx)))  # dashes: densest column
+                rr = sorted(runs_use[xx], key=lambda r: r[0])
                 if not -len(rr) <= sd.get('rank', 0) < len(rr):
                     raise ValueError(f'{pc["kind"]} {name}: column {sd["col"]} has {len(rr)} strokes')
                 r0 = rr[sd.get('rank', 0)]
@@ -426,18 +440,18 @@ def extract_plot(doc, pc, thr=160):
                 slo, shi = lo, hi
                 if 'xlim' in sd:
                     a, b = sorted([X.inv(sd['xlim'][0]), X.inv(sd['xlim'][1])]); slo, shi = max(lo, int(a)), min(hi, int(b))
-                parts.append(trace(runs, (sx, sy), stroke, slo, shi, gap=opts.get('gap', 60), tol=opts.get('tol'),
+                parts.append(trace(runs_use, (sx, sy), stroke, slo, shi, gap=opts.get('gap', 60), tol=opts.get('tol'),
                                    y_lo=y_lo, y_hi=y_hi))
                 continue
             sx, sy = float(X.inv(sd[0])), float(Y.inv(sd[1]))
             try:
-                sx, sy = snap_seed(runs, (sx, sy), stroke)
+                sx, sy = snap_seed(runs_use, (sx, sy), stroke)
             except ValueError as e:
                 raise ValueError(f'{pc["kind"]} {name} seed {sd}: {e}')
             slo, shi = lo, hi
             if len(sd) >= 4:  # [x, y, xmin, xmax]: this seed's trace is limited to that x range
                 a, b = sorted([X.inv(sd[2]), X.inv(sd[3])]); slo, shi = max(lo, int(a)), min(hi, int(b))
-            tr = trace(runs, (sx, sy), stroke, slo, shi, gap=opts.get('gap', 60), tol=opts.get('tol'),
+            tr = trace(runs_use, (sx, sy), stroke, slo, shi, gap=opts.get('gap', 60), tol=opts.get('tol'),
                        y_lo=y_lo, y_hi=y_hi)
             parts.append(tr)
         P = np.vstack(parts)
