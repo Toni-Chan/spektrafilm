@@ -1,0 +1,42 @@
+FUJICOLOR ETERNA Vivid 160 8543 / 8643
+Datasheet: FUJIFILM motion picture film data sheet KB-0701E (2007-03 (print code SK-07.03)), eterna_vivid160.pdf, PDF page(s) 1
+Source URL: https://modusdever.com/assets/Manuais/fuji/eterna_vivid160.pdf
+Publication: KB-0701E
+Publication date: 2007-03 (print code SK-07.03)
+Type: negative
+Densitometry: Status M
+Process: ECN-2
+Exposure: 3200K light source, 1/50 s, Fuji Filter SC-41
+Sensitivity defined at: 0.40 above minimum density
+Speed: EI 160 tungsten 3200K (EI 100 daylight with No. 85)
+
+Files (x range, y range, n points):
+  density_curve_b.csv  x -1.948..1.814  y 0.66..2.332  n=23
+  density_curve_g.csv  x -1.95..1.808  y 0.515..2.145  n=22
+  density_curve_r.csv  x -1.95..1.807  y 0.254..1.608  n=16
+  dye_density_mid.csv  x 408.059..692.265  y 0.703..1.495  n=112
+  dye_density_min.csv  x 407.99..693.027  y 0.133..0.73  n=78
+  log_sensitivity_b.csv  x 385.53..518.846  y 0.246..2.175  n=55
+  log_sensitivity_g.csv  x 479.998..598.914  y 0.237..1.962  n=43
+  log_sensitivity_r.csv  x 570.758..663.629  y 0.406..1.301  n=35
+
+Units: log_sensitivity_* = wavelength nm, log10 sensitivity (relative where the sheet prints no
+  absolute scale); density_curve_* = log10 H (lux-seconds), total density as printed (base+fog
+  included); dye_density_* = wavelength nm, spectral diffuse density (c/m/y: individual dyes as
+  printed; mid: mid-scale neutral; min: minimum density).
+Extraction: the plot is rendered from the PDF at 600 dpi (the curves are embedded 1-bit scans or
+  vector strokes), grid lines are found as long straight dark runs and removed except where a curve
+  crosses them, axes are calibrated piecewise-linearly through the printed grid lines named in the
+  sheet config (sheets/*.json), and each curve is followed column by column from a seed point
+  (script: scripts/extract_filmcolors_datasheets.py). Typical accuracy ~0.2-0.5 pt on the page
+  (about 1-2 nm, 0.01-0.02 log H or density) plus the accuracy of the original drawing / scan.
+Calibration:
+  char_p1: {"x_labels": [-1.80618, -1.20412, -0.60206, 0.0, 0.60206, 1.20412, 1.80618], "y_labels": [0, 0.5, 1, 1.5, 2, 2.5, 3], "x_resid_pt": 0.043, "y_resid_pt": 0.032, "stroke_px": 8.0, "grid_lines": {"h": 6, "v": 15}}
+  sens_p1: {"x_labels": [400, 450, 500, 550, 600, 650, 700], "y_labels": [0, 1, 2, 3], "x_resid_pt": 0.309, "y_resid_pt": 0.765, "stroke_px": 9.0, "grid_lines": {"h": 4, "v": 9}}
+  dye_p1: {"x_labels": [400, 500, 600, 700], "y_labels": [0, 0.5, 1, 1.5, 2], "x_resid_pt": 0.204, "y_resid_pt": 0.836, "stroke_px": 7.0, "grid_lines": {"h": 5, "v": 4}}
+Distance of the written curves to the printed strokes (pt): {"char:b": {"median_pt": 0.0, "p95_pt": 0.0, "max_pt": 0.0}, "char:g": {"median_pt": 0.0, "p95_pt": 0.0, "max_pt": 0.0}, "char:r": {"median_pt": 0.0, "p95_pt": 0.0, "max_pt": 0.12}, "sens:b": {"median_pt": 0.0, "p95_pt": 0.0, "max_pt": 0.0}, "sens:g": {"median_pt": 0.0, "p95_pt": 0.0, "max_pt": 0.0}, "sens:r": {"median_pt": 0.0, "p95_pt": 0.0, "max_pt": 0.0}, "dye:mid": {"median_pt": 0.0, "p95_pt": 0.0, "max_pt": 0.0}, "dye:min": {"median_pt": 0.0, "p95_pt": 0.433, "max_pt": 0.509}}
+Caveats:
+  curves read directly from the PDF vector paths (page 1), no tracing
+  characteristic curves printed against camera stops (-6..+6), converted to relative log H
+  ETERNA Vivid: FUJIFILM's high-saturation, high-contrast cine negative
+  y label 2.5: no grid line within 3.0 pt of 128.66; used as given

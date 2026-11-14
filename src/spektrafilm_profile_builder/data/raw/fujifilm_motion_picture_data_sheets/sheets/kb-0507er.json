@@ -1,0 +1,299 @@
+{
+ "doc": "KB-0507ER",
+ "publisher": "FUJIFILM motion picture film data sheet",
+ "date": "2007-05 (print code SK-07.05)",
+ "title": "FUJICOLOR NEGATIVE FILM ETERNA 250D 35mm Type 8563 / 16mm Type 8663",
+ "pdf": "eterna250d.pdf",
+ "url": "https://modusdever.com/assets/Manuais/fuji/eterna250d.pdf",
+ "derotate": true,
+ "stocks": [
+  {
+   "id": "fujifilm_eterna_250d_kb0507er",
+   "name": "FUJICOLOR ETERNA 250D 8563 / 8663",
+   "type": "negative",
+   "meta": {
+    "speed": "EI 250 daylight (EI 64 tungsten with LBB-12 / No. 80A)",
+    "process": "ECN-2",
+    "densitometry": "Status M",
+    "exposure": "5400K light source, 1/50 s, Fuji Filter SC-41",
+    "sensitivity_defined_at": "0.40 above minimum density",
+    "art": "vector (PDF paths, page 1; the page is stored rotated and is read in its displayed orientation)"
+   },
+   "notes": [
+    "curves read directly from the PDF vector paths (page 1), no tracing",
+    "characteristic curves printed against camera stops (-6..+6), converted to relative log H"
+   ],
+   "plots": [
+    {
+     "kind": "char",
+     "page": 1,
+     "rect": [
+      362,
+      276,
+      555,
+      416
+     ],
+     "x": [
+      [
+       -1.80618,
+       379.38
+      ],
+      [
+       -1.20412,
+       405.81
+      ],
+      [
+       -0.60206,
+       432.24
+      ],
+      [
+       0.0,
+       458.67
+      ],
+      [
+       0.60206,
+       485.11
+      ],
+      [
+       1.20412,
+       511.54
+      ],
+      [
+       1.80618,
+       537.97
+      ]
+     ],
+     "y": [
+      [
+       0,
+       412.8
+      ],
+      [
+       0.5,
+       390.64
+      ],
+      [
+       1,
+       368.47
+      ],
+      [
+       1.5,
+       346.3
+      ],
+      [
+       2,
+       324.13
+      ],
+      [
+       2.5,
+       301.96
+      ],
+      [
+       3,
+       279.79
+      ]
+     ],
+     "curves": {
+      "b": [
+       {
+        "path": [
+         1499,
+         0
+        ]
+       }
+      ],
+      "g": [
+       {
+        "path": [
+         1498,
+         0
+        ]
+       }
+      ],
+      "r": [
+       {
+        "path": [
+         1497,
+         0
+        ]
+       }
+      ]
+     },
+     "dense_lines": true
+    },
+    {
+     "kind": "sens",
+     "page": 1,
+     "rect": [
+      362,
+      547,
+      555,
+      658
+     ],
+     "x": [
+      [
+       400,
+       376.4
+      ],
+      [
+       450,
+       403.82
+      ],
+      [
+       500,
+       431.25
+      ],
+      [
+       550,
+       458.67
+      ],
+      [
+       600,
+       486.1
+      ],
+      [
+       650,
+       513.52
+      ],
+      [
+       700,
+       540.95
+      ]
+     ],
+     "y": [
+      [
+       0,
+       654.55
+      ],
+      [
+       1,
+       620.03
+      ],
+      [
+       2,
+       585.5
+      ],
+      [
+       3,
+       550.98
+      ]
+     ],
+     "curves": {
+      "b": [
+       {
+        "path": [
+         1491,
+         0
+        ]
+       }
+      ],
+      "g": [
+       {
+        "path": [
+         1492,
+         0
+        ]
+       }
+      ],
+      "r": [
+       {
+        "path": [
+         1493,
+         0
+        ]
+       }
+      ]
+     },
+     "dense_lines": true
+    },
+    {
+     "kind": "dye",
+     "page": 1,
+     "rect": [
+      132,
+      276,
+      289,
+      476
+     ],
+     "x": [
+      [
+       400,
+       135.9
+      ],
+      [
+       500,
+       185.6
+      ],
+      [
+       600,
+       235.3
+      ],
+      [
+       700,
+       285.0
+      ]
+     ],
+     "y": [
+      [
+       0,
+       472.22
+      ],
+      [
+       0.5,
+       424.11
+      ],
+      [
+       1,
+       376.0
+      ],
+      [
+       1.5,
+       327.9
+      ],
+      [
+       2,
+       279.79
+      ]
+     ],
+     "curves": {
+      "mid": [
+       {
+        "path": [
+         1488,
+         0
+        ]
+       }
+      ],
+      "min": [
+       {
+        "path": [
+         1489,
+         0
+        ]
+       }
+      ]
+     },
+     "dense_lines": true
+    }
+   ],
+   "recipe": {
+    "stock": "fujifilm_eterna_250d_kb0507er",
+    "name": "Fujifilm Eterna 250D (KB-0507ER)",
+    "target_print": "kodak_2383",
+    "reference_illuminant": "D55",
+    "use": "cine",
+    "density_over_min": 0.4,
+    "data_trustability": 0.3,
+    "estimates": [
+     "the characteristic curves are printed against camera stops: converted to relative log H (1 stop = 0.30103), the absolute exposure scale comes from the builder's speed-point anchoring",
+     "spectral sensitivity on a relative log scale (one log unit = the interval marked '1.0'), absolute level from the builder's mid-grey anchoring",
+     "sensitivity tails beyond the printed curves",
+     "base+fog and mid-scale dye densities read from the sheet, individual CMY dyes reconstructed by the builder (not printed)",
+     "dye densities outside the printed 400-700 nm",
+     "print stock: KODAK VISION 2383 (the shipped cine print profile; FUJIFILM ETERNA-CP 3513/3514 is not in the repository)",
+     "interlayer DIR coupler strength (not on any data sheet; runtime default for negatives)"
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,298 @@
+{
+ "doc": "KB-914E",
+ "publisher": "FUJI PHOTO FILM motion picture film data sheet",
+ "date": "2000-05 (print code SK-00.05)",
+ "title": "FUJICOLOR NEGATIVE FILM F-250 35mm Type 8552 / 16mm Type 8652 (Super F series)",
+ "pdf": "F-250.pdf",
+ "url": "https://www.cinematography.net/Files/F-250.pdf",
+ "derotate": true,
+ "stocks": [
+  {
+   "id": "fujifilm_f250_kb914e",
+   "name": "FUJICOLOR F-250 8552 / 8652",
+   "type": "negative",
+   "meta": {
+    "speed": "EI 250 tungsten 3200K (EI 160 daylight with LBA-12 / No. 85)",
+    "process": "ECN-2",
+    "densitometry": "Status M",
+    "exposure": "3200K tungsten lamp, 1/50 s, Fuji Filter SC-41",
+    "sensitivity_defined_at": "0.40 above minimum density",
+    "art": "vector (PDF paths, page 1; stored rotated, read as displayed)"
+   },
+   "notes": [
+    "curves read directly from the PDF vector paths (page 1), no tracing",
+    "characteristic curves printed against log H (lux-seconds), bar notation on the axis"
+   ],
+   "plots": [
+    {
+     "kind": "char",
+     "page": 1,
+     "rect": [
+      346.9,
+      99.53,
+      610.71,
+      275.53
+     ],
+     "x": [
+      [
+       -3.5,
+       350.9
+      ],
+      [
+       -3.0,
+       379.33
+      ],
+      [
+       -2.5,
+       407.76
+      ],
+      [
+       -2.0,
+       436.2
+      ],
+      [
+       -1.5,
+       464.63
+      ],
+      [
+       -1.0,
+       493.07
+      ],
+      [
+       -0.5,
+       521.5
+      ],
+      [
+       0.0,
+       549.94
+      ],
+      [
+       0.5,
+       578.38
+      ],
+      [
+       1.0,
+       606.71
+      ]
+     ],
+     "y": [
+      [
+       0.0,
+       272.53
+      ],
+      [
+       0.5,
+       244.26
+      ],
+      [
+       1.0,
+       215.87
+      ],
+      [
+       1.5,
+       187.49
+      ],
+      [
+       2.0,
+       159.1
+      ],
+      [
+       2.5,
+       130.72
+      ],
+      [
+       3.0,
+       102.53
+      ]
+     ],
+     "curves": {
+      "b": [
+       {
+        "path": [
+         137,
+         0
+        ]
+       }
+      ],
+      "g": [
+       {
+        "path": [
+         138,
+         0
+        ]
+       }
+      ],
+      "r": [
+       {
+        "path": [
+         139,
+         0
+        ]
+       }
+      ]
+     },
+     "dense_lines": true
+    },
+    {
+     "kind": "sens",
+     "page": 1,
+     "rect": [
+      370.78,
+      414.54,
+      609.29,
+      550.5
+     ],
+     "x": [
+      [
+       400,
+       390.78
+      ],
+      [
+       500,
+       456.95
+      ],
+      [
+       600,
+       523.12
+      ],
+      [
+       700,
+       589.29
+      ]
+     ],
+     "y": [
+      [
+       0,
+       547.5
+      ],
+      [
+       1,
+       503.66
+      ],
+      [
+       2,
+       460.86
+      ],
+      [
+       3,
+       417.54
+      ]
+     ],
+     "curves": {
+      "b": [
+       {
+        "path": [
+         131,
+         0
+        ]
+       }
+      ],
+      "g": [
+       {
+        "path": [
+         132,
+         0
+        ]
+       }
+      ],
+      "r": [
+       {
+        "path": [
+         133,
+         0
+        ]
+       }
+      ]
+     },
+     "dense_lines": true
+    },
+    {
+     "kind": "dye",
+     "page": 1,
+     "rect": [
+      93.29,
+      99.35,
+      284.54,
+      344.35
+     ],
+     "x": [
+      [
+       400,
+       97.29
+      ],
+      [
+       500,
+       157.98
+      ],
+      [
+       600,
+       219.26
+      ],
+      [
+       700,
+       280.54
+      ]
+     ],
+     "y": [
+      [
+       0.0,
+       341.35
+      ],
+      [
+       0.5,
+       281.48
+      ],
+      [
+       1.0,
+       221.72
+      ],
+      [
+       1.5,
+       161.99
+      ],
+      [
+       2.0,
+       102.35
+      ]
+     ],
+     "curves": {
+      "mid": [
+       {
+        "path": [
+         134,
+         0
+        ]
+       }
+      ],
+      "min": [
+       {
+        "path": [
+         135,
+         0
+        ]
+       }
+      ]
+     },
+     "dense_lines": true
+    }
+   ],
+   "recipe": {
+    "stock": "fujifilm_f250_kb914e",
+    "name": "Fujifilm F-250 (KB-914E)",
+    "target_print": "kodak_2383",
+    "reference_illuminant": "T",
+    "use": "cine",
+    "density_over_min": 0.4,
+    "data_trustability": 0.3,
+    "estimates": [
+     "spectral sensitivity on a relative log scale (one log unit = the interval marked '1.0'), absolute level from the builder's mid-grey anchoring",
+     "sensitivity tails beyond the printed curves",
+     "base+fog and mid-scale dye densities read from the sheet, individual CMY dyes reconstructed by the builder (not printed)",
+     "dye densities outside the printed 400-700 nm",
+     "print stock: KODAK VISION 2383 (the shipped cine print profile; FUJIFILM ETERNA-CP 3513/3514 is not in the repository)",
+     "interlayer DIR coupler strength (not on any data sheet; runtime default for negatives)"
+    ]
+   }
+  }
+ ]
+}
