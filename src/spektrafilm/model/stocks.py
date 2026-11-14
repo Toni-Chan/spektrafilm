@@ -55,6 +55,14 @@ class FilmStocks(Enum):
     fujifilm_sensia_100_fdg = 'fujifilm_sensia_100_fdg'
     fujifilm_sensia_200_fdg = 'fujifilm_sensia_200_fdg'
     fujifilm_sensia_400_fdg = 'fujifilm_sensia_400_fdg'
+    # FUJIFILM data sheets / product information bulletins (filmcolors.org), built with spektrafilm_profile_builder
+    # positive
+    fujifilm_provia_100_rdp2_af3796e = 'fujifilm_provia_100_rdp2_af3796e'
+    fujifilm_provia_1600_rsp_af3798e = 'fujifilm_provia_1600_rsp_af3798e'
+    fujifilm_ms_100_1000_rms_af3989e = 'fujifilm_ms_100_1000_rms_af3989e'
+    fujifilm_t64_rtp_af3178e = 'fujifilm_t64_rtp_af3178e'
+    fujifilm_provia_400x_rxp_af30213e = 'fujifilm_provia_400x_rxp_af30213e'
+    fujifilm_velvia_50_rvp50_af30221e2 = 'fujifilm_velvia_50_rvp50_af30221e2'
     # kodak technical data sheets (E-series, 1997-2003), built with spektrafilm_profile_builder
     # negative
     kodak_portra_160nc_e190 = 'kodak_portra_160nc_e190'

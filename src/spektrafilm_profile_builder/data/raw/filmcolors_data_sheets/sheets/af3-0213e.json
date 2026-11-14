@@ -1,0 +1,257 @@
+{
+ "doc": "AF3-0213E",
+ "publisher": "FUJIFILM product information bulletin",
+ "date": "2006-01 (print code ESD-06.1)",
+ "title": "FUJICHROME PROVIA 400X Professional [RXP]",
+ "pdf": "Fujichrome-Provia-400X-Professional-RXP_AF3-0213E.pdf",
+ "url": "https://filmcolors.org/wp-content/uploads/2025/12/Fujichrome-Provia-400X-Professional-RXP_AF3-0213E.pdf",
+ "entry": "https://filmcolors.org/timeline-entry/40397/",
+ "stocks": [
+  {
+   "id": "fujifilm_provia_400x_rxp_af30213e",
+   "name": "FUJICHROME PROVIA 400X Professional [RXP]",
+   "type": "positive",
+   "meta": {
+    "speed": "ISO 400 (daylight)",
+    "process": "E-6 / CR-56",
+    "densitometry": "Fuji FAD-30S (Status A)",
+    "exposure": "Daylight, 1/50 sec",
+    "sensitivity_defined_at": "1.0 above D-min",
+    "art": "vector (curves read from the PDF paths, page 7)"
+   },
+   "plots": [
+    {
+     "kind": "char",
+     "page": 7,
+     "rect": [
+      80,
+      107,
+      289,
+      290
+     ],
+     "x": [
+      [
+       -4,
+       82.3
+      ],
+      [
+       -3,
+       133.0
+      ],
+      [
+       -2,
+       184.6
+      ],
+      [
+       -1,
+       234.9
+      ],
+      [
+       0,
+       286.3
+      ]
+     ],
+     "y": [
+      [
+       0,
+       287.1
+      ],
+      [
+       1,
+       236.4
+      ],
+      [
+       2,
+       185.4
+      ],
+      [
+       3,
+       134.3
+      ],
+      [
+       3.5,
+       109.1
+      ]
+     ],
+     "curves": {
+      "r": [
+       {
+        "path": [
+         14
+        ]
+       }
+      ],
+      "g": [
+       {
+        "path": [
+         12
+        ]
+       }
+      ],
+      "b": [
+       {
+        "path": [
+         13
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "kind": "sens",
+     "page": 7,
+     "rect": [
+      330,
+      107,
+      539,
+      290
+     ],
+     "x": [
+      [
+       400,
+       342.8
+      ],
+      [
+       500,
+       404.3
+      ],
+      [
+       600,
+       465.7
+      ],
+      [
+       700,
+       527.1
+      ]
+     ],
+     "y": [
+      [
+       3,
+       109.4
+      ],
+      [
+       2,
+       169.4
+      ],
+      [
+       1,
+       228.9
+      ],
+      [
+       0,
+       288.0
+      ]
+     ],
+     "curves": {
+      "b": [
+       {
+        "path": [
+         19,
+         0
+        ]
+       }
+      ],
+      "g": [
+       {
+        "path": [
+         19,
+         1
+        ]
+       }
+      ],
+      "r": [
+       {
+        "path": [
+         19,
+         2
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "kind": "dye",
+     "page": 7,
+     "rect": [
+      331,
+      398,
+      537,
+      550
+     ],
+     "x": [
+      [
+       400,
+       345.1
+      ],
+      [
+       500,
+       404.3
+      ],
+      [
+       600,
+       463.5
+      ],
+      [
+       700,
+       522.3
+      ]
+     ],
+     "y": [
+      [
+       1,
+       428.4
+      ],
+      [
+       0.5,
+       488.0
+      ],
+      [
+       0,
+       547.5
+      ]
+     ],
+     "curves": {
+      "y": [
+       {
+        "path": [
+         26,
+         0
+        ]
+       }
+      ],
+      "m": [
+       {
+        "path": [
+         26,
+         1
+        ]
+       }
+      ],
+      "c": [
+       {
+        "path": [
+         26,
+         2
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "recipe": {
+    "stock": "fujifilm_provia_400x_rxp_af30213e",
+    "name": "Fujifilm Provia 400X RXP (AF3-0213E)",
+    "reference_illuminant": "D55",
+    "dye_extension": "hold_decay",
+    "estimates": [
+     "dye densities outside the printed ~390-720 nm (held below, exponential decay above)",
+     "sensitivity tails beyond the printed curves",
+     "interlayer DIR coupler strength (not on any data sheet)"
+    ]
+   },
+   "notes": [
+    "curves read directly from the PDF vector paths (page 7), no tracing"
+   ]
+  }
+ ]
+}

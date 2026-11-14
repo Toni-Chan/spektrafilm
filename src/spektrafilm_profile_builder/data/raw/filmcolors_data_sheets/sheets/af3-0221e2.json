@@ -1,0 +1,331 @@
+{
+ "doc": "AF3-0221E2",
+ "publisher": "FUJIFILM product information bulletin",
+ "date": "2007-03 (print code KAMIQ-07.3)",
+ "title": "FUJICHROME Velvia 50 Professional [RVP50]",
+ "pdf": "Fujichrome-Velvia-50-Professional-RVP50_AF3-0221E2.pdf",
+ "url": "https://filmcolors.org/wp-content/uploads/2025/12/Fujichrome-Velvia-50-Professional-RVP50_AF3-0221E2.pdf",
+ "entry": "https://filmcolors.org/timeline-entry/40399/",
+ "stocks": [
+  {
+   "id": "fujifilm_velvia_50_rvp50_af30221e2",
+   "name": "FUJICHROME Velvia 50 Professional [RVP50] (2007 reissue)",
+   "type": "positive",
+   "meta": {
+    "speed": "ISO 50 (daylight)",
+    "process": "E-6 / CR-56",
+    "densitometry": "Status A",
+    "exposure": "Daylight",
+    "sensitivity_defined_at": "1.0 above D-min",
+    "art": "1-bit scanned images embedded in the PDF (page 8)"
+   },
+   "plots": [
+    {
+     "kind": "char",
+     "page": 8,
+     "rect": [
+      60,
+      105,
+      287,
+      309
+     ],
+     "x": [
+      [
+       -3,
+       86.76
+      ],
+      [
+       -2,
+       130.86
+      ],
+      [
+       -1,
+       174.9
+      ],
+      [
+       0,
+       219.12
+      ],
+      [
+       1,
+       263.16
+      ]
+     ],
+     "y": [
+      [
+       4,
+       109.56
+      ],
+      [
+       3,
+       153.3
+      ],
+      [
+       2,
+       197.52
+      ],
+      [
+       1,
+       241.92
+      ],
+      [
+       0.5,
+       264.12
+      ],
+      [
+       0,
+       286.26
+      ]
+     ],
+     "extra_h": [
+      3.5
+     ],
+     "mask": [
+      [
+       -1.45,
+       3.25,
+       1.5,
+       4.0
+      ],
+      [
+       -3.0,
+       0.45,
+       -2.0,
+       1.1
+      ]
+     ],
+     "curves": {
+      "r": [
+       [
+        -2.6,
+        3.33
+       ]
+      ],
+      "g": {
+       "seeds": [
+        [
+         -2.6,
+         3.79
+        ]
+       ],
+       "xlim": [
+        -2.9,
+        -1.68
+       ],
+       "fill": "r"
+      },
+      "b": {
+       "seeds": [
+        [
+         -2.6,
+         3.69
+        ]
+       ],
+       "xlim": [
+        -2.9,
+        -1.68
+       ],
+       "fill": "r"
+      }
+     }
+    },
+    {
+     "kind": "sens",
+     "page": 8,
+     "rect": [
+      312,
+      105,
+      533,
+      307
+     ],
+     "x": [
+      [
+       400,
+       346.32
+      ],
+      [
+       500,
+       404.28
+      ],
+      [
+       600,
+       462.6
+      ],
+      [
+       700,
+       519.9
+      ]
+     ],
+     "y": [
+      [
+       2,
+       110.82
+      ],
+      [
+       1,
+       168.06
+      ],
+      [
+       0,
+       225.96
+      ],
+      [
+       -1,
+       283.8
+      ]
+     ],
+     "min_component": 90,
+     "mask": [
+      [
+       560,
+       1.95,
+       720,
+       1.45
+      ]
+     ],
+     "curves": {
+      "b": {
+       "seeds": [
+        [
+         415,
+         0.56
+        ]
+       ],
+       "xlim": [
+        386,
+        497
+       ]
+      },
+      "g": {
+       "seeds": [
+        [
+         548,
+         0.55
+        ]
+       ],
+       "xlim": [
+        485,
+        594
+       ]
+      },
+      "r": {
+       "seeds": [
+        [
+         650,
+         0.55
+        ]
+       ],
+       "xlim": [
+        576,
+        694
+       ]
+      }
+     }
+    },
+    {
+     "kind": "dye",
+     "page": 8,
+     "rect": [
+      312,
+      405,
+      533,
+      578
+     ],
+     "x": [
+      [
+       400,
+       346.26
+      ],
+      [
+       500,
+       403.8
+      ],
+      [
+       600,
+       461.7
+      ],
+      [
+       700,
+       519.36
+      ]
+     ],
+     "y": [
+      [
+       1,
+       436.44
+      ],
+      [
+       0.5,
+       494.16
+      ],
+      [
+       0,
+       551.58
+      ]
+     ],
+     "min_component": 90,
+     "mask": [
+      [
+       580,
+       1.25,
+       720,
+       1.05
+      ]
+     ],
+     "curves": {
+      "y": [
+       [
+        450,
+        0.99,
+        380,
+        602
+       ]
+      ],
+      "m": [
+       [
+        545,
+        0.99,
+        470,
+        722
+       ],
+       [
+        440,
+        0.2,
+        380,
+        470
+       ]
+      ],
+      "c": [
+       [
+        660,
+        0.99,
+        540,
+        722
+       ],
+       [
+        470,
+        0.05,
+        380,
+        540
+       ]
+      ]
+     }
+    }
+   ],
+   "recipe": {
+    "stock": "fujifilm_velvia_50_rvp50_af30221e2",
+    "name": "Fujifilm Velvia 50 RVP50 2007 (AF3-0221E2)",
+    "reference_illuminant": "D55",
+    "dye_extension": "hold_decay",
+    "estimates": [
+     "dye densities outside the printed 380-720 nm (held below, exponential decay above)",
+     "sensitivity tails beyond the printed curves",
+     "interlayer DIR coupler strength (not on any data sheet)"
+    ]
+   },
+   "notes": [
+    "curves traced from the 1-bit scans embedded on page 8; the dye plot starts at 380 nm"
+   ]
+  }
+ ]
+}

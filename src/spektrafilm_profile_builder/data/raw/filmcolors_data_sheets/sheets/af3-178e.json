@@ -1,0 +1,255 @@
+{
+ "doc": "AF3-178E",
+ "publisher": "FUJIFILM product information bulletin",
+ "date": "2005-09 (print code ESD-05.9)",
+ "title": "FUJICHROME T64 Professional [RTP]",
+ "pdf": "Fujichrome-T64-Professional-RTP_AF3-178E.pdf",
+ "url": "https://filmcolors.org/wp-content/uploads/2025/12/Fujichrome-T64-Professional-RTP_AF3-178E.pdf",
+ "entry": "https://filmcolors.org/timeline-entry/40394/",
+ "stocks": [
+  {
+   "id": "fujifilm_t64_rtp_af3178e",
+   "name": "FUJICHROME T64 Professional [RTP]",
+   "type": "positive",
+   "meta": {
+    "speed": "ISO 64 (tungsten 3200 K); ISO 32 with No. 85B in daylight",
+    "process": "E-6 / CR-56",
+    "densitometry": "Status A",
+    "exposure": "printed as 'Daylight' (sic, 'Dayloght') on the characteristic-curve plot although the film is tungsten balanced",
+    "sensitivity_defined_at": "1.0 above D-min",
+    "art": "vector (curves read from the PDF paths, page 7)"
+   },
+   "plots": [
+    {
+     "kind": "char",
+     "page": 7,
+     "rect": [
+      83,
+      105,
+      288,
+      287
+     ],
+     "x": [
+      [
+       -3,
+       108.3
+      ],
+      [
+       -2,
+       152.9
+      ],
+      [
+       -1,
+       197.8
+      ],
+      [
+       0,
+       241.3
+      ],
+      [
+       1,
+       284.6
+      ]
+     ],
+     "y": [
+      [
+       0,
+       283.7
+      ],
+      [
+       1,
+       239.7
+      ],
+      [
+       2,
+       195.8
+      ],
+      [
+       3,
+       151.9
+      ],
+      [
+       4,
+       107.9
+      ]
+     ],
+     "curves": {
+      "r": [
+       {
+        "path": [
+         12
+        ]
+       }
+      ],
+      "g": [
+       {
+        "path": [
+         14
+        ]
+       }
+      ],
+      "b": [
+       {
+        "path": [
+         13
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "kind": "sens",
+     "page": 7,
+     "rect": [
+      329,
+      105,
+      538,
+      288
+     ],
+     "x": [
+      [
+       400,
+       343.4
+      ],
+      [
+       500,
+       403.0
+      ],
+      [
+       600,
+       464.2
+      ],
+      [
+       700,
+       523.0
+      ]
+     ],
+     "y": [
+      [
+       1,
+       137.5
+      ],
+      [
+       0,
+       197.0
+      ],
+      [
+       -1,
+       257.2
+      ]
+     ],
+     "curves": {
+      "b": [
+       {
+        "path": [
+         17,
+         0
+        ]
+       }
+      ],
+      "g": [
+       {
+        "path": [
+         17,
+         1
+        ]
+       }
+      ],
+      "r": [
+       {
+        "path": [
+         17,
+         2
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "kind": "dye",
+     "page": 7,
+     "rect": [
+      335,
+      402,
+      540,
+      555
+     ],
+     "x": [
+      [
+       400,
+       348.9
+      ],
+      [
+       500,
+       408.1
+      ],
+      [
+       600,
+       466.8
+      ],
+      [
+       700,
+       525.4
+      ]
+     ],
+     "y": [
+      [
+       1,
+       433.7
+      ],
+      [
+       0.5,
+       493.2
+      ],
+      [
+       0,
+       552.7
+      ]
+     ],
+     "curves": {
+      "y": [
+       {
+        "path": [
+         26,
+         0
+        ]
+       }
+      ],
+      "m": [
+       {
+        "path": [
+         26,
+         1
+        ]
+       }
+      ],
+      "c": [
+       {
+        "path": [
+         26,
+         2
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "recipe": {
+    "stock": "fujifilm_t64_rtp_af3178e",
+    "name": "Fujifilm T64 RTP (AF3-178E)",
+    "reference_illuminant": "T",
+    "dye_extension": "hold_decay",
+    "estimates": [
+     "dye densities outside the printed ~390-720 nm (held below, exponential decay above)",
+     "sensitivity tails beyond the printed curves",
+     "interlayer DIR coupler strength (not on any data sheet)",
+     "neutral balance assumed for 3200 K tungsten (the curve plot is captioned 'Daylight')"
+    ]
+   },
+   "notes": [
+    "curves read directly from the PDF vector paths (page 7), no tracing",
+    "the characteristic-curve plot is captioned 'Exposure: Dayloght' (sic) although T64 is a 3200 K tungsten film; the profile assumes neutral balance under tungsten (reference illuminant T, estimate)"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,7 @@
+{
+  "stock": "fujifilm_velvia_50_rvp50_af30221e2",
+  "estimate": true,
+  "dir_couplers_interlayer_scale": 1.6,
+  "note": "Velvia 50 [RVP50] (AF3-0221E2, 2007 reissue) is sold as the highest-saturation Fujifilm E-6 film, like the original Velvia. From the sheet alone it renders at C* 37.7, close to PROVIA 100F (36.7); the interimage effects behind Velvia's saturation are not on the sheet.",
+  "calibration": "Target: as close to velvia_100f_fdg (43.3) / velvia_100_fdg (45.6) as the grey scale allows: at 1.8 (the velvia_50_fdg scale) a mid-grey patch shifts by 2.9 a*b*, above the 2.5 the override tests allow; 1.6 shifts it by 1.5. ColorChecker C*: 37.6 -> 41.1 (1.4: 40.1, 1.8: 42.2), above velvia_50_fdg (39.5); grey a*b* [0.1, 0.7], L* black 7.3."
+}

@@ -1,0 +1,380 @@
+{
+ "doc": "AF3-798E",
+ "publisher": "FUJIFILM data sheet",
+ "date": "1994-01 (print code EIGI-94.1)",
+ "title": "FUJICHROME PROVIA 1600 Professional [RSP]",
+ "pdf": "Fujichrome-Provia-1600-Professional-RSP_AF3-798E.pdf",
+ "url": "https://filmcolors.org/wp-content/uploads/2025/12/Fujichrome-Provia-1600-Professional-RSP_AF3-798E.pdf",
+ "entry": "https://filmcolors.org/timeline-entry/40406/",
+ "stocks": [
+  {
+   "id": "fujifilm_provia_1600_rsp_af3798e",
+   "name": "FUJICHROME PROVIA 1600 Professional [RSP]",
+   "type": "positive",
+   "meta": {
+    "speed": "EI 1600 (daylight; ISO 400 film push-processed +2)",
+    "process": "CR-56 (E-6), push +2 for EI 1600",
+    "densitometry": "Fuji FAD-30S (Status A)",
+    "exposure": "Daylight, 1/50 sec",
+    "sensitivity_defined_at": "1.0 above D-min"
+   },
+   "plots": [
+    {
+     "kind": "char",
+     "page": 6,
+     "rect": [
+      70,
+      122,
+      277,
+      304
+     ],
+     "threshold": 200,
+     "line_frac": 0.25,
+     "x": [
+      [
+       -4.0,
+       97.26
+      ],
+      [
+       -3.5,
+       122.46
+      ],
+      [
+       -2.5,
+       173.22
+      ],
+      [
+       -2.0,
+       198.9
+      ],
+      [
+       -1.5,
+       224.34
+      ]
+     ],
+     "y": [
+      [
+       3.5,
+       124.3
+      ],
+      [
+       3.0,
+       149.38
+      ],
+      [
+       2.5,
+       175.3
+      ],
+      [
+       2.0,
+       200.74
+      ],
+      [
+       1.5,
+       226.42
+      ],
+      [
+       1.0,
+       251.74
+      ],
+      [
+       0.5,
+       277.18
+      ],
+      [
+       0.0,
+       302.26
+      ]
+     ],
+     "mask": [
+      [
+       -4.4,
+       0.0,
+       -3.3,
+       0.8
+      ],
+      [
+       -3.05,
+       2.75,
+       -0.55,
+       3.25
+      ]
+     ],
+     "curves": {
+      "r": {
+       "seeds": [
+        {
+         "col": -3.8,
+         "rank": 2,
+         "xlim": [
+          -4.1,
+          -2.95
+         ]
+        },
+        {
+         "row": 2.0,
+         "rank": 1,
+         "ylim": [
+          1.82,
+          2.12
+         ]
+        },
+        {
+         "row": 1.25,
+         "rank": 2,
+         "ylim": [
+          0.25,
+          1.78
+         ]
+        },
+        {
+         "col": -1.0,
+         "rank": 0,
+         "xlim": [
+          -2.2,
+          -0.5
+         ]
+        }
+       ]
+      },
+      "g": {
+       "seeds": [
+        {
+         "col": -3.8,
+         "rank": 0,
+         "xlim": [
+          -4.1,
+          -2.9
+         ]
+        },
+        {
+         "row": 2.0,
+         "rank": 2,
+         "ylim": [
+          1.82,
+          2.15
+         ]
+        },
+        {
+         "row": 1.25,
+         "rank": 1,
+         "ylim": [
+          0.45,
+          1.78
+         ]
+        }
+       ],
+       "fill": "r",
+       "gap": 90
+      },
+      "b": {
+       "seeds": [
+        {
+         "col": -3.8,
+         "rank": 1,
+         "xlim": [
+          -4.1,
+          -2.95
+         ]
+        },
+        {
+         "row": 1.25,
+         "rank": 0,
+         "ylim": [
+          0.45,
+          2.2
+         ]
+        }
+       ],
+       "fill": "r"
+      }
+     },
+     "extra_v": [
+      -3.0,
+      -1.0
+     ]
+    },
+    {
+     "kind": "sens",
+     "page": 6,
+     "rect": [
+      318,
+      120,
+      529,
+      301
+     ],
+     "threshold": 200,
+     "line_frac": 0.25,
+     "x": [
+      [
+       400,
+       334.62
+      ],
+      [
+       500,
+       393.66
+      ],
+      [
+       600,
+       452.7
+      ],
+      [
+       700,
+       511.98
+      ]
+     ],
+     "y": [
+      [
+       3,
+       122.18
+      ],
+      [
+       2,
+       181.46
+      ],
+      [
+       1,
+       240.74
+      ],
+      [
+       0,
+       299.18
+      ]
+     ],
+     "min_component": 90,
+     "curves": {
+      "b": {
+       "seeds": [
+        [
+         430,
+         2.2
+        ]
+       ],
+       "xlim": [
+        392,
+        517
+       ]
+      },
+      "g": {
+       "seeds": [
+        [
+         553,
+         2.03
+        ]
+       ],
+       "xlim": [
+        468,
+        592
+       ]
+      },
+      "r": {
+       "seeds": [
+        [
+         645,
+         2.02
+        ]
+       ],
+       "xlim": [
+        562,
+        676
+       ]
+      }
+     }
+    },
+    {
+     "kind": "dye",
+     "page": 6,
+     "rect": [
+      318,
+      428,
+      532,
+      582
+     ],
+     "threshold": 200,
+     "line_frac": 0.25,
+     "x": [
+      [
+       400,
+       336.42
+      ],
+      [
+       500,
+       395.46
+      ],
+      [
+       600,
+       454.38
+      ],
+      [
+       700,
+       514.02
+      ]
+     ],
+     "y": [
+      [
+       1.0,
+       460.1
+      ],
+      [
+       0.0,
+       578.9
+      ]
+     ],
+     "min_component": 90,
+     "curves": {
+      "y": [
+       [
+        450,
+        0.99
+       ]
+      ],
+      "m": [
+       [
+        545,
+        0.99,
+        470,
+        730
+       ],
+       [
+        440,
+        0.2,
+        370,
+        470
+       ]
+      ],
+      "c": [
+       [
+        655,
+        0.99,
+        540,
+        730
+       ],
+       [
+        450,
+        0.15,
+        370,
+        540
+       ]
+      ]
+     }
+    }
+   ],
+   "recipe": {
+    "stock": "fujifilm_provia_1600_rsp_af3798e",
+    "name": "Fujifilm Provia 1600 RSP (AF3-798E)",
+    "reference_illuminant": "D55",
+    "dye_extension": "hold_decay",
+    "estimates": [
+     "dye densities outside the printed 390-720 nm (held below, exponential decay above)",
+     "sensitivity tails beyond the printed curves",
+     "interlayer DIR coupler strength (not on any data sheet)"
+    ]
+   },
+   "notes": [
+    "EI 1600 = ISO 400 push-processed +2 (the only curve set printed)",
+    "the three steep sections are separate and cross: B left of G left of R below D ~1.8, G right of R above; traced as x(y) per stroke. Between D ~1.8 and 2.3 and below D ~0.9 the G trace can run on the R stroke (they are <= 0.035 log H apart there)",
+    "the profile keeps this crossover, so mid-greys render green-yellow (ColorChecker grey a*b* about -6, +3)"
+   ]
+  }
+ ]
+}
