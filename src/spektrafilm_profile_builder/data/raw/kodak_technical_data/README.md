@@ -241,7 +241,10 @@ links a 2003 reprint). `index.csv` catalogues them too (76 rows).
   from the mid-scale neutral and D-min curves, sensitivity tails beyond the
   printed curves, hanatos2025 adaptation parameters (donors pinned to
   upstream's Kodak still negatives and the E-series negatives above), and the
-  interlayer DIR strength (runtime default; no film_render_overrides).
+  interlayer DIR strength (runtime default, except ULTRA COLOR 100UC / 400UC:
+  `film_render_overrides` 1.4 / 1.25, ColorChecker C* 44.5 / 46.0 -> 49.7
+  against PORTRA 400UC 49.6, since E-4035 sells them as the most saturated
+  Kodak negatives).
 * **ROYAL SUPRA / SUPRA 200 dyes.** Their mid-scale neutral rises steeply
   below 400 nm (to D 2.5 at 380 nm), which the generic dye start reproduces
   less well: reconstruction cost 0.27-0.41 against 0.003-0.19 for the other
