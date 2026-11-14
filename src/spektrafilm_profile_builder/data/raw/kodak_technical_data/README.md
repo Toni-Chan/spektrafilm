@@ -1,10 +1,12 @@
 # KODAK technical data sheets — raw curve records
 
 Source: the KODAK technical data sheets (publication series E-*, 1997-2003)
-mirrored at <https://125px.com/docs/unsorted/kodak/>, published by Eastman
+mirrored at <https://125px.com/docs/unsorted/kodak/>, plus E-55 KODACHROME 25,
+64, and 200 Professional Film (June 2009) mirrored at
+<https://125px.com/docs/film/kodak/e55.pdf>, published by Eastman
 Kodak Company. **The PDFs are not redistributed here**; every record names
-its file, publication code, date and page, and `index.csv` catalogues all 69
-`e*.pdf` sheets of that folder (publication, date, stocks, material type,
+its file, publication code, date, page and URL, and `index.csv` catalogues all 69
+`e*.pdf` sheets of that folder and E-55 (publication, date, stocks, material type,
 curve sets found, vector/raster, superseded revisions, notes).
 
 The curves were read from the vector strokes of the PDFs (all 69 sheets are
@@ -92,6 +94,9 @@ of this repository and name their source sheet in `metadata.datasource`.
 | `positive/kodak_elite_chrome_extra_color_100_e126` | KODAK ELITE Chrome Extra Color 100 | E-126 (September 1998) | e126.pdf p. 5 | positive | `kodak_elite_chrome_extra_color_100_e126` |
 | `positive/kodak_elite_chrome_200_e148` | KODAK ELITE Chrome 200 | E-148 (January 1998) | e148.pdf p. 4 | positive | `kodak_elite_chrome_200_e148` |
 | `positive/kodak_elite_chrome_160t_e154` | KODAK ELITE Chrome 160T | E-154 (January 1998) | e154.pdf p. 3;4 | positive | `kodak_elite_chrome_160t_e154` |
+| `positive/kodak_kodachrome_25_e55` | KODAK KODACHROME 25 Professional [PKM] | E-55 (June 2009) | e55.pdf p. 3 | positive | `kodak_kodachrome_25_e55` |
+| `positive/kodak_kodachrome_64_e55` | KODAK KODACHROME 64 Professional [PKR] | E-55 (June 2009) | e55.pdf p. 4 | positive | `kodak_kodachrome_64_e55` |
+| `positive/kodak_kodachrome_200_e55` | KODAK KODACHROME 200 Professional [PKL] | E-55 (June 2009) | e55.pdf p. 5 | positive | `kodak_kodachrome_200_e55` |
 | `other/kodak_ektachrome_duplicating_edupe_e2529` | KODAK PROFESSIONAL EKTACHROME Duplicating Film EDUPE | E-2529 (May 2002) | e2529.pdf p. 6;7 | duplicating | — (duplicating film, not a camera film) |
 | `paper/kodak_portra_iii_e140` | KODAK PROFESSIONAL PORTRA III Paper | E-140 (July 2002) | e140.pdf p. 5 | paper | `kodak_portra_iii_e140` |
 | `paper/kodak_supra_iii_e141` | KODAK PROFESSIONAL SUPRA III Paper | E-141 (July 2002) | e141.pdf p. 6 | paper | `kodak_supra_iii_e141` |
@@ -150,7 +155,7 @@ Digital: text only) and E-4013 (Day/Night Digital Display Material).
 
 ## Profiles
 
-`recipes.csv` is the batch recipe of the 63 profiles
+`recipes.csv` is the batch recipe of the 66 profiles
 (`spektrafilm-profile-builder batch recipes.csv`):
 
 * 28 colour negatives: status M, D55 (T for the tungsten stocks), sensitivity
@@ -158,8 +163,9 @@ Digital: text only) and E-4013 (Day/Night Digital Display Material).
   III), `data_trustability` 1.0 and the grey-ramp refinement on
   `kodak_portra_endura`, as upstream's Kodak negatives; target print
   `kodak_portra_endura`.
-* 18 reversal films: status A, scanned mid-grey anchored at 18.4 %
-  (`log_sensitivity_density_over_min` = 1.0, the E.N.D. the sheets state).
+* 21 reversal films (18 E-6 and the three K-14 KODACHROMEs of E-55): status A,
+  scanned mid-grey anchored at 18.4 % (`log_sensitivity_density_over_min` = 1.0,
+  the E.N.D. the sheets state).
 * 17 print materials (`type: paper` in the recipe): 13 reflection papers
   (`support: paper`) and 4 backlit display transparencies (DURATRANS,
   DURACLEAR, ENDURA Transparency and Clear, `support: film` like
@@ -194,3 +200,41 @@ Digital: text only) and E-4013 (Day/Night Digital Display Material).
   sensitivities sit about 50 nm shorter than E-4021's (whose peaks match every
   other RA-4 paper sheet), so its raw data most likely came from another source
   or carry a wavelength-axis offset; the shipped profile is unchanged.
+
+## KODACHROME 25 / 64 / 200 (E-55, June 2009)
+
+E-55 pages 3, 4 and 5 give each stock its characteristic curves (status A,
+K-14, daylight), spectral sensitivities (E.N.D. 1.00, 250-750 nm axis),
+spectral dye densities (normalised to a visual density of 1.0 for a 3200 K
+viewing illuminant, cyan / magenta / yellow / visual neutral) and MTF. All
+curves are vector strokes. The dye plots have no top frame label above 1.0 and
+the cyan dye (peak about 1.2-1.3) and the visual neutral (about 1.3-1.4) run
+above the highest y label, so for these sheets the extractor reads the dye
+plot up to the top of its frame (`frame_top` selector option). Checked by
+overlaying the CSVs on 600 dpi renders of the pages: every extracted point lies
+on a printed stroke (at most 0.12 pt from a dark pixel).
+
+Not on the sheet, so **estimate placeholders** (named in each profile's
+`metadata.datasource`):
+
+* dye densities outside the printed range (420-700 nm for 25/64, 410-700 nm for
+  200): `dye_extension: hold_decay` holds the first printed value towards
+  380 nm and decays the last one (25 nm) towards 780 nm, instead of the default
+  NaN (opaque);
+* sensitivity tails below the printed log -2 and beyond the printed wavelengths
+  (e.g. the KODACHROME 25 cyan-forming layer beyond 702 nm, the blue-forming
+  layer below 420 nm): the builder's usual smooth tail continuation;
+* KODACHROME 25 base+fog: its characteristic curves stop at log H +0.63 while
+  still falling (D 0.16-0.18), so the toe fit lands below zero (R -0.095);
+  `density_min` 0.10/0.10/0.10 is assumed (the 64 / 200 toe fits give
+  0.085-0.17);
+* interlayer (interimage) strength: `film_render_overrides/<stock>.json`,
+  `dir_couplers_interlayer_scale` 1.4 for all three (see that README).
+
+The hanatos2025 adaptation donors are pinned (`adaptation_donors`) to the Kodak
+positives shipped before E-55. Cross-checks: the KODACHROME 25 sensitivities
+have area-normalised mean wavelengths of 447.7 / 554.5 / 632.3 nm (B/G/R,
+printed range) against 444.3 / 554.8 / 632.0 nm from the analysis of the 1980
+E-77 curves at <https://visns.neocities.org/4x5LFphotography/HGWK>; upstream's
+`kodak_kodachrome_64` matches the E-55 KODACHROME 64 dyes within 0.002 RMS
+(peak-normalised) and its R/G sensitivities within 0.014 log RMS.

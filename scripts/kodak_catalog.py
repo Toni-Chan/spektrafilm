@@ -38,7 +38,13 @@ TYPE_LABEL = {
 }
 
 
-def title_of(doc):
+# Sheets whose first page names the product without the word KODAK (checked by hand).
+TITLES = {'e55': 'KODACHROME 25, 64, and 200 Professional Film'}
+
+
+def title_of(doc, stem=''):
+    if stem in TITLES:
+        return TITLES[stem]
     lines = [l.strip() for l in doc[0].get_text().splitlines() if l.strip()]
     for l in lines[:12]:
         if re.search(r'KODAK', l) and len(l) > 10:
@@ -86,14 +92,14 @@ def main():
             notes.append(f'{nimg} embedded image(s); curves are vector')
         rows.append({
             'file': stem + '.pdf', 'publication': pub, 'date': date, 'pages': len(doc),
-            'title': title_of(doc),
+            'title': title_of(doc, stem),
             'stocks': '; '.join(r['name'] for r in rr),
             'record_ids': '; '.join(r['id'] for r in rr),
             'type': typ,
             'curve_sets': '; '.join(f'{k}x{v}' for k, v in sorted(kinds.items())),
             'graphics': 'vector' if nseg and not nimg else ('vector+raster' if nseg else 'raster'),
             'superseded': sup, 'notes': ' | '.join(notes),
-            'url': E.BASE_URL + stem + '.pdf',
+            'url': E.source_url(stem),
         })
     with open(a.out, 'w', newline='') as f:
         w = csv.DictWriter(f, fieldnames=list(rows[0]))
