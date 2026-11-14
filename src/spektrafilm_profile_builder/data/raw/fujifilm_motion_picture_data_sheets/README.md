@@ -55,3 +55,28 @@ mid-scale and minimum densities), dye densities outside 400-700 nm, the print st
 (KODAK VISION 2383; FUJIFILM ETERNA-CP is not in the repository), the hanatos2025
 adaptation parameters (pinned Fujifilm negative donors) and the interlayer DIR
 coupler strength.
+
+## Calibration (interlayer DIR overrides)
+
+ColorChecker 24 mean C*ab of the 18 colour patches (no auto exposure, no grain; printed on
+`kodak_portra_endura` as for every override in `src/spektrafilm/data/film_render_overrides`; the
+Frontier SP500 `community_spd` scan in brackets). References: KODAK VISION3 50D 42.1, 250D 41.2 (32.2),
+200T 41.9, 500T 40.5 (31.6), VERITA 200D 40.8.
+
+| profile | C* | note |
+|---|---|---|
+| ETERNA 250D | 40.5 (33.4) | natural, like VISION3 250D |
+| ETERNA 250 | 43.3 (34.8) | borrowed spectral curves |
+| ETERNA 400 | 37.5 (33.1) | lowest sheet gamma of the set; borrowed spectral curves |
+| ETERNA Vivid 160 | 43.0 → **46.0** (39.5) | `dir_couplers_interlayer_scale` 1.2 (estimate) |
+| ETERNA Vivid 500 | 46.3 (36.9) | most saturated from the sheet alone; no override |
+| REALA 500D | 41.9 (34.0) | borrowed spectral curves |
+| F-64D | 44.3 (35.3) | borrowed spectral curves |
+| F-125 | 44.5 (35.3) | |
+| F-250 | 45.9 (36.8) | |
+
+Only ETERNA Vivid 160 is a clear mismatch: FUJIFILM sells it as the high-saturation stock (and
+Vivid 500 as its "seamless match"), but from its curves alone it rendered no more saturated than
+the natural ETERNA 250 and below F-125 / F-250. Scale 1.2 brings it to Vivid 500 (grey-ramp
+max Δa*b* vs no override 0.13). The other stocks follow their makers' ranking (ETERNA natural /
+low contrast, F-series standard, Vivid highest) and keep the runtime default.
