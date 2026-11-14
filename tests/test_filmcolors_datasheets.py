@@ -62,12 +62,15 @@ def test_positive_curves_are_plausible(rec):
         d = _xy(rec, f'density_curve_{ch}')
         assert d[0, 1] > 2.0 and d[-1, 1] < 0.4  # reversal: dense at low exposure
         s = _xy(rec, f'log_sensitivity_{ch}')
-        lo, hi = {'b': (380, 520), 'g': (470, 610), 'r': (560, 710)}[ch]
+        win = {'b': (380, 520), 'g': (470, 610), 'r': (560, 710)}
+        if 'infrared' in rec['name'].lower():  # false-colour film: green-, red-, IR-sensitive layers, all blue-sensitive
+            win = {'b': (380, 620), 'g': (380, 720), 'r': (380, 900)}
+        lo, hi = win[ch]
         assert lo <= s[np.argmax(s[:, 1]), 0] <= hi
     for dye, (lo, hi) in {'y': (420, 470), 'm': (520, 570), 'c': (620, 690)}.items():
         xy = _xy(rec, f'dye_density_{dye}')
         assert lo <= xy[np.argmax(xy[:, 1]), 0] <= hi
-        assert 0.95 <= xy[:, 1].max() <= 1.05  # normalised peaks as printed
+        assert 0.85 <= xy[:, 1].max() <= 1.05  # normalised peaks (FUJIFILM) or dyes of a 1.0 neutral (KODAK)
         assert xy[:, 1].min() > -0.03
 
 
