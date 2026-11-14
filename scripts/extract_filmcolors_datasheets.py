@@ -36,6 +36,13 @@ This script renders each plot at 600 dpi and digitises the raster:
 
 Sheet configs also carry the stock metadata and the builder recipe (estimate placeholders listed);
 records.csv, recipes.csv and extraction_summary.json are rewritten from all configs.
+
+The same reader serves data sheets that filmcolors.org does not catalogue (`--raw` pointing at another
+raw folder, e.g. fujifilm_motion_picture_data_sheets; `entry` is then omitted). Further config options:
+`"derotate": true` (sheet; pages stored rotated, read in their displayed orientation), `"dense_lines": true`
+(plot; straight vector segments sampled densely so that binning does not bend them), `"borrow"` (stock; a
+sheet that prints only some plots takes the missing curves from a sibling record, listed as estimates),
+and `"use"` in the recipe (e.g. "cine").
 """
 import argparse, csv, glob, json, math, os, shutil, sys
 import numpy as np
@@ -323,7 +330,7 @@ def remove_lines(dark, h, v):
     return m
 
 
-def vector_subpaths(doc, page, idx, n=24):
+def vector_subpaths(doc, page, idx, n=24, dense_lines=False):
     """sampled sub-paths (page pt) of drawing number idx on a page, for sheets whose curves are vector art"""
     segs, cur = [], None
     for it in doc[page - 1].get_drawings()[idx]['items']:
@@ -331,6 +338,12 @@ def vector_subpaths(doc, page, idx, n=24):
             p0, p1, p2, p3 = (np.array([q.x, q.y]) for q in it[1:5])
             t = np.linspace(0, 1, n)[:, None]
             pts = (1 - t) ** 3 * p0 + 3 * (1 - t) ** 2 * t * p1 + 3 * (1 - t) * t ** 2 * p2 + t ** 3 * p3
+        elif it[0] == 'l' and dense_lines:
+            # long straight segments sampled every ~0.5 pt like the Bezier pieces, so that binning and smoothing
+            # do not bend them (plot option "dense_lines"; off for the configs digitised before it existed)
+            p0, p1 = np.array([it[1].x, it[1].y]), np.array([it[2].x, it[2].y])
+            k = max(2, int(np.ceil(np.hypot(*(p1 - p0)) / 0.5)) + 1)
+            pts = p0 + np.linspace(0, 1, k)[:, None] * (p1 - p0)
         elif it[0] == 'l':
             pts = np.array([[it[1].x, it[1].y], [it[2].x, it[2].y]])
         else:
@@ -408,7 +421,7 @@ def extract_plot(doc, pc, thr=160):
         for sd in seeds:
             if isinstance(sd, dict) and 'path' in sd:
                 # vector art: [drawing index, sub-path index] on the page; exact, no tracing needed
-                sp = vector_subpaths(doc, pc['page'], sd['path'][0])[sd['path'][1] if len(sd['path']) > 1 else 0]
+                sp = vector_subpaths(doc, pc['page'], sd['path'][0], dense_lines=pc.get('dense_lines', False))[sd['path'][1] if len(sd['path']) > 1 else 0]
                 P_ = np.column_stack([(sp[:, 0] - rect[0]) * s, (sp[:, 1] - rect[1]) * s])
                 a, b = (X.inv(sd['xlim'][0]), X.inv(sd['xlim'][1])) if 'xlim' in sd else (lo, hi)
                 a, b = sorted([float(a), float(b)])
@@ -535,8 +548,7 @@ def write_info(folder, sheet, st, files, calib, notes, acc):
     L = [st['name'],
          f"Datasheet: {sheet['publisher']} {sheet['doc']} ({sheet['date']}), {sheet['pdf']}, PDF page(s) "
          f"{', '.join(map(str, sorted({p['page'] for p in st['plots']})))}",
-         f"Source URL: {sheet['url']}",
-         f"Catalogue entry: {sheet['entry']}",
+         f"Source URL: {sheet['url']}"] + ([f"Catalogue entry: {sheet['entry']}"] if sheet.get('entry') else []) + [
          f"Publication: {sheet['doc']}", f"Publication date: {sheet['date']}",
          f"Type: {st['type']}"]
     for k in ('densitometry', 'process', 'exposure', 'sensitivity_defined_at', 'speed'):
@@ -579,6 +591,9 @@ def check_sheet(ims, path, h=1100):
 
 def extract_sheet(sheet, pdf_dir, out, chk):
     doc = pymupdf.open(os.path.join(pdf_dir, sheet['pdf']))
+    if sheet.get('derotate'):  # spreads stored as rotated portrait pages: work in the displayed orientation
+        for pg in doc:
+            pg.remove_rotation()
     rows, summary = [], {}
     for st in sheet['stocks']:
         bucket = 'positive' if st['type'] == 'positive' else 'negative'
@@ -602,7 +617,8 @@ def extract_sheet(sheet, pdf_dir, out, chk):
                                  y=(round(float(xy[:, 1].min()), 3), round(float(xy[:, 1].max()), 3)))
             ims.append(overlay(res, ctx))
         missing = [f for f in ('log_sensitivity_r', 'log_sensitivity_g', 'log_sensitivity_b', 'density_curve_r',
-                               'density_curve_g', 'density_curve_b') if f not in files]
+                               'density_curve_g', 'density_curve_b') if f not in files
+                   and f not in st.get('borrow', {}).get('files', [])]
         if missing:
             notes.append(f'MISSING: {missing}')
         write_info(folder, sheet, st, files, calib, notes, acc)
@@ -648,7 +664,7 @@ def recipes(sheets):
                 continue
             pages = ';'.join(map(str, sorted({p['page'] for p in st['plots']})))
             src = (f"{sheet['publisher']} {sheet['doc']} ({sheet['date']}), {sheet['pdf']}, PDF page(s) {pages}, "
-                   f"{st['name']}: {sheet['url']} (catalogued at {sheet['entry']})")
+                   f"{st['name']}: {sheet['url']}" + (f" (catalogued at {sheet['entry']})" if sheet.get('entry') else ''))
             if r.get('estimates'):
                 src += ' Estimate placeholders (not on the sheet): ' + '; '.join(r['estimates']) + '.'
             bucket = 'positive' if st['type'] == 'positive' else 'negative'
@@ -658,7 +674,38 @@ def recipes(sheets):
                             log_sensitivity_density_over_min=r.get('density_over_min', 1.0),
                             data_trustability=r.get('data_trustability', 0.3), density_min=r.get('density_min', ''),
                             dye_extension=r.get('dye_extension', ''), adaptation_donors=' '.join(r.get('adaptation_donors', DEFAULT_DONORS.get(st['type'], []))),
-                            datasource=src, source_id=st['id'], page=pages))
+                            datasource=src, source_id=st['id'], page=pages, **({'use': r['use']} if r.get('use') else {})))
+    return out
+
+
+BORROW_MARK = 'Borrowed curves (estimate placeholders, not on this sheet):'
+
+
+def borrow(sheets, raw):
+    """Stocks whose sheet prints only some plots (e.g. a manual with characteristic curves only) take the
+    missing curves from a sibling record (`"borrow": {"from": id, "files": [...], "why": "..."}`); the copies
+    are listed in info.txt and the extraction summary as estimates."""
+    where = {st['id']: ('positive' if st['type'] == 'positive' else 'negative') for sh in sheets for st in sh['stocks']}
+    out = {}
+    for sheet in sheets:
+        for st in sheet['stocks']:
+            b = st.get('borrow')
+            if not b:
+                continue
+            if b['from'] not in where:
+                raise ValueError(f"{st['id']}: borrow source {b['from']} has no sheet config")
+            src = os.path.join(raw, where[b['from']], b['from'])
+            dst = os.path.join(raw, where[st['id']], st['id'])
+            if not os.path.isdir(dst):
+                continue
+            for fn in b['files']:
+                shutil.copyfile(os.path.join(src, fn + '.csv'), os.path.join(dst, fn + '.csv'))
+            info = os.path.join(dst, 'info.txt')
+            text = open(info).read().split(BORROW_MARK)[0].rstrip('\n') + '\n'
+            text += f"{BORROW_MARK}\n  {', '.join(f + '.csv' for f in b['files'])} copied from {b['from']}"
+            text += (f" ({b['why']})" if b.get('why') else '') + '\n'
+            open(info, 'w').write(text)
+            out[st['id']] = dict(source=b['from'], files=list(b['files']), why=b.get('why', ''))
     return out
 
 
@@ -685,6 +732,8 @@ def main():
         summary.update(s)
     ids = {st['id'] for sh in sheets for st in sh['stocks']}
     summary = {k: v for k, v in summary.items() if k in ids}
+    for k, v in borrow(sheets, a.raw).items():
+        summary.setdefault(k, {})['borrowed'] = v
     for sheet in sheets:
         for st in sheet['stocks']:
             bucket = 'positive' if st['type'] == 'positive' else 'negative'
@@ -697,7 +746,9 @@ def main():
     with open(os.path.join(a.raw, 'records.csv'), 'w', newline='') as f:
         w = csv.DictWriter(f, fieldnames=list(rows[0])); w.writeheader(); w.writerows(rows)
     with open(os.path.join(a.raw, 'recipes.csv'), 'w', newline='') as f:
-        w = csv.DictWriter(f, fieldnames=RECIPE_COLS); w.writeheader(); w.writerows(recipes(sheets))
+        rr = recipes(sheets)
+        cols = RECIPE_COLS + (['use'] if any('use' in r for r in rr) else [])
+        w = csv.DictWriter(f, fieldnames=cols, restval=''); w.writeheader(); w.writerows(rr)
     with open(summ_path, 'w') as f:
         json.dump(summary, f, indent=1, sort_keys=True)
 
