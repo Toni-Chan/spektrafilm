@@ -17,6 +17,16 @@ class FilmStocks(Enum):
     kodak_verita_200d = 'kodak_verita_200d'
     kodak_vision3_200t = 'kodak_vision3_200t'
     kodak_vision3_500t = 'kodak_vision3_500t'
+    # fuji cine (FUJIFILM motion picture data sheets KB-series, built with spektrafilm_profile_builder)
+    fujifilm_eterna_250d_kb0507er = 'fujifilm_eterna_250d_kb0507er'
+    fujifilm_eterna_vivid_160_kb0701e = 'fujifilm_eterna_vivid_160_kb0701e'
+    fujifilm_eterna_vivid_500_kb0901e = 'fujifilm_eterna_vivid_500_kb0901e'
+    fujifilm_f250_kb914e = 'fujifilm_f250_kb914e'
+    fujifilm_f125_kb913e = 'fujifilm_f125_kb913e'
+    fujifilm_eterna_250_kb1101e = 'fujifilm_eterna_250_kb1101e'
+    fujifilm_eterna_400_kb1101e = 'fujifilm_eterna_400_kb1101e'
+    fujifilm_f64d_kb1101e = 'fujifilm_f64d_kb1101e'
+    fujifilm_reala_500d_kb1101e = 'fujifilm_reala_500d_kb1101e'
     # fuji pro
     fujifilm_pro_400h = 'fujifilm_pro_400h'
     # fuji consumer
