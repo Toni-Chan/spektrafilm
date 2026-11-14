@@ -347,7 +347,7 @@
      "kodak_vision3_50d"
     ],
     "estimates": [
-     "mid-scale neutral and D-min dye densities borrowed from VISION 500T 5263 (not on this sheet)",
+     "mid-scale neutral and D-min dye densities borrowed from kodak_vision_500t_5263 (VISION 500T, H-1-5263tx; not on this sheet)",
      "sensitivity density (0.2 above D-min), densitometry (Status M) and exposure time not printed: assumed as on the VISION 320T sheet of the same edition",
      "spectral sensitivity on the sheet's log scale, absolute level from the builder's mid-grey anchoring",
      "sensitivity tails beyond the printed curves",
