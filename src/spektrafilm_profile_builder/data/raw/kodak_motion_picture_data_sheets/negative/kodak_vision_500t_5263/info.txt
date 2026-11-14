@@ -1,0 +1,63 @@
+KODAK VISION 500T Color Negative Film 5263 / 7263
+Datasheet: KODAK motion picture film technical data sheet H-1-5263tx (2002-01), 5263.pdf, PDF page(s) 3, 4
+Source URL: https://125px.com/docs/motionpicture/kodak/5263.pdf
+Publication: H-1-5263tx
+Publication date: 2002-01
+Type: negative
+Densitometry: Status M
+Process: ECN-2
+Exposure: 3200 K tungsten, 1/50 s
+Sensitivity defined at: 0.4 above D-min (effective exposure 0.013 s)
+Speed: EI 500 tungsten (EI 320 daylight with WRATTEN 85)
+
+Files (x range, y range, n points):
+  density_curve_b.csv  x -4.113..-0.153  y 0.924..2.353  n=25
+  density_curve_g.csv  x -4.113..-0.153  y 0.573..2.03  n=22
+  density_curve_r.csv  x -4.113..-0.153  y 0.154..1.383  n=21
+  dye_density_c.csv  x 350.508..797.475  y -0.0..1.001  n=85
+  dye_density_m.csv  x 350.42..796.247  y -0.003..1.006  n=101
+  dye_density_mid.csv  x 350.508..739.862  y 0.531..1.633  n=124
+  dye_density_min.csv  x 350.471..740.113  y 0.142..1.054  n=101
+  dye_density_y.csv  x 350.508..639.999  y -0.0..1.003  n=69
+  log_sensitivity_b.csv  x 361.241..531.228  y 0.895..3.239  n=46
+  log_sensitivity_g.csv  x 471.194..611.219  y 0.341..2.883  n=45
+  log_sensitivity_r.csv  x 501.259..681.288  y 0.568..2.642  n=62
+
+Units: log_sensitivity_* = wavelength nm, log10 sensitivity (relative where the sheet prints no
+  absolute scale); density_curve_* = log10 H (lux-seconds), total density as printed (base+fog
+  included); dye_density_* = wavelength nm, spectral diffuse density (c/m/y: individual dyes as
+  printed; mid: mid-scale neutral; min: minimum density).
+Extraction: the plot is rendered from the PDF at 600 dpi (the curves are embedded 1-bit scans or
+  vector strokes), grid lines are found as long straight dark runs and removed except where a curve
+  crosses them, axes are calibrated piecewise-linearly through the printed grid lines named in the
+  sheet config (sheets/*.json), and each curve is followed column by column from a seed point
+  (script: scripts/extract_filmcolors_datasheets.py). Typical accuracy ~0.2-0.5 pt on the page
+  (about 1-2 nm, 0.01-0.02 log H or density) plus the accuracy of the original drawing / scan.
+Calibration:
+  char_p3: {"x_labels": [-4.0, -3.0, -2.0, -1.0], "y_labels": [3.0, 2.0, 1.0, 0.0], "x_resid_pt": 0.0, "y_resid_pt": 0.004, "stroke_px": 7.0, "grid_lines": {"h": 2, "v": 2}}
+  sens_p4: {"x_labels": [250.0, 300.0, 350.0, 400.0, 450.0, 500.0, 550.0, 600.0, 650.0, 700.0, 750.0], "y_labels": [4.0, 3.0, 2.0, 1.0, 0.0], "x_resid_pt": 0.325, "y_resid_pt": 0.036, "stroke_px": 6.0, "grid_lines": {"h": 5, "v": 11}}
+  dye_p4: {"x_labels": [300.0, 400.0, 500.0, 600.0, 700.0, 800.0], "y_labels": [1.8, 1.6, 1.4, 1.2, 1.0, 0.8, 0.6, 0.4, 0.2, 0.0], "x_resid_pt": 0.063, "y_resid_pt": 0.031, "stroke_px": 7.0, "grid_lines": {"h": 2, "v": 2}}
+Distance of the written curves to the printed strokes (pt): {"char:b": {"median_pt": 0.0, "p95_pt": 0.0, "max_pt": 0.0}, "char:g": {"median_pt": 0.0, "p95_pt": 0.0, "max_pt": 0.0}, "char:r": {"median_pt": 0.0, "p95_pt": 0.0, "max_pt": 0.0}, "sens:b": {"median_pt": 0.0, "p95_pt": 0.0, "max_pt": 0.0}, "sens:g": {"median_pt": 0.0, "p95_pt": 0.0, "max_pt": 0.0}, "sens:r": {"median_pt": 0.0, "p95_pt": 0.0, "max_pt": 0.0}, "dye:mid": {"median_pt": 0.0, "p95_pt": 0.0, "max_pt": 0.0}, "dye:min": {"median_pt": 0.0, "p95_pt": 0.0, "max_pt": 0.0}, "dye:y": {"median_pt": 0.0, "p95_pt": 0.0, "max_pt": 0.0}, "dye:m": {"median_pt": 0.0, "p95_pt": 0.0, "max_pt": 0.0}, "dye:c": {"median_pt": 0.0, "p95_pt": 0.0, "max_pt": 0.0}}
+Caveats:
+  curves read directly from the PDF vector paths (pages 3-4), no tracing
+  characteristic curves calibrated on the printed log-exposure axis (top); the camera-stop axis under the same plot is ~10% wider than it (15.4 pt per stop vs 13.9 pt) and is not used
+  C/M/Y dye curves are printed peak-normalised (1.0 at the peak)
+  x label -4.0: no grid line within 3.0 pt of 375.51; used as given
+  x label -3.0: no grid line within 3.0 pt of 421.62; used as given
+  x label -2.0: no grid line within 3.0 pt of 467.73; used as given
+  x label -1.0: no grid line within 3.0 pt of 513.84; used as given
+  y label 3.0: no grid line within 3.0 pt of 130.17; used as given
+  y label 2.0: no grid line within 3.0 pt of 176.25; used as given
+  y label 1.0: no grid line within 3.0 pt of 222.33; used as given
+  x label 400.0: no grid line within 3.0 pt of 393.6; used as given
+  x label 500.0: no grid line within 3.0 pt of 430.45; used as given
+  x label 600.0: no grid line within 3.0 pt of 467.31; used as given
+  x label 700.0: no grid line within 3.0 pt of 504.16; used as given
+  y label 1.6: no grid line within 3.0 pt of 390.09; used as given
+  y label 1.4: no grid line within 3.0 pt of 410.55; used as given
+  y label 1.2: no grid line within 3.0 pt of 431.01; used as given
+  y label 1.0: no grid line within 3.0 pt of 451.47; used as given
+  y label 0.8: no grid line within 3.0 pt of 471.93; used as given
+  y label 0.6: no grid line within 3.0 pt of 492.39; used as given
+  y label 0.4: no grid line within 3.0 pt of 512.85; used as given
+  y label 0.2: no grid line within 3.0 pt of 533.31; used as given

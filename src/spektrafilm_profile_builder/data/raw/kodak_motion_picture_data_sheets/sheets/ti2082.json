@@ -1,0 +1,456 @@
+{
+ "doc": "TI2082",
+ "publisher": "KODAK motion picture film technical information data sheet",
+ "date": "1993-10 (Revised 10-93)",
+ "title": "EASTMAN EXR 500T Film 5298 / 7298",
+ "pdf": "5298-ti2082.pdf",
+ "url": "https://125px.com/docs/motionpicture/kodak/5298-ti2082.pdf",
+ "stocks": [
+  {
+   "id": "kodak_exr_500t_5298",
+   "name": "EASTMAN EXR 500T Color Negative Film 5298 / 7298",
+   "type": "negative",
+   "meta": {
+    "speed": "EI 500 tungsten (EI 320 daylight with WRATTEN 85)",
+    "process": "ECN-2",
+    "densitometry": "Status M",
+    "exposure": "tungsten, 1/50 s",
+    "sensitivity_defined_at": "0.4 above D-min (effective exposure 0.013 s)",
+    "art": "raster (embedded ~137 dpi colour chart images, pages 7-9)"
+   },
+   "notes": [
+    "curves traced from embedded colour chart images (TI2082B/C/D 9-93, pages 7-9), colour by colour; axis labels are inside the images, axes calibrated on the chart grid (0.2 log H / 0.2 density / 10 nm)",
+    "green and red strokes are dash-dot / dotted on the chart and are bridged by the tracker",
+    "only the mid-scale neutral and D-min dye densities are printed"
+   ],
+   "plots": [
+    {
+     "kind": "char",
+     "page": 7,
+     "rect": [
+      92,
+      144,
+      529,
+      392
+     ],
+     "piecewise": false,
+     "x": [
+      [
+       -4.0,
+       97.22
+      ],
+      [
+       -3.0,
+       168.14
+      ],
+      [
+       -2.0,
+       239.6
+      ],
+      [
+       -1.0,
+       310.46
+      ],
+      [
+       0.0,
+       381.38
+      ],
+      [
+       1.0,
+       452.84
+      ],
+      [
+       2.0,
+       523.76
+      ]
+     ],
+     "y": [
+      [
+       3.0,
+       149.44
+      ],
+      [
+       2.0,
+       228.7
+      ],
+      [
+       1.0,
+       307.48
+      ],
+      [
+       0.0,
+       386.8
+      ]
+     ],
+     "mask": [
+      [
+       -3.85,
+       2.05,
+       -2.9,
+       2.68
+      ]
+     ],
+     "curves": {
+      "b": {
+       "seeds": [
+        [
+         -1.0,
+         1.97
+        ]
+       ],
+       "rgb": [
+        30,
+        30,
+        250
+       ],
+       "rgb_tol": 110,
+       "gap": 80
+      },
+      "g": {
+       "seeds": [
+        [
+         -0.981,
+         1.625
+        ],
+        [
+         -1.97,
+         1.027
+        ],
+        [
+         -2.711,
+         0.648
+        ]
+       ],
+       "rgb": [
+        150,
+        150,
+        30
+       ],
+       "rgb_tol": 90,
+       "gap": 80
+      },
+      "r": {
+       "seeds": [
+        [
+         -0.996,
+         1.059
+        ]
+       ],
+       "rgb": [
+        250,
+        50,
+        10
+       ],
+       "rgb_tol": 110,
+       "gap": 80
+      }
+     }
+    },
+    {
+     "kind": "sens",
+     "page": 8,
+     "rect": [
+      119,
+      152,
+      521,
+      402
+     ],
+     "piecewise": false,
+     "x": [
+      [
+       250,
+       124.04
+      ],
+      [
+       300,
+       163.4
+      ],
+      [
+       350,
+       202.28
+      ],
+      [
+       400,
+       241.7
+      ],
+      [
+       450,
+       280.58
+      ],
+      [
+       500,
+       319.94
+      ],
+      [
+       550,
+       358.82
+      ],
+      [
+       600,
+       398.18
+      ],
+      [
+       650,
+       437.06
+      ],
+      [
+       700,
+       476.48
+      ],
+      [
+       750,
+       515.36
+      ]
+     ],
+     "y": [
+      [
+       3.0,
+       157.84
+      ],
+      [
+       2.0,
+       217.66
+      ],
+      [
+       1.0,
+       277.06
+      ],
+      [
+       0.0,
+       336.88
+      ],
+      [
+       -1.0,
+       396.22
+      ]
+     ],
+     "mask": [
+      [
+       255,
+       -0.3,
+       380,
+       -1.0
+      ]
+     ],
+     "curves": {
+      "b": {
+       "seeds": [
+        [
+         440.0,
+         2.687
+        ]
+       ],
+       "rgb": [
+        30,
+        30,
+        250
+       ],
+       "rgb_tol": 110,
+       "gap": 80
+      },
+      "g": {
+       "seeds": [
+        [
+         531.99,
+         2.393
+        ],
+        [
+         585.809,
+         0.901
+        ],
+        [
+         483.078,
+         1.215
+        ]
+       ],
+       "rgb": [
+        150,
+        150,
+        30
+       ],
+       "rgb_tol": 90,
+       "gap": 80
+      },
+      "r": {
+       "seeds": [
+        [
+         633.494,
+         2.034
+        ],
+        [
+         578.449,
+         1.374
+        ],
+        [
+         675.046,
+         1.0
+        ]
+       ],
+       "rgb": [
+        250,
+        50,
+        10
+       ],
+       "rgb_tol": 110,
+       "gap": 80
+      }
+     }
+    },
+    {
+     "kind": "dye",
+     "page": 9,
+     "rect": [
+      121,
+      152,
+      521,
+      402
+     ],
+     "piecewise": false,
+     "x": [
+      [
+       250,
+       126.62
+      ],
+      [
+       300,
+       165.5
+      ],
+      [
+       350,
+       204.38
+      ],
+      [
+       400,
+       243.26
+      ],
+      [
+       450,
+       282.14
+      ],
+      [
+       500,
+       321.02
+      ],
+      [
+       550,
+       359.9
+      ],
+      [
+       600,
+       398.72
+      ],
+      [
+       650,
+       437.6
+      ],
+      [
+       700,
+       476.48
+      ],
+      [
+       750,
+       515.36
+      ]
+     ],
+     "y": [
+      [
+       2.5,
+       157.84
+      ],
+      [
+       2.0,
+       205.6
+      ],
+      [
+       1.5,
+       253.42
+      ],
+      [
+       1.0,
+       301.18
+      ],
+      [
+       0.5,
+       349.0
+      ],
+      [
+       0.0,
+       396.76
+      ]
+     ],
+     "mask": [
+      [
+       255,
+       2.45,
+       390,
+       2.0
+      ]
+     ],
+     "curves": {
+      "mid": {
+       "seeds": [
+        [
+         450.353,
+         1.776
+        ]
+       ],
+       "rgb": [
+        30,
+        30,
+        250
+       ],
+       "rgb_tol": 110,
+       "gap": 80
+      },
+      "min": {
+       "seeds": [
+        [
+         450,
+         1.03
+        ]
+       ],
+       "rgb": [
+        150,
+        150,
+        30
+       ],
+       "rgb_tol": 90,
+       "gap": 80
+      }
+     }
+    }
+   ],
+   "recipe": {
+    "stock": "kodak_exr_500t_5298",
+    "name": "Kodak EXR 500T 5298 (TI2082)",
+    "target_print": "kodak_2383",
+    "reference_illuminant": "T",
+    "use": "cine",
+    "density_over_min": 0.4,
+    "data_trustability": 0.3,
+    "adaptation_donors": [
+     "kodak_ektar_100",
+     "kodak_gold_200",
+     "kodak_portra_160",
+     "kodak_portra_400",
+     "kodak_portra_800",
+     "kodak_ultramax_400",
+     "kodak_vision3_200t",
+     "kodak_vision3_250d",
+     "kodak_vision3_500t",
+     "kodak_vision3_50d"
+    ],
+    "estimates": [
+     "curves traced from ~137 dpi chart images (accuracy ~0.5 px of the chart)",
+     "spectral sensitivity on the sheet's log scale, absolute level from the builder's mid-grey anchoring",
+     "sensitivity tails beyond the printed curves",
+     "individual CMY dyes reconstructed by the builder from the printed mid-scale neutral and D-min (not printed)",
+     "dye densities outside the printed wavelength range",
+     "print stock: KODAK VISION 2383 (the shipped cine print profile; the contemporary 5386 / 2386 / 2393 era prints are not modelled separately)",
+     "interlayer DIR coupler strength (not on any data sheet; runtime default for negatives)",
+     "hanatos2025 adaptation parameters borrowed from the shipped Kodak negatives (pinned donors)"
+    ]
+   }
+  }
+ ]
+}

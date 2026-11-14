@@ -1,0 +1,363 @@
+{
+ "doc": "H-1-5279",
+ "publisher": "KODAK motion picture film technical data sheet",
+ "date": "1996-03",
+ "title": "KODAK VISION 500T Color Negative Film 5279 / 7279",
+ "pdf": "5279.pdf",
+ "url": "https://125px.com/docs/motionpicture/kodak/5279.pdf",
+ "stocks": [
+  {
+   "id": "kodak_vision_500t_5279",
+   "name": "KODAK VISION 500T Color Negative Film 5279 / 7279",
+   "type": "negative",
+   "meta": {
+    "speed": "EI 500 tungsten (EI 320 daylight with WRATTEN 85)",
+    "process": "ECN-2",
+    "art": "vector (PDF paths, pages 2-3)"
+   },
+   "notes": [
+    "curves read directly from the PDF vector paths (pages 2-3), no tracing",
+    "the sheet prints peak-normalised C/M/Y dye curves (\"Spectral dye peaks\") but no mid-scale neutral or D-min densities; those two are borrowed from VISION 500T 5263 (its successor sheet, same emulsion family)",
+    "densitometry, exposure and the sensitivity density are not printed (Status M, 1/50 s tungsten and 0.2 above D-min assumed, as on the VISION 320T sheet of the same edition)"
+   ],
+   "plots": [
+    {
+     "kind": "char",
+     "page": 2,
+     "rect": [
+      359,
+      459,
+      543,
+      601
+     ],
+     "piecewise": false,
+     "x": [
+      [
+       -4.0,
+       365.78
+      ],
+      [
+       -3.0,
+       403.46
+      ],
+      [
+       -2.0,
+       441.15
+      ],
+      [
+       -1.0,
+       478.83
+      ],
+      [
+       0.0,
+       516.52
+      ]
+     ],
+     "y": [
+      [
+       3.0,
+       461.5
+      ],
+      [
+       2.0,
+       507.3
+      ],
+      [
+       1.0,
+       553.08
+      ],
+      [
+       0.0,
+       598.9
+      ]
+     ],
+     "curves": {
+      "b": [
+       {
+        "path": [
+         84,
+         0
+        ]
+       }
+      ],
+      "g": [
+       {
+        "path": [
+         85,
+         0
+        ]
+       }
+      ],
+      "r": [
+       {
+        "path": [
+         86,
+         0
+        ]
+       }
+      ]
+     },
+     "dense_lines": true
+    },
+    {
+     "kind": "sens",
+     "page": 3,
+     "rect": [
+      82,
+      114,
+      288,
+      273
+     ],
+     "x": [
+      [
+       250.0,
+       95.53
+      ],
+      [
+       300.0,
+       113.58
+      ],
+      [
+       350.0,
+       131.63
+      ],
+      [
+       400.0,
+       149.68
+      ],
+      [
+       450.0,
+       167.73
+      ],
+      [
+       500.0,
+       185.78
+      ],
+      [
+       550.0,
+       203.83
+      ],
+      [
+       600.0,
+       221.88
+      ],
+      [
+       650.0,
+       239.93
+      ],
+      [
+       700.0,
+       257.98
+      ],
+      [
+       750.0,
+       276.02
+      ]
+     ],
+     "y": [
+      [
+       2.0,
+       127.28
+      ],
+      [
+       1.0,
+       161.36
+      ],
+      [
+       0.0,
+       195.44
+      ],
+      [
+       -1.0,
+       229.52
+      ],
+      [
+       -2.0,
+       263.6
+      ]
+     ],
+     "curves": {
+      "b": [
+       {
+        "path": [
+         27,
+         0
+        ]
+       }
+      ],
+      "g": [
+       {
+        "path": [
+         26,
+         0
+        ]
+       }
+      ],
+      "r": [
+       {
+        "path": [
+         25,
+         0
+        ]
+       }
+      ]
+     },
+     "dense_lines": true
+    },
+    {
+     "kind": "dye",
+     "page": 3,
+     "rect": [
+      93,
+      430,
+      278,
+      571
+     ],
+     "x": [
+      [
+       300,
+       95.5
+      ],
+      [
+       350,
+       113.54
+      ],
+      [
+       400,
+       131.61
+      ],
+      [
+       450,
+       149.68
+      ],
+      [
+       500,
+       167.74
+      ],
+      [
+       550,
+       185.81
+      ],
+      [
+       600,
+       203.88
+      ],
+      [
+       650,
+       221.95
+      ],
+      [
+       700,
+       240.01
+      ],
+      [
+       750,
+       258.08
+      ],
+      [
+       800,
+       275.8
+      ]
+     ],
+     "y": [
+      [
+       1.0,
+       432.7
+      ],
+      [
+       0.8,
+       455.46
+      ],
+      [
+       0.6,
+       478.18
+      ],
+      [
+       0.4,
+       500.9
+      ],
+      [
+       0.2,
+       523.62
+      ],
+      [
+       0.0,
+       546.34
+      ],
+      [
+       -0.2,
+       569.1
+      ]
+     ],
+     "curves": {
+      "y": [
+       {
+        "path": [
+         53,
+         0
+        ]
+       }
+      ],
+      "m": [
+       {
+        "path": [
+         51,
+         0
+        ]
+       }
+      ],
+      "c": [
+       {
+        "path": [
+         52,
+         0
+        ]
+       }
+      ]
+     },
+     "dense_lines": true
+    }
+   ],
+   "borrow": {
+    "from": "kodak_vision_500t_5263",
+    "files": [
+     "dye_density_mid",
+     "dye_density_min"
+    ],
+    "why": "the 5279 sheet prints no mid-scale neutral / D-min densities; 5263 is the successor VISION 500T sheet"
+   },
+   "recipe": {
+    "stock": "kodak_vision_500t_5279",
+    "name": "Kodak VISION 500T 5279 (H-1-5279)",
+    "target_print": "kodak_2383",
+    "reference_illuminant": "T",
+    "use": "cine",
+    "density_over_min": 0.2,
+    "data_trustability": 0.25,
+    "adaptation_donors": [
+     "kodak_ektar_100",
+     "kodak_gold_200",
+     "kodak_portra_160",
+     "kodak_portra_400",
+     "kodak_portra_800",
+     "kodak_ultramax_400",
+     "kodak_vision3_200t",
+     "kodak_vision3_250d",
+     "kodak_vision3_500t",
+     "kodak_vision3_50d"
+    ],
+    "estimates": [
+     "mid-scale neutral and D-min dye densities borrowed from VISION 500T 5263 (not on this sheet)",
+     "sensitivity density (0.2 above D-min), densitometry (Status M) and exposure time not printed: assumed as on the VISION 320T sheet of the same edition",
+     "spectral sensitivity on the sheet's log scale, absolute level from the builder's mid-grey anchoring",
+     "sensitivity tails beyond the printed curves",
+     "individual C/M/Y dye curves printed peak-normalised: used as the start of the builder's dye reconstruction against the printed mid-scale neutral and D-min",
+     "dye densities outside the printed wavelength range",
+     "print stock: KODAK VISION 2383 (the shipped cine print profile; the contemporary 5386 / 2386 / 2393 era prints are not modelled separately)",
+     "interlayer DIR coupler strength (not on any data sheet; runtime default for negatives)",
+     "hanatos2025 adaptation parameters borrowed from the shipped Kodak negatives (pinned donors)"
+    ]
+   }
+  }
+ ]
+}
