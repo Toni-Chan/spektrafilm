@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import csv
+import re
 import json
 from dataclasses import fields
 from pathlib import Path
@@ -123,7 +124,7 @@ def test_profile_json_uses_only_upstream_schema_keys(stock):
     assert set(payload['data']) <= {f.name for f in fields(ProfileData)}
     assert set(payload['info']) <= {f.name for f in fields(ProfileInfo)}
     assert set(payload['metadata']) <= {f.name for f in fields(ProfileMetadata)}
-    assert 'KODAK technical data E-' in payload['metadata']['datasource']
+    assert re.search(r'KODAK technical data (E|LE)-', payload['metadata']['datasource'])
 
 
 @pytest.mark.parametrize('stock', STOCKS)
@@ -132,7 +133,7 @@ def test_profile_loads_with_expected_info_and_shapes(stock):
     p = load_profile(stock)  # spektrafilm's own validation
     info, d = p.info, p.data
     assert info.stock == stock
-    assert '(E-' in info.name and info.name.startswith('Kodak')
+    assert re.search(r'\((E|LE)-', info.name) and info.name.startswith('Kodak')
     assert info.channel_model == 'color'
     assert d.wavelengths.shape == (81,)
     assert d.log_exposure.shape == (256,)
