@@ -1,0 +1,35 @@
+{
+ "doc": "AF3-796E", "publisher": "FUJIFILM data sheet", "date": "1996-04 (print code EIGI-96.4)",
+ "title": "FUJICHROME PROVIA 100 Professional [RDP II]",
+ "pdf": "Fujichrome-Provia-100-Professional-RDPII_AF3-796E.pdf",
+ "url": "https://filmcolors.org/wp-content/uploads/2025/12/Fujichrome-Provia-100-Professional-RDPII_AF3-796E.pdf",
+ "entry": "https://filmcolors.org/timeline-entry/40404/",
+ "stocks": [
+  {"id": "fujifilm_provia_100_rdp2_af3796e", "name": "FUJICHROME PROVIA 100 Professional [RDP II]", "type": "positive",
+   "meta": {"speed": "ISO 100 (daylight)", "process": "CR-56 or E-6", "densitometry": "Fuji FAD-30S (Status A)",
+            "exposure": "Daylight, 1/50 sec", "sensitivity_defined_at": "1.0 above D-min"},
+   "plots": [
+    {"kind": "char", "page": 6, "rect": [47, 120, 272, 330],
+     "x": [[-3, 90.62], [-2, 134.66], [-1, 178.94], [0, 223.1], [1, 266.3]],
+     "y": [[3.0, 170.74], [2.0, 216.1], [1.0, 261.1], [0, 305.14]], "extra_h": [3.5],
+     "mask": [[-3.4, 0.0, -2.3, 1.1], [-2.05, 3.22, 0.95, 4.0]],
+     "curves": {"r": [[-3.2, 3.30]],
+                "g": {"seeds": [[-2.2, 3.17]], "xlim": [-3.32, -1.75], "fill": "r"},
+                "b": {"seeds": [[-3.0, 3.41]], "xlim": [-3.32, -1.75], "fill": "r"}}},
+    {"kind": "sens", "page": 6, "rect": [300, 121, 527, 356],
+     "x": [[400, 337.5], [600, 454.86], [700, 514.38]], "y": [[2, 124.06], [1, 184.3], [0, 244.42], [-1, 303.7]],
+     "min_component": 90,
+     "curves": {"b": {"seeds": [[440, 1.08]], "xlim": [390, 496]}, "g": {"seeds": [[550, 0.82]], "xlim": [494, 594]},
+                "r": {"seeds": [[640, 0.9]], "xlim": [586, 700]}}},
+    {"kind": "dye", "page": 6, "rect": [298, 420, 529, 595],
+     "x": [[400, 335.14], [500, 395.38], [600, 453.58], [700, 513.1]], "y": [[1.0, 450.78], [0.5, 511.86], [0, 571.14]],
+     "min_component": 90,
+     "curves": {"y": [[445, 0.99]], "m": [[545, 0.99, 470, 720], [440, 0.215, 389, 470]],
+                "c": [[655, 0.99, 540, 720], [450, 0.15, 389, 540]]}}
+   ],
+   "recipe": {"stock": "fujifilm_provia_100_rdp2_af3796e", "name": "Fujifilm Provia 100 RDP II (AF3-796E)",
+              "reference_illuminant": "D55", "dye_extension": "hold_decay",
+              "estimates": ["dye densities outside the printed 390-720 nm (held below, exponential decay above)",
+                            "sensitivity tails beyond the printed curves", "interlayer DIR coupler strength (not on any data sheet)"]}}
+ ]
+}

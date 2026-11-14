@@ -1,0 +1,345 @@
+{
+ "doc": "AF3-989E",
+ "publisher": "FUJIFILM data sheet",
+ "date": "1998-06 (print code EIGI-98.6)",
+ "title": "FUJICHROME MS 100/1000 Professional [RMS]",
+ "pdf": "Fujichrome-MS-1001000-Professional-RMS_AF3-989E.pdf",
+ "url": "https://filmcolors.org/wp-content/uploads/2025/12/Fujichrome-MS-1001000-Professional-RMS_AF3-989E.pdf",
+ "entry": "https://filmcolors.org/timeline-entry/40410/",
+ "stocks": [
+  {
+   "id": "fujifilm_ms_100_1000_rms_af3989e",
+   "name": "FUJICHROME MS 100/1000 Professional [RMS] (EI 100, standard processing)",
+   "type": "positive",
+   "meta": {
+    "speed": "multi-speed EI 100-1000 (daylight); EI 100 curves used",
+    "process": "E-6 / CR-56",
+    "densitometry": "Fuji FAD-30S (Status A)",
+    "exposure": "Daylight 1/50 sec",
+    "sensitivity_defined_at": "1.0 above D-min"
+   },
+   "notes": [
+    "char: the sheet prints EI 100, EI 400 and EI 800 curve sets; only the EI 100 set (standard processing, rightmost) is extracted",
+    "char: below the shoulder the three EI 100 channel curves are drawn on top of each other; one shared trace is used there",
+    "near D 2.0-2.8, where the three EI sets converge, the R/B shoulder traces can deviate by up to ~0.1 density"
+   ],
+   "plots": [
+    {
+     "kind": "char",
+     "page": 6,
+     "rect": [
+      60,
+      116,
+      283,
+      304
+     ],
+     "threshold": 200,
+     "line_frac": 0.25,
+     "x": [
+      [
+       -3.0,
+       96.9
+      ],
+      [
+       -2.0,
+       141.9
+      ],
+      [
+       -1.0,
+       187.02
+      ],
+      [
+       0.0,
+       232.62
+      ],
+      [
+       1.0,
+       277.02
+      ]
+     ],
+     "y": [
+      [
+       4.0,
+       118.66
+      ],
+      [
+       3.0,
+       163.8
+      ],
+      [
+       2.0,
+       209.14
+      ],
+      [
+       1.0,
+       254.1
+      ],
+      [
+       0.5,
+       277.06
+      ],
+      [
+       0.0,
+       299.4
+      ]
+     ],
+     "mask": [
+      [
+       -3.45,
+       0.3,
+       -2.3,
+       1.2
+      ],
+      [
+       -1.95,
+       3.2,
+       0.95,
+       3.95
+      ]
+     ],
+     "curves": {
+      "r": {
+       "seeds": [
+        {
+         "col": -3.0,
+         "rank": 2,
+         "xlim": [
+          -3.3,
+          -1.95
+         ]
+        },
+        {
+         "row": 1.25,
+         "rank": -1,
+         "ylim": [
+          0.3,
+          2.3
+         ]
+        },
+        [
+         0.0,
+         0.3,
+         -0.6,
+         0.95
+        ]
+       ]
+      },
+      "g": {
+       "seeds": [
+        {
+         "col": -3.0,
+         "rank": 0,
+         "xlim": [
+          -3.3,
+          -1.95
+         ]
+        }
+       ],
+       "fill": "r"
+      },
+      "b": {
+       "seeds": [
+        {
+         "col": -3.0,
+         "rank": 1,
+         "xlim": [
+          -3.3,
+          -1.95
+         ]
+        }
+       ],
+       "fill": "r"
+      }
+     },
+     "extra_h": [
+      3.0,
+      1.5
+     ]
+    },
+    {
+     "kind": "sens",
+     "page": 6,
+     "rect": [
+      300,
+      116,
+      535,
+      300
+     ],
+     "x": [
+      [
+       400,
+       336.3
+      ],
+      [
+       500,
+       395.46
+      ],
+      [
+       600,
+       454.62
+      ],
+      [
+       700,
+       514.5
+      ]
+     ],
+     "y": [
+      [
+       2,
+       118.42
+      ],
+      [
+       1,
+       178.78
+      ],
+      [
+       0,
+       237.94
+      ],
+      [
+       -1,
+       297.22
+      ]
+     ],
+     "min_component": 90,
+     "curves": {
+      "b": {
+       "seeds": [
+        {
+         "col": 430,
+         "rank": 0
+        }
+       ],
+       "xlim": [
+        388,
+        494
+       ]
+      },
+      "g": {
+       "seeds": [
+        {
+         "col": 540,
+         "rank": 0
+        }
+       ],
+       "xlim": [
+        490,
+        597
+       ]
+      },
+      "r": {
+       "seeds": [
+        {
+         "col": 640,
+         "rank": 0
+        }
+       ],
+       "xlim": [
+        589,
+        695
+       ]
+      }
+     }
+    },
+    {
+     "kind": "dye",
+     "page": 6,
+     "rect": [
+      300,
+      425,
+      535,
+      577
+     ],
+     "x": [
+      [
+       400,
+       338.1
+      ],
+      [
+       500,
+       398.04
+      ],
+      [
+       600,
+       455.34
+      ],
+      [
+       700,
+       514.86
+      ]
+     ],
+     "y": [
+      [
+       1.0,
+       454.5
+      ],
+      [
+       0.5,
+       513.78
+      ],
+      [
+       0.0,
+       574.26
+      ]
+     ],
+     "min_component": 90,
+     "curves": {
+      "y": [
+       {
+        "col": 430,
+        "rank": 0
+       }
+      ],
+      "m": [
+       {
+        "col": 560,
+        "rank": 0,
+        "xlim": [
+         470,
+         730
+        ]
+       },
+       {
+        "col": 405,
+        "rank": -1,
+        "xlim": [
+         380,
+         470
+        ]
+       }
+      ],
+      "c": [
+       {
+        "col": 625,
+        "rank": 0,
+        "xlim": [
+         540,
+         730
+        ]
+       },
+       {
+        "col": 405,
+        "rank": -2,
+        "xlim": [
+         380,
+         540
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "recipe": {
+    "stock": "fujifilm_ms_100_1000_rms_af3989e",
+    "name": "Fujifilm MS 100/1000 RMS at EI 100 (AF3-989E)",
+    "reference_illuminant": "D55",
+    "dye_extension": "hold_decay",
+    "estimates": [
+     "dye densities outside the printed 390-720 nm (held below, exponential decay above)",
+     "sensitivity tails beyond the printed curves",
+     "interlayer DIR coupler strength (not on any data sheet)"
+    ]
+   }
+  }
+ ]
+}

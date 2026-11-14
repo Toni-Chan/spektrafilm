@@ -1,0 +1,1330 @@
+{
+ "fujifilm_ms_100_1000_rms_af3989e": {
+  "accuracy": {
+   "char:b": {
+    "max_pt": 1.518,
+    "median_pt": 0.0,
+    "p95_pt": 0.379
+   },
+   "char:g": {
+    "max_pt": 1.518,
+    "median_pt": 0.0,
+    "p95_pt": 0.36
+   },
+   "char:r": {
+    "max_pt": 2.163,
+    "median_pt": 0.0,
+    "p95_pt": 0.768
+   },
+   "dye:c": {
+    "max_pt": 0.36,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   },
+   "dye:m": {
+    "max_pt": 0.36,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   },
+   "dye:y": {
+    "max_pt": 0.12,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   },
+   "sens:b": {
+    "max_pt": 0.24,
+    "median_pt": 0.0,
+    "p95_pt": 0.12
+   },
+   "sens:g": {
+    "max_pt": 0.24,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   },
+   "sens:r": {
+    "max_pt": 0.24,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   }
+  },
+  "calib": {
+   "char_p6": {
+    "grid_lines": {
+     "h": 10,
+     "v": 10
+    },
+    "stroke_px": 6.0,
+    "x_labels": [
+     -3.0,
+     -2.0,
+     -1.0,
+     0.0,
+     1.0
+    ],
+    "x_resid_pt": 0.431,
+    "y_labels": [
+     4.0,
+     3.0,
+     2.0,
+     1.0,
+     0.5,
+     0.0
+    ],
+    "y_resid_pt": 0.313
+   },
+   "dye_p6": {
+    "grid_lines": {
+     "h": 4,
+     "v": 6
+    },
+    "stroke_px": 5.0,
+    "x_labels": [
+     400,
+     500,
+     600,
+     700
+    ],
+    "x_resid_pt": 0.836,
+    "y_labels": [
+     1.0,
+     0.5,
+     0.0
+    ],
+    "y_resid_pt": 0.4
+   },
+   "sens_p6": {
+    "grid_lines": {
+     "h": 4,
+     "v": 6
+    },
+    "stroke_px": 8.0,
+    "x_labels": [
+     400,
+     500,
+     600,
+     700
+    ],
+    "x_resid_pt": 0.288,
+    "y_labels": [
+     2,
+     1,
+     0,
+     -1
+    ],
+    "y_resid_pt": 0.469
+   }
+  },
+  "files": {
+   "density_curve_b": {
+    "n": 88,
+    "x": [
+     -3.293,
+     0.512
+    ],
+    "y": [
+     0.156,
+     3.436
+    ]
+   },
+   "density_curve_g": {
+    "n": 90,
+    "x": [
+     -3.3,
+     0.512
+    ],
+    "y": [
+     0.156,
+     3.596
+    ]
+   },
+   "density_curve_r": {
+    "n": 85,
+    "x": [
+     -3.3,
+     0.512
+    ],
+    "y": [
+     0.156,
+     3.3
+    ]
+   },
+   "dye_density_c": {
+    "n": 73,
+    "x": [
+     389.59,
+     718.145
+    ],
+    "y": [
+     0.104,
+     0.996
+    ]
+   },
+   "dye_density_m": {
+    "n": 92,
+    "x": [
+     388.989,
+     718.044
+    ],
+    "y": [
+     0.024,
+     0.996
+    ]
+   },
+   "dye_density_y": {
+    "n": 74,
+    "x": [
+     389.69,
+     718.145
+    ],
+    "y": [
+     0.009,
+     0.996
+    ]
+   },
+   "log_sensitivity_b": {
+    "n": 59,
+    "x": [
+     392.799,
+     493.813
+    ],
+    "y": [
+     -0.083,
+     1.227
+    ]
+   },
+   "log_sensitivity_g": {
+    "n": 51,
+    "x": [
+     490.061,
+     596.755
+    ],
+    "y": [
+     -0.172,
+     0.879
+    ]
+   },
+   "log_sensitivity_r": {
+    "n": 40,
+    "x": [
+     588.945,
+     673.848
+    ],
+    "y": [
+     -0.121,
+     0.993
+    ]
+   }
+  },
+  "notes": [
+   "char: the sheet prints EI 100, EI 400 and EI 800 curve sets; only the EI 100 set (standard processing, rightmost) is extracted",
+   "char: below the shoulder the three EI 100 channel curves are drawn on top of each other; one shared trace is used there",
+   "near D 2.0-2.8, where the three EI sets converge, the R/B shoulder traces can deviate by up to ~0.1 density",
+   "y label 3.0: no grid line within 3.0 pt of 163.8; used as given",
+   "char g: own trace covers x -3.3..-1.95; outside it the curve coincides with r on the sheet and that trace is used",
+   "char b: own trace covers x -3.29..-1.95; outside it the curve coincides with r on the sheet and that trace is used"
+  ]
+ },
+ "fujifilm_provia_100_rdp2_af3796e": {
+  "accuracy": {
+   "char:b": {
+    "max_pt": 1.2,
+    "median_pt": 0.0,
+    "p95_pt": 0.537
+   },
+   "char:g": {
+    "max_pt": 1.292,
+    "median_pt": 0.0,
+    "p95_pt": 0.24
+   },
+   "char:r": {
+    "max_pt": 0.12,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   },
+   "dye:c": {
+    "max_pt": 0.12,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   },
+   "dye:m": {
+    "max_pt": 0.12,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   },
+   "dye:y": {
+    "max_pt": 0.12,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   },
+   "sens:b": {
+    "max_pt": 1.368,
+    "median_pt": 0.0,
+    "p95_pt": 0.12
+   },
+   "sens:g": {
+    "max_pt": 0.12,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   },
+   "sens:r": {
+    "max_pt": 0.12,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   }
+  },
+  "calib": {
+   "char_p6": {
+    "grid_lines": {
+     "h": 9,
+     "v": 9
+    },
+    "stroke_px": 6.0,
+    "x_labels": [
+     -3,
+     -2,
+     -1,
+     0,
+     1
+    ],
+    "x_resid_pt": 0.431,
+    "y_labels": [
+     3.0,
+     2.0,
+     1.0,
+     0
+    ],
+    "y_resid_pt": 0.419
+   },
+   "dye_p6": {
+    "grid_lines": {
+     "h": 4,
+     "v": 6
+    },
+    "stroke_px": 6.0,
+    "x_labels": [
+     400,
+     500,
+     600,
+     700
+    ],
+    "x_resid_pt": 0.685,
+    "y_labels": [
+     1.0,
+     0.5,
+     0
+    ],
+    "y_resid_pt": 0.6
+   },
+   "sens_p6": {
+    "grid_lines": {
+     "h": 4,
+     "v": 5
+    },
+    "stroke_px": 8.0,
+    "x_labels": [
+     400,
+     600,
+     700
+    ],
+    "x_resid_pt": 0.36,
+    "y_labels": [
+     2,
+     1,
+     0,
+     -1
+    ],
+    "y_resid_pt": 0.348
+   }
+  },
+  "files": {
+   "density_curve_b": {
+    "n": 88,
+    "x": [
+     -3.296,
+     0.836
+    ],
+    "y": [
+     0.09,
+     3.402
+    ]
+   },
+   "density_curve_g": {
+    "n": 98,
+    "x": [
+     -3.32,
+     0.836
+    ],
+    "y": [
+     0.09,
+     3.471
+    ]
+   },
+   "density_curve_r": {
+    "n": 65,
+    "x": [
+     -3.307,
+     0.836
+    ],
+    "y": [
+     0.09,
+     3.286
+    ]
+   },
+   "dye_density_c": {
+    "n": 81,
+    "x": [
+     389.641,
+     717.44
+    ],
+    "y": [
+     0.107,
+     0.997
+    ]
+   },
+   "dye_density_m": {
+    "n": 105,
+    "x": [
+     389.044,
+     717.137
+    ],
+    "y": [
+     0.024,
+     0.996
+    ]
+   },
+   "dye_density_y": {
+    "n": 95,
+    "x": [
+     389.641,
+     717.137
+    ],
+    "y": [
+     0.01,
+     0.996
+    ]
+   },
+   "log_sensitivity_b": {
+    "n": 55,
+    "x": [
+     393.763,
+     495.808
+    ],
+    "y": [
+     -0.17,
+     1.163
+    ]
+   },
+   "log_sensitivity_g": {
+    "n": 51,
+    "x": [
+     494.274,
+     593.865
+    ],
+    "y": [
+     -0.204,
+     0.852
+    ]
+   },
+   "log_sensitivity_r": {
+    "n": 47,
+    "x": [
+     586.094,
+     681.048
+    ],
+    "y": [
+     -0.142,
+     0.961
+    ]
+   }
+  },
+  "notes": [
+   "char g: own trace covers x -3.32..-1.75; outside it the curve coincides with r on the sheet and that trace is used",
+   "char b: own trace covers x -3.3..-2.09; outside it the curve coincides with r on the sheet and that trace is used"
+  ]
+ },
+ "fujifilm_provia_1600_rsp_af3798e": {
+  "accuracy": {
+   "char:b": {
+    "max_pt": 1.106,
+    "median_pt": 0.0,
+    "p95_pt": 0.495
+   },
+   "char:g": {
+    "max_pt": 2.683,
+    "median_pt": 0.0,
+    "p95_pt": 0.646
+   },
+   "char:r": {
+    "max_pt": 0.36,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   },
+   "dye:c": {
+    "max_pt": 0.12,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   },
+   "dye:m": {
+    "max_pt": 0.36,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   },
+   "dye:y": {
+    "max_pt": 2.213,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   },
+   "sens:b": {
+    "max_pt": 0.24,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   },
+   "sens:g": {
+    "max_pt": 0.24,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   },
+   "sens:r": {
+    "max_pt": 0.12,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   }
+  },
+  "calib": {
+   "char_p6": {
+    "grid_lines": {
+     "h": 8,
+     "v": 11
+    },
+    "stroke_px": 6.0,
+    "x_labels": [
+     -4.0,
+     -3.5,
+     -2.5,
+     -2.0,
+     -1.5
+    ],
+    "x_resid_pt": 0.187,
+    "y_labels": [
+     3.5,
+     3.0,
+     2.5,
+     2.0,
+     1.5,
+     1.0,
+     0.5,
+     0.0
+    ],
+    "y_resid_pt": 0.342
+   },
+   "dye_p6": {
+    "grid_lines": {
+     "h": 3,
+     "v": 7
+    },
+    "stroke_px": 6.0,
+    "x_labels": [
+     400,
+     500,
+     600,
+     700
+    ],
+    "x_resid_pt": 0.276,
+    "y_labels": [
+     1.0,
+     0.0
+    ],
+    "y_resid_pt": 0.0
+   },
+   "sens_p6": {
+    "grid_lines": {
+     "h": 4,
+     "v": 6
+    },
+    "stroke_px": 8.0,
+    "x_labels": [
+     400,
+     500,
+     600,
+     700
+    ],
+    "x_resid_pt": 0.048,
+    "y_labels": [
+     3,
+     2,
+     1,
+     0
+    ],
+    "y_resid_pt": 0.336
+   }
+  },
+  "files": {
+   "density_curve_b": {
+    "n": 133,
+    "x": [
+     -4.004,
+     -0.531
+    ],
+    "y": [
+     0.133,
+     2.425
+    ]
+   },
+   "density_curve_g": {
+    "n": 124,
+    "x": [
+     -4.004,
+     -0.531
+    ],
+    "y": [
+     0.133,
+     2.569
+    ]
+   },
+   "density_curve_r": {
+    "n": 84,
+    "x": [
+     -4.001,
+     -0.531
+    ],
+    "y": [
+     0.133,
+     2.267
+    ]
+   },
+   "dye_density_c": {
+    "n": 85,
+    "x": [
+     377.439,
+     723.843
+    ],
+    "y": [
+     0.11,
+     0.997
+    ]
+   },
+   "dye_density_m": {
+    "n": 109,
+    "x": [
+     377.439,
+     723.843
+    ],
+    "y": [
+     0.017,
+     1.001
+    ]
+   },
+   "dye_density_y": {
+    "n": 94,
+    "x": [
+     377.439,
+     723.843
+    ],
+    "y": [
+     0.017,
+     1.001
+    ]
+   },
+   "log_sensitivity_b": {
+    "n": 48,
+    "x": [
+     391.972,
+     514.402
+    ],
+    "y": [
+     0.73,
+     2.22
+    ]
+   },
+   "log_sensitivity_g": {
+    "n": 58,
+    "x": [
+     470.63,
+     591.988
+    ],
+    "y": [
+     0.725,
+     2.058
+    ]
+   },
+   "log_sensitivity_r": {
+    "n": 53,
+    "x": [
+     564.097,
+     673.428
+    ],
+    "y": [
+     0.692,
+     2.052
+    ]
+   }
+  },
+  "notes": [
+   "EI 1600 = ISO 400 push-processed +2 (the only curve set printed)",
+   "the three steep sections are separate and cross: B left of G left of R below D ~1.8, G right of R above; traced as x(y) per stroke. Between D ~1.8 and 2.3 and below D ~0.9 the G trace can run on the R stroke (they are <= 0.035 log H apart there)",
+   "the profile keeps this crossover, so mid-greys render green-yellow (ColorChecker grey a*b* about -6, +3)",
+   "char g: own trace covers x -4..-2.15; outside it the curve coincides with r on the sheet and that trace is used",
+   "char b: own trace covers x -4..-2.15; outside it the curve coincides with r on the sheet and that trace is used"
+  ]
+ },
+ "fujifilm_provia_400x_rxp_af30213e": {
+  "accuracy": {
+   "char:b": {
+    "max_pt": 0.6,
+    "median_pt": 0.0,
+    "p95_pt": 0.339
+   },
+   "char:g": {
+    "max_pt": 0.612,
+    "median_pt": 0.0,
+    "p95_pt": 0.12
+   },
+   "char:r": {
+    "max_pt": 0.0,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   },
+   "dye:c": {
+    "max_pt": 0.12,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   },
+   "dye:m": {
+    "max_pt": 0.12,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   },
+   "dye:y": {
+    "max_pt": 0.0,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   },
+   "sens:b": {
+    "max_pt": 0.0,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   },
+   "sens:g": {
+    "max_pt": 0.0,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   },
+   "sens:r": {
+    "max_pt": 0.0,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   }
+  },
+  "calib": {
+   "char_p7": {
+    "grid_lines": {
+     "h": 8,
+     "v": 9
+    },
+    "stroke_px": 7.0,
+    "x_labels": [
+     -4,
+     -3,
+     -2,
+     -1,
+     0
+    ],
+    "x_resid_pt": 0.337,
+    "y_labels": [
+     0,
+     1,
+     2,
+     3,
+     3.5
+    ],
+    "y_resid_pt": 0.081
+   },
+   "dye_p7": {
+    "grid_lines": {
+     "h": 4,
+     "v": 6
+    },
+    "stroke_px": 8.0,
+    "x_labels": [
+     400,
+     500,
+     600,
+     700
+    ],
+    "x_resid_pt": 0.138,
+    "y_labels": [
+     1,
+     0.5,
+     0
+    ],
+    "y_resid_pt": 0.02
+   },
+   "sens_p7": {
+    "grid_lines": {
+     "h": 4,
+     "v": 6
+    },
+    "stroke_px": 4.0,
+    "x_labels": [
+     400,
+     500,
+     600,
+     700
+    ],
+    "x_resid_pt": 0.03,
+    "y_labels": [
+     3,
+     2,
+     1,
+     0
+    ],
+    "y_resid_pt": 0.204
+   }
+  },
+  "files": {
+   "density_curve_b": {
+    "n": 57,
+    "x": [
+     -3.916,
+     -0.029
+    ],
+    "y": [
+     0.137,
+     3.334
+    ]
+   },
+   "density_curve_g": {
+    "n": 53,
+    "x": [
+     -3.914,
+     -0.029
+    ],
+    "y": [
+     0.137,
+     3.484
+    ]
+   },
+   "density_curve_r": {
+    "n": 57,
+    "x": [
+     -3.916,
+     -0.029
+    ],
+    "y": [
+     0.137,
+     3.204
+    ]
+   },
+   "dye_density_c": {
+    "n": 74,
+    "x": [
+     394.219,
+     710.26
+    ],
+    "y": [
+     0.02,
+     0.998
+    ]
+   },
+   "dye_density_m": {
+    "n": 82,
+    "x": [
+     394.219,
+     711.959
+    ],
+    "y": [
+     0.001,
+     0.997
+    ]
+   },
+   "dye_density_y": {
+    "n": 52,
+    "x": [
+     396.472,
+     711.109
+    ],
+    "y": [
+     0.0,
+     0.996
+    ]
+   },
+   "log_sensitivity_b": {
+    "n": 45,
+    "x": [
+     388.73,
+     498.873
+    ],
+    "y": [
+     0.163,
+     1.969
+    ]
+   },
+   "log_sensitivity_g": {
+    "n": 57,
+    "x": [
+     474.081,
+     591.229
+    ],
+    "y": [
+     0.134,
+     1.734
+    ]
+   },
+   "log_sensitivity_r": {
+    "n": 50,
+    "x": [
+     554.886,
+     689.226
+    ],
+    "y": [
+     0.174,
+     1.433
+    ]
+   }
+  },
+  "notes": [
+   "curves read directly from the PDF vector paths (page 7), no tracing"
+  ]
+ },
+ "fujifilm_t64_rtp_af3178e": {
+  "accuracy": {
+   "char:b": {
+    "max_pt": 0.6,
+    "median_pt": 0.0,
+    "p95_pt": 0.339
+   },
+   "char:g": {
+    "max_pt": 0.6,
+    "median_pt": 0.0,
+    "p95_pt": 0.24
+   },
+   "char:r": {
+    "max_pt": 0.268,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   },
+   "dye:c": {
+    "max_pt": 0.12,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   },
+   "dye:m": {
+    "max_pt": 0.12,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   },
+   "dye:y": {
+    "max_pt": 0.12,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   },
+   "sens:b": {
+    "max_pt": 0.0,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   },
+   "sens:g": {
+    "max_pt": 0.0,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   },
+   "sens:r": {
+    "max_pt": 0.0,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   }
+  },
+  "calib": {
+   "char_p7": {
+    "grid_lines": {
+     "h": 9,
+     "v": 10
+    },
+    "stroke_px": 6.0,
+    "x_labels": [
+     -3,
+     -2,
+     -1,
+     0,
+     1
+    ],
+    "x_resid_pt": 0.816,
+    "y_labels": [
+     0,
+     1,
+     2,
+     3,
+     4
+    ],
+    "y_resid_pt": 0.024
+   },
+   "dye_p7": {
+    "grid_lines": {
+     "h": 4,
+     "v": 6
+    },
+    "stroke_px": 8.0,
+    "x_labels": [
+     400,
+     500,
+     600,
+     700
+    ],
+    "x_resid_pt": 0.24,
+    "y_labels": [
+     1,
+     0.5,
+     0
+    ],
+    "y_resid_pt": 0.02
+   },
+   "sens_p7": {
+    "grid_lines": {
+     "h": 5,
+     "v": 6
+    },
+    "stroke_px": 4.0,
+    "x_labels": [
+     400,
+     500,
+     600,
+     700
+    ],
+    "x_resid_pt": 0.755,
+    "y_labels": [
+     1,
+     0,
+     -1
+    ],
+    "y_resid_pt": 0.2
+   }
+  },
+  "files": {
+   "density_curve_b": {
+    "n": 46,
+    "x": [
+     -3.079,
+     0.3
+    ],
+    "y": [
+     0.123,
+     3.514
+    ]
+   },
+   "density_curve_g": {
+    "n": 49,
+    "x": [
+     -3.079,
+     0.3
+    ],
+    "y": [
+     0.123,
+     3.689
+    ]
+   },
+   "density_curve_r": {
+    "n": 46,
+    "x": [
+     -3.079,
+     0.3
+    ],
+    "y": [
+     0.123,
+     3.576
+    ]
+   },
+   "dye_density_c": {
+    "n": 74,
+    "x": [
+     394.21,
+     710.16
+    ],
+    "y": [
+     0.019,
+     0.997
+    ]
+   },
+   "dye_density_m": {
+    "n": 82,
+    "x": [
+     394.21,
+     711.859
+    ],
+    "y": [
+     -0.0,
+     0.997
+    ]
+   },
+   "dye_density_y": {
+    "n": 52,
+    "x": [
+     396.451,
+     711.008
+    ],
+    "y": [
+     -0.001,
+     0.995
+    ]
+   },
+   "log_sensitivity_b": {
+    "n": 64,
+    "x": [
+     388.392,
+     509.025
+    ],
+    "y": [
+     -1.011,
+     0.902
+    ]
+   },
+   "log_sensitivity_g": {
+    "n": 48,
+    "x": [
+     485.413,
+     587.784
+    ],
+    "y": [
+     -1.003,
+     0.388
+    ]
+   },
+   "log_sensitivity_r": {
+    "n": 28,
+    "x": [
+     567.362,
+     659.088
+    ],
+    "y": [
+     -0.997,
+     0.127
+    ]
+   }
+  },
+  "notes": [
+   "curves read directly from the PDF vector paths (page 7), no tracing",
+   "the characteristic-curve plot is captioned 'Exposure: Dayloght' (sic) although T64 is a 3200 K tungsten film; the profile assumes neutral balance under tungsten (reference illuminant T, estimate)"
+  ]
+ },
+ "fujifilm_velvia_50_rvp50_af30221e2": {
+  "accuracy": {
+   "char:b": {
+    "max_pt": 0.509,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   },
+   "char:g": {
+    "max_pt": 0.72,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   },
+   "char:r": {
+    "max_pt": 0.17,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   },
+   "dye:c": {
+    "max_pt": 0.12,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   },
+   "dye:m": {
+    "max_pt": 0.0,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   },
+   "dye:y": {
+    "max_pt": 0.0,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   },
+   "sens:b": {
+    "max_pt": 0.17,
+    "median_pt": 0.0,
+    "p95_pt": 0.12
+   },
+   "sens:g": {
+    "max_pt": 0.0,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   },
+   "sens:r": {
+    "max_pt": 0.12,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   }
+  },
+  "calib": {
+   "char_p8": {
+    "grid_lines": {
+     "h": 9,
+     "v": 10
+    },
+    "stroke_px": 7.0,
+    "x_labels": [
+     -3,
+     -2,
+     -1,
+     0,
+     1
+    ],
+    "x_resid_pt": 0.06,
+    "y_labels": [
+     4,
+     3,
+     2,
+     1,
+     0.5,
+     0
+    ],
+    "y_resid_pt": 0.26
+   },
+   "dye_p8": {
+    "grid_lines": {
+     "h": 4,
+     "v": 6
+    },
+    "stroke_px": 11.0,
+    "x_labels": [
+     400,
+     500,
+     600,
+     700
+    ],
+    "x_resid_pt": 0.12,
+    "y_labels": [
+     1,
+     0.5,
+     0
+    ],
+    "y_resid_pt": 0.1
+   },
+   "sens_p8": {
+    "grid_lines": {
+     "h": 4,
+     "v": 6
+    },
+    "stroke_px": 13.0,
+    "x_labels": [
+     400,
+     500,
+     600,
+     700
+    ],
+    "x_resid_pt": 0.372,
+    "y_labels": [
+     2,
+     1,
+     0,
+     -1
+    ],
+    "y_resid_pt": 0.258
+   }
+  },
+  "files": {
+   "density_curve_b": {
+    "n": 98,
+    "x": [
+     -2.829,
+     1.12
+    ],
+    "y": [
+     0.142,
+     3.702
+    ]
+   },
+   "density_curve_g": {
+    "n": 91,
+    "x": [
+     -2.829,
+     1.12
+    ],
+    "y": [
+     0.142,
+     3.807
+    ]
+   },
+   "density_curve_r": {
+    "n": 78,
+    "x": [
+     -2.83,
+     1.12
+    ],
+    "y": [
+     0.142,
+     3.341
+    ]
+   },
+   "dye_density_c": {
+    "n": 87,
+    "x": [
+     382.795,
+     717.066
+    ],
+    "y": [
+     0.048,
+     1.003
+    ]
+   },
+   "dye_density_m": {
+    "n": 100,
+    "x": [
+     382.795,
+     716.857
+    ],
+    "y": [
+     0.014,
+     1.002
+    ]
+   },
+   "dye_density_y": {
+    "n": 73,
+    "x": [
+     382.795,
+     600.312
+    ],
+    "y": [
+     0.002,
+     1.003
+    ]
+   },
+   "log_sensitivity_b": {
+    "n": 51,
+    "x": [
+     386.749,
+     494.824
+    ],
+    "y": [
+     -0.784,
+     0.575
+    ]
+   },
+   "log_sensitivity_g": {
+    "n": 54,
+    "x": [
+     485.197,
+     592.181
+    ],
+    "y": [
+     -0.724,
+     0.555
+    ]
+   },
+   "log_sensitivity_r": {
+    "n": 58,
+    "x": [
+     577.572,
+     691.728
+    ],
+    "y": [
+     -0.797,
+     0.547
+    ]
+   }
+  },
+  "notes": [
+   "curves traced from the 1-bit scans embedded on page 8; the dye plot starts at 380 nm",
+   "char g: own trace covers x -2.83..-1.68; outside it the curve coincides with r on the sheet and that trace is used",
+   "char b: own trace covers x -2.83..-1.68; outside it the curve coincides with r on the sheet and that trace is used"
+  ]
+ }
+}
