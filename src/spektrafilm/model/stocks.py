@@ -104,6 +104,9 @@ class FilmStocks(Enum):
     kodak_elite_chrome_extra_color_100_e126 = 'kodak_elite_chrome_extra_color_100_e126'
     kodak_elite_chrome_200_e148 = 'kodak_elite_chrome_200_e148'
     kodak_elite_chrome_160t_e154 = 'kodak_elite_chrome_160t_e154'
+    kodak_kodachrome_25_e55 = 'kodak_kodachrome_25_e55'
+    kodak_kodachrome_64_e55 = 'kodak_kodachrome_64_e55'
+    kodak_kodachrome_200_e55 = 'kodak_kodachrome_200_e55'
 
 class PrintPapers(Enum):
     kodak_ultra_endura = 'kodak_ultra_endura' # problematic
