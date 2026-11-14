@@ -60,5 +60,14 @@ midscale neutral. The density at which sensitivity is defined is not stated
 Dye densities outside the printed 400-700 nm (`hold_decay`), sensitivity
 tails beyond the printed curves, the hanatos2025 adaptation parameters
 (donors pinned to upstream's and the KODAK technical-data reversal profiles),
-the interlayer DIR strength (see `film_render_overrides`), and for EIR the
-dropped infrared response.
+the interlayer DIR strength (runtime default, no `film_render_overrides`:
+EKTACHROME 100D renders ColorChecker C* 35.9 against upstream's
+`kodak_ektachrome_100` 37.5 and E100G 36.5, no clear mismatch; EIR is a
+false-colour film, so a C* target does not apply), and for EIR the dropped
+infrared response.
+
+Without a No. 12 filter the infrared-sensitive (cyan-forming) layer's high
+printed blue sensitivity dominates: blue subjects (sky) render magenta-red,
+greens go dark blue-green, reds go green, and skin turns cyan-green (default
+scanner, mid-grey a*b* about (8.6, -12.5)). This follows the printed curves;
+it is not the familiar red-foliage infrared look, which needs infrared input.
