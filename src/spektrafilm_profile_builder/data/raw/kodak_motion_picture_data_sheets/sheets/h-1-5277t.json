@@ -1,0 +1,376 @@
+{
+ "doc": "H-1-5277t",
+ "publisher": "KODAK motion picture film technical data sheet",
+ "date": "1996-03",
+ "title": "KODAK VISION 320T Color Negative Film 5277 / 7277",
+ "pdf": "5277.pdf",
+ "url": "https://125px.com/docs/motionpicture/kodak/5277.pdf",
+ "stocks": [
+  {
+   "id": "kodak_vision_320t_5277",
+   "name": "KODAK VISION 320T Color Negative Film 5277 / 7277",
+   "type": "negative",
+   "meta": {
+    "speed": "EI 320 tungsten (EI 200 daylight with WRATTEN 85)",
+    "process": "ECN-2",
+    "densitometry": "Status M",
+    "exposure": "tungsten, 1/50 s",
+    "sensitivity_defined_at": "0.2 above D-min (effective exposure 0.013 s)",
+    "art": "vector (PDF paths, page 4)"
+   },
+   "notes": [
+    "curves read directly from the PDF vector paths (page 4), no tracing",
+    "characteristic curves read on the camera-stop grid (converted to relative log H)",
+    "C/M/Y dye curves are printed peak-normalised (dashed strokes; the legend samples are not read)"
+   ],
+   "plots": [
+    {
+     "kind": "char",
+     "page": 4,
+     "rect": [
+      73,
+      500,
+      278,
+      656
+     ],
+     "x": [
+      [
+       -2.40824,
+       98.93
+      ],
+      [
+       -1.80618,
+       124.36
+      ],
+      [
+       -1.20412,
+       149.79
+      ],
+      [
+       -0.60206,
+       175.22
+      ],
+      [
+       0.0,
+       200.65
+      ],
+      [
+       0.60206,
+       226.08
+      ],
+      [
+       1.20412,
+       251.51
+      ],
+      [
+       1.80618,
+       276.94
+      ]
+     ],
+     "y": [
+      [
+       3.0,
+       502.5
+      ],
+      [
+       2.0,
+       553.39
+      ],
+      [
+       1.0,
+       604.25
+      ],
+      [
+       0.0,
+       655.1
+      ]
+     ],
+     "curves": {
+      "b": [
+       {
+        "path": [
+         22,
+         0
+        ]
+       }
+      ],
+      "g": [
+       {
+        "path": [
+         21,
+         0
+        ]
+       }
+      ],
+      "r": [
+       {
+        "path": [
+         21,
+         1
+        ]
+       }
+      ]
+     },
+     "dense_lines": true
+    },
+    {
+     "kind": "sens",
+     "page": 4,
+     "rect": [
+      336,
+      109,
+      562,
+      281
+     ],
+     "x": [
+      [
+       250.0,
+       349.76
+      ],
+      [
+       300.0,
+       369.83
+      ],
+      [
+       350.0,
+       389.89
+      ],
+      [
+       400.0,
+       409.96
+      ],
+      [
+       450.0,
+       430.02
+      ],
+      [
+       500.0,
+       450.09
+      ],
+      [
+       550.0,
+       470.16
+      ],
+      [
+       600.0,
+       490.22
+      ],
+      [
+       650.0,
+       510.29
+      ],
+      [
+       700.0,
+       530.36
+      ],
+      [
+       750.0,
+       550.42
+      ]
+     ],
+     "y": [
+      [
+       4.0,
+       121.19
+      ],
+      [
+       3.0,
+       159.02
+      ],
+      [
+       2.0,
+       196.85
+      ],
+      [
+       1.0,
+       234.67
+      ],
+      [
+       0.0,
+       272.5
+      ]
+     ],
+     "curves": {
+      "b": [
+       {
+        "path": [
+         28,
+         0
+        ]
+       }
+      ],
+      "g": [
+       {
+        "path": [
+         27,
+         1
+        ]
+       }
+      ],
+      "r": [
+       {
+        "path": [
+         27,
+         0
+        ]
+       }
+      ]
+     },
+     "dense_lines": true
+    },
+    {
+     "kind": "dye",
+     "page": 4,
+     "rect": [
+      343,
+      358,
+      553,
+      545
+     ],
+     "x": [
+      [
+       300.0,
+       357.06
+      ],
+      [
+       400.0,
+       393.9
+      ],
+      [
+       500.0,
+       430.75
+      ],
+      [
+       600.0,
+       467.6
+      ],
+      [
+       700.0,
+       504.44
+      ],
+      [
+       800.0,
+       541.29
+      ]
+     ],
+     "y": [
+      [
+       1.8,
+       369.62
+      ],
+      [
+       1.6,
+       388.04
+      ],
+      [
+       1.4,
+       406.45
+      ],
+      [
+       1.2,
+       424.87
+      ],
+      [
+       1.0,
+       443.28
+      ],
+      [
+       0.8,
+       461.7
+      ],
+      [
+       0.6,
+       480.12
+      ],
+      [
+       0.4,
+       498.53
+      ],
+      [
+       0.2,
+       516.95
+      ],
+      [
+       0.0,
+       535.36
+      ]
+     ],
+     "curves": {
+      "mid": [
+       {
+        "path": [
+         39,
+         0
+        ]
+       }
+      ],
+      "min": [
+       {
+        "path": [
+         41,
+         0
+        ]
+       }
+      ],
+      "y": [
+       {
+        "path": [
+         42,
+         0
+        ]
+       }
+      ],
+      "m": [
+       {
+        "path": [
+         43,
+         0
+        ]
+       }
+      ],
+      "c": [
+       {
+        "path": [
+         40,
+         0
+        ]
+       }
+      ]
+     },
+     "dense_lines": true
+    }
+   ],
+   "recipe": {
+    "stock": "kodak_vision_320t_5277",
+    "name": "Kodak VISION 320T 5277 (H-1-5277t)",
+    "target_print": "kodak_2383",
+    "reference_illuminant": "T",
+    "use": "cine",
+    "density_over_min": 0.2,
+    "data_trustability": 0.3,
+    "adaptation_donors": [
+     "kodak_ektar_100",
+     "kodak_gold_200",
+     "kodak_portra_160",
+     "kodak_portra_400",
+     "kodak_portra_800",
+     "kodak_ultramax_400",
+     "kodak_vision3_200t",
+     "kodak_vision3_250d",
+     "kodak_vision3_500t",
+     "kodak_vision3_50d"
+    ],
+    "estimates": [
+     "the characteristic curves are read on the printed camera-stop grid (1 stop = 0.30103 log H; the sheet's relative log-exposure ticks are hand-placed and agree within ~1%); the absolute exposure scale comes from the builder's speed-point anchoring",
+     "spectral sensitivity on the sheet's log scale, absolute level from the builder's mid-grey anchoring",
+     "sensitivity tails beyond the printed curves",
+     "individual C/M/Y dye curves printed peak-normalised: used as the start of the builder's dye reconstruction against the printed mid-scale neutral and D-min",
+     "dye densities outside the printed wavelength range",
+     "print stock: KODAK VISION 2383 (the shipped cine print profile; the contemporary 5386 / 2386 / 2393 era prints are not modelled separately)",
+     "interlayer DIR coupler strength (not on any data sheet; runtime default for negatives)",
+     "hanatos2025 adaptation parameters borrowed from the shipped Kodak negatives (pinned donors)"
+    ]
+   }
+  }
+ ]
+}

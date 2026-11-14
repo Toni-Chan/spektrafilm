@@ -1,0 +1,53 @@
+KODAK VISION 250D Color Negative Film 5246 / 7246
+Datasheet: KODAK motion picture film technical data sheet H-1-5246t (2003-03), 5246.pdf, PDF page(s) 4, 5
+Source URL: https://125px.com/docs/motionpicture/kodak/5246.pdf
+Publication: H-1-5246t
+Publication date: 2003-03
+Type: negative
+Densitometry: Status M
+Process: ECN-2
+Exposure: daylight, 1/50 s
+Sensitivity defined at: 0.4 above D-min (effective exposure 0.013 s)
+Speed: EI 250 daylight (EI 64 tungsten with WRATTEN 80A)
+
+Files (x range, y range, n points):
+  density_curve_b.csv  x -2.239..1.532  y 0.919..2.5  n=70
+  density_curve_g.csv  x -2.239..1.532  y 0.589..2.18  n=84
+  density_curve_r.csv  x -2.239..1.532  y 0.158..1.549  n=54
+  dye_density_mid.csv  x 351.794..795.598  y 0.226..1.306  n=133
+  dye_density_min.csv  x 351.374..795.179  y 0.093..0.993  n=108
+  log_sensitivity_b.csv  x 360.559..510.062  y 0.348..2.526  n=61
+  log_sensitivity_g.csv  x 390.097..600.152  y -0.002..2.588  n=76
+  log_sensitivity_r.csv  x 500.295..680.232  y 0.094..2.528  n=63
+
+Units: log_sensitivity_* = wavelength nm, log10 sensitivity (relative where the sheet prints no
+  absolute scale); density_curve_* = log10 H (lux-seconds), total density as printed (base+fog
+  included); dye_density_* = wavelength nm, spectral diffuse density (c/m/y: individual dyes as
+  printed; mid: mid-scale neutral; min: minimum density).
+Extraction: the plot is rendered from the PDF at 600 dpi (the curves are embedded 1-bit scans or
+  vector strokes), grid lines are found as long straight dark runs and removed except where a curve
+  crosses them, axes are calibrated piecewise-linearly through the printed grid lines named in the
+  sheet config (sheets/*.json), and each curve is followed column by column from a seed point
+  (script: scripts/extract_filmcolors_datasheets.py). Typical accuracy ~0.2-0.5 pt on the page
+  (about 1-2 nm, 0.01-0.02 log H or density) plus the accuracy of the original drawing / scan.
+Calibration:
+  char_p4: {"x_labels": [-2.40824, -1.80618, -1.20412, -0.60206, 0.0, 0.60206, 1.20412], "y_labels": [3.0, 2.0, 1.0, 0.0], "x_resid_pt": 0.034, "y_resid_pt": 0.024, "stroke_px": 7.0, "grid_lines": {"h": 7, "v": 9}}
+  sens_p5: {"x_labels": [250.0, 300.0, 350.0, 400.0, 450.0, 500.0, 550.0, 600.0, 650.0, 700.0, 750.0], "y_labels": [4.0, 3.0, 2.0, 1.0, 0.0], "x_resid_pt": 0.311, "y_resid_pt": 0.036, "stroke_px": 6.0, "grid_lines": {"h": 5, "v": 11}}
+  dye_p5: {"x_labels": [300, 350, 400, 450, 500, 550, 600, 650, 700, 750, 800], "y_labels": [1.8, 1.3, 0.8, 0.3, -0.2], "x_resid_pt": 0.027, "y_resid_pt": 0.038, "stroke_px": 8.0, "grid_lines": {"h": 2, "v": 2}}
+Distance of the written curves to the printed strokes (pt): {"char:b": {"median_pt": 0.0, "p95_pt": 0.0, "max_pt": 0.12}, "char:g": {"median_pt": 0.0, "p95_pt": 0.0, "max_pt": 0.12}, "char:r": {"median_pt": 0.0, "p95_pt": 0.0, "max_pt": 0.12}, "sens:b": {"median_pt": 0.0, "p95_pt": 0.0, "max_pt": 0.0}, "sens:g": {"median_pt": 0.0, "p95_pt": 0.0, "max_pt": 0.0}, "sens:r": {"median_pt": 0.0, "p95_pt": 0.0, "max_pt": 0.0}, "dye:mid": {"median_pt": 0.0, "p95_pt": 0.0, "max_pt": 0.0}, "dye:min": {"median_pt": 0.0, "p95_pt": 0.783, "max_pt": 1.08}}
+Caveats:
+  curves read directly from the PDF vector paths (pages 4-5), no tracing
+  characteristic curves read on the camera-stop grid (converted to relative log H)
+  the dye plot ("D-mins subtracted") also prints peak-normalised C/M/Y strokes, but the yellow stroke runs on into a 0.67-density red-region hump, so the C/M/Y set is ambiguous and not used
+  x label 350: no grid line within 3.0 pt of 393.72; used as given
+  x label 400: no grid line within 3.0 pt of 412.2; used as given
+  x label 450: no grid line within 3.0 pt of 430.64; used as given
+  x label 500: no grid line within 3.0 pt of 449.13; used as given
+  x label 550: no grid line within 3.0 pt of 467.61; used as given
+  x label 600: no grid line within 3.0 pt of 486.1; used as given
+  x label 650: no grid line within 3.0 pt of 504.58; used as given
+  x label 700: no grid line within 3.0 pt of 523.02; used as given
+  x label 750: no grid line within 3.0 pt of 541.51; used as given
+  y label 1.3: no grid line within 3.0 pt of 107.7; used as given
+  y label 0.8: no grid line within 3.0 pt of 153.79; used as given
+  y label 0.3: no grid line within 3.0 pt of 199.81; used as given

@@ -1,0 +1,411 @@
+{
+ "doc": "H-1-5245t",
+ "publisher": "KODAK motion picture film technical data sheet",
+ "date": "2003-05",
+ "title": "EASTMAN EXR 50D Color Negative Film 5245 / 7245",
+ "pdf": "5245.pdf",
+ "url": "https://125px.com/docs/motionpicture/kodak/5245.pdf",
+ "stocks": [
+  {
+   "id": "kodak_exr_50d_5245",
+   "name": "EASTMAN EXR 50D Color Negative Film 5245 / 7245",
+   "type": "negative",
+   "meta": {
+    "speed": "EI 50 daylight (EI 12 tungsten with WRATTEN 80A)",
+    "process": "ECN-2",
+    "densitometry": "Status M",
+    "exposure": "daylight, 1/50 s",
+    "sensitivity_defined_at": "0.40 above D-min (effective exposure 0.15 s)",
+    "art": "vector (PDF paths, pages 3-4)"
+   },
+   "notes": [
+    "curves read directly from the PDF vector paths (pages 3-4), no tracing",
+    "the March 1999 edition (H-1-5245) prints identical characteristic and sensitivity curves and only mid-scale / D-min dye densities; this May 2003 edition supersedes it (not extracted separately)",
+    "C/M/Y dye curves are printed peak-normalised (1.0 at the peak)"
+   ],
+   "plots": [
+    {
+     "kind": "char",
+     "page": 3,
+     "rect": [
+      349,
+      79,
+      558,
+      287
+     ],
+     "x": [
+      [
+       -4.0,
+       361.12
+      ],
+      [
+       -3.0,
+       391.89
+      ],
+      [
+       -2.0,
+       422.65
+      ],
+      [
+       -1.0,
+       453.42
+      ],
+      [
+       0.0,
+       484.18
+      ],
+      [
+       1.0,
+       514.94
+      ],
+      [
+       2.0,
+       545.71
+      ]
+     ],
+     "y": [
+      [
+       3.0,
+       91.38
+      ],
+      [
+       2.0,
+       152.88
+      ],
+      [
+       1.0,
+       214.39
+      ],
+      [
+       0.0,
+       275.89
+      ]
+     ],
+     "curves": {
+      "b": [
+       {
+        "path": [
+         17,
+         2
+        ]
+       },
+       {
+        "path": [
+         18,
+         0
+        ]
+       }
+      ],
+      "g": [
+       {
+        "path": [
+         17,
+         1
+        ]
+       }
+      ],
+      "r": [
+       {
+        "path": [
+         17,
+         0
+        ]
+       }
+      ]
+     },
+     "dense_lines": true
+    },
+    {
+     "kind": "sens",
+     "page": 4,
+     "rect": [
+      61,
+      417,
+      269,
+      590
+     ],
+     "x": [
+      [
+       250.0,
+       74.65
+      ],
+      [
+       300.0,
+       94.75
+      ],
+      [
+       350.0,
+       114.84
+      ],
+      [
+       400.0,
+       134.94
+      ],
+      [
+       450.0,
+       155.04
+      ],
+      [
+       500.0,
+       175.13
+      ],
+      [
+       550.0,
+       195.23
+      ],
+      [
+       600.0,
+       215.32
+      ],
+      [
+       650.0,
+       235.42
+      ],
+      [
+       700.0,
+       255.52
+      ]
+     ],
+     "y": [
+      [
+       2.0,
+       428.31
+      ],
+      [
+       1.0,
+       466.18
+      ],
+      [
+       0.0,
+       504.05
+      ],
+      [
+       -1.0,
+       541.92
+      ],
+      [
+       -2.0,
+       579.79
+      ]
+     ],
+     "curves": {
+      "b": [
+       {
+        "path": [
+         15,
+         1
+        ]
+       }
+      ],
+      "g": [
+       {
+        "path": [
+         15,
+         0
+        ]
+       }
+      ],
+      "r": [
+       {
+        "path": [
+         15,
+         2
+        ]
+       }
+      ]
+     },
+     "dense_lines": true
+    },
+    {
+     "kind": "dye",
+     "page": 4,
+     "rect": [
+      343,
+      52,
+      556,
+      240
+     ],
+     "x": [
+      [
+       300.0,
+       358.5
+      ],
+      [
+       350.0,
+       376.97
+      ],
+      [
+       400.0,
+       395.44
+      ],
+      [
+       450.0,
+       413.91
+      ],
+      [
+       500.0,
+       432.38
+      ],
+      [
+       550.0,
+       450.84
+      ],
+      [
+       600.0,
+       469.31
+      ],
+      [
+       650.0,
+       487.78
+      ],
+      [
+       700.0,
+       506.25
+      ],
+      [
+       750.0,
+       524.72
+      ],
+      [
+       800.0,
+       543.19
+      ]
+     ],
+     "y": [
+      [
+       1.8,
+       61.83
+      ],
+      [
+       1.6,
+       80.22
+      ],
+      [
+       1.4,
+       98.61
+      ],
+      [
+       1.2,
+       117.0
+      ],
+      [
+       1.0,
+       135.38
+      ],
+      [
+       0.8,
+       153.77
+      ],
+      [
+       0.6,
+       172.16
+      ],
+      [
+       0.4,
+       190.55
+      ],
+      [
+       0.2,
+       208.94
+      ],
+      [
+       0.0,
+       227.33
+      ]
+     ],
+     "curves": {
+      "mid": [
+       {
+        "path": [
+         23,
+         0
+        ]
+       }
+      ],
+      "min": [
+       {
+        "path": [
+         24,
+         0
+        ]
+       }
+      ],
+      "y": [
+       {
+        "path": [
+         28,
+         0
+        ]
+       }
+      ],
+      "m": [
+       {
+        "path": [
+         28,
+         1
+        ]
+       },
+       {
+        "path": [
+         29,
+         0
+        ]
+       },
+       {
+        "path": [
+         30,
+         0
+        ]
+       }
+      ],
+      "c": [
+       {
+        "path": [
+         32,
+         0
+        ]
+       },
+       {
+        "path": [
+         33,
+         0
+        ]
+       }
+      ]
+     },
+     "dense_lines": true
+    }
+   ],
+   "recipe": {
+    "stock": "kodak_exr_50d_5245",
+    "name": "Kodak EXR 50D 5245 (H-1-5245t)",
+    "target_print": "kodak_2383",
+    "reference_illuminant": "D55",
+    "use": "cine",
+    "density_over_min": 0.4,
+    "data_trustability": 0.3,
+    "adaptation_donors": [
+     "kodak_ektar_100",
+     "kodak_gold_200",
+     "kodak_portra_160",
+     "kodak_portra_400",
+     "kodak_portra_800",
+     "kodak_ultramax_400",
+     "kodak_vision3_200t",
+     "kodak_vision3_250d",
+     "kodak_vision3_500t",
+     "kodak_vision3_50d"
+    ],
+    "estimates": [
+     "spectral sensitivity on the sheet's log scale, absolute level from the builder's mid-grey anchoring",
+     "sensitivity tails beyond the printed curves",
+     "individual C/M/Y dye curves printed peak-normalised: used as the start of the builder's dye reconstruction against the printed mid-scale neutral and D-min",
+     "dye densities outside the printed wavelength range",
+     "print stock: KODAK VISION 2383 (the shipped cine print profile; the contemporary 5386 / 2386 / 2393 era prints are not modelled separately)",
+     "interlayer DIR coupler strength (not on any data sheet; runtime default for negatives)",
+     "hanatos2025 adaptation parameters borrowed from the shipped Kodak negatives (pinned donors)"
+    ]
+   }
+  }
+ ]
+}

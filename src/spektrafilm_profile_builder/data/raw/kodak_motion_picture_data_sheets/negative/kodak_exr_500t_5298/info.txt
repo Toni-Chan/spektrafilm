@@ -1,0 +1,41 @@
+EASTMAN EXR 500T Color Negative Film 5298 / 7298
+Datasheet: KODAK motion picture film technical information data sheet TI2082 (1993-10 (Revised 10-93)), 5298-ti2082.pdf, PDF page(s) 7, 8, 9
+Source URL: https://125px.com/docs/motionpicture/kodak/5298-ti2082.pdf
+Publication: TI2082
+Publication date: 1993-10 (Revised 10-93)
+Type: negative
+Densitometry: Status M
+Process: ECN-2
+Exposure: tungsten, 1/50 s
+Sensitivity defined at: 0.4 above D-min (effective exposure 0.013 s)
+Speed: EI 500 tungsten (EI 320 daylight with WRATTEN 85)
+
+Files (x range, y range, n points):
+  density_curve_b.csv  x -3.003..-0.012  y 0.982..2.482  n=213
+  density_curve_g.csv  x -3.003..-0.012  y 0.61..2.098  n=184
+  density_curve_r.csv  x -3.003..-0.012  y 0.172..1.48  n=214
+  dye_density_mid.csv  x 400.554..698.014  y 0.89..1.802  n=227
+  dye_density_min.csv  x 400.554..699.326  y 0.23..1.038  n=203
+  log_sensitivity_b.csv  x 400.916..538.91  y 0.178..2.738  n=106
+  log_sensitivity_g.csv  x 460.867..599.321  y 0.081..2.553  n=106
+  log_sensitivity_r.csv  x 560.836..675.448  y 0.218..2.253  n=95
+
+Units: log_sensitivity_* = wavelength nm, log10 sensitivity (relative where the sheet prints no
+  absolute scale); density_curve_* = log10 H (lux-seconds), total density as printed (base+fog
+  included); dye_density_* = wavelength nm, spectral diffuse density (c/m/y: individual dyes as
+  printed; mid: mid-scale neutral; min: minimum density).
+Extraction: the plot is rendered from the PDF at 600 dpi (the curves are embedded 1-bit scans or
+  vector strokes), grid lines are found as long straight dark runs and removed except where a curve
+  crosses them, axes are calibrated piecewise-linearly through the printed grid lines named in the
+  sheet config (sheets/*.json), and each curve is followed column by column from a seed point
+  (script: scripts/extract_filmcolors_datasheets.py). Typical accuracy ~0.2-0.5 pt on the page
+  (about 1-2 nm, 0.01-0.02 log H or density) plus the accuracy of the original drawing / scan.
+Calibration:
+  char_p7: {"x_labels": [-4.0, -3.0, -2.0, -1.0, 0.0, 1.0, 2.0], "y_labels": [3.0, 2.0, 1.0, 0.0], "x_resid_pt": 0.199, "y_resid_pt": 0.168, "stroke_px": 4.0, "grid_lines": {"h": 16, "v": 31}}
+  sens_p8: {"x_labels": [250, 300, 350, 400, 450, 500, 550, 600, 650, 700, 750], "y_labels": [3.0, 2.0, 1.0, 0.0, -1.0], "x_resid_pt": 0.177, "y_resid_pt": 0.15, "stroke_px": 5.0, "grid_lines": {"h": 21, "v": 51}}
+  dye_p9: {"x_labels": [250, 300, 350, 400, 450, 500, 550, 600, 650, 700, 750], "y_labels": [2.5, 2.0, 1.5, 1.0, 0.5, 0.0], "x_resid_pt": 0.033, "y_resid_pt": 0.023, "stroke_px": 4.0, "grid_lines": {"h": 6, "v": 51}}
+Distance of the written curves to the printed strokes (pt): {"char:b": {"median_pt": 0.0, "p95_pt": 0.12, "max_pt": 0.24}, "char:g": {"median_pt": 0.12, "p95_pt": 1.2, "max_pt": 1.784}, "char:r": {"median_pt": 0.12, "p95_pt": 0.646, "max_pt": 0.967}, "sens:b": {"median_pt": 0.0, "p95_pt": 0.12, "max_pt": 0.24}, "sens:g": {"median_pt": 0.24, "p95_pt": 2.041, "max_pt": 3.72}, "sens:r": {"median_pt": 0.24, "p95_pt": 1.223, "max_pt": 2.242}, "dye:mid": {"median_pt": 0.12, "p95_pt": 0.72, "max_pt": 1.032}, "dye:min": {"median_pt": 0.0, "p95_pt": 0.12, "max_pt": 0.24}}
+Caveats:
+  curves traced from embedded colour chart images (TI2082B/C/D 9-93, pages 7-9), colour by colour; axis labels are inside the images, axes calibrated on the chart grid (0.2 log H / 0.2 density / 10 nm)
+  green and red strokes are dash-dot / dotted on the chart and are bridged by the tracker
+  only the mid-scale neutral and D-min dye densities are printed

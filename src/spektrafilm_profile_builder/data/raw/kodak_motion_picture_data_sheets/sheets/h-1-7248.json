@@ -1,0 +1,313 @@
+{
+ "doc": "H-1-7248",
+ "publisher": "KODAK motion picture film technical data sheet",
+ "date": "1999-03",
+ "title": "EASTMAN EXR 100T Color Negative Film 5248 / 7248",
+ "pdf": "5248.pdf",
+ "url": "https://125px.com/docs/motionpicture/kodak/5248.pdf",
+ "stocks": [
+  {
+   "id": "kodak_exr_100t_5248",
+   "name": "EASTMAN EXR 100T Color Negative Film 5248 / 7248",
+   "type": "negative",
+   "meta": {
+    "speed": "EI 100 tungsten (EI 64 daylight with WRATTEN 85)",
+    "process": "ECN-2",
+    "densitometry": "Status M",
+    "exposure": "tungsten, 1/50 s",
+    "sensitivity_defined_at": "0.40 above D-min (effective exposure 0.013 s)",
+    "art": "vector (PDF paths, page 3)"
+   },
+   "notes": [
+    "curves read directly from the PDF vector paths (page 3), no tracing",
+    "characteristic curves calibrated on the printed log-exposure axis (top); the camera-stop axis printed under the same plot is ~9% too compressed against it (12.7 pt per stop vs 13.9 pt) and is not used",
+    "only the mid-scale neutral and D-min dye densities are printed"
+   ],
+   "plots": [
+    {
+     "kind": "char",
+     "page": 3,
+     "rect": [
+      88,
+      56,
+      266,
+      244
+     ],
+     "piecewise": false,
+     "x": [
+      [
+       -2.0,
+       132.75
+      ],
+      [
+       -1.0,
+       178.87
+      ],
+      [
+       0.0,
+       225.0
+      ]
+     ],
+     "y": [
+      [
+       3.0,
+       68.48
+      ],
+      [
+       2.0,
+       123.74
+      ],
+      [
+       1.0,
+       179.0
+      ],
+      [
+       0.0,
+       234.27
+      ]
+     ],
+     "curves": {
+      "b": [
+       {
+        "path": [
+         2,
+         1
+        ]
+       }
+      ],
+      "g": [
+       {
+        "path": [
+         2,
+         0
+        ]
+       }
+      ],
+      "r": [
+       {
+        "path": [
+         2,
+         2
+        ]
+       }
+      ]
+     },
+     "dense_lines": true
+    },
+    {
+     "kind": "sens",
+     "page": 3,
+     "rect": [
+      349,
+      45,
+      556,
+      219
+     ],
+     "x": [
+      [
+       250.0,
+       362.66
+      ],
+      [
+       300.0,
+       382.76
+      ],
+      [
+       350.0,
+       402.85
+      ],
+      [
+       400.0,
+       422.95
+      ],
+      [
+       450.0,
+       443.04
+      ],
+      [
+       500.0,
+       463.14
+      ],
+      [
+       550.0,
+       483.23
+      ],
+      [
+       600.0,
+       503.33
+      ],
+      [
+       650.0,
+       523.42
+      ],
+      [
+       700.0,
+       543.52
+      ]
+     ],
+     "y": [
+      [
+       2.0,
+       57.81
+      ],
+      [
+       1.0,
+       95.68
+      ],
+      [
+       0.0,
+       133.55
+      ],
+      [
+       -1.0,
+       171.41
+      ],
+      [
+       -2.0,
+       209.28
+      ]
+     ],
+     "curves": {
+      "b": [
+       {
+        "path": [
+         31,
+         0
+        ]
+       }
+      ],
+      "g": [
+       {
+        "path": [
+         30,
+         0
+        ]
+       }
+      ],
+      "r": [
+       {
+        "path": [
+         31,
+         1
+        ]
+       }
+      ]
+     },
+     "dense_lines": true
+    },
+    {
+     "kind": "dye",
+     "page": 3,
+     "rect": [
+      72,
+      268,
+      282,
+      475
+     ],
+     "x": [
+      [
+       250.0,
+       86.78
+      ],
+      [
+       350.0,
+       123.65
+      ],
+      [
+       450.0,
+       160.52
+      ],
+      [
+       550.0,
+       197.38
+      ],
+      [
+       650.0,
+       234.25
+      ],
+      [
+       750.0,
+       271.12
+      ]
+     ],
+     "y": [
+      [
+       2.5,
+       280.57
+      ],
+      [
+       2.0,
+       317.44
+      ],
+      [
+       1.5,
+       354.31
+      ],
+      [
+       1.0,
+       391.18
+      ],
+      [
+       0.5,
+       428.05
+      ],
+      [
+       0.0,
+       464.92
+      ]
+     ],
+     "curves": {
+      "mid": [
+       {
+        "path": [
+         11,
+         0
+        ]
+       }
+      ],
+      "min": [
+       {
+        "path": [
+         10,
+         0
+        ]
+       }
+      ]
+     },
+     "dense_lines": true
+    }
+   ],
+   "recipe": {
+    "stock": "kodak_exr_100t_5248",
+    "name": "Kodak EXR 100T 5248 (H-1-7248)",
+    "target_print": "kodak_2383",
+    "reference_illuminant": "T",
+    "use": "cine",
+    "density_over_min": 0.4,
+    "data_trustability": 0.3,
+    "adaptation_donors": [
+     "kodak_ektar_100",
+     "kodak_gold_200",
+     "kodak_portra_160",
+     "kodak_portra_400",
+     "kodak_portra_800",
+     "kodak_ultramax_400",
+     "kodak_vision3_200t",
+     "kodak_vision3_250d",
+     "kodak_vision3_500t",
+     "kodak_vision3_50d"
+    ],
+    "estimates": [
+     "characteristic curves on the printed log H axis (the camera-stop axis of the same plot is inconsistent with it by ~9%)",
+     "spectral sensitivity on the sheet's log scale, absolute level from the builder's mid-grey anchoring",
+     "sensitivity tails beyond the printed curves",
+     "individual CMY dyes reconstructed by the builder from the printed mid-scale neutral and D-min (not printed)",
+     "dye densities outside the printed wavelength range",
+     "print stock: KODAK VISION 2383 (the shipped cine print profile; the contemporary 5386 / 2386 / 2393 era prints are not modelled separately)",
+     "interlayer DIR coupler strength (not on any data sheet; runtime default for negatives)",
+     "hanatos2025 adaptation parameters borrowed from the shipped Kodak negatives (pinned donors)"
+    ]
+   }
+  }
+ ]
+}
