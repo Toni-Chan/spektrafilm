@@ -60,6 +60,24 @@ POSITIVES = {
     'kodak_elite_chrome_extra_color_100_e126': ('Kodak Elite Chrome Extra Color 100', 'D55', 'weak'),
     'kodak_elite_chrome_200_e148': ('Kodak Elite Chrome 200', 'D55', 'weak'),
     'kodak_elite_chrome_160t_e154': ('Kodak Elite Chrome 160T', 'T', 'weak'),
+    'kodak_kodachrome_25_e55': ('Kodak Kodachrome 25 (PKM)', 'D55', 'strong'),
+    'kodak_kodachrome_64_e55': ('Kodak Kodachrome 64 (PKR)', 'D55', 'strong'),
+    'kodak_kodachrome_200_e55': ('Kodak Kodachrome 200 (PKL)', 'D55', 'strong'),
+}
+# id -> extra recipe fields (all estimates, see the README):
+# * E-55 prints dyes only on ~410/420-700 nm: continue them ('hold_decay');
+# * KODACHROME 25's characteristic curves stop at log H +0.63 while still falling (D 0.16-0.18), so the
+#   toe fit lands below zero (R -0.095): base+fog 0.10 is assumed (KODACHROME 64 / 200 toe fits 0.085-0.17);
+# * hanatos2025 donors are pinned to the Kodak positives shipped before E-55, so the build does not
+#   depend on the order the three KODACHROME profiles are written in.
+_E55 = ('kodak_kodachrome_25_e55', 'kodak_kodachrome_64_e55', 'kodak_kodachrome_200_e55')
+_DONORS = ' '.join(['kodak_ektachrome_100', 'kodak_kodachrome_64'] + [k for k in POSITIVES if k not in _E55])
+EXTRA = {sid: dict(dye_extension='hold_decay', adaptation_donors=_DONORS) for sid in _E55}
+EXTRA['kodak_kodachrome_25_e55']['density_min'] = '0.10;0.10;0.10'
+ESTIMATE_NOTE = {
+    'hold_decay': ('Estimate placeholders (not on the sheet): dye densities outside the printed range '
+                   '(held below, exponential decay above), sensitivity tails below the printed log -2 '
+                   'and beyond the printed wavelengths, interlayer DIR scale (film_render_overrides).'),
 }
 # id -> (display name, support)   support 'film' = transparent/translucent display material (like kodak_2383)
 PAPERS = {
@@ -103,9 +121,17 @@ def main():
         rid = r['id']
         info = open(os.path.join(root, r['folder'], 'info.txt')).read()
         tag = f"{r['publication']}, {year(r['date'])}"
+        m = re.search(r'^Source URL:[ \t]*(\S+)', info, re.M)
+        url = m.group(1) if m else f"https://125px.com/docs/unsorted/kodak/{r['pdf']}"
         src = (f"KODAK technical data {r['publication']} ({r['date']}), {r['pdf']}, PDF page(s) {r['pages']}, "
-               f"{r['name']}: https://125px.com/docs/unsorted/kodak/{r['pdf']}")
-        base = dict(stock=rid, record=r['folder'], datasource=src, source_id=rid, page=r['pages'])
+               f"{r['name']}: {url}")
+        extra = EXTRA.get(rid, {})
+        if extra.get('dye_extension') in ESTIMATE_NOTE:
+            src += ' ' + ESTIMATE_NOTE[extra['dye_extension']]
+        if extra.get('density_min'):
+            src += f" Base+fog {extra['density_min'].replace(';', '/')} (R/G/B) is an estimate (curves end before D-min)."
+        base = dict(stock=rid, record=r['folder'], datasource=src, source_id=rid, page=r['pages'],
+                    **{k: extra.get(k, '') for k in ('density_min', 'dye_extension', 'adaptation_donors')})
         if rid in NEGATIVES:
             name, ill, ah = NEGATIVES[rid]
             out.append(dict(base, name=f'{name} ({tag})', type='negative', target_print='kodak_portra_endura',
@@ -126,7 +152,7 @@ def main():
                             data_trustability=1.0, support=support))
     cols = ['stock', 'name', 'type', 'record', 'support', 'target_print', 'reference_illuminant',
             'viewing_illuminant', 'antihalation', 'log_sensitivity_density_over_min', 'data_trustability',
-            'datasource', 'source_id', 'page']
+            'density_min', 'dye_extension', 'adaptation_donors', 'datasource', 'source_id', 'page']
     with open(os.path.join(root, 'recipes.csv'), 'w', newline='') as f:
         w = csv.DictWriter(f, fieldnames=cols)
         w.writeheader(); w.writerows(out)

@@ -10,7 +10,7 @@ so downstream ports (e.g. SpektraLab) can read them without the Python runtime.
 Profiles built from data sheets (`*_fdg`, `kodak_*_<pubcode>`) get their
 characteristic curves from **neutral, white-light exposures**. Those curves do
 not encode interlayer interimage effects (DIR couplers in negatives, iodide
-interimage in E-6 reversal films), which are the main design lever behind
+interimage in E-6 and K-14 reversal films), which are the main design lever behind
 "vivid"/"ultra"/"VS" stocks: the makers raise saturation *while keeping the
 grey scale neutral* (Kodak E-163: "Color Amplifying Technology ... while
 maintaining a neutral gray scale"). The runtime gives every film of a type the

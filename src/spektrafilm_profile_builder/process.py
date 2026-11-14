@@ -25,7 +25,7 @@ from .runtime_fit import (
 )
 from .spectral import (
     LOG_EXPOSURE_GRID, densitometer_crosstalk_matrix, extrapolate_log_sensitivity_tails,
-    fill_dye_gaps, interpolate, load_densitometer, load_generic_dyes,
+    extend_dyes_beyond_sheet, fill_dye_gaps, interpolate, load_densitometer, load_generic_dyes,
 )
 
 
@@ -48,6 +48,8 @@ class Recipe:
     grey_ramp_correction: bool = True
     data_trustability: float = 0.3
     adaptation_donors: list = field(default_factory=list)  # shipped profiles whose hanatos2025 params are averaged
+    density_min: str = ''                      # '' = toe fit; 'r,g,b' = base+fog override (estimate, for curves cut off before D-min)
+    dye_extension: str = 'none'                # positives: 'none' (NaN outside the printed range) | 'hold_decay' (estimate)
     datasource: str = ''                       # appended to the metadata datasource text
     copyright: str = ''
 
@@ -294,6 +296,12 @@ def build_profile(record: RawRecord, recipe: Recipe, report: BuildReport | None 
     # 2. characteristic curves: remove base+fog, put mid-grey at log exposure 0
     le, dc = _density_curves_on_grid(record)
     dc_min = measure_density_min(le, dc, ptype)
+    if recipe.density_min:
+        fitted = dc_min
+        dc_min = np.array([float(v) for v in str(recipe.density_min).replace(';', ',').split(',')], dtype=float)
+        if dc_min.shape != (3,):
+            raise ValueError(f'density_min needs three values r,g,b, got {recipe.density_min!r}')
+        report.log(f'base+fog override (estimate placeholder): {dc_min.tolist()} (toe fit gave {np.round(fitted, 3).tolist()})')
     dc = dc - dc_min
     dc, _ = _anchor(le, dc, ptype)
     report.log(f'base+fog (status {densitometer_kind[-1]}) RGB: {np.round(dc_min, 3).tolist()}')
@@ -315,7 +323,13 @@ def build_profile(record: RawRecord, recipe: Recipe, report: BuildReport | None 
     else:
         if not record.has_cmy_dyes:
             raise ValueError(f'{record.folder}: a positive needs dye_density_c/m/y.csv')
-        cmy = fill_dye_gaps(wl, record.dye_density_cmy)
+        if recipe.dye_extension == 'hold_decay':
+            cmy = extend_dyes_beyond_sheet(wl, record.dye_density_cmy)
+            report.log('dye densities outside the printed range: estimate placeholder (hold short side, decay long side)')
+        elif recipe.dye_extension in ('none', '', None):
+            cmy = fill_dye_gaps(wl, record.dye_density_cmy)
+        else:
+            raise ValueError(f'unknown dye_extension {recipe.dye_extension!r}')
         cmy = cmy / np.nanmax(cmy, axis=0)
         base = _positive_base_density(wl, dc_min)
         mid = None
