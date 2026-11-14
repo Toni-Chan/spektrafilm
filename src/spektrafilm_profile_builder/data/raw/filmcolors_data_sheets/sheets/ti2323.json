@@ -1,0 +1,389 @@
+{
+ "doc": "TI-2323",
+ "publisher": "KODAK technical data",
+ "date": "September 2005 (Revised 9-05)",
+ "title": "KODAK EKTACHROME Professional Infrared EIR Film",
+ "pdf": "ti2323.pdf",
+ "url": "https://filmcolors.org/wp-content/uploads/2026/10/ti2323.pdf",
+ "entry": "https://filmcolors.org/timeline-entry/40700/",
+ "stocks": [
+  {
+   "id": "kodak_ektachrome_eir_ti2323",
+   "name": "KODAK EKTACHROME Professional Infrared EIR Film",
+   "type": "positive",
+   "meta": {
+    "speed": "no ISO speed (EI 200 with a No. 12 filter suggested on the sheet's exposure table)",
+    "process": "AR-5 (curves); E-6 also listed",
+    "densitometry": "Status A",
+    "exposure": "Daylight, 1/50 sec",
+    "sensitivity_defined_at": "1.0 Equivalent Neutral Density (END)",
+    "art": "vector (curves read from the PDF paths, pages 7-8)"
+   },
+   "notes": [
+    "curves read directly from the PDF vector paths (pages 7 and 8), no tracing; also mirrored at https://125px.com/docs/film/kodak/ti2323-Ektachrome_EIR.pdf (identical file)",
+    "false-colour film: the green-sensitive layer forms yellow, the red-sensitive layer magenta and the infrared-sensitive layer cyan dye; the records follow spektrafilm's layer naming by dye (b = yellow-forming = green-sensitive, g = magenta-forming = red-sensitive, r = cyan-forming = infrared-sensitive)",
+    "characteristic curves: Blue/Green -> density_curve_b, Green/Red -> density_curve_g, Red/IR -> density_curve_r (assigned by the label next to each curve start)",
+    "the dye plot's '400' x label is not separate text; the x axis is calibrated from 500/600/700 nm and the curve starts at the frame"
+   ],
+   "plots": [
+    {
+     "kind": "char",
+     "page": 7,
+     "rect": [
+      365,
+      120,
+      560,
+      320
+     ],
+     "x": [
+      [
+       -3,
+       372.46
+      ],
+      [
+       -2,
+       418.1
+      ],
+      [
+       -1,
+       463.75
+      ],
+      [
+       0,
+       509.4
+      ],
+      [
+       1,
+       555.04
+      ]
+     ],
+     "y": [
+      [
+       0,
+       313.32
+      ],
+      [
+       1,
+       267.1
+      ],
+      [
+       2,
+       220.88
+      ],
+      [
+       3,
+       174.66
+      ],
+      [
+       4,
+       128.44
+      ]
+     ],
+     "curves": {
+      "b": [
+       {
+        "path": [
+         6,
+         0
+        ]
+       }
+      ],
+      "g": [
+       {
+        "path": [
+         6,
+         1
+        ]
+       },
+       {
+        "path": [
+         7,
+         0
+        ]
+       }
+      ],
+      "r": [
+       {
+        "path": [
+         7,
+         1
+        ]
+       },
+       {
+        "path": [
+         8,
+         0
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "kind": "sens",
+     "page": 7,
+     "rect": [
+      355,
+      370,
+      568,
+      532
+     ],
+     "x": [
+      [
+       400,
+       361.7
+      ],
+      [
+       500,
+       401.97
+      ],
+      [
+       600,
+       442.25
+      ],
+      [
+       700,
+       482.52
+      ],
+      [
+       800,
+       522.79
+      ],
+      [
+       900,
+       563.07
+      ]
+     ],
+     "y": [
+      [
+       2,
+       375.68
+      ],
+      [
+       1,
+       413.74
+      ],
+      [
+       0,
+       451.8
+      ],
+      [
+       -1,
+       489.86
+      ],
+      [
+       -2,
+       527.92
+      ]
+     ],
+     "curves": {
+      "b": [
+       {
+        "path": [
+         17,
+         0
+        ]
+       }
+      ],
+      "g": [
+       {
+        "path": [
+         11,
+         0
+        ]
+       }
+      ],
+      "r": [
+       {
+        "path": [
+         11,
+         1
+        ]
+       },
+       {
+        "path": [
+         12,
+         0
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "kind": "dye",
+     "page": 8,
+     "rect": [
+      76,
+      78,
+      274,
+      270
+     ],
+     "x": [
+      [
+       500,
+       143.67
+      ],
+      [
+       600,
+       206.05
+      ],
+      [
+       700,
+       268.43
+      ]
+     ],
+     "y": [
+      [
+       0,
+       266.26
+      ],
+      [
+       0.4,
+       213.7
+      ],
+      [
+       0.8,
+       161.15
+      ],
+      [
+       1.2,
+       108.6
+      ],
+      [
+       1.4,
+       82.34
+      ]
+     ],
+     "curves": {
+      "y": [
+       {
+        "path": [
+         43,
+         0
+        ]
+       },
+       {
+        "path": [
+         44,
+         0
+        ]
+       },
+       {
+        "path": [
+         45,
+         0
+        ]
+       }
+      ],
+      "m": [
+       {
+        "path": [
+         47,
+         0
+        ]
+       },
+       {
+        "path": [
+         48,
+         0
+        ]
+       },
+       {
+        "path": [
+         49,
+         0
+        ]
+       },
+       {
+        "path": [
+         50,
+         0
+        ]
+       }
+      ],
+      "c": [
+       {
+        "path": [
+         52,
+         0
+        ]
+       },
+       {
+        "path": [
+         53,
+         0
+        ]
+       },
+       {
+        "path": [
+         54,
+         0
+        ]
+       }
+      ],
+      "neutral": [
+       {
+        "path": [
+         55,
+         0
+        ]
+       },
+       {
+        "path": [
+         56,
+         0
+        ]
+       },
+       {
+        "path": [
+         57,
+         0
+        ]
+       },
+       {
+        "path": [
+         58,
+         0
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "recipe": {
+    "stock": "kodak_ektachrome_eir_ti2323",
+    "name": "Kodak Ektachrome Infrared EIR (TI-2323, 2005)",
+    "reference_illuminant": "D55",
+    "dye_extension": "hold_decay",
+    "adaptation_donors": [
+     "kodak_ektachrome_100",
+     "kodak_ektachrome_64_e8",
+     "kodak_ektachrome_100_e27",
+     "kodak_ektachrome_100_plus_e113",
+     "kodak_ektachrome_64t_e130",
+     "kodak_ektachrome_160t_e144",
+     "kodak_ektachrome_320t_e145",
+     "kodak_ektachrome_p1600_e147",
+     "kodak_ektachrome_400x_e161",
+     "kodak_ektachrome_e100vs_e163",
+     "kodak_ektachrome_e100s_e164",
+     "kodak_ektachrome_e100sw_e164",
+     "kodak_ektachrome_e200_e28",
+     "kodak_ektachrome_e100g_e4024",
+     "kodak_ektachrome_e100gx_e4024",
+     "kodak_elite_chrome_100_e7014",
+     "kodak_elite_chrome_extra_color_100_e126",
+     "kodak_elite_chrome_200_e148",
+     "kodak_elite_chrome_160t_e154"
+    ],
+    "estimates": [
+     "infrared sensitivity beyond spektrafilm's spectral grid is dropped: the cyan-forming (infrared-sensitive) layer only sees its visible / near-IR tail, so foliage and other IR-reflecting subjects do not turn red as on the real film (RGB input carries no infrared)",
+     "no No. 12 (yellow) filter in the model: all three layers keep the blue sensitivity printed on the sheet",
+     "dye densities outside the printed 400-700 nm (held below, exponential decay above)",
+     "sensitivity tails beyond the printed curves",
+     "hanatos2025 adaptation parameters (averaged from pinned Kodak reversal profiles)",
+     "interlayer DIR coupler strength (not on any data sheet)"
+    ]
+   }
+  }
+ ]
+}

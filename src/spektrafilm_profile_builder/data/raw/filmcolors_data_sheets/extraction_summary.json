@@ -1,0 +1,501 @@
+{
+ "kodak_ektachrome_100d_h15294": {
+  "accuracy": {
+   "char:b": {
+    "max_pt": 0.36,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   },
+   "char:g": {
+    "max_pt": 0.24,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   },
+   "char:r": {
+    "max_pt": 0.0,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   },
+   "dye:c": {
+    "max_pt": 0.12,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   },
+   "dye:m": {
+    "max_pt": 0.433,
+    "median_pt": 0.0,
+    "p95_pt": 0.12
+   },
+   "dye:neutral": {
+    "max_pt": 0.12,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   },
+   "dye:y": {
+    "max_pt": 0.36,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   },
+   "sens:b": {
+    "max_pt": 0.24,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   },
+   "sens:g": {
+    "max_pt": 0.24,
+    "median_pt": 0.0,
+    "p95_pt": 0.12
+   },
+   "sens:r": {
+    "max_pt": 0.24,
+    "median_pt": 0.0,
+    "p95_pt": 0.12
+   }
+  },
+  "calib": {
+   "char_p3": {
+    "grid_lines": {
+     "h": 5,
+     "v": 6
+    },
+    "stroke_px": 6.0,
+    "x_labels": [
+     -4,
+     -3,
+     -2,
+     -1,
+     0,
+     1
+    ],
+    "x_resid_pt": 0.134,
+    "y_labels": [
+     4,
+     3,
+     2,
+     1,
+     0
+    ],
+    "y_resid_pt": 0.55
+   },
+   "dye_p4": {
+    "grid_lines": {
+     "h": 4,
+     "v": 7
+    },
+    "stroke_px": 6.0,
+    "x_labels": [
+     400,
+     450,
+     500,
+     550,
+     600,
+     650,
+     700
+    ],
+    "x_resid_pt": 0.154,
+    "y_labels": [
+     1.5,
+     1,
+     0.5,
+     0
+    ],
+    "y_resid_pt": 0.03
+   },
+   "sens_p3": {
+    "grid_lines": {
+     "h": 21,
+     "v": 11
+    },
+    "stroke_px": 6.0,
+    "x_labels": [
+     250,
+     300,
+     400,
+     500,
+     600,
+     700,
+     750
+    ],
+    "x_resid_pt": 0.136,
+    "y_labels": [
+     2,
+     1,
+     0,
+     -1,
+     -2
+    ],
+    "y_resid_pt": 0.144
+   }
+  },
+  "files": {
+   "density_curve_b": {
+    "n": 72,
+    "x": [
+     -2.787,
+     0.043
+    ],
+    "y": [
+     0.2,
+     3.798
+    ]
+   },
+   "density_curve_g": {
+    "n": 66,
+    "x": [
+     -2.777,
+     0.019
+    ],
+    "y": [
+     0.213,
+     3.597
+    ]
+   },
+   "density_curve_r": {
+    "n": 40,
+    "x": [
+     -2.777,
+     0.043
+    ],
+    "y": [
+     0.259,
+     3.196
+    ]
+   },
+   "dye_density_c": {
+    "n": 108,
+    "x": [
+     402.411,
+     697.946
+    ],
+    "y": [
+     0.034,
+     0.943
+    ]
+   },
+   "dye_density_m": {
+    "n": 146,
+    "x": [
+     402.411,
+     679.911
+    ],
+    "y": [
+     0.013,
+     0.932
+    ]
+   },
+   "dye_density_neutral": {
+    "n": 126,
+    "x": [
+     402.143,
+     697.946
+    ],
+    "y": [
+     0.743,
+     1.139
+    ]
+   },
+   "dye_density_y": {
+    "n": 62,
+    "x": [
+     402.143,
+     555.83
+    ],
+    "y": [
+     0.009,
+     0.921
+    ]
+   },
+   "log_sensitivity_b": {
+    "n": 47,
+    "x": [
+     394.207,
+     521.626
+    ],
+    "y": [
+     -0.77,
+     1.497
+    ]
+   },
+   "log_sensitivity_g": {
+    "n": 48,
+    "x": [
+     472.086,
+     606.402
+    ],
+    "y": [
+     -1.011,
+     1.21
+    ]
+   },
+   "log_sensitivity_r": {
+    "n": 42,
+    "x": [
+     555.215,
+     686.433
+    ],
+    "y": [
+     -1.022,
+     1.409
+    ]
+   }
+  },
+  "notes": [
+   "the whole PDF is images (no text layer): curves traced from the 600 dpi render of the embedded JPEGs, each curve only through pixels of its printed colour",
+   "sensitometry plot: top axis log exposure (lux-seconds) -4..1 used; the bottom camera-stops axis is ignored",
+   "dye plot: the cyan / magenta / yellow dyes are peak-normalised on the sheet (note under the plot); the black curve is the midscale neutral"
+  ]
+ },
+ "kodak_ektachrome_eir_ti2323": {
+  "accuracy": {
+   "char:b": {
+    "max_pt": 0.0,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   },
+   "char:g": {
+    "max_pt": 0.12,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   },
+   "char:r": {
+    "max_pt": 0.0,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   },
+   "dye:c": {
+    "max_pt": 0.0,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   },
+   "dye:m": {
+    "max_pt": 0.24,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   },
+   "dye:neutral": {
+    "max_pt": 0.0,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   },
+   "dye:y": {
+    "max_pt": 0.268,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   },
+   "sens:b": {
+    "max_pt": 0.0,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   },
+   "sens:g": {
+    "max_pt": 0.339,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   },
+   "sens:r": {
+    "max_pt": 0.12,
+    "median_pt": 0.0,
+    "p95_pt": 0.0
+   }
+  },
+  "calib": {
+   "char_p7": {
+    "grid_lines": {
+     "h": 2,
+     "v": 2
+    },
+    "stroke_px": 8.0,
+    "x_labels": [
+     -3,
+     -2,
+     -1,
+     0,
+     1
+    ],
+    "x_resid_pt": 0.413,
+    "y_labels": [
+     0,
+     1,
+     2,
+     3,
+     4
+    ],
+    "y_resid_pt": 0.455
+   },
+   "dye_p8": {
+    "grid_lines": {
+     "h": 2,
+     "v": 2
+    },
+    "stroke_px": 8.0,
+    "x_labels": [
+     500,
+     600,
+     700
+    ],
+    "x_resid_pt": 0.343,
+    "y_labels": [
+     0,
+     0.4,
+     0.8,
+     1.2,
+     1.4
+    ],
+    "y_resid_pt": 0.259
+   },
+   "sens_p7": {
+    "grid_lines": {
+     "h": 5,
+     "v": 11
+    },
+    "stroke_px": 7.0,
+    "x_labels": [
+     400,
+     500,
+     600,
+     700,
+     800,
+     900
+    ],
+    "x_resid_pt": 0.051,
+    "y_labels": [
+     2,
+     1,
+     0,
+     -1,
+     -2
+    ],
+    "y_resid_pt": 0.054
+   }
+  },
+  "files": {
+   "density_curve_b": {
+    "n": 62,
+    "x": [
+     -1.911,
+     0.953
+    ],
+    "y": [
+     0.142,
+     3.336
+    ]
+   },
+   "density_curve_g": {
+    "n": 61,
+    "x": [
+     -1.911,
+     0.953
+    ],
+    "y": [
+     0.173,
+     3.685
+    ]
+   },
+   "density_curve_r": {
+    "n": 67,
+    "x": [
+     -1.911,
+     0.953
+    ],
+    "y": [
+     0.153,
+     3.541
+    ]
+   },
+   "dye_density_c": {
+    "n": 70,
+    "x": [
+     405.967,
+     692.98
+    ],
+    "y": [
+     0.02,
+     0.938
+    ]
+   },
+   "dye_density_m": {
+    "n": 101,
+    "x": [
+     408.415,
+     695.863
+    ],
+    "y": [
+     0.012,
+     0.934
+    ]
+   },
+   "dye_density_neutral": {
+    "n": 116,
+    "x": [
+     408.415,
+     695.863
+    ],
+    "y": [
+     0.808,
+     1.135
+    ]
+   },
+   "dye_density_y": {
+    "n": 66,
+    "x": [
+     405.967,
+     680.861
+    ],
+    "y": [
+     0.01,
+     0.906
+    ]
+   },
+   "log_sensitivity_b": {
+    "n": 51,
+    "x": [
+     405.823,
+     608.882
+    ],
+    "y": [
+     -0.991,
+     1.233
+    ]
+   },
+   "log_sensitivity_g": {
+    "n": 81,
+    "x": [
+     405.823,
+     693.079
+    ],
+    "y": [
+     -0.991,
+     1.428
+    ]
+   },
+   "log_sensitivity_r": {
+    "n": 99,
+    "x": [
+     405.823,
+     894.915
+    ],
+    "y": [
+     -0.85,
+     1.262
+    ]
+   }
+  },
+  "notes": [
+   "curves read directly from the PDF vector paths (pages 7 and 8), no tracing; also mirrored at https://125px.com/docs/film/kodak/ti2323-Ektachrome_EIR.pdf (identical file)",
+   "false-colour film: the green-sensitive layer forms yellow, the red-sensitive layer magenta and the infrared-sensitive layer cyan dye; the records follow spektrafilm's layer naming by dye (b = yellow-forming = green-sensitive, g = magenta-forming = red-sensitive, r = cyan-forming = infrared-sensitive)",
+   "characteristic curves: Blue/Green -> density_curve_b, Green/Red -> density_curve_g, Red/IR -> density_curve_r (assigned by the label next to each curve start)",
+   "the dye plot's '400' x label is not separate text; the x axis is calibrated from 500/600/700 nm and the curve starts at the frame",
+   "x label -2: no grid line within 3.0 pt of 418.1; used as given",
+   "x label -1: no grid line within 3.0 pt of 463.75; used as given",
+   "x label 0: no grid line within 3.0 pt of 509.4; used as given",
+   "y label 1: no grid line within 3.0 pt of 267.1; used as given",
+   "y label 2: no grid line within 3.0 pt of 220.88; used as given",
+   "y label 3: no grid line within 3.0 pt of 174.66; used as given",
+   "x label 500: no grid line within 3.0 pt of 143.67; used as given",
+   "x label 600: no grid line within 3.0 pt of 206.05; used as given",
+   "y label 0.4: no grid line within 3.0 pt of 213.7; used as given",
+   "y label 0.8: no grid line within 3.0 pt of 161.15; used as given",
+   "y label 1.2: no grid line within 3.0 pt of 108.6; used as given"
+  ]
+ }
+}

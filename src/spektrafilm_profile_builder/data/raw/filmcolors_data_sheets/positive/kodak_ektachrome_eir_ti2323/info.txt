@@ -1,0 +1,56 @@
+KODAK EKTACHROME Professional Infrared EIR Film
+Datasheet: KODAK technical data TI-2323 (September 2005 (Revised 9-05)), ti2323.pdf, PDF page(s) 7, 8
+Source URL: https://filmcolors.org/wp-content/uploads/2026/10/ti2323.pdf
+Catalogue entry: https://filmcolors.org/timeline-entry/40700/
+Publication: TI-2323
+Publication date: September 2005 (Revised 9-05)
+Type: positive
+Densitometry: Status A
+Process: AR-5 (curves); E-6 also listed
+Exposure: Daylight, 1/50 sec
+Sensitivity defined at: 1.0 Equivalent Neutral Density (END)
+Speed: no ISO speed (EI 200 with a No. 12 filter suggested on the sheet's exposure table)
+
+Files (x range, y range, n points):
+  density_curve_b.csv  x -1.911..0.953  y 0.142..3.336  n=62
+  density_curve_g.csv  x -1.911..0.953  y 0.173..3.685  n=61
+  density_curve_r.csv  x -1.911..0.953  y 0.153..3.541  n=67
+  dye_density_c.csv  x 405.967..692.98  y 0.02..0.938  n=70
+  dye_density_m.csv  x 408.415..695.863  y 0.012..0.934  n=101
+  dye_density_neutral.csv  x 408.415..695.863  y 0.808..1.135  n=116
+  dye_density_y.csv  x 405.967..680.861  y 0.01..0.906  n=66
+  log_sensitivity_b.csv  x 405.823..608.882  y -0.991..1.233  n=51
+  log_sensitivity_g.csv  x 405.823..693.079  y -0.991..1.428  n=81
+  log_sensitivity_r.csv  x 405.823..894.915  y -0.85..1.262  n=99
+
+Units: log_sensitivity_* = wavelength nm, log10 sensitivity (relative where the sheet prints no
+  absolute scale); density_curve_* = log10 H (lux-seconds), total density as printed (base+fog
+  included); dye_density_* = wavelength nm, spectral diffuse density (c/m/y: individual dyes as
+  printed; mid: mid-scale neutral; min: minimum density).
+Extraction: the plot is rendered from the PDF at 600 dpi (the curves are embedded 1-bit scans or
+  vector strokes), grid lines are found as long straight dark runs and removed except where a curve
+  crosses them, axes are calibrated piecewise-linearly through the printed grid lines named in the
+  sheet config (sheets/*.json), and each curve is followed column by column from a seed point
+  (script: scripts/extract_filmcolors_datasheets.py). Typical accuracy ~0.2-0.5 pt on the page
+  (about 1-2 nm, 0.01-0.02 log H or density) plus the accuracy of the original drawing / scan.
+Calibration:
+  char_p7: {"x_labels": [-3, -2, -1, 0, 1], "y_labels": [0, 1, 2, 3, 4], "x_resid_pt": 0.413, "y_resid_pt": 0.455, "stroke_px": 8.0, "grid_lines": {"h": 2, "v": 2}}
+  sens_p7: {"x_labels": [400, 500, 600, 700, 800, 900], "y_labels": [2, 1, 0, -1, -2], "x_resid_pt": 0.051, "y_resid_pt": 0.054, "stroke_px": 7.0, "grid_lines": {"h": 5, "v": 11}}
+  dye_p8: {"x_labels": [500, 600, 700], "y_labels": [0, 0.4, 0.8, 1.2, 1.4], "x_resid_pt": 0.343, "y_resid_pt": 0.259, "stroke_px": 8.0, "grid_lines": {"h": 2, "v": 2}}
+Distance of the written curves to the printed strokes (pt): {"char:b": {"median_pt": 0.0, "p95_pt": 0.0, "max_pt": 0.0}, "char:g": {"median_pt": 0.0, "p95_pt": 0.0, "max_pt": 0.12}, "char:r": {"median_pt": 0.0, "p95_pt": 0.0, "max_pt": 0.0}, "sens:b": {"median_pt": 0.0, "p95_pt": 0.0, "max_pt": 0.0}, "sens:g": {"median_pt": 0.0, "p95_pt": 0.0, "max_pt": 0.339}, "sens:r": {"median_pt": 0.0, "p95_pt": 0.0, "max_pt": 0.12}, "dye:y": {"median_pt": 0.0, "p95_pt": 0.0, "max_pt": 0.268}, "dye:m": {"median_pt": 0.0, "p95_pt": 0.0, "max_pt": 0.24}, "dye:c": {"median_pt": 0.0, "p95_pt": 0.0, "max_pt": 0.0}, "dye:neutral": {"median_pt": 0.0, "p95_pt": 0.0, "max_pt": 0.0}}
+Caveats:
+  curves read directly from the PDF vector paths (pages 7 and 8), no tracing; also mirrored at https://125px.com/docs/film/kodak/ti2323-Ektachrome_EIR.pdf (identical file)
+  false-colour film: the green-sensitive layer forms yellow, the red-sensitive layer magenta and the infrared-sensitive layer cyan dye; the records follow spektrafilm's layer naming by dye (b = yellow-forming = green-sensitive, g = magenta-forming = red-sensitive, r = cyan-forming = infrared-sensitive)
+  characteristic curves: Blue/Green -> density_curve_b, Green/Red -> density_curve_g, Red/IR -> density_curve_r (assigned by the label next to each curve start)
+  the dye plot's '400' x label is not separate text; the x axis is calibrated from 500/600/700 nm and the curve starts at the frame
+  x label -2: no grid line within 3.0 pt of 418.1; used as given
+  x label -1: no grid line within 3.0 pt of 463.75; used as given
+  x label 0: no grid line within 3.0 pt of 509.4; used as given
+  y label 1: no grid line within 3.0 pt of 267.1; used as given
+  y label 2: no grid line within 3.0 pt of 220.88; used as given
+  y label 3: no grid line within 3.0 pt of 174.66; used as given
+  x label 500: no grid line within 3.0 pt of 143.67; used as given
+  x label 600: no grid line within 3.0 pt of 206.05; used as given
+  y label 0.4: no grid line within 3.0 pt of 213.7; used as given
+  y label 0.8: no grid line within 3.0 pt of 161.15; used as given
+  y label 1.2: no grid line within 3.0 pt of 108.6; used as given
