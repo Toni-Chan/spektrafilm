@@ -40,16 +40,6 @@ TYPE_LABEL = {
 
 # Sheets whose first page names the product without the word KODAK (checked by hand).
 TITLES = {'e55': 'KODACHROME 25, 64, and 200 Professional Film'}
-# filmcolors.org catalogue sheets (125px.com docs/film/kodak/): first-page lines are split or cover text.
-TITLES.update({
-    'e2e': 'KODAK PROFESSIONAL PROFOTO 100 Colour Negative Film',
-    'e2519': 'KODAK PROFESSIONAL SUPRA Color Negative Films (100, 400, 800)',
-    'e4026': 'KODAK PROFESSIONAL ROYAL SUPRA Color Negative Films (200, 400, 800)',
-    'e4029': 'KODAK PROFESSIONAL SUPRA Color Negative Films (200, 400, 800)',
-    'e4035': 'KODAK PROFESSIONAL ULTRA COLOR Films / 100UC and 400UC',
-    'le1': 'KODAK PROFESSIONAL Law Enforcement Films (LE100, LE400, LE800)',
-    'ti2323': 'KODAK EKTACHROME Professional Infrared EIR Film',
-})
 
 
 def title_of(doc, stem=''):
@@ -60,6 +50,18 @@ def title_of(doc, stem=''):
         if re.search(r'KODAK', l) and len(l) > 10:
             return l[:90]
     return lines[0][:90] if lines else ''
+
+
+# filmcolors.org catalogue sheets (125px.com docs/film/kodak/): first-page lines are split or cover text.
+TITLES.update({
+    'e2e': 'KODAK PROFESSIONAL PROFOTO 100 Colour Negative Film',
+    'e2519': 'KODAK PROFESSIONAL SUPRA Color Negative Films (100, 400, 800)',
+    'e4026': 'KODAK PROFESSIONAL ROYAL SUPRA Color Negative Films (200, 400, 800)',
+    'e4029': 'KODAK PROFESSIONAL SUPRA Color Negative Films (200, 400, 800)',
+    'e4035': 'KODAK PROFESSIONAL ULTRA COLOR Films / 100UC and 400UC',
+    'le1': 'KODAK PROFESSIONAL Law Enforcement Films (LE100, LE400, LE800)',
+    'ti2323': 'KODAK EKTACHROME Professional Infrared EIR Film',
+})
 
 
 def main():
