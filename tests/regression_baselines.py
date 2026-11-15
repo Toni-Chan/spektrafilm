@@ -19,6 +19,7 @@ class RegressionCase:
     print_profile: str
     image_recipe: str
     output_mode: str
+    scanner_method: str = "default"
 
 
 REGRESSION_CASES: tuple[RegressionCase, ...] = (
@@ -57,6 +58,24 @@ REGRESSION_CASES: tuple[RegressionCase, ...] = (
         image_recipe="green_patch_8",
         output_mode="print_rgb",
     ),
+    # Frontier cases use the estimate-labelled default profiles; regenerate
+    # them only when those profiles change on purpose.
+    RegressionCase(
+        case_id="frontier_sp500_portra_gray_ramp16",
+        film_profile="kodak_portra_400",
+        print_profile="kodak_portra_endura",
+        image_recipe="gray_ramp_16",
+        output_mode="print_rgb",
+        scanner_method="frontier_sp500",
+    ),
+    RegressionCase(
+        case_id="frontier_sp3000_portra_green_patch8",
+        film_profile="kodak_portra_400",
+        print_profile="kodak_portra_endura",
+        image_recipe="green_patch_8",
+        output_mode="print_rgb",
+        scanner_method="frontier_sp3000",
+    ),
 )
 
 
@@ -87,6 +106,7 @@ def compute_case_output(case: RegressionCase) -> np.ndarray:
     np.random.seed(0)
     image = build_case_image(case.image_recipe)
     params = make_fast_test_params(film_profile=case.film_profile, print_profile=case.print_profile)
+    params.scanner.method = case.scanner_method
 
     if case.output_mode == "negative_density":
         params.taps.collect = "cmy_film"

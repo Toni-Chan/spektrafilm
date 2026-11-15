@@ -13,12 +13,14 @@ from spektrafilm_gui.param_manifest import (
     OUTPUT_GAMUT_COMPRESS_MANIFEST,
     PREFLASHING_MANIFEST,
     SCANNER_MANIFEST,
+    FRONTIER_MANIFEST,
 )
 from spektrafilm_gui.widget_primitives import CollapsibleSection, platform_default_font
 from spektrafilm_gui.widget_sections import (
     ParamsGroupSection,
     DisplaySection,
     EnlargerSection,
+    ScannerSection,
     ExposureControlSection,
     FilePickerSection,
     GuiConfigSection,
@@ -64,7 +66,7 @@ class WidgetBundle:
     camera: ParamsGroupSection
     exposure_control: ExposureControlSection
     enlarger: EnlargerSection
-    scanner: ParamsGroupSection
+    scanner: ScannerSection
     spectral_upsampling: SpectralUpsamplingSection
     tune: TuneSection
     output: OutputSection
@@ -76,9 +78,11 @@ def create_widget_bundle() -> WidgetBundle:
     simulation = SimulationSection()
     special = SpecialSection(simulation)
     glare = ParamsGroupSection(GLARE_MANIFEST)
-    scanner = ParamsGroupSection(SCANNER_MANIFEST)
+    scanner = ScannerSection(SCANNER_MANIFEST, FRONTIER_MANIFEST)
     camera = ParamsGroupSection(CAMERA_MANIFEST)
     simulation.bind_scan_for_print_sections(glare=glare, scanner=scanner)
+    enlarger = EnlargerSection(simulation)
+    scanner.bind_print_path_widgets(enlarger, simulation._editors.get('print_paper'))
 
     return WidgetBundle(
         filepicker=filepicker,
@@ -101,7 +105,7 @@ def create_widget_bundle() -> WidgetBundle:
         preview_crop=PreviewCropSection(input_image),
         camera=camera,
         exposure_control=ExposureControlSection(simulation, camera),
-        enlarger=EnlargerSection(simulation),
+        enlarger=enlarger,
         scanner=scanner,
         spectral_upsampling=SpectralUpsamplingSection(input_image),
         tune=TuneSection(special),

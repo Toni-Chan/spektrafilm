@@ -853,3 +853,57 @@ class EnlargerSection(QWidget):
         self.setLayout(
             _build_path_panel('Enlarger', SIMULATION_ENLARGER_PANEL_FIELDS, simulation_section._editors, expanded=True),
         )
+
+class ScannerSection(QWidget):
+    """Scanner group plus its nested Frontier panel (``scanner.frontier``).
+
+    Behaves like one params-group section over ``ScannerParams``: editors of
+    both panels are exposed together for auto-preview wiring, and
+    ``get_state`` returns the scanner group with the Frontier subgroup set.
+    In Frontier mode the Frontier panel is enabled and the generic scanner
+    and print-path controls are disabled (they are bypassed by the runtime).
+    """
+
+    _is_params_group = True
+    _GENERIC_SCANNER_LEAVES = ('lens_blur', 'white_correction', 'white_level', 'black_correction', 'black_level', 'unsharp_mask')
+
+    def __init__(self, scanner_manifest: GroupManifest, frontier_manifest: GroupManifest):
+        super().__init__()
+        self.generic = ParamsGroupSection(scanner_manifest)
+        self.frontier = ParamsGroupSection(frontier_manifest)
+        self._editors = {**self.generic._editors, **self.frontier._editors}
+        for leaf, editor in self._editors.items():
+            setattr(self, leaf, editor)
+        self._print_path_widgets: list[QWidget] = []
+        root = QVBoxLayout()
+        root.setContentsMargins(0, 0, 0, 0)
+        root.addWidget(self.generic)
+        root.addWidget(self.frontier)
+        self.setLayout(root)
+        self.method.currentTextChanged.connect(self._update_mode)
+        self._update_mode(self.method.value)
+
+    def bind_print_path_widgets(self, *widgets: QWidget) -> None:
+        self._print_path_widgets.extend(w for w in widgets if w is not None)
+        self._update_mode(self.method.value)
+
+    def is_frontier_mode(self) -> bool:
+        return self.method.value != "default"
+
+    def _update_mode(self, method: str) -> None:
+        frontier_mode = method != "default"
+        self.frontier.setEnabled(frontier_mode)
+        for leaf in self._GENERIC_SCANNER_LEAVES:
+            editor = self.generic._editors.get(leaf)
+            if editor is not None:
+                editor.setEnabled(not frontier_mode)
+        for widget in self._print_path_widgets:
+            widget.setEnabled(not frontier_mode)
+
+    def set_state(self, group: Any) -> None:
+        self.generic.set_state(group)
+        self.frontier.set_state(getattr(group, 'frontier', None) or self.frontier._group_cls())
+        self._update_mode(self.method.value)
+
+    def get_state(self) -> Any:
+        return replace(self.generic.get_state(), frontier=self.frontier.get_state())

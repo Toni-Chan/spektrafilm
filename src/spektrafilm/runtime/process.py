@@ -83,6 +83,29 @@ def simulate_preview(image, params: RuntimePhotoParams,
     return result
 
 
+def simulate_roll(images, params: RuntimePhotoParams, digest_params_first: bool = True):
+    """Simulate a roll of frames through a Frontier method.
+
+    With ``params.scanner.frontier.roll_density_setup == "roll"`` one density
+    correction is fitted from all frames and applied to each; with ``"off"``
+    every frame is processed independently (identical to ``simulate``).
+    """
+    from spektrafilm.model.frontier_roll_setup import RollDensitySetup
+    from spektrafilm.runtime.pipeline import SimulationPipeline
+    from spektrafilm.runtime.topology import Tap
+
+    if digest_params_first:
+        params = digest_params(params)
+    if params.scanner.method == "default":
+        raise ValueError("simulate_roll requires a Frontier scanner method")
+    pipe = SimulationPipeline(params)
+    if params.scanner.frontier.roll_density_setup == "off":
+        return [pipe.process(img) for img in images]
+    densities = [pipe.process(img, collect=Tap.INSTRUMENT_DENSITY) for img in images]
+    setup = RollDensitySetup.fit(densities, pipe._frontier_stage.stock_reference.d_mid)
+    return [pipe.process(setup.apply(d), inject=Tap.INSTRUMENT_DENSITY) for d in densities]
+
+
 #######################################################################################################
 # Legacy for ART, to be removed in the future when the old API is fully deprecated.
 

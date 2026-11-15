@@ -20,6 +20,7 @@ from dataclasses import dataclass
 
 from spektrafilm.runtime.params_schema import (
     EnlargerParams,
+    FrontierParams,
     DiffusionFilterParams,
     DirCouplersParams,
     GlareParams,
@@ -40,6 +41,11 @@ from spektrafilm_gui.options import (
     OutputGamutCompressAlgorithms,
     RGBColorSpaces,
     RGBtoRAWMethod,
+    ScannerMethods,
+    FrontierRollSetups,
+    FrontierContrasts,
+    FrontierSharpness,
+    FrontierOutputSpaces,
 )
 
 
@@ -560,6 +566,14 @@ SCANNER_MANIFEST = GroupManifest(
     collapsed_by_default=True,
     fields=(
         ParamSpec(
+            f"{_SC}.method",
+            tier="basic",
+            enum=ScannerMethods,
+            tooltip="default: the existing generic scanner after the print. frontier_sp3000 / frontier_sp500: "
+                    "simulated Fujifilm Frontier film scan (LED capture + Frontier rendering), skipping the "
+                    "enlarger and paper. Frontier values are estimates (provenance: estimate) until measured.",
+        ),
+        ParamSpec(
             f"{_SC}.lens_blur",
             tier="basic",
             min=0,
@@ -592,6 +606,33 @@ SCANNER_MANIFEST = GroupManifest(
             step=0.05,
             tooltip="Apply unsharp mask to the scan, [sigma in pixel, amount].",
         ),
+    ),
+)
+
+
+_FR = "scanner.frontier"
+_EST = " [provenance: estimate; see docs/frontier/evidence.md]"
+
+FRONTIER_MANIFEST = GroupManifest(
+    title="Frontier",
+    group_path=_FR,
+    group_cls=FrontierParams,
+    collapsed_by_default=True,
+    fields=(
+        ParamSpec(f"{_FR}.contrast", tier="basic", enum=FrontierContrasts,
+                  tooltip="Frontier gradation preset (soft/standard/hard contrast slope)." + _EST),
+        ParamSpec(f"{_FR}.density_offset", tier="basic", step=0.01, decimals=3,
+                  tooltip="Per-channel R, G, B density offset subtracted before gradation (Frontier colour keys), log10 units." + _EST),
+        ParamSpec(f"{_FR}.brightness_offset", tier="basic", step=0.1, decimals=2,
+                  tooltip="Frontier density (brightness) key in stops." + _EST),
+        ParamSpec(f"{_FR}.sharpness", tier="basic", enum=FrontierSharpness,
+                  tooltip="Frontier sharpness level (unsharp-mask surrogate, applied once)." + _EST),
+        ParamSpec(f"{_FR}.hyper_tone", tier="basic", min=0, max=1, step=0.05,
+                  tooltip="Hyper Tone surrogate: edge-aware large-scale contrast compression, 0 = off." + _EST),
+        ParamSpec(f"{_FR}.roll_density_setup", enum=FrontierRollSetups,
+                  tooltip="Per-roll density setup; only used by simulate_roll (batch), ignored for a single frame."),
+        ParamSpec(f"{_FR}.output_space", tier="basic", enum=FrontierOutputSpaces,
+                  tooltip="Frontier output colour space (sRGB or Adobe RGB)."),
     ),
 )
 
@@ -868,6 +909,7 @@ ALL_MANIFESTS = (
     CAMERA_DIFFUSION_MANIFEST,
     ENLARGER_DIFFUSION_MANIFEST,
     SCANNER_MANIFEST,
+    FRONTIER_MANIFEST,
     INPUT_GAMUT_COMPRESS_MANIFEST,
     OUTPUT_GAMUT_COMPRESS_MANIFEST,
 )

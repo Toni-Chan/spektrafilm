@@ -3,5 +3,6 @@
 from .printing import PrintingStage
 from .scanning import ScanningStage
 from .filming import FilmingStage
+from .frontier_scanning import FrontierScanningStage
 
-__all__ = ["FilmingStage", "PrintingStage", "ScanningStage"]
+__all__ = ["FilmingStage", "FrontierScanningStage", "PrintingStage", "ScanningStage"]

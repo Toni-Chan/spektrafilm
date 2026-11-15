@@ -1,0 +1,24 @@
+{
+  "name": "frontier_default",
+  "description": "Placeholder Fujifilm Frontier capture/render template. Every value is an estimate until replaced by lab measurements (see docs/frontier/evidence.md).",
+  "applies_to": ["frontier_sp3000", "frontier_sp500"],
+  "wavelength_grid_nm": {"start": 380, "stop": 780, "step": 5},
+  "led": {
+    "model": "gaussian",
+    "peak_nm": {"value": [630.0, 550.0, 460.0], "channels": "RGB", "label": "estimate", "source": "community R9", "replace_with": "FRT-15"},
+    "fwhm_nm": {"value": [20.0, 30.0, 25.0], "channels": "RGB", "label": "estimate", "source": "LED vendor typical R15/R16", "replace_with": "FRT-15"},
+    "relative_power": {"value": [1.0, 1.0, 1.0], "channels": "RGB", "label": "estimate", "source": "per-channel exposure is normalised on film base", "replace_with": "FRT-13"}
+  },
+  "sensor": {
+    "model": "silicon_generic",
+    "qe_nodes_nm": {"value": [380, 420, 460, 500, 550, 600, 650, 700, 780], "label": "estimate", "source": "generic front-illuminated CCD shape, R8 comparator only", "replace_with": "FRT-14"},
+    "qe_relative": {"value": [0.20, 0.38, 0.55, 0.72, 0.90, 1.00, 0.95, 0.82, 0.55], "label": "estimate", "source": "generic front-illuminated CCD shape, R8 comparator only", "replace_with": "FRT-14"},
+    "bit_depth": {"value": 12, "label": "estimate", "source": "no public spec", "replace_with": "FRT-13"},
+    "black_offset": {"value": 0.0, "label": "estimate", "source": "no data", "replace_with": "FRT-13"}
+  },
+  "render": {
+    "tone_curve": {"value": "linear", "label": "estimate", "source": "no data", "replace_with": "FRT-13"},
+    "sharpening": {"value": "off", "label": "estimate", "source": "operator setting", "replace_with": "FRT-16"},
+    "hyper_tone": {"value": 0.0, "label": "estimate", "source": "operator setting", "replace_with": "FRT-16"}
+  }
+}

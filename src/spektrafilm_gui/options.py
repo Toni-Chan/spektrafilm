@@ -66,3 +66,32 @@ class OutputGamutCompressAlgorithms(Enum):
     cam16ucs = "cam16ucs"
 
 
+
+
+class ScannerMethods(Enum):
+    default = "default"
+    frontier_sp3000 = "frontier_sp3000"
+    frontier_sp500 = "frontier_sp500"
+
+
+class FrontierRollSetups(Enum):
+    off = "off"
+    roll = "roll"
+
+
+class FrontierContrasts(Enum):
+    soft = "soft"
+    standard = "standard"
+    hard = "hard"
+
+
+class FrontierSharpness(Enum):
+    off = "off"
+    low = "low"
+    std = "std"
+    high = "high"
+
+
+class FrontierOutputSpaces(Enum):
+    sRGB = "sRGB"
+    AdobeRGB = "AdobeRGB"

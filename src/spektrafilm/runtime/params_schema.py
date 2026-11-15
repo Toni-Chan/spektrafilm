@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
+from typing import Literal
 
 from spektrafilm.profiles.io import Profile
 from spektrafilm.utils.gamut_compression import (
@@ -75,6 +76,26 @@ class EnlargerParams:
     preflash_m_filter_shift: float = 0.0
 
 
+FRONTIER_SCANNER_METHODS = ("default", "frontier_sp3000", "frontier_sp500")
+
+
+@dataclass
+class FrontierParams:
+    """Operator-facing settings of the simulated Fujifilm Frontier scanner.
+
+    Only used when ``ScannerParams.method`` is a Frontier method. The
+    defaults are neutral (no roll setup, no offsets, no sharpening).
+    """
+    roll_density_setup: Literal["off", "roll"] = "off"
+    density_offset: tuple[float, float, float] = (0.0, 0.0, 0.0)
+    brightness_offset: float = 0.0
+    contrast: Literal["soft", "standard", "hard"] = "standard"
+    sharpness: Literal["off", "low", "std", "high"] = "off"
+    hyper_tone: float = 0.0
+    output_space: Literal["sRGB", "AdobeRGB"] = "sRGB"
+    seed: int | None = None
+
+
 @dataclass
 class ScannerParams:
     lens_blur: float = 0.0
@@ -83,6 +104,11 @@ class ScannerParams:
     white_level: float = 0.98
     black_level: float = 0.01
     unsharp_mask: tuple[float, float] = (0.7, 0.7)
+    # "default" keeps the original scanner path untouched.
+    method: Literal["default", "frontier_sp3000", "frontier_sp500"] = "default"
+    capture_profile: str | None = None
+    render_profile: str | None = None
+    frontier: FrontierParams = field(default_factory=FrontierParams)
 
 
 @dataclass
