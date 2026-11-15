@@ -252,9 +252,18 @@ def curve_drawings(page, min_w=0.6):
     return out
 
 
-def pieces_in(plot, drawings, margin=8):
+def frame_top(plot, vl, tol=2.0):
+    """Top of the plot frame: the highest end of the vertical frame line(s) at the plot's left or right
+    edge that reach down to the x axis (for sheets whose curves run above the top y label)."""
     B = plot['box']
-    E = pymupdf.Rect(B.x0 - margin, B.y0 - 2 * margin, B.x1 + margin, max(B.y1 + margin, plot.get('row_y', B.y1) - 1))
+    tops = [y0 for x, y0, y1 in vl if (abs(x - B.x0) < tol or abs(x - B.x1) < tol) and y1 > B.y1 - 2 and y0 < B.y0]
+    return min(tops) if tops else None
+
+
+def pieces_in(plot, drawings, margin=8, top=None):
+    B = plot['box']
+    y_top = B.y0 - 2 * margin if top is None else min(B.y0 - 2 * margin, top - 1)
+    E = pymupdf.Rect(B.x0 - margin, y_top, B.x1 + margin, max(B.y1 + margin, plot.get('row_y', B.y1) - 1))
     out = []
     for d in drawings:
         for sp in subpaths(d):

@@ -146,3 +146,26 @@ def fill_dye_gaps(wavelengths, dyes, decay_nm: float = 25.0) -> np.ndarray:
         for k in range(last + 1, hi + 1):
             out[k, j] = out[last, j] * np.exp(-(wl[k] - wl[last]) / decay_nm)
     return out
+
+
+def extend_dyes_beyond_sheet(wavelengths, dyes, decay_nm: float = 25.0) -> np.ndarray:
+    """ESTIMATE placeholder: continue dye curves outside the range the sheet prints.
+
+    ``fill_dye_gaps`` leaves every dye NaN (opaque in the runtime) outside the
+    union of the printed ranges. Sheets that stop at 420 nm (Kodak E-55) would
+    then black out 380-420 nm. Opt-in (recipe ``dye_extension = hold_decay``):
+    on the short-wavelength side each dye holds its first printed value (dyes
+    keep absorbing towards the UV; no data), on the long side it decays
+    exponentially from its last printed value (``decay_nm``). Not data; only
+    matters for light at the ends of the visible range.
+    """
+    wl = np.asarray(wavelengths, dtype=float)
+    out = fill_dye_gaps(wl, dyes, decay_nm=decay_nm)
+    finite_any = np.any(np.isfinite(out), axis=1)
+    if not finite_any.any():
+        return out
+    lo, hi = np.flatnonzero(finite_any)[[0, -1]]
+    for j in range(out.shape[1]):
+        out[:lo, j] = out[lo, j]
+        out[hi + 1:, j] = out[hi, j] * np.exp(-(wl[hi + 1:] - wl[hi]) / decay_nm)
+    return out

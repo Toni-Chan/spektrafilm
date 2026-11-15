@@ -3,9 +3,10 @@
 Builds spektrafilm film profiles (the JSON files in
 `src/spektrafilm/data/profiles`) from digitised manufacturer data-sheet
 curves, and ships the 25 colour profiles made from the **Fujifilm
-Professional Data Guide** (`*_fdg`) and the 63 film and print-material
-profiles made from the **KODAK technical data sheets** (E-series, 1997-2003;
-`kodak_<stock>_<pubcode>`, e.g. `kodak_portra_160nc_e190`).
+Professional Data Guide** (`*_fdg`) and the 66 film and print-material
+profiles made from the **KODAK technical data sheets** (E-series, 1997-2003,
+and E-55 KODACHROME, 2009; `kodak_<stock>_<pubcode>`, e.g.
+`kodak_portra_160nc_e190`, `kodak_kodachrome_25_e55`).
 
 It is the historical upstream raw-curve factory (`profiles_factory`, last
 public at commit `049f677^`) restored, ported to the current module layout and
@@ -113,6 +114,17 @@ Finally a common log-exposure shift makes the scanned mid-grey render at
 18.4 % at 0 EV, which is what all shipped reversal profiles do (net density
 about 0.5 at log exposure 0). The mid-scale neutral density is
 `channel_density @ D(0) + base_density`.
+
+Two opt-in recipe fields (CLI `--density-min`, `--dye-extension`) cover sheets
+whose curves stop short; both are estimate placeholders and the KODAK recipe
+writes them into the profile's `metadata.datasource`:
+
+* `density_min` (`r;g;b` status densities): base+fog used instead of the toe
+  fit, for characteristic curves that end before reaching D-min (the fit then
+  extrapolates, possibly below zero);
+* `dye_extension: hold_decay` (positives): dyes are continued outside the
+  printed range too (first printed value held towards 380 nm, exponential
+  decay from the last one towards 780 nm), instead of staying NaN (opaque).
 
 Paper / print material (`--type paper`, status A), following upstream's
 `process_paper_profile`: base+fog is removed and spread spectrally from the
