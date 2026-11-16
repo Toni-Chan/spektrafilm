@@ -6,6 +6,7 @@
     "cine negative": "a stock's kind, read from Resources/StockCatalog.json (StockCards, StockPairPicker)",
     "b&w negative": "a stock's kind, read from Resources/StockCatalog.json (StockCards, StockPairPicker)",
     "colour paper": "a stock's kind, read from Resources/StockCatalog.json (StockCards, StockPairPicker)",
+    "display film": "a stock's kind, read from Resources/StockCatalog.json (StockCards, StockPairPicker)",
     "cine print film": "a stock's kind, read from Resources/StockCatalog.json (StockCards, StockPairPicker)",
     "b&w paper": "a stock's kind, read from Resources/StockCatalog.json (StockCards, StockPairPicker)",
     "Rounded": "FilmEdgeGate.label: the case's name with a capital (Model/FilmEdge.swift)",

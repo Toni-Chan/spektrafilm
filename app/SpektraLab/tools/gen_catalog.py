@@ -227,6 +227,121 @@ for _sid, _name, _short, _kind, _swatch, _grain in FILMCOLORS:
 # films (the product's colour-then-silver rule above), so the 34 that were there keep their order.
 ORDER[ORDER.index("kodak_tri_x_400"):ORDER.index("kodak_tri_x_400")] = [r[0] for r in FILMCOLORS]
 
+# The first catalogues (Toni-Chan/spektrafilm main: PR #2's 25 *_fdg profiles
+# from the Fujifilm Professional Data Guide, PR #4's 63 KODAK E-series
+# technical-data profiles, PR #5's DIR scale overrides baked into the profiles).
+# Same rules as FILMCOLORS: the profile's name, a short name without maker or
+# code, except where it would match another card's, which then takes the
+# source's code ("PDG" for the Pro Data Guide, the KODAK publication number).
+# Grain: the same ESTIMATE placeholder rule as FILMCOLORS_GRAIN; Superia Reala
+# takes ISO 100 and Vericolor III (no speed in its short name) ISO 160.
+FILMCOLORS_LEGACY = [
+    ('fujifilm_nexia_400_fdg', 'Fujifilm Nexia 400 (Pro Data Guide)', 'Nexia 400', 'colour negative', '#75c782', 1.08),
+    ('fujifilm_nexia_800_fdg', 'Fujifilm Nexia 800 (Pro Data Guide)', 'Nexia 800', 'colour negative', '#4eb761', 1.24),
+    ('fujifilm_nexia_a200_fdg', 'Fujifilm Nexia A200 (Pro Data Guide)', 'Nexia A200', 'colour negative', '#3b914d', 0.94),
+    ('fujifilm_npl_160_fdg', 'Fujifilm NPL 160 (Pro Data Guide)', 'NPL 160', 'colour negative', '#53b96b', 0.9),
+    ('fujifilm_pro_160c_fdg', 'Fujifilm Pro 160C (Pro Data Guide)', 'Pro 160C', 'colour negative', '#3d9755', 0.9),
+    ('fujifilm_pro_160s_fdg', 'Fujifilm Pro 160S (Pro Data Guide)', 'Pro 160S', 'colour negative', '#59bb75', 0.9),
+    ('fujifilm_pro_400h_fdg', 'Fujifilm Pro 400H (Pro Data Guide)', 'Pro 400H PDG', 'colour negative', '#409c5d', 1.08),
+    ('fujifilm_pro_800z_fdg', 'Fujifilm Pro 800Z (Pro Data Guide)', 'Pro 800Z', 'colour negative', '#5fbe7f', 1.24),
+    ('fujifilm_superia_100_fdg', 'Fujifilm Superia 100 (Pro Data Guide)', 'Superia 100', 'colour negative', '#42a265', 0.82),
+    ('fujifilm_superia_1600_fdg', 'Fujifilm Superia 1600 (Pro Data Guide)', 'Superia 1600', 'colour negative', '#64c088', 1.43),
+    ('fujifilm_superia_200_fdg', 'Fujifilm Superia 200 (Pro Data Guide)', 'Superia 200', 'colour negative', '#44a86e', 0.94),
+    ('fujifilm_superia_reala_fdg', 'Fujifilm Superia Reala (Pro Data Guide)', 'Superia Reala 100', 'colour negative', '#6ac291', 0.82),
+    ('fujifilm_superia_xtra_400_fdg', 'Fujifilm Superia X-Tra 400 (Pro Data Guide)', 'Superia X-Tra 400', 'colour negative', '#47ad77', 1.08),
+    ('fujifilm_superia_xtra_800_fdg', 'Fujifilm Superia X-Tra 800 (Pro Data Guide)', 'Superia X-Tra 800', 'colour negative', '#70c49a', 1.24),
+    ('fujifilm_true_definition_400_fdg', 'Fujifilm True Definition 400 (Pro Data Guide)', 'True Definition 400', 'colour negative', '#49b380', 1.08),
+    ('fujifilm_64t_type_ii_fdg', 'Fujifilm 64T Type II (Pro Data Guide)', '64T Type II', 'slide (positive)', '#7596c7', 0.9),
+    ('fujifilm_astia_100f_fdg', 'Fujifilm Astia 100F (Pro Data Guide)', 'Astia 100F', 'slide (positive)', '#4563a8', 0.98),
+    ('fujifilm_provia_100f_fdg', 'Fujifilm Provia 100F (Pro Data Guide)', 'Provia 100F PDG', 'slide (positive)', '#5569ba', 0.98),
+    ('fujifilm_provia_400f_fdg', 'Fujifilm Provia 400F (Pro Data Guide)', 'Provia 400F', 'slide (positive)', '#6d76c4', 1.3),
+    ('fujifilm_sensia_100_fdg', 'Fujifilm Sensia 100 (Pro Data Guide)', 'Sensia 100', 'slide (positive)', '#4141a0', 0.98),
+    ('fujifilm_sensia_200_fdg', 'Fujifilm Sensia 200 (Pro Data Guide)', 'Sensia 200', 'slide (positive)', '#584db6', 1.13),
+    ('fujifilm_sensia_400_fdg', 'Fujifilm Sensia 400 (Pro Data Guide)', 'Sensia 400', 'slide (positive)', '#7765c0', 1.3),
+    ('fujifilm_velvia_100_fdg', 'Fujifilm Velvia 100 (Pro Data Guide)', 'Velvia 100 PDG', 'slide (positive)', '#593e98', 0.98),
+    ('fujifilm_velvia_100f_fdg', 'Fujifilm Velvia 100F (Pro Data Guide)', 'Velvia 100F', 'slide (positive)', '#7248b0', 0.98),
+    ('fujifilm_velvia_50_fdg', 'Fujifilm Velvia 50 (Pro Data Guide)', 'Velvia 50 PDG', 'slide (positive)', '#8d5dbd', 0.86),
+    ('kodak_advantix_100_e46', 'Kodak Advantix 100 (E-46, 1998)', 'Advantix 100 E-46', 'colour negative', '#cd9584', 0.82),
+    ('kodak_advantix_100_e7003', 'Kodak Advantix 100 (E-7003, 2002)', 'Advantix 100 E-7003', 'colour negative', '#c58670', 0.82),
+    ('kodak_advantix_200_e46', 'Kodak Advantix 200 (E-46, 1998)', 'Advantix 200', 'colour negative', '#bd775c', 0.94),
+    ('kodak_advantix_400_e46', 'Kodak Advantix 400 (E-46, 1998)', 'Advantix 400', 'colour negative', '#b46949', 1.08),
+    ('kodak_advantix_bright_sun_flash_hd200_e7003', 'Kodak Advantix Bright Sun & Flash 200 (E-7003, 2002)', 'Advantix Bright Sun & Flash 200', 'colour negative', '#cd9b84', 0.94),
+    ('kodak_advantix_versatility_e7003', 'Kodak Advantix Versatility 400 (E-7003, 2002)', 'Advantix Versatility 400', 'colour negative', '#c58c70', 1.08),
+    ('kodak_bright_sun_flash_200_e2329', 'Kodak Bright Sun & Flash 200 (E-2329, 2003)', 'Bright Sun & Flash 200', 'colour negative', '#bd7e5c', 0.94),
+    ('kodak_ektapress_pj100_e116', 'Kodak Ektapress PJ100 (E-116, 2003)', 'Ektapress PJ100', 'colour negative', '#b47049', 0.82),
+    ('kodak_ektapress_pj400_e116', 'Kodak Ektapress PJ400 (E-116, 2003)', 'Ektapress PJ400', 'colour negative', '#cda084', 1.08),
+    ('kodak_ektapress_pj800_e116', 'Kodak Ektapress PJ800 (E-116, 2003)', 'Ektapress PJ800', 'colour negative', '#c59270', 1.24),
+    ('kodak_max_versatility_400_e2330', 'Kodak Max Versatility 400 (E-2330, 2001)', 'Max Versatility 400', 'colour negative', '#bd855c', 1.08),
+    ('kodak_max_versatility_plus_800_e2452', 'Kodak Max Versatility Plus 800 (E-2452, 2001)', 'Max Versatility Plus 800', 'colour negative', '#b47849', 1.24),
+    ('kodak_portra_100t_e2468', 'Kodak Portra 100T (E-2468, 2003)', 'Portra 100T', 'colour negative', '#cda584', 0.82),
+    ('kodak_portra_160nc_e190', 'Kodak Portra 160NC (E-190, 2003)', 'Portra 160NC', 'colour negative', '#c59870', 0.9),
+    ('kodak_portra_160vc_e190', 'Kodak Portra 160VC (E-190, 2003)', 'Portra 160VC', 'colour negative', '#bd8b5c', 0.9),
+    ('kodak_portra_400nc_e190', 'Kodak Portra 400NC (E-190, 2003)', 'Portra 400NC', 'colour negative', '#b47f49', 1.08),
+    ('kodak_portra_400uc_e190', 'Kodak Portra 400UC (E-190, 2003)', 'Portra 400UC', 'colour negative', '#cdaa84', 1.08),
+    ('kodak_portra_400vc_e190', 'Kodak Portra 400VC (E-190, 2003)', 'Portra 400VC', 'colour negative', '#c59e70', 1.08),
+    ('kodak_portra_800_e190', 'Kodak Portra 800 (E-190, 2003)', 'Portra 800 E-190', 'colour negative', '#bd925c', 1.24),
+    ('kodak_pro_1000_e182', 'Kodak Pro 1000 (E-182, 1997)', 'Pro 1000', 'colour negative', '#b48749', 1.3),
+    ('kodak_pro_100_e182', 'Kodak Pro 100 (E-182, 1997)', 'Pro 100', 'colour negative', '#cdaf84', 0.82),
+    ('kodak_pro_100t_e182', 'Kodak Pro 100T (E-182, 1997)', 'Pro 100T E-182', 'colour negative', '#c5a470', 0.82),
+    ('kodak_pro_100t_e29', 'Kodak Pro 100T (E-29, 1999)', 'Pro 100T E-29', 'colour negative', '#bd995c', 0.82),
+    ('kodak_pro_400_e182', 'Kodak Pro 400 (E-182, 1997)', 'Pro 400', 'colour negative', '#b48e49', 1.08),
+    ('kodak_pro_400mc_e182', 'Kodak Pro 400 MC (E-182, 1997)', 'Pro 400 MC', 'colour negative', '#cdb484', 1.08),
+    ('kodak_pro_image_100_e4l', 'Kodak Pro Image 100 (E-4L, 1997)', 'Pro Image 100', 'colour negative', '#c5aa70', 0.82),
+    ('kodak_royal_gold_400_e7007', 'Kodak Royal Gold 400 (E-7007, 2002)', 'Royal Gold 400', 'colour negative', '#bda05c', 1.08),
+    ('kodak_vericolor_iii_e26', 'Kodak Vericolor III (E-26, 1997)', 'Vericolor III', 'colour negative', '#b49649', 0.9),
+    ('kodak_ektachrome_100_e27', 'Kodak Ektachrome 100 (EPN) (E-27, 2003)', 'Ektachrome 100 E-27', 'slide (positive)', '#6ec4c4', 0.98),
+    ('kodak_ektachrome_100_plus_e113', 'Kodak Ektachrome 100 Plus (EPP) (E-113, 2003)', 'Ektachrome 100 Plus', 'slide (positive)', '#4db3b6', 0.98),
+    ('kodak_ektachrome_160t_e144', 'Kodak Ektachrome 160T (EPT) (E-144, 2003)', 'Ektachrome 160T', 'slide (positive)', '#3e9398', 1.08),
+    ('kodak_ektachrome_320t_e145', 'Kodak Ektachrome 320T (EPJ) (E-145, 2003)', 'Ektachrome 320T', 'slide (positive)', '#60b6be', 1.24),
+    ('kodak_ektachrome_400x_e161', 'Kodak Ektachrome 400X (EPL) (E-161, 2003)', 'Ektachrome 400X', 'slide (positive)', '#469faa', 1.3),
+    ('kodak_ektachrome_64_e8', 'Kodak Ektachrome 64 (EPR) (E-8, 2003)', 'Ektachrome 64', 'slide (positive)', '#387e8a', 0.9),
+    ('kodak_ektachrome_64t_e130', 'Kodak Ektachrome 64T (EPY) (E-130, 2003)', 'Ektachrome 64T', 'slide (positive)', '#52a7b8', 0.9),
+    ('kodak_ektachrome_e100g_e4024', 'Kodak Ektachrome E100G (E-4024, 2003)', 'Ektachrome E100G', 'slide (positive)', '#408a9c', 0.98),
+    ('kodak_ektachrome_e100gx_e4024', 'Kodak Ektachrome E100GX (E-4024, 2003)', 'Ektachrome E100GX', 'slide (positive)', '#65abc0', 0.98),
+    ('kodak_ektachrome_e100s_e164', 'Kodak Ektachrome E100S (E-164, 2003)', 'Ektachrome E100S', 'slide (positive)', '#4895af', 0.98),
+    ('kodak_ektachrome_e100sw_e164', 'Kodak Ektachrome E100SW (E-164, 2003)', 'Ektachrome E100SW', 'slide (positive)', '#3a778e', 0.98),
+    ('kodak_ektachrome_e100vs_e163', 'Kodak Ektachrome E100VS (E-163, 2001)', 'Ektachrome E100VS', 'slide (positive)', '#579bba', 0.98),
+    ('kodak_ektachrome_e200_e28', 'Kodak Ektachrome E200 (E-28, 2002)', 'Ektachrome E200', 'slide (positive)', '#4281a1', 1.13),
+    ('kodak_ektachrome_p1600_e147', 'Kodak Ektachrome P1600 (EPH) (E-147, 2003)', 'Ektachrome P1600', 'slide (positive)', '#69a1c2', 1.71),
+    ('kodak_elite_chrome_100_e7014', 'Kodak Elite Chrome 100 (E-7014, 2003)', 'Elite Chrome 100', 'slide (positive)', '#498ab4', 0.98),
+    ('kodak_elite_chrome_160t_e154', 'Kodak Elite Chrome 160T (E-154, 1998)', 'Elite Chrome 160T', 'slide (positive)', '#3c6e93', 1.08),
+    ('kodak_elite_chrome_200_e148', 'Kodak Elite Chrome 200 (E-148, 1998)', 'Elite Chrome 200', 'slide (positive)', '#5b90bc', 1.13),
+    ('kodak_elite_chrome_extra_color_100_e126', 'Kodak Elite Chrome Extra Color 100 (E-126, 1998)', 'Elite Chrome Extra Color 100', 'slide (positive)', '#4477a6', 0.98),
+]
+PAPERS_LEGACY = [
+    ('kodak_color_metallic_e4005', 'Kodak Professional Color Metallic Paper (E-4005, 2003)', 'Color Metallic', 'colour paper', '#f5f1ea'),
+    ('kodak_duraflex_e143', 'Kodak Professional Duraflex Print Material (E-143, 2003)', 'Duraflex', 'colour paper', '#f1ebe2'),
+    ('kodak_edge_generations_e7010', 'Kodak Edge Generations Paper (E-7010, 2002)', 'Edge Generations', 'colour paper', '#f5f0e9'),
+    ('kodak_ektacolor_edge_7_e19', 'Kodak Ektacolor Edge 7 Paper (E-19, 2003)', 'Ektacolor Edge 7', 'colour paper', '#f1ebe1'),
+    ('kodak_ektacolor_royal_vii_e23', 'Kodak Ektacolor Royal VII Paper (E-23, 2003)', 'Ektacolor Royal VII', 'colour paper', '#f4f0e8'),
+    ('kodak_endura_metallic_e4028', 'Kodak Professional Endura Metallic Paper (E-4028, 2003)', 'Endura Metallic', 'colour paper', '#f0ebe0'),
+    ('kodak_portra_endura_e4021', 'Kodak Professional Portra Endura Paper (E-4021, 2003)', 'Portra Endura E-4021', 'colour paper', '#f3f0e7'),
+    ('kodak_portra_iii_e140', 'Kodak Professional Portra III Paper (E-140, 2002)', 'Portra III', 'colour paper', '#f0ebdf'),
+    ('kodak_royal_generations_e7009', 'Kodak Royal Generations Paper (E-7009, 2002)', 'Royal Generations', 'colour paper', '#f3efe6'),
+    ('kodak_supra_endura_e4021', 'Kodak Professional Supra Endura Paper (E-4021, 2003)', 'Supra Endura E-4021', 'colour paper', '#efeade'),
+    ('kodak_supra_iii_e141', 'Kodak Professional Supra III Paper (E-141, 2002)', 'Supra III', 'colour paper', '#f2efe5'),
+    ('kodak_ultra_endura_e4020', 'Kodak Professional Ultra Endura Paper (E-4020, 2003)', 'Ultra Endura E-4020', 'colour paper', '#eeeadd'),
+    ('kodak_ultra_iii_e142', 'Kodak Professional Ultra III Paper (E-142, 2003)', 'Ultra III', 'colour paper', '#f2efe3'),
+    ('kodak_duraclear_e143', 'Kodak Professional Duraclear Display Material (E-143, 2003)', 'Duraclear', 'display film', '#e7ecee'),
+    ('kodak_duratrans_e143', 'Kodak Professional Duratrans Display Material (E-143, 2003)', 'Duratrans', 'display film', '#d5dde2'),
+    ('kodak_endura_clear_e4030', 'Kodak Professional Endura Clear Display Material (E-4030, 2002)', 'Endura Clear', 'display film', '#dbe0e6'),
+    ('kodak_endura_transparency_e4030', 'Kodak Professional Endura Transparency Display Material (E-4030, 2002)', 'Endura Transparency', 'display film', '#e1e5ea'),
+]
+for _sid, _name, _short, _kind, _swatch, _grain in FILMCOLORS_LEGACY:
+    NAMES[_sid] = (_name, _short, _kind)
+    CHOSEN[_sid] = _swatch
+    COLOUR_GRAIN[_sid] = _grain
+# After the colour films above, still before the black-and-white films.
+ORDER[ORDER.index("kodak_tri_x_400"):ORDER.index("kodak_tri_x_400")] = [r[0] for r in FILMCOLORS_LEGACY]
+# The 13 reflective papers and the 4 backlit display transparencies (film
+# support, printed and read like a cine print film: the engine treats a print
+# stock the same whatever its support) go after every colour paper already
+# there and before the silver paper.
+for _sid, _name, _short, _kind, _swatch in PAPERS_LEGACY:
+    NAMES[_sid] = (_name, _short, _kind)
+    CHOSEN[_sid] = _swatch
+ORDER[ORDER.index("ilford_multigrade_iv_rc"):ORDER.index("ilford_multigrade_iv_rc")] = [r[0] for r in PAPERS_LEGACY]
+
 # A silver paper's grades as packs (`engine/resources_product/paper_grades.json`),
 # and the filter new prints are made through.
 PAPER_GRADES = REPO / "engine/resources_product/paper_grades.json"
