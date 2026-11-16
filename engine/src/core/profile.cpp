@@ -62,6 +62,11 @@ bool Profile::from_json(const Json& root, std::string& error) {
     info.log_sensitivity_density_over_min = in.at("log_sensitivity_density_over_min").as_double(0.2);
     info.reference_illuminant = str_or(in, "reference_illuminant", "D55");
     info.viewing_illuminant = str_or(in, "viewing_illuminant", "D50");
+    info.dir_couplers_interlayer_scale = in.at("dir_couplers_interlayer_scale").as_double(1.0);
+    if (!std::isfinite(info.dir_couplers_interlayer_scale) || !(info.dir_couplers_interlayer_scale > 0.0)) {
+        error = "profile '" + info.stock + "': dir_couplers_interlayer_scale must be a positive number";
+        return false;
+    }
     if (info.type != "negative" && info.type != "positive") {
         error = "profile '" + info.stock + "': type is '" + info.type + "', expected negative or positive";
         return false;
@@ -228,6 +233,9 @@ void override_info(const Json& in, ProfileInfo& info) {
     if (in.has("log_sensitivity_density_over_min"))
         info.log_sensitivity_density_over_min =
             in.at("log_sensitivity_density_over_min").as_double(info.log_sensitivity_density_over_min);
+    if (in.has("dir_couplers_interlayer_scale"))
+        info.dir_couplers_interlayer_scale =
+            in.at("dir_couplers_interlayer_scale").as_double(info.dir_couplers_interlayer_scale);
 }
 
 }  // namespace

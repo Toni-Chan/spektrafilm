@@ -38,6 +38,13 @@ struct ProfileInfo {
     std::string channel_model = "color", densitometer = "status_M";
     double log_sensitivity_density_over_min = 0.2;
     std::string reference_illuminant = "D55", viewing_illuminant = "D50";
+    /// `info.dir_couplers_interlayer_scale`: what spektrafilm's
+    /// `data/film_render_overrides/<stock>.json` carries for a profile built
+    /// from a data sheet (an estimate: a neutral-exposure sheet cannot show the
+    /// interimage effect). It multiplies the interlayer DIR gammas exactly as
+    /// `params_builder._apply_film_render_overrides` does (`apply_film_specifics`);
+    /// 1 when absent, so no profile that does not carry it moves.
+    double dir_couplers_interlayer_scale = 1.0;
     /// The stock whose data this profile reads when it is a `derived_from`
     /// alias (`load_profile`); empty for a profile that carries its own data.
     std::string base_stock;
