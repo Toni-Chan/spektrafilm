@@ -748,6 +748,20 @@ void apply_film_specifics(Params& p) {
         set2(dc.gamma_interlayer_g_to_rb, 0.104, 0.078);
         set2(dc.gamma_interlayer_b_to_rg, 0.078, 0.078);
     }
+    // spektrafilm's `_apply_film_render_overrides`, run last as it is there:
+    // the profile's `dir_couplers_interlayer_scale` (an estimate, 1 when the
+    // profile has none) times the interlayer gammas only. The same-layer
+    // gammas and the user's `inhibition_interlayer` are left alone, and the
+    // grey stays put because `density_curves_before_dir_couplers` pre-corrects
+    // the curves with this same matrix.
+    const double s = p.film.info.dir_couplers_interlayer_scale;
+    if (s != 1.0) {
+        for (int i = 0; i < 2; ++i) {
+            dc.gamma_interlayer_r_to_gb[i] *= s;
+            dc.gamma_interlayer_g_to_rb[i] *= s;
+            dc.gamma_interlayer_b_to_rg[i] *= s;
+        }
+    }
 }
 
 }  // namespace
