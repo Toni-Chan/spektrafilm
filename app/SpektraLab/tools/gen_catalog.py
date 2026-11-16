@@ -166,6 +166,79 @@ COLOUR_GRAIN = {
     # green 7.29 / 8.34 / 7.46 / 8.61 at 1. VC's steeper curves render grainier, so it takes less to reach its speed's.
     "kodak_portra_160nc": 0.79, "kodak_portra_160vc": 0.69, "kodak_portra_400nc": 0.94, "kodak_portra_400vc": 0.81,
 }
+# --- The filmcolors.org / KODAK E-55 data-sheet stocks (2026-11-15) ----------
+# Built with spektrafilm_profile_builder from published data sheets in the
+# Toni-Chan/spektrafilm draft PRs #6-#12 (KODACHROME E-55, FUJIFILM reversal and
+# negative, KODAK negative and reversal, FUJIFILM and KODAK motion picture).
+# The name is the profile's (codes in parentheses, so the edge print stops
+# before them); the short name drops the maker and the code.
+#
+# FILMCOLORS_GRAIN: ESTIMATE placeholders, not measured. None of these stocks
+# has had its engine granularity measured against a sheet (COLOUR_GRAIN's
+# SHEET rule), so each takes the ISO rule's shape fitted on this script's own
+# ISO rows (the six Kodak still negatives: 0.82 x (ISO/100)^0.200, the same
+# exponent as the Vision3 fit above), times 1.2 for a slide (the existing slides'
+# SHEET rows sit about that far above the fit), and Kodachrome scaled from
+# Kodachrome 64's SHEET 1.15 by the same exponent. EIR takes ISO 200 (its usual
+# EI behind a #12 filter); MS 100/1000 its EI 100.
+FILMCOLORS = [
+    ('kodak_ultra_color_100uc_e4035', 'Kodak Ultra Color 100UC (E-4035, 2007)', 'Ultra Color 100UC', 'colour negative', '#cf6a45', 0.82),
+    ('kodak_ultra_color_400uc_e4035', 'Kodak Ultra Color 400UC (E-4035, 2007)', 'Ultra Color 400UC', 'colour negative', '#c25d3c', 1.08),
+    ('kodak_supra_100_e2519', 'Kodak Supra 100 (E-2519, 2003)', 'Supra 100', 'colour negative', '#e6c3a2', 0.82),
+    ('kodak_supra_200_e4029', 'Kodak Supra 200 (E-4029, 2003)', 'Supra 200', 'colour negative', '#dcb592', 0.94),
+    ('kodak_supra_400_e2519', 'Kodak Supra 400 (E-2519, 2003)', 'Supra 400', 'colour negative', '#d2a782', 1.08),
+    ('kodak_supra_800_e2519', 'Kodak Supra 800 (E-2519, 2003)', 'Supra 800', 'colour negative', '#c79973', 1.24),
+    ('kodak_royal_supra_200_e4026', 'Kodak Royal Supra 200 (E-4026, 2002)', 'Royal Supra 200', 'colour negative', '#d9a35f', 0.94),
+    ('kodak_royal_supra_400_e4026', 'Kodak Royal Supra 400 (E-4026, 2002)', 'Royal Supra 400', 'colour negative', '#cd9552', 1.08),
+    ('kodak_royal_supra_800_e4026', 'Kodak Royal Supra 800 (E-4026, 2002)', 'Royal Supra 800', 'colour negative', '#c08746', 1.24),
+    ('kodak_profoto_100_e2e', 'Kodak Profoto 100 (E-2E, 1997)', 'Profoto 100', 'colour negative', '#e0a988', 0.82),
+    ('kodak_le100_le1', 'Kodak Law Enforcement LE100 (LE-1, 1998)', 'LE100', 'colour negative', '#b8a48c', 0.82),
+    ('kodak_le400_le1', 'Kodak Law Enforcement LE400 (LE-1, 1998)', 'LE400', 'colour negative', '#ab967d', 1.08),
+    ('kodak_le800_le1', 'Kodak Law Enforcement LE800 (LE-1, 1998)', 'LE800', 'colour negative', '#9e886f', 1.24),
+    ('fujifilm_pro_160ns_af30232e', 'Fujifilm Pro 160NS (AF3-0232E)', 'Pro 160NS', 'colour negative', '#8fb79a', 0.9),
+    ('fujifilm_nps_160_af3809e', 'Fujifilm NPS 160 (AF3-809E)', 'NPS 160', 'colour negative', '#84ad8f', 0.9),
+    ('fujifilm_npc_160_af3065e', 'Fujifilm NPC 160 (AF3-065E)', 'NPC 160', 'colour negative', '#6fa37f', 0.9),
+    ('fujifilm_nph_400_af3121e', 'Fujifilm NPH 400 (AF3-121E, 2002)', 'NPH 400', 'colour negative', '#79a184', 1.08),
+    ('fujifilm_npz_800_af3100e', 'Fujifilm NPZ 800 (AF3-100E)', 'NPZ 800', 'colour negative', '#6b9476', 1.24),
+    ('fujifilm_super_hg_1600_af3659en', 'Fujifilm Super HG 1600 (AF3-659EN)', 'Super HG 1600', 'colour negative', '#5e8869', 1.43),
+    ('fujifilm_nexia_h400_af3013e', 'Fujifilm Nexia H400 (AF3-013E)', 'Nexia H400', 'colour negative', '#88a86e', 1.08),
+    ('kodak_kodachrome_25_e55', 'Kodak Kodachrome 25 (PKM, E-55 2009)', 'Kodachrome 25', 'slide (positive)', '#d4b04e', 0.95),
+    ('kodak_kodachrome_64_e55', 'Kodak Kodachrome 64 (PKR, E-55 2009)', 'Kodachrome 64 E-55', 'slide (positive)', '#bf9632', 1.15),
+    ('kodak_kodachrome_200_e55', 'Kodak Kodachrome 200 (PKL, E-55 2009)', 'Kodachrome 200', 'slide (positive)', '#ad8528', 1.44),
+    ('kodak_ektachrome_100d_h15294', 'Kodak Ektachrome 100D 5294/7294 (H-1-5294, 2024)', 'Ektachrome 100D', 'slide (positive)', '#4a78b5', 0.98),
+    ('kodak_ektachrome_eir_ti2323', 'Kodak Ektachrome Infrared EIR (TI-2323, 2005)', 'Ektachrome EIR', 'slide (positive)', '#b0485a', 1.13),
+    ('fujifilm_provia_100_rdp2_af3796e', 'Fujifilm Provia 100 RDP II (AF3-796E)', 'Provia 100 RDP II', 'slide (positive)', '#6996d6', 0.98),
+    ('fujifilm_provia_400x_rxp_af30213e', 'Fujifilm Provia 400X RXP (AF3-0213E)', 'Provia 400X', 'slide (positive)', '#557fc0', 1.3),
+    ('fujifilm_provia_1600_rsp_af3798e', 'Fujifilm Provia 1600 RSP (AF3-798E)', 'Provia 1600', 'slide (positive)', '#476fad', 1.71),
+    ('fujifilm_ms_100_1000_rms_af3989e', 'Fujifilm MS 100/1000 RMS (EI 100, AF3-989E)', 'MS 100/1000', 'slide (positive)', '#7a8fc4', 0.98),
+    ('fujifilm_t64_rtp_af3178e', 'Fujifilm T64 RTP (AF3-178E)', 'T64', 'slide (positive)', '#5a86c9', 0.9),
+    ('fujifilm_velvia_50_rvp50_af30221e2', 'Fujifilm Velvia 50 RVP50 (2007, AF3-0221E2)', 'Velvia 50', 'slide (positive)', '#a84a7e', 0.86),
+    ('kodak_exr_50d_5245', 'Kodak EXR 50D 5245 (H-1-5245t)', 'EXR 50D 5245', 'cine negative', '#7591a1', 0.71),
+    ('kodak_exr_100t_5248', 'Kodak EXR 100T 5248 (H-1-7248)', 'EXR 100T 5248', 'cine negative', '#6a8698', 0.82),
+    ('kodak_exr_200t_5293', 'Kodak EXR 200T 5293 (H-1-5293t)', 'EXR 200T 5293', 'cine negative', '#5f7b8f', 0.94),
+    ('kodak_exr_500t_5298', 'Kodak EXR 500T 5298 (TI2082)', 'EXR 500T 5298', 'cine negative', '#547086', 1.13),
+    ('kodak_vision_250d_5246', 'Kodak Vision 250D 5246 (H-1-5246t)', 'Vision 250D 5246', 'cine negative', '#638c95', 0.98),
+    ('kodak_vision_320t_5277', 'Kodak Vision 320T 5277 (H-1-5277t)', 'Vision 320T 5277', 'cine negative', '#58808f', 1.03),
+    ('kodak_vision_500t_5279', 'Kodak Vision 500T 5279 (H-1-5279)', 'Vision 500T 5279', 'cine negative', '#4d7589', 1.13),
+    ('kodak_vision_500t_5263', 'Kodak Vision 500T 5263 (H-1-5263tx)', 'Vision 500T 5263', 'cine negative', '#436a80', 1.13),
+    ('fujifilm_f64d_kb1101e', 'Fujifilm F-64D (KB-1101E)', 'F-64D', 'cine negative', '#7a9a92', 0.75),
+    ('fujifilm_f125_kb913e', 'Fujifilm F-125 (KB-913E)', 'F-125', 'cine negative', '#6f9089', 0.86),
+    ('fujifilm_f250_kb914e', 'Fujifilm F-250 (KB-914E)', 'F-250', 'cine negative', '#648680', 0.98),
+    ('fujifilm_eterna_250d_kb0507er', 'Fujifilm Eterna 250D (KB-0507ER)', 'Eterna 250D', 'cine negative', '#6e9a8a', 0.98),
+    ('fujifilm_eterna_250_kb1101e', 'Fujifilm Eterna 250 (KB-1101E)', 'Eterna 250', 'cine negative', '#638f80', 0.98),
+    ('fujifilm_eterna_400_kb1101e', 'Fujifilm Eterna 400 (KB-1101E)', 'Eterna 400', 'cine negative', '#588576', 1.08),
+    ('fujifilm_eterna_vivid_160_kb0701e', 'Fujifilm Eterna Vivid 160 (KB-0701E)', 'Eterna Vivid 160', 'cine negative', '#4f9a7c', 0.9),
+    ('fujifilm_eterna_vivid_500_kb0901e', 'Fujifilm Eterna Vivid 500 (KB-0901E)', 'Eterna Vivid 500', 'cine negative', '#45886d', 1.13),
+    ('fujifilm_reala_500d_kb1101e', 'Fujifilm Reala 500D (KB-1101E)', 'Reala 500D', 'cine negative', '#5a7f71', 1.13),
+]
+for _sid, _name, _short, _kind, _swatch, _grain in FILMCOLORS:
+    NAMES[_sid] = (_name, _short, _kind)
+    CHOSEN[_sid] = _swatch
+    COLOUR_GRAIN[_sid] = _grain
+# After every colour film already in the picker and before the black-and-white
+# films (the product's colour-then-silver rule above), so the 34 that were there keep their order.
+ORDER[ORDER.index("kodak_tri_x_400"):ORDER.index("kodak_tri_x_400")] = [r[0] for r in FILMCOLORS]
+
 # A silver paper's grades as packs (`engine/resources_product/paper_grades.json`),
 # and the filter new prints are made through.
 PAPER_GRADES = REPO / "engine/resources_product/paper_grades.json"
