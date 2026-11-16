@@ -93,7 +93,7 @@ reference and need a checkout of spektrafilm on `PYTHONPATH`;
 |---|---|
 | `app/SpektraLab/` | the Mac app: SwiftUI, UIKit and Metal under Mac Catalyst |
 | `engine/` | the SpektraLab engine: C++20, its Metal kernels and its C ABI (`spk_*`) |
-| `engine/resources/` | baked constants, spektrafilm's 28 film and paper profiles, print LUTs |
+| `engine/resources/` | baked constants, spektrafilm's 28 film and paper profiles and 48 data-sheet profiles from Toni-Chan/spektrafilm (draft PRs #6–#12), print LUTs |
 | `engine/resources_product/` | SpektraLab's own black-and-white films and paper, and CineStill 800T |
 | `vendor/spklib/` | the library helper, prebuilt from spklib |
 | `ARCHITECTURE.md` | how the engine fits together |
