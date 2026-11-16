@@ -35289,6 +35289,28 @@
         }
       }
     },
+    "display film" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ディスプレイ用フィルム"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "灯箱片"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "燈箱片"
+          }
+        }
+      }
+    },
     "edited" : {
       "localizations" : {
         "ja" : {
