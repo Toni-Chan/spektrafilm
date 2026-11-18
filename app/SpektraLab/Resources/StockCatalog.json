@@ -1446,7 +1446,7 @@
   {
    "id": "kodak_portra_160nc_e190",
    "name": "Kodak Portra 160NC (E-190, 2003)",
-   "shortName": "Portra 160NC",
+   "shortName": "Portra 160NC E-190",
    "kind": "colour negative",
    "stage": "filming",
    "use": "still",
@@ -1459,7 +1459,7 @@
   {
    "id": "kodak_portra_160vc_e190",
    "name": "Kodak Portra 160VC (E-190, 2003)",
-   "shortName": "Portra 160VC",
+   "shortName": "Portra 160VC E-190",
    "kind": "colour negative",
    "stage": "filming",
    "use": "still",
@@ -1472,7 +1472,7 @@
   {
    "id": "kodak_portra_400nc_e190",
    "name": "Kodak Portra 400NC (E-190, 2003)",
-   "shortName": "Portra 400NC",
+   "shortName": "Portra 400NC E-190",
    "kind": "colour negative",
    "stage": "filming",
    "use": "still",
@@ -1498,7 +1498,7 @@
   {
    "id": "kodak_portra_400vc_e190",
    "name": "Kodak Portra 400VC (E-190, 2003)",
-   "shortName": "Portra 400VC",
+   "shortName": "Portra 400VC E-190",
    "kind": "colour negative",
    "stage": "filming",
    "use": "still",
